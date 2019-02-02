@@ -240,12 +240,7 @@ RCT_EXPORT_METHOD(setAdvertisingIdentifier: (nullable NSString*) adId) {
  * @see ACPMobilePrivacyStatus
  */
 RCT_EXPORT_METHOD(setPushIdentifier: (nullable NSString*) deviceToken) {
-    NSLog(@"setPushIdentifier() is not supported in JavaScript on iOS. Instead "
-          "in `AppDelegate.m` implement the method "
-          "`application:didRegisterForRemoteNotificationsWithDeviceToken` as below:\n\n"
-          "  - (void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {\n"
-          "      [ACPCore setPushIdentifier:deviceToken];\n"
-          "  }\n");
+    [ACPCore setPushIdentifier:[RCTConvert NSData:deviceToken]];
 }
 
 /**
