@@ -125,7 +125,7 @@ export class ACPCore {
   }
 
   /**
- * @brief Update specific configuration parameters
+ * Update specific configuration parameters
  *
  * Update the current SDK configuration with specific key/value pairs. Keys not found in the current
  * configuration are added. Configuration updates are preserved and applied over existing or new
