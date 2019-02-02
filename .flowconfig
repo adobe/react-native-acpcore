@@ -1,0 +1,70 @@
+[ignore]
+; We fork some components by platform
+.*/*[.]android.js
+
+; Ignore "BUCK" generated dirs
+<PROJECT_ROOT>/\.buckd/
+
+; Ignore unexpected extra "@providesModule"
+.*/node_modules/.*/node_modules/fbjs/.*
+
+; Ignore templates for 'react-native init'
+<PROJECT_ROOT>/node_modules/react-native/local-cli/.*
+
+; Ignore polyfills
+<PROJECT_ROOT>/node_modules/react-native/Libraries/polyfills/.*
+
+; Ignore various node_modules
+<PROJECT_ROOT>/node_modules/metro/.*
+
+; Ignore RN jest
+<PROJECT_ROOT>/node_modules/react-native/.*
+
+; Ignore Example
+<PROJECT_ROOT>/sample/*
+
+
+[include]
+<PROJECT_ROOT>/node_modules/react-native/Libraries/StyleSheet/StyleSheetTypes
+
+[libs]
+node_modules/react-native/Libraries/react-native/react-native-interface.js
+node_modules/react-native/flow
+flow-typed/
+
+[options]
+module.system=haste
+
+emoji=true
+
+munge_underscores=true
+
+module.name_mapper='^[./a-zA-Z0-9$_-]+\.\(bmp\|gif\|jpg\|jpeg\|png\|psd\|svg\|webp\|m4v\|mov\|mp4\|mpeg\|mpg\|webm\|aac\|aiff\|caf\|m4a\|mp3\|wav\|html\|pdf\)$' -> 'RelativeImageStub'
+
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=./src/
+
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.json
+module.file_ext=.native.js
+
+suppress_type=$FlowIssue
+suppress_type=$FlowFixMe
+suppress_type=$FixMe
+
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe\\($\\|[^(]\\|(\\(>=0\\.\\(4[0-9]\\|[1-3][0-9]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssue\\((\\(>=0\\.\\(4[0-9]\\|[1-3][0-9]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)?:? #[0-9]+
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixedInNextDeploy
+suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
+
+esproposal.decorators=ignore
+
+module.name_mapper.extension='png' -> 'emptyObject'
+module.name_mapper='^react-navigation$' -> 'emptyObject'
+
+; https://github.com/facebook/react-native/issues/14927
+module.name_mapper='^./link/link$' -> 'emptyObject'
+
+[version]
+0.92.0

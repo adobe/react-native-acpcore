@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		210E3BAF2200E9CF00AC9192 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BAE2200E9CF00AC9192 /* UIKit.framework */; };
+		210E3BB12200E9D400AC9192 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB02200E9D400AC9192 /* SystemConfiguration.framework */; };
+		210E3BB32200E9DB00AC9192 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB22200E9DB00AC9192 /* WebKit.framework */; };
+		210E3BB52200E9E300AC9192 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB42200E9E300AC9192 /* UserNotifications.framework */; };
+		210E3BB72200E9EB00AC9192 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB62200E9EA00AC9192 /* libsqlite3.0.tbd */; };
+		210E3BB92200E9F000AC9192 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB82200E9F000AC9192 /* libc++.tbd */; };
+		210E3BBB2200E9F500AC9192 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BBA2200E9F500AC9192 /* libz.tbd */; };
+		21230B932203B41D00F2B198 /* RCTACPSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E026202203A24E006C3583 /* RCTACPSignal.m */; };
+		2132E26922057F1D000DDF24 /* RCTACPIdentityDataBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2132E26822057F1D000DDF24 /* RCTACPIdentityDataBridge.m */; };
+		21E025FC2202252B006C3583 /* ACPExtensionEvent+ReactNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E025FB2202252B006C3583 /* ACPExtensionEvent+ReactNative.m */; };
+		21E0261822039C07006C3583 /* RCTACPCoreDataBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261722039C07006C3583 /* RCTACPCoreDataBridge.m */; };
+		21E0261B2203A235006C3583 /* RCTACPIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261A2203A235006C3583 /* RCTACPIdentity.m */; };
+		21E0261E2203A241006C3583 /* RCTACPLifecycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261D2203A241006C3583 /* RCTACPLifecycle.m */; };
+		21E026272203A6B5006C3583 /* libACPCore_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BCB2200EB7100AC9192 /* libACPCore_iOS.a */; };
+		21E026282203A6B5006C3583 /* libACPIdentity_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BD82200EB7200AC9192 /* libACPIdentity_iOS.a */; };
+		21E026292203A6B5006C3583 /* libACPLifecycle_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BCA2200EB7100AC9192 /* libACPLifecycle_iOS.a */; };
+		21E0262A2203A6B5006C3583 /* libACPSignal_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BCC2200EB7100AC9192 /* libACPSignal_iOS.a */; };
+		B3E7B58A1CC2AC0600A0062D /* RCTACPCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RCTACPCore.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		58B511D91A9E6C8500147676 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		134814201AA4EA6300B7C361 /* libRCTACPCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTACPCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		210E3BAE2200E9CF00AC9192 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		210E3BB02200E9D400AC9192 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		210E3BB22200E9DB00AC9192 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		210E3BB42200E9E300AC9192 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		210E3BB62200E9EA00AC9192 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		210E3BB82200E9F000AC9192 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		210E3BBA2200E9F500AC9192 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		210E3BCA2200EB7100AC9192 /* libACPLifecycle_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libACPLifecycle_iOS.a; path = libs/libACPLifecycle_iOS.a; sourceTree = "<group>"; };
+		210E3BCB2200EB7100AC9192 /* libACPCore_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libACPCore_iOS.a; path = libs/libACPCore_iOS.a; sourceTree = "<group>"; };
+		210E3BCC2200EB7100AC9192 /* libACPSignal_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libACPSignal_iOS.a; path = libs/libACPSignal_iOS.a; sourceTree = "<group>"; };
+		210E3BCE2200EB7100AC9192 /* ACPLifecycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPLifecycle.h; sourceTree = "<group>"; };
+		210E3BCF2200EB7100AC9192 /* ACPExtensionEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtensionEvent.h; sourceTree = "<group>"; };
+		210E3BD02200EB7100AC9192 /* ACPExtensionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtensionListener.h; sourceTree = "<group>"; };
+		210E3BD12200EB7100AC9192 /* ACPCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPCore.h; sourceTree = "<group>"; };
+		210E3BD22200EB7100AC9192 /* ACPExtensionError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtensionError.h; sourceTree = "<group>"; };
+		210E3BD32200EB7100AC9192 /* ACPIdentity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPIdentity.h; sourceTree = "<group>"; };
+		210E3BD42200EB7100AC9192 /* ACPSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPSignal.h; sourceTree = "<group>"; };
+		210E3BD52200EB7100AC9192 /* ACPMobileVisitorId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPMobileVisitorId.h; sourceTree = "<group>"; };
+		210E3BD62200EB7200AC9192 /* ACPExtensionApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtensionApi.h; sourceTree = "<group>"; };
+		210E3BD72200EB7200AC9192 /* ACPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtension.h; sourceTree = "<group>"; };
+		210E3BD82200EB7200AC9192 /* libACPIdentity_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libACPIdentity_iOS.a; path = libs/libACPIdentity_iOS.a; sourceTree = "<group>"; };
+		21230B842203B1F400F2B198 /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2132E26722057F1D000DDF24 /* RCTACPIdentityDataBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTACPIdentityDataBridge.h; path = src/Identity/RCTACPIdentityDataBridge.h; sourceTree = "<group>"; };
+		2132E26822057F1D000DDF24 /* RCTACPIdentityDataBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCTACPIdentityDataBridge.m; path = src/Identity/RCTACPIdentityDataBridge.m; sourceTree = "<group>"; };
+		21E025FA2202252B006C3583 /* ACPExtensionEvent+ReactNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ACPExtensionEvent+ReactNative.h"; path = "src/Data-Bridging/ACPExtensionEvent+ReactNative.h"; sourceTree = "<group>"; };
+		21E025FB2202252B006C3583 /* ACPExtensionEvent+ReactNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ACPExtensionEvent+ReactNative.m"; path = "src/Data-Bridging/ACPExtensionEvent+ReactNative.m"; sourceTree = "<group>"; };
+		21E0261622039C07006C3583 /* RCTACPCoreDataBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTACPCoreDataBridge.h; path = src/Core/RCTACPCoreDataBridge.h; sourceTree = "<group>"; };
+		21E0261722039C07006C3583 /* RCTACPCoreDataBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCTACPCoreDataBridge.m; path = src/Core/RCTACPCoreDataBridge.m; sourceTree = "<group>"; };
+		21E026192203A235006C3583 /* RCTACPIdentity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTACPIdentity.h; path = src/Identity/RCTACPIdentity.h; sourceTree = "<group>"; };
+		21E0261A2203A235006C3583 /* RCTACPIdentity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCTACPIdentity.m; path = src/Identity/RCTACPIdentity.m; sourceTree = "<group>"; };
+		21E0261C2203A241006C3583 /* RCTACPLifecycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTACPLifecycle.h; path = src/Lifecycle/RCTACPLifecycle.h; sourceTree = "<group>"; };
+		21E0261D2203A241006C3583 /* RCTACPLifecycle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCTACPLifecycle.m; path = src/Lifecycle/RCTACPLifecycle.m; sourceTree = "<group>"; };
+		21E0261F2203A24E006C3583 /* RCTACPSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTACPSignal.h; path = src/Signal/RCTACPSignal.h; sourceTree = "<group>"; };
+		21E026202203A24E006C3583 /* RCTACPSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCTACPSignal.m; path = src/Signal/RCTACPSignal.m; sourceTree = "<group>"; };
+		B3E7B5881CC2AC0600A0062D /* RCTACPCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTACPCore.h; path = src/Core/RCTACPCore.h; sourceTree = "<group>"; };
+		B3E7B5891CC2AC0600A0062D /* RCTACPCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTACPCore.m; path = src/Core/RCTACPCore.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58B511D81A9E6C8500147676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				210E3BBB2200E9F500AC9192 /* libz.tbd in Frameworks */,
+				21E026292203A6B5006C3583 /* libACPLifecycle_iOS.a in Frameworks */,
+				210E3BB92200E9F000AC9192 /* libc++.tbd in Frameworks */,
+				210E3BB72200E9EB00AC9192 /* libsqlite3.0.tbd in Frameworks */,
+				210E3BB52200E9E300AC9192 /* UserNotifications.framework in Frameworks */,
+				210E3BB32200E9DB00AC9192 /* WebKit.framework in Frameworks */,
+				21E0262A2203A6B5006C3583 /* libACPSignal_iOS.a in Frameworks */,
+				21E026272203A6B5006C3583 /* libACPCore_iOS.a in Frameworks */,
+				21E026282203A6B5006C3583 /* libACPIdentity_iOS.a in Frameworks */,
+				210E3BB12200E9D400AC9192 /* SystemConfiguration.framework in Frameworks */,
+				210E3BAF2200E9CF00AC9192 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		134814211AA4EA7D00B7C361 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				134814201AA4EA6300B7C361 /* libRCTACPCore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		210E3BAD2200E9CF00AC9192 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21230B842203B1F400F2B198 /* libReact.a */,
+				210E3BBA2200E9F500AC9192 /* libz.tbd */,
+				210E3BB82200E9F000AC9192 /* libc++.tbd */,
+				210E3BB62200E9EA00AC9192 /* libsqlite3.0.tbd */,
+				210E3BB42200E9E300AC9192 /* UserNotifications.framework */,
+				210E3BB22200E9DB00AC9192 /* WebKit.framework */,
+				210E3BB02200E9D400AC9192 /* SystemConfiguration.framework */,
+				210E3BAE2200E9CF00AC9192 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		210E3BC92200EB6200AC9192 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				210E3BCD2200EB7100AC9192 /* include */,
+				210E3BCB2200EB7100AC9192 /* libACPCore_iOS.a */,
+				210E3BD82200EB7200AC9192 /* libACPIdentity_iOS.a */,
+				210E3BCA2200EB7100AC9192 /* libACPLifecycle_iOS.a */,
+				210E3BCC2200EB7100AC9192 /* libACPSignal_iOS.a */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		210E3BCD2200EB7100AC9192 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				210E3BCE2200EB7100AC9192 /* ACPLifecycle.h */,
+				210E3BCF2200EB7100AC9192 /* ACPExtensionEvent.h */,
+				210E3BD02200EB7100AC9192 /* ACPExtensionListener.h */,
+				210E3BD12200EB7100AC9192 /* ACPCore.h */,
+				210E3BD22200EB7100AC9192 /* ACPExtensionError.h */,
+				210E3BD32200EB7100AC9192 /* ACPIdentity.h */,
+				210E3BD42200EB7100AC9192 /* ACPSignal.h */,
+				210E3BD52200EB7100AC9192 /* ACPMobileVisitorId.h */,
+				210E3BD62200EB7200AC9192 /* ACPExtensionApi.h */,
+				210E3BD72200EB7200AC9192 /* ACPExtension.h */,
+			);
+			name = include;
+			path = libs/include;
+			sourceTree = "<group>";
+		};
+		21E026222203A438006C3583 /* Identity */ = {
+			isa = PBXGroup;
+			children = (
+				21E026192203A235006C3583 /* RCTACPIdentity.h */,
+				21E0261A2203A235006C3583 /* RCTACPIdentity.m */,
+				2132E26722057F1D000DDF24 /* RCTACPIdentityDataBridge.h */,
+				2132E26822057F1D000DDF24 /* RCTACPIdentityDataBridge.m */,
+			);
+			name = Identity;
+			sourceTree = "<group>";
+		};
+		21E026232203A440006C3583 /* Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				21E0261C2203A241006C3583 /* RCTACPLifecycle.h */,
+				21E0261D2203A241006C3583 /* RCTACPLifecycle.m */,
+			);
+			name = Lifecycle;
+			sourceTree = "<group>";
+		};
+		21E026242203A448006C3583 /* Signal */ = {
+			isa = PBXGroup;
+			children = (
+				21E0261F2203A24E006C3583 /* RCTACPSignal.h */,
+				21E026202203A24E006C3583 /* RCTACPSignal.m */,
+			);
+			name = Signal;
+			sourceTree = "<group>";
+		};
+		21E026252203A4EC006C3583 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B3E7B5881CC2AC0600A0062D /* RCTACPCore.h */,
+				B3E7B5891CC2AC0600A0062D /* RCTACPCore.m */,
+				21E0261622039C07006C3583 /* RCTACPCoreDataBridge.h */,
+				21E0261722039C07006C3583 /* RCTACPCoreDataBridge.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		21E026262203A540006C3583 /* Data Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				21E025FA2202252B006C3583 /* ACPExtensionEvent+ReactNative.h */,
+				21E025FB2202252B006C3583 /* ACPExtensionEvent+ReactNative.m */,
+			);
+			name = "Data Helpers";
+			sourceTree = "<group>";
+		};
+		58B511D21A9E6C8500147676 = {
+			isa = PBXGroup;
+			children = (
+				21E026252203A4EC006C3583 /* Core */,
+				21E026222203A438006C3583 /* Identity */,
+				21E026232203A440006C3583 /* Lifecycle */,
+				21E026242203A448006C3583 /* Signal */,
+				21E026262203A540006C3583 /* Data Helpers */,
+				210E3BC92200EB6200AC9192 /* Libs */,
+				134814211AA4EA7D00B7C361 /* Products */,
+				210E3BAD2200E9CF00AC9192 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58B511DA1A9E6C8500147676 /* RCTACPCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RCTACPCore" */;
+			buildPhases = (
+				58B511D71A9E6C8500147676 /* Sources */,
+				58B511D81A9E6C8500147676 /* Frameworks */,
+				58B511D91A9E6C8500147676 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCTACPCore;
+			productName = RCTDataManager;
+			productReference = 134814201AA4EA6300B7C361 /* libRCTACPCore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58B511D31A9E6C8500147676 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Adobe;
+				TargetAttributes = {
+					58B511DA1A9E6C8500147676 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RCTACPCore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 58B511D21A9E6C8500147676;
+			productRefGroup = 58B511D21A9E6C8500147676;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58B511DA1A9E6C8500147676 /* RCTACPCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58B511D71A9E6C8500147676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21E025FC2202252B006C3583 /* ACPExtensionEvent+ReactNative.m in Sources */,
+				B3E7B58A1CC2AC0600A0062D /* RCTACPCore.m in Sources */,
+				21E0261B2203A235006C3583 /* RCTACPIdentity.m in Sources */,
+				21E0261822039C07006C3583 /* RCTACPCoreDataBridge.m in Sources */,
+				21230B932203B41D00F2B198 /* RCTACPSignal.m in Sources */,
+				21E0261E2203A241006C3583 /* RCTACPLifecycle.m in Sources */,
+				2132E26922057F1D000DDF24 /* RCTACPIdentityDataBridge.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		58B511ED1A9E6C8500147676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		58B511EE1A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58B511F01A9E6C8500147676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libs",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RCTACPCore;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		58B511F11A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libs",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RCTACPCore;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RCTACPCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B511ED1A9E6C8500147676 /* Debug */,
+				58B511EE1A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RCTACPCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58B511F01A9E6C8500147676 /* Debug */,
+				58B511F11A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58B511D31A9E6C8500147676 /* Project object */;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "adobe-mobile-marketing-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "flow": "flow",
+    "build": "rm -fr lib flow && mkdir lib flow && ./node_modules/.bin/babel src/ -d lib/"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Adobe",
+  "license": "TODO",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-module-resolver": "^3.1.3",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react-native": "2.1.0",
+    "flow-bin": "^0.92.0"
+  },
+  "dependencies": {
+    "react": "16.3.1",
+    "react-native": "0.55.4"
+  }
+}
