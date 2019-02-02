@@ -1,4 +1,6 @@
-/*************************************************************************
+// @flow
+
+/** ***********************************************************************
 * ADOBE CONFIDENTIAL
 * ___________________
 *
@@ -13,16 +15,15 @@
 * Dissemination of this information or reproduction of this material
 * is strictly forbidden unless prior written permission is obtained
 * from Adobe.
-**************************************************************************/
+************************************************************************* */
 
 import { NativeModules } from 'react-native';
 
 const { RCTACPLifecycle } = NativeModules;
 
-const EXTENSION_VERSION = "1.0.0";
+const EXTENSION_VERSION = '1.0.0';
 
 export class ACPLifecycle {
-
   /**
    * Returns the version of the ACPLifecycle extension
    * @param  {string} Promise [description]
@@ -32,7 +33,6 @@ export class ACPLifecycle {
   }
 
   static registerExtension() {
-      RCTACPLifecycle.registerExtension();
+    RCTACPLifecycle.registerExtension();
   }
-
 }
