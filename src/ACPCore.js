@@ -1,4 +1,6 @@
-/*************************************************************************
+// @flow
+
+/** ***********************************************************************
 * ADOBE CONFIDENTIAL
 * ___________________
 *
@@ -13,7 +15,7 @@
 * Dissemination of this information or reproduction of this material
 * is strictly forbidden unless prior written permission is obtained
 * from Adobe.
-**************************************************************************/
+************************************************************************* */
 
 import { NativeModules } from 'react-native';
 
@@ -21,9 +23,9 @@ const { RCTACPCore } = NativeModules;
 
 // Define our enums
 export type ACPMobilePrivacyStatus =
-  | 'ACP_PRIVACY_STATUS_OPT_IN'
-  | 'ACP_PRIVACY_STATUS_OPT_OUT'
-  | 'ACP_PRIVACY_STATUS_UNKNOWN';
+  | "ACP_PRIVACY_STATUS_OPT_IN"
+  | "ACP_PRIVACY_STATUS_OPT_OUT"
+  | "ACP_PRIVACY_STATUS_UNKNOWN";
 const ACPPrivacyStatusValues: {|
   optIn: ACPMobilePrivacyStatus,
   optOut: ACPMobilePrivacyStatus,
@@ -35,15 +37,15 @@ const ACPPrivacyStatusValues: {|
 };
 
 export type ACPMobileLogLevel =
-  | 'ACP_LOG_LEVEL_ERROR'
-  | 'ACP_LOG_LEVEL_WARNING'
-  | 'ACP_LOG_LEVEL_DEBUG'
-  | 'ACP_LOG_LEVEL_VERBOSE';
+  | "ACP_LOG_LEVEL_ERROR"
+  | "ACP_LOG_LEVEL_WARNING"
+  | "ACP_LOG_LEVEL_DEBUG"
+  | "ACP_LOG_LEVEL_VERBOSE";
 const ACPLogLevelValues: {|
-  error: ACPMobileLogLevel,
-  warning: ACPMobileLogLevel,
   debug: ACPMobileLogLevel,
+  error: ACPMobileLogLevel,
   verbose: ACPMobileLogLevel,
+  warning: ACPMobileLogLevel,
 |} = {
   error: RCTACPCore.ACP_LOG_LEVEL_ERROR,
   warning: RCTACPCore.ACP_LOG_LEVEL_WARNING,
@@ -51,9 +53,11 @@ const ACPLogLevelValues: {|
   verbose: RCTACPCore.ACP_LOG_LEVEL_VERBOSE,
 };
 
-const EXTENSION_VERSION = "1.0.0";
+const EXTENSION_VERSION = '1.0.0';
 
 export class ACPCore {
+  static ACPMobilePrivacyStatus = ACPPrivacyStatusValues;
+  static ACPMobileLogLevel = ACPLogLevelValues;
 
   /**
    * Returns the version of the ACPCore extension
@@ -63,8 +67,9 @@ export class ACPCore {
     return Promise.resolve(EXTENSION_VERSION);
   }
 
-/**
- * Start the Core processing. This should be called after the initial set of extensions have been registered.
+  /**
+ * Start the Core processing.
+ * This should be called after the initial set of extensions have been registered.
  * This call will wait for any outstanding registrations to complete and then start event processing.
  * You can use the callback to kickoff additional operations immediately after any operations kicked off during registration.
  * @param  {boolean} Promise a promise that resolves when core has started
@@ -73,7 +78,7 @@ export class ACPCore {
     return RCTACPCore.start();
   }
 
- /**
+  /**
  * Load remote configuration specified by the given application ID
  *
  * Configure the SDK by downloading the remote configuration file hosted on Adobe servers
@@ -119,7 +124,7 @@ export class ACPCore {
     RCTACPCore.configureWithFileInPath(filepath);
   }
 
-/**
+  /**
  * @brief Update specific configuration parameters
  *
  * Update the current SDK configuration with specific key/value pairs. Keys not found in the current
@@ -157,11 +162,11 @@ export class ACPCore {
 
   // dispatchResponseEvent TODO
 
-  static trackAction(action: String, contextData:  { string: string }) {
+  static trackAction(action: String, contextData: { string: string }) {
     RCTACPCore.trackAction(action, contextData);
   }
 
-  static trackState(state: String, contextData:  { string: string }) {
+  static trackState(state: String, contextData: { string: string }) {
     RCTACPCore.trackState(state, contextData);
   }
 
@@ -196,5 +201,4 @@ export class ACPCore {
   static downloadRules() {
     RCTACPCore.downloadRules();
   }
-
 }

@@ -1,4 +1,6 @@
-/*************************************************************************
+// @flow
+
+/** ***********************************************************************
 * ADOBE CONFIDENTIAL
 * ___________________
 *
@@ -13,26 +15,20 @@
 * Dissemination of this information or reproduction of this material
 * is strictly forbidden unless prior written permission is obtained
 * from Adobe.
-**************************************************************************/
+************************************************************************* */
 
 import { NativeModules } from 'react-native';
 
 const { RCTACPSignal } = NativeModules;
 
-const EXTENSION_VERSION = "1.0.0";
+const EXTENSION_VERSION = '1.0.0';
 
 export class ACPSignal {
-
-  /**
-   * Returns the version of the ACPSignal extension
-   * @param  {string} Promise [description]
-   */
   static extensionVersion(): Promise<string> {
     return Promise.resolve(EXTENSION_VERSION);
   }
 
   static registerExtension() {
-      RCTACPSignal.registerExtension();
+    RCTACPSignal.registerExtension();
   }
-
 }

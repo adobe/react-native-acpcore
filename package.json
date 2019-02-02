@@ -1,11 +1,12 @@
 {
-  "name": "adobe-mobile-marketing-core",
+  "name": "ACPCoreBeta",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "flow": "flow",
+    "lint": "node_modules/.bin/eslint . --max-warnings=0 src/",
     "build": "rm -fr lib flow && mkdir lib flow && ./node_modules/.bin/babel src/ -d lib/"
   },
   "keywords": [
@@ -15,10 +16,21 @@
   "license": "TODO",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
     "babel-plugin-module-resolver": "^3.1.3",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native": "2.1.0",
-    "flow-bin": "^0.92.0"
+    "flow-typed": "^2.3.0",
+    "flow-bin": "^0.92.0",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-react-native": "^3.2.1"
   },
   "dependencies": {
     "react": "16.3.1",
