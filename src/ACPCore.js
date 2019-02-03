@@ -101,7 +101,7 @@ export class ACPCore {
  * added to the ADBMobile JSON file when downloaded from the Adobe Mobile Services UI and can be
  * found in Manage App Settings. A value of `nil` has no effect.
  */
-  static configureWithAppId(appId: String) {
+  static configureWithAppId(appId?: String) {
     RCTACPCore.configureWithAppId(appId);
   }
 
@@ -120,7 +120,7 @@ export class ACPCore {
    *
    * @param  {String} filepath absolute path to a local configuration file. A value of `nil` has no effect.
    */
-  static configureWithFileInPath(filepath: String) {
+  static configureWithFileInPath(filepath?: String) {
     RCTACPCore.configureWithFileInPath(filepath);
   }
 
@@ -136,7 +136,7 @@ export class ACPCore {
  *
  * @param  {{ string: any }} configMap configuration key/value pairs to be updated or added. A value of `nil` has no effect.
  */
-  static updateConfiguration(configMap: { string: any }) {
+  static updateConfiguration(configMap?: { string: any }) {
     RCTACPCore.updateConfiguration(configMap);
   }
 
@@ -162,23 +162,23 @@ export class ACPCore {
 
   // dispatchResponseEvent TODO
 
-  static trackAction(action: String, contextData: { string: string }) {
+  static trackAction(action?: String, contextData?: { string: string }) {
     RCTACPCore.trackAction(action, contextData);
   }
 
-  static trackState(state: String, contextData: { string: string }) {
+  static trackState(state?: String, contextData?: { string: string }) {
     RCTACPCore.trackState(state, contextData);
   }
 
-  static setAdvertisingIdentifier(advertisingIdentifier: String) {
+  static setAdvertisingIdentifier(advertisingIdentifier?: String) {
     RCTACPCore.setAdvertisingIdentifier(advertisingIdentifier);
   }
 
-  static setPushIdentifier(pushIdentifier: String) {
+  static setPushIdentifier(pushIdentifier?: String) {
     RCTACPCore.setPushIdentifier(pushIdentifier);
   }
 
-  static lifecycleStart(additionalContextData: { string: string }) {
+  static lifecycleStart(additionalContextData?: { string: string }) {
     RCTACPCore.lifecycleStart(additionalContextData);
   }
 
@@ -194,7 +194,7 @@ export class ACPCore {
     RCTACPCore.collectLaunchInfo();
   }
 
-  static setAppGroup(appGroup: String) {
+  static setAppGroup(appGroup?: String) {
     RCTACPCore.setAppGroup(appGroup);
   }
 

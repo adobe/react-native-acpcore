@@ -78,11 +78,11 @@ export class ACPIdentity {
     RCTACPIdentity.registerExtension();
   }
 
-  static syncIdentifiers(identifiers: {string: string}) {
+  static syncIdentifiers(identifiers?: {string: string}) {
     RCTACPIdentity.syncIdentifiers(identifiers);
   }
 
-  static syncIdentifiersWithAuthState(identifiers: {string: string}, authenticationState: ACPMobileVisitorAuthenticationState) {
+  static syncIdentifiersWithAuthState(identifiers?: {string: string}, authenticationState: ACPMobileVisitorAuthenticationState) {
     RCTACPIdentity.syncIdentifiers(identifiers, authenticationState);
   }
 
@@ -90,7 +90,7 @@ export class ACPIdentity {
     RCTACPIdentity.syncIdentifier(identifierType, identifier, authenticationState);
   }
 
-  static appendVisitorInfoForURL(baseURL: String): Promise<?string> {
+  static appendVisitorInfoForURL(baseURL?: String): Promise<?string> {
     return RCTACPIdentity.appendVisitorInfoForURL(baseURL);
   }
 
