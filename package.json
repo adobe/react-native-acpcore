@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "flow": "flow",
     "lint": "node_modules/.bin/eslint . --max-warnings=0 src/",
-    "build": "rm -fr lib flow && mkdir lib flow && ./node_modules/.bin/babel src/ -d lib/"
+    "build": "rm -fr lib flow && mkdir lib flow && ./node_modules/.bin/babel src/ -d lib/",
+    "prepublish": "npm run-script lint && npm run-script build"
   },
   "keywords": [
     "react-native"
