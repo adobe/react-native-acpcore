@@ -24,10 +24,18 @@ const { RCTACPSignal } = NativeModules;
 const EXTENSION_VERSION = '1.0.0';
 
 export class ACPSignal {
+
+  /**
+   * Returns the version of the ACPSignal extension
+   * @param  {string} Promise a promise that resolves with the extension verison
+   */
   static extensionVersion(): Promise<string> {
     return Promise.resolve(EXTENSION_VERSION);
   }
 
+  /**
+   * Registers the ACPSignal extension with ACPCore
+   */
   static registerExtension() {
     RCTACPSignal.registerExtension();
   }

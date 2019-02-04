@@ -32,6 +32,9 @@ export class ACPLifecycle {
     return Promise.resolve(EXTENSION_VERSION);
   }
 
+  /**
+   * Registers the ACPLifecycle extension with ACPCore
+   */
   static registerExtension() {
     RCTACPLifecycle.registerExtension();
   }
