@@ -1,0 +1,19 @@
+platform :ios, '10.0'
+
+target 'RCTACPCore' do
+  # inherit! :search_paths
+  # Pods for testing
+  pod 'ACPCore'
+  
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+  'Core',
+  'RCTAnimation',
+  'RCTBlob',
+  'RCTNetwork',
+  'RCTText',
+  'RCTWebSocket',
+  'CxxBridge',
+  'DevSupport',
+  ]
+  pod 'yoga', path: '../node_modules/react-native/ReactCommon/yoga'
+end
