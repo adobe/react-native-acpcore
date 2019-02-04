@@ -74,6 +74,9 @@ export class ACPIdentity {
     return Promise.resolve(EXTENSION_VERSION);
   }
 
+  /**
+   * Registers the ACPIdentity extension with ACPCore
+   */
   static registerExtension() {
     RCTACPIdentity.registerExtension();
   }
@@ -101,4 +104,5 @@ export class ACPIdentity {
   static getExperienceCloudId(): Promise<?string> {
     return RCTACPIdentity.getExperienceCloudId();
   }
+
 }

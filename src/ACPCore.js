@@ -97,7 +97,7 @@ export class ACPCore {
  * made using ACPCore::updateConfiguration:
  * and ACPCore::setPrivacyStatus: are always applied on top of configuration changes made using this API.
  *
- * @param  {String} appId a unique identifier assigned to the app instance by the Adobe Mobile Services. It is automatically
+ * @param  {String?} appId a unique identifier assigned to the app instance by the Adobe Mobile Services. It is automatically
  * added to the ADBMobile JSON file when downloaded from the Adobe Mobile Services UI and can be
  * found in Manage App Settings. A value of `nil` has no effect.
  */
@@ -118,7 +118,7 @@ export class ACPCore {
    * made using ACPCore::updateConfiguration:
    * and ACPCore::setPrivacyStatus: are always applied on top of configuration changes made using this API.
    *
-   * @param  {String} filepath absolute path to a local configuration file. A value of `nil` has no effect.
+   * @param  {String?} filepath absolute path to a local configuration file. A value of `nil` has no effect.
    */
   static configureWithFileInPath(filepath?: String) {
     RCTACPCore.configureWithFileInPath(filepath);
@@ -134,24 +134,44 @@ export class ACPCore {
  *
  * Using `nil` values is allowed and effectively removes the configuration parameter from the current configuration.
  *
- * @param  {{ string: any }} configMap configuration key/value pairs to be updated or added. A value of `nil` has no effect.
+ * @param  {{ string: any }?} configMap configuration key/value pairs to be updated or added. A value of `nil` has no effect.
  */
   static updateConfiguration(configMap?: { string: any }) {
     RCTACPCore.updateConfiguration(configMap);
   }
 
+/**
+ * Set the logging level of the SDK
+ *
+ * @param {ACPMobileLogLevel} mode ACPMobileLogLevel to be used by the SDK
+ */
   static setLogLevel(mode: ACPMobileLogLevel) {
     RCTACPCore.setLogLevel(mode);
   }
 
+/**
+ * Set the Adobe Mobile Privacy status
+ *
+ * @param {ACPMobilePrivacyStatus} privacyStatus ACPMobilePrivacyStatus to be set to the SDK
+ */
   static setPrivacyStatus(privacyStatus: ACPMobilePrivacyStatus) {
     RCTACPCore.setPrivacyStatus(privacyStatus);
   }
 
+  /**
+   * Get the current Adobe Mobile Privacy Status
+   *
+   * @return {ACPMobilePrivacyStatus} the current privacy status
+   */
   static getPrivacyStatus(): Promise<ACPMobilePrivacyStatus> {
     return RCTACPCore.getPrivacyStatus();
   }
 
+/**
+ * Calls the provided callback with a JSON string containing all of the user's identities known by the SDK
+ *
+ * @return {string?} known identifier as a JSON string
+ */
   static getSdkIdentities(): Promise<?string> {
     return RCTACPCore.getSdkIdentities();
   }
@@ -162,43 +182,126 @@ export class ACPCore {
 
   // dispatchResponseEvent TODO
 
+  /**
+   * This method sends a generic Analytics action tracking hit with context data.
+   *
+   *  Actions represent events that occur in your application that you want to measure; the corresponding metrics will
+   *  be incremented each time the event occurs. For example, you may want to track when an user click on the login
+   *  button or a certain article was viewed.
+   *
+   *  note: when using the Adobe Analytics extension, calling this API will increment page views
+   * @param  {String?} state containing the name of the state to track
+   * @param  {{ string: string }?} contextData containing context data to attach on this hit
+   */
   static trackAction(action?: String, contextData?: { string: string }) {
     RCTACPCore.trackAction(action, contextData);
   }
 
+/**
+ * This method sends a generic Analytics state tracking hit with context data.
+ *
+ *  States represent different screens or views of you application. When the user navigates between application pages,
+ *  a new track call should be sent with current state name. Tracking state name is typically called from a
+ *  Component in the componentDidMount function.
+ *
+ *  note: when using the Adobe Analytics extension, calling this API will increment page views
+ * @param  {String?} state containing the name of the state to track
+ * @param  {{ string: string }?} contextData containing context data to attach on this hit
+ */
   static trackState(state?: String, contextData?: { string: string }) {
     RCTACPCore.trackState(state, contextData);
   }
 
+/**
+ * Submits a generic event containing the provided IDFA with event type `generic.identity`.
+ *
+ * When using the Adobe Identity extension, the following applies:
+ *   - If the IDFA was set in the SDK, the IDFA will be sent in lifecycle. It can also be accessed in Signals (Postbacks).
+ *   - This ID is preserved between app upgrades, is saved and restored during the standard application backup process,
+ *     and is removed at uninstall.
+ *   - If the Mobile SDK is configured with `identity.adidEnabled` set to `false`, then the advertising identifier
+ *     is not set or stored.
+ *
+ * @param {String?} advertisingIdentifier the advertising idenifier string.
+ */
   static setAdvertisingIdentifier(advertisingIdentifier?: String) {
     RCTACPCore.setAdvertisingIdentifier(advertisingIdentifier);
   }
 
+/**
+ * Submits a generic event containing the provided push token with event type `generic.identity`.
+ *
+ * When using the Adobe Identity extension, the following applies:
+ *   - If the current SDK privacy status is \ref ACPMobilePrivacyStatusOptOut, then the push identifier is not set.
+ *
+ * @param {String?} pushIdentifier the device token for push notifications
+ */
   static setPushIdentifier(pushIdentifier?: String) {
     RCTACPCore.setPushIdentifier(pushIdentifier);
   }
 
+/**
+ * Submits a generic event to start/resume lifecycle collection with event type `generic.lifecycle`.
+ *
+ * When using the Adobe Lifecycle extension, the following applies:
+ *   - Start a new lifecycle session or resume a previously paused lifecycle session. If a previously paused session
+ *     timed out, then a new session is created. If a current session is running, then calling this method does nothing.
+ *   - Additional context data may be passed when calling this method. Lifecycle data and any additional data are
+ *     sent as context data parameters to Analytics, to Target as mbox parameters, and for Audience Manager they are
+ *     sent as customer variables. Any additional data is also used by the Rules Engine when processing rules.
+ *
+ * @param  {{ string: string }?} additionalContextData optional additional context for this session.
+ */
   static lifecycleStart(additionalContextData?: { string: string }) {
     RCTACPCore.lifecycleStart(additionalContextData);
   }
 
+ /**
+  * Submits a generic event to pause lifecycle collection with event type `generic.lifecycle`.
+  *
+  * When using the Adobe Lifecycle extension, the following applies:
+  *   - Pauses the current lifecycle session. Calling pause on an already paused session updates the paused timestamp,
+  *     having the effect of resetting the session timeout timer. If no lifecycle session is running, then calling
+  *     this method does nothing.
+  *   - A paused session is resumed if ACPCore::lifecycleStart: is called before the session timeout. After
+  *     the session timeout, a paused session is closed and calling ACPCore::lifecycleStart: will create
+  *     a new session. The session timeout is defined by the `lifecycle.sessionTimeout` configuration parameter.
+  *   - If not defined, the default session timeout is five minutes.
+  */
   static lifecyclePause() {
     RCTACPCore.lifecyclePause();
   }
 
+/**
+ * Collect PII data. Although using this call enables collection of PII data, the SDK does not
+ * automatically send the data to any Adobe endpoint.
+ *
+ * @param  {{ string: string }} data the dictionary containing the PII data to be collected
+ */
   static collectPii(data: { string: string }) {
     RCTACPCore.collectPii(data);
   }
 
+  // TODO, should we make this native only?
   static collectLaunchInfo() {
     RCTACPCore.collectLaunchInfo();
   }
 
+  // iOS only
+  // TODO, should we make this native only
   static setAppGroup(appGroup?: String) {
     RCTACPCore.setAppGroup(appGroup);
   }
 
+  /**
+  * iOS only
+  * RulesEngine API to download and refresh rules from the server.
+  *
+  * Forces Rules Engine to send a network request to the rules url in Configuration,
+  * to refresh rules content set in the SDK.
+   */
   static downloadRules() {
     RCTACPCore.downloadRules();
   }
+
 }
