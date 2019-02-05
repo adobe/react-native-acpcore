@@ -18,7 +18,7 @@
 * from Adobe.
 ************************************************************************* */
 
-// export * from 'ACPCore';
+export * from 'ACPCore';
 // export * from 'ACPIdentity';
 // export * from 'ACPLifecycle';
 // export * from 'ACPSignal';
@@ -29,4 +29,4 @@
 //
 // export default RCTACPCore;
 
-const CoreAPI = require('react-native').NativeModules.ACPCore;
+// const ACPCore = require('react-native').NativeModules.ACPCore;
