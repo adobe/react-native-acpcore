@@ -18,11 +18,7 @@ const ACPSignal = NativeModules.ACPSignal;
 type Props = {};
 export default class App extends Component<Props> {
   render() {
-    ACPCore.setLogLevel("ACP_LOG_LEVEL_VERBOSE");
-    ACPLifecycle.registerExtension();
-    ACPIdentity.registerExtension();
-    ACPSignal.registerExtension();
-
+    this.initSDK();
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={{ marginTop: 75 }}>
@@ -50,6 +46,19 @@ export default class App extends Component<Props> {
         </ScrollView>
       </View>
     );
+  }
+
+  async initSDK() {
+    ACPCore.setLogLevel("ACP_LOG_LEVEL_VERBOSE");
+    ACPCore.configureWithAppId("launch-EN1a68f9bc5b3c475b8c232adc3f8011fb");
+    ACPLifecycle.registerExtension();
+    ACPIdentity.registerExtension();
+    ACPSignal.registerExtension();
+    try {
+      ACPCore.start();
+    } catch(e) {
+      console.log("Failed to start ACPCore");
+    }
   }
 
   async coreExtensionVersion() {
@@ -119,7 +128,7 @@ export default class App extends Component<Props> {
   }
 
   lifecycleStart() {
-    ACPCore.lifecycleStart();
+    ACPCore.lifecycleStart({});
   }
 
   lifecyclePause() {
