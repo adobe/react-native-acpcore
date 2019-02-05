@@ -28,5 +28,7 @@
 
 + (NSString *)stringFromPrivacyStatus: (ACPMobilePrivacyStatus) status;
 
++ (NSDictionary *)sanitizeDictionaryToContainClass: (Class) type WithDictionary:(NSDictionary *)dict;
+
 @end
 

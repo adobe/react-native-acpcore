@@ -128,7 +128,7 @@ export default class App extends Component<Props> {
   }
 
   lifecycleStart() {
-    ACPCore.lifecycleStart({});
+    ACPCore.lifecycleStart({"lifecycleStart": "myData"});
   }
 
   lifecyclePause() {
@@ -136,7 +136,43 @@ export default class App extends Component<Props> {
   }
 
   collectPii() {
-    // todo
+    ACPCore.collectPii({"myPii": "data"});
+  }
+
+  // identity
+
+  syncIdentifiers() {
+    ACPIdentity.syncIdentifiers({"id1": "identifier1"});
+  }
+
+  syncIdentifiersWithAuthState() {
+    ACPCore.syncIdentifiers({"id1": "identifier1"}, "ACP_VISITOR_AUTH_STATE_AUTHENTICATED");
+  }
+
+  syncIdentifier() {
+    ACPIdentity.syncIdentifier("idType", "ID", "ACP_VISITOR_AUTH_STATE_AUTHENTICATED");
+  }
+
+  appendVisitorInfoForURL() {
+    // TODO
+  }
+
+  async getIdentifiers() {
+    try {
+      var cloudId = await ACPIdentity.getIdentifiers();
+      console.log("ACPIdentity identifiers: " + identities);
+    } catch (e) {
+      console.log("failed to get identifiers");
+    }
+  }
+
+  async getExperienceCloudId() {
+    try {
+      var cloudId = await ACPIdentity.getExperienceCloudId();
+      console.log("ACPIdentity cloudId: " + cloudId);
+    } catch (e) {
+      console.log("failed to get cloudId");
+    }
   }
 
 }
