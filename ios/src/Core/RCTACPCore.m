@@ -23,6 +23,8 @@
 
 @implementation RCTACPCore
 
+RCT_EXPORT_MODULE(ACPCore);
+
 static NSString* const EXTENSION_NAME = @"RCTACPCore";
 static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dictionary to Event";
 
@@ -37,7 +39,9 @@ static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dic
     return [RCTACPCoreDataBridge getCoreConstants];
 }
 
-RCT_EXPORT_MODULE()
++ (BOOL)requiresMainQueueSetup {
+    return YES;
+}
 
 /*
  * @brief Start the Core processing. This should be called after the initial set of extensions have been registered.

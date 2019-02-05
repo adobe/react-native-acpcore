@@ -19,7 +19,9 @@
 
 import { NativeModules } from 'react-native';
 
-const { RCTACPCore } = NativeModules;
+// const { RCTACPCore: Native } = NativeModules;
+
+const { RCTACPCore } = NativeModules
 
 // Define our enums
 export type ACPMobilePrivacyStatus =
@@ -140,7 +142,7 @@ export class ACPCore {
     RCTACPCore.updateConfiguration(configMap);
   }
 
-/**
+  /**
  * Set the logging level of the SDK
  *
  * @param {ACPMobileLogLevel} mode ACPMobileLogLevel to be used by the SDK
@@ -149,7 +151,7 @@ export class ACPCore {
     RCTACPCore.setLogLevel(mode);
   }
 
-/**
+  /**
  * Set the Adobe Mobile Privacy status
  *
  * @param {ACPMobilePrivacyStatus} privacyStatus ACPMobilePrivacyStatus to be set to the SDK
@@ -167,7 +169,7 @@ export class ACPCore {
     return RCTACPCore.getPrivacyStatus();
   }
 
-/**
+  /**
  * Calls the provided callback with a JSON string containing all of the user's identities known by the SDK
  *
  * @return {string?} known identifier as a JSON string
@@ -197,7 +199,7 @@ export class ACPCore {
     RCTACPCore.trackAction(action, contextData);
   }
 
-/**
+  /**
  * This method sends a generic Analytics state tracking hit with context data.
  *
  *  States represent different screens or views of you application. When the user navigates between application pages,
@@ -212,7 +214,7 @@ export class ACPCore {
     RCTACPCore.trackState(state, contextData);
   }
 
-/**
+  /**
  * Submits a generic event containing the provided IDFA with event type `generic.identity`.
  *
  * When using the Adobe Identity extension, the following applies:
@@ -228,7 +230,7 @@ export class ACPCore {
     RCTACPCore.setAdvertisingIdentifier(advertisingIdentifier);
   }
 
-/**
+  /**
  * Submits a generic event containing the provided push token with event type `generic.identity`.
  *
  * When using the Adobe Identity extension, the following applies:
@@ -240,7 +242,7 @@ export class ACPCore {
     RCTACPCore.setPushIdentifier(pushIdentifier);
   }
 
-/**
+  /**
  * Submits a generic event to start/resume lifecycle collection with event type `generic.lifecycle`.
  *
  * When using the Adobe Lifecycle extension, the following applies:
@@ -256,7 +258,7 @@ export class ACPCore {
     RCTACPCore.lifecycleStart(additionalContextData);
   }
 
- /**
+  /**
   * Submits a generic event to pause lifecycle collection with event type `generic.lifecycle`.
   *
   * When using the Adobe Lifecycle extension, the following applies:
@@ -272,7 +274,7 @@ export class ACPCore {
     RCTACPCore.lifecyclePause();
   }
 
-/**
+  /**
  * Collect PII data. Although using this call enables collection of PII data, the SDK does not
  * automatically send the data to any Adobe endpoint.
  *

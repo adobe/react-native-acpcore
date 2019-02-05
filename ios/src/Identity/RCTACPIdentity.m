@@ -21,15 +21,20 @@
 
 @implementation RCTACPIdentity
 
+//RCT_EXPORT_MODULE();
+
 - (dispatch_queue_t)methodQueue
 {
     return dispatch_get_main_queue();
 }
-RCT_EXPORT_MODULE()
 
 - (NSDictionary *)constantsToExport {
     return [RCTACPIdentityDataBridge getIdentityConstants];
 }
+
+//+ (BOOL)requiresMainQueueSetup {
+//    return YES;
+//}
 
 /**
  * @brief Registers the ACPIdentity extension with the Core Event Hub.
