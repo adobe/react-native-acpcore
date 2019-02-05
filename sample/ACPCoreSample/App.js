@@ -22,6 +22,7 @@ export default class App extends Component<Props> {
     ACPLifecycle.registerExtension();
     ACPIdentity.registerExtension();
     ACPSignal.registerExtension();
+
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={{ marginTop: 75 }}>
@@ -39,8 +40,6 @@ export default class App extends Component<Props> {
         <Button title="ACPCore::lifecycleStart()" onPress={this.lifecycleStart}/>
         <Button title="ACPCore::lifecyclePause()" onPress={this.lifecyclePause}/>
         <Button title="ACPCore::collectPii()" onPress={this.collectPii}/>
-        <Button title="ACPCore::setAppGroup()" onPress={this.setAppGroup}/>
-        <Button title="ACPCore::downloadRules()" onPress={this.downloadRules}/>
 
         <Button title="ACPIdentity::syncIdentifiers()" onPress={this.syncIdentifiers}/>
         <Button title="ACPIdentity::syncIdentifiersWithAuthState()" onPress={this.syncIdentifiersWithAuthState}/>
@@ -89,11 +88,11 @@ export default class App extends Component<Props> {
     }
   }
 
-  async setPrivacyOptIn() {
+  setPrivacyOptIn() {
     ACPCore.setPrivacyStatus("ACP_PRIVACY_STATUS_OPT_IN");
   }
 
-  async setPrivacyOptOut() {
+  setPrivacyOptOut() {
     ACPCore.setPrivacyStatus("ACP_PRIVACY_STATUS_OPT_OUT");
   }
 
@@ -106,6 +105,30 @@ export default class App extends Component<Props> {
     }
   }
 
+  async getSdkIdentities() {
+    try {
+      var identities = await ACPCore.getSdkIdentities();
+      console.log("ACPCore identities: " + identities);
+    } catch (e) {
+      console.log("failed to get identities");
+    }
+  }
+
+  setAdvertisingIdentifier() {
+    ACPCore.setAdvertisingIdentifier("adID");
+  }
+
+  lifecycleStart() {
+    ACPCore.lifecycleStart();
+  }
+
+  lifecyclePause() {
+    ACPCore.lifecyclePause();
+  }
+
+  collectPii() {
+    // todo
+  }
 
 }
 
