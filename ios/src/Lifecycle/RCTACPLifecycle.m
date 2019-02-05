@@ -20,11 +20,20 @@
 
 @implementation RCTACPLifecycle
 
-//RCT_EXPORT_MODULE();
+RCT_EXPORT_MODULE();
+
+static NSString* const EXTENSION_VERSION = @"1.0.0";
 
 - (dispatch_queue_t)methodQueue
 {
     return dispatch_get_main_queue();
+}
+
+/**
+ * @brief Returns the current version of the ACPLifecycle Extension.
+ */
+RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
+    resolve(EXTENSION_VERSION);
 }
 
 /**

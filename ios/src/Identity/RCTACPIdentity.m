@@ -21,7 +21,9 @@
 
 @implementation RCTACPIdentity
 
-//RCT_EXPORT_MODULE();
+RCT_EXPORT_MODULE();
+
+static NSString* const EXTENSION_VERSION = @"1.0.0";
 
 - (dispatch_queue_t)methodQueue
 {
@@ -32,9 +34,16 @@
     return [RCTACPIdentityDataBridge getIdentityConstants];
 }
 
-//+ (BOOL)requiresMainQueueSetup {
-//    return YES;
-//}
++ (BOOL)requiresMainQueueSetup {
+    return YES;
+}
+
+/**
+ * @brief Returns the current version of the ACPIdentity Extension.
+ */
+RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
+    resolve(EXTENSION_VERSION);
+}
 
 /**
  * @brief Registers the ACPIdentity extension with the Core Event Hub.
@@ -67,7 +76,7 @@ RCT_EXPORT_METHOD(appendToUrl:(nonnull NSString*)baseUrl resolver:(RCTPromiseRes
  * @see ADBMobileMarketing::syncIdentifier:identifier:authentication:
  * @see ADBMobileMarketing::syncIdentifiers:
  */
-RCT_EXPORT_METHOD(getIdentifiers:(RCTPromiseResolveBlock) resolve) {
+RCT_EXPORT_METHOD(getIdentifiers:(RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     [ACPIdentity getIdentifiers:^(NSArray<ACPMobileVisitorId *> * _Nullable visitorIDs) {
         NSMutableArray *visitorIDArr = [NSMutableArray array];
         for (ACPMobileVisitorId* visitorID in visitorIDs) {
@@ -87,7 +96,7 @@ RCT_EXPORT_METHOD(getIdentifiers:(RCTPromiseResolveBlock) resolve) {
  *
  * @param callback method which will be invoked once Experience Cloud ID is available.
  */
-RCT_EXPORT_METHOD(getExperienceCloudId:(RCTPromiseResolveBlock) resolve) {
+RCT_EXPORT_METHOD(getExperienceCloudId:(RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     [ACPIdentity getExperienceCloudId:^(NSString * _Nullable experienceCloudId) {
         resolve(experienceCloudId);
     }];

@@ -26,6 +26,7 @@
 RCT_EXPORT_MODULE(ACPCore);
 
 static NSString* const EXTENSION_NAME = @"RCTACPCore";
+static NSString* const EXTENSION_VERSION = @"1.0.0";
 static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dictionary to Event";
 
 // https://facebook.github.io/react-native/docs/native-modules-ios#threading
@@ -43,6 +44,13 @@ static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dic
     return YES;
 }
 
+/**
+ * @brief Returns the current version of the ACPCore Extension.
+ */
+RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
+    resolve(EXTENSION_VERSION);
+}
+
 /*
  * @brief Start the Core processing. This should be called after the initial set of extensions have been registered.
  *
@@ -51,7 +59,7 @@ static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dic
  *
  * @param callback An optional method invoked after registrations are complete
  */
-RCT_EXPORT_METHOD(start: (RCTPromiseResolveBlock) resolve) {
+RCT_EXPORT_METHOD(start: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     [ACPCore start:^{
         resolve(@(YES));
     }];
@@ -137,7 +145,7 @@ RCT_EXPORT_METHOD(setLogLevel: (NSString *) logLevelString) {
  * @param callback method invoked with the configured privacy status as a parameter
  * @see ACPMobilePrivacyStatus
  */
-RCT_EXPORT_METHOD(getPrivacyStatus: (RCTPromiseResolveBlock) resolve) {
+RCT_EXPORT_METHOD(getPrivacyStatus: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     [ACPCore getPrivacyStatus:^(ACPMobilePrivacyStatus status) {
         resolve([RCTACPCoreDataBridge stringFromPrivacyStatus:status]);
     }];
@@ -161,7 +169,7 @@ RCT_EXPORT_METHOD(setPrivacyStatus: (NSString *) statusString) {
  * @brief Calls the provided callback with a JSON string containing all of the user's identities known by the SDK
  * @param callback a void-returning method that has an NSString param containing a JSON string
  */
-RCT_EXPORT_METHOD(getSdkIdentities: (RCTPromiseResolveBlock) resolve) {
+RCT_EXPORT_METHOD(getSdkIdentities: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     [ACPCore getSdkIdentities:^(NSString * _Nullable content) {
         resolve(content);
     }];
