@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		210688C7220A2B460085783D /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 210688C6220A2B460085783D /* CalendarManager.m */; };
 		210E3BAF2200E9CF00AC9192 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BAE2200E9CF00AC9192 /* UIKit.framework */; };
 		210E3BB12200E9D400AC9192 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB02200E9D400AC9192 /* SystemConfiguration.framework */; };
 		210E3BB32200E9DB00AC9192 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB22200E9DB00AC9192 /* WebKit.framework */; };
@@ -42,8 +41,6 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRCTACPCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTACPCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		210688C5220A2B460085783D /* CalendarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CalendarManager.h; path = src/CalendarManager.h; sourceTree = "<group>"; };
-		210688C6220A2B460085783D /* CalendarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CalendarManager.m; path = src/CalendarManager.m; sourceTree = "<group>"; };
 		210E3BAE2200E9CF00AC9192 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		210E3BB02200E9D400AC9192 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		210E3BB22200E9DB00AC9192 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -191,8 +188,6 @@
 			children = (
 				B3E7B5881CC2AC0600A0062D /* RCTACPCore.h */,
 				B3E7B5891CC2AC0600A0062D /* RCTACPCore.m */,
-				210688C5220A2B460085783D /* CalendarManager.h */,
-				210688C6220A2B460085783D /* CalendarManager.m */,
 				21E0261622039C07006C3583 /* RCTACPCoreDataBridge.h */,
 				21E0261722039C07006C3583 /* RCTACPCoreDataBridge.m */,
 			);
@@ -279,7 +274,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				21E025FC2202252B006C3583 /* ACPExtensionEvent+ReactNative.m in Sources */,
-				210688C7220A2B460085783D /* CalendarManager.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RCTACPCore.m in Sources */,
 				21E0261B2203A235006C3583 /* RCTACPIdentity.m in Sources */,
 				21E0261822039C07006C3583 /* RCTACPCoreDataBridge.m in Sources */,

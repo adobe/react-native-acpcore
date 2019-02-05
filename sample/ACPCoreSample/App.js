@@ -10,16 +10,12 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Button, ScrollView, NativeModules} from 'react-native';
 
-const CalendarManager = NativeModules.CalendarManager;
 const ACPCore = NativeModules.ACPCore;
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
-    console.log("test");
-    console.log(NativeModules);
     ACPCore.configureWithAppId("test123");
-    CalendarManager.addEvent('Birthday Party', '4 Privet Drive, Surrey');
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={{ marginTop: 75 }}>
