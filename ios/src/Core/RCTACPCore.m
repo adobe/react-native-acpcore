@@ -190,8 +190,8 @@ RCT_EXPORT_METHOD(setAppGroup: (nullable NSString*) appGroup) {
  *    @brief Submits a generic PII collection request event with type `generic.pii`.
  *    @param data a dictionary containing PII data
  */
-RCT_EXPORT_METHOD(collectPii: (nonnull NSDictionary<NSString*, NSString*>*) data) {
-    [ACPCore collectPii:data];
+RCT_EXPORT_METHOD(collectPii: (nonnull NSDictionary*) data) {
+    [ACPCore collectPii:[RCTACPCoreDataBridge sanitizeDictionaryToContainClass:[NSString class] WithDictionary:data]];
 }
 
 /**
@@ -222,8 +222,8 @@ RCT_EXPORT_METHOD(lifecyclePause) {
  *
  * @param additionalContextData optional additional context for this session.
  */
-RCT_EXPORT_METHOD(lifecycleStart: (nullable NSDictionary<NSString*, NSString*>*) additionalContextData) {
-    [ACPCore lifecycleStart:additionalContextData];
+RCT_EXPORT_METHOD(lifecycleStart: (nullable NSDictionary*) additionalContextData) {
+    [ACPCore lifecycleStart:[RCTACPCoreDataBridge sanitizeDictionaryToContainClass:[NSString class] WithDictionary:additionalContextData]];
 }
 
 /**
