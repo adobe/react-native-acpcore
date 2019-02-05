@@ -2,13 +2,13 @@
   "name": "react-native-acpcore",
   "version": "0.0.1",
   "description": "",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "flow": "flow",
     "lint": "node_modules/.bin/eslint . --max-warnings=0 src/",
-    "build": "rm -fr lib flow && mkdir lib flow && ./node_modules/.bin/babel src/ -d lib/",
-    "prepublish": "npm run-script lint && npm run-script build"
+    "lint-fix": "node_modules/.bin/eslint . --fix src/",
+    "build": "rm -fr lib flow && mkdir lib flow && ./node_modules/.bin/babel src/ -d lib/"
   },
   "keywords": [
     "react-native"
@@ -34,7 +34,7 @@
     "eslint-plugin-react-native": "^3.2.1"
   },
   "dependencies": {
-    "react": "16.3.1",
-    "react-native": "0.55.4"
+    "react": "16.6.3",
+    "react-native": "0.58.3"
   }
 }

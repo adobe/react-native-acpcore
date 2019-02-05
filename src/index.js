@@ -1,4 +1,5 @@
 // @flow
+'use strict';
 
 /** ***********************************************************************
 * ADOBE CONFIDENTIAL
@@ -17,7 +18,15 @@
 * from Adobe.
 ************************************************************************* */
 
-export * from 'ACPCore';
-export * from 'ACPIdentity';
-export * from 'ACPLifecycle';
-export * from 'ACPSignal';
+// export * from 'ACPCore';
+// export * from 'ACPIdentity';
+// export * from 'ACPLifecycle';
+// export * from 'ACPSignal';
+
+// import { NativeModules } from 'react-native';
+
+// const { ACPCore } = NativeModules;
+//
+// export default RCTACPCore;
+
+const CoreAPI = require('react-native').NativeModules.ACPCore;

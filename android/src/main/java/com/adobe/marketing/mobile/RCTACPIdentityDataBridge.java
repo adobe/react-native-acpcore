@@ -29,6 +29,12 @@ public final class RCTACPIdentityDataBridge {
     private static final String ACP_VISITOR_AUTH_STATE_LOGGED_OUT = "ACP_VISITOR_AUTH_STATE_LOGGED_OUT";
     private static final String ACP_VISITOR_AUTH_STATE_UNKNOWN = "ACP_VISITOR_AUTH_STATE_UNKNOWN";
 
+    // Visitor ID
+    private static final String ACP_VISITOR_ID_ORIGIN = "idOrigin";
+    private static final String ACP_VISITOR_ID_TYPE = "idType";
+    private static final String ACP_VISITOR_IDENTIFIER = "identifier";
+    private static final String ACP_VISITOR_AUTH_STATE = "authenticationState";
+
     public static HashMap<String, Object> getIdentityConstants() {
         HashMap<String, Object> map = new HashMap<>();
         map.put(ACP_VISITOR_AUTH_STATE_AUTHENTICATED, ACP_VISITOR_AUTH_STATE_AUTHENTICATED);
@@ -65,10 +71,10 @@ public final class RCTACPIdentityDataBridge {
     }
 
     public static VisitorID visitorIdentifierFromReadableMap(final ReadableMap map) {
-        return new VisitorID(RCTACPCoreDataBridge.getNullableString(map, VISITOR_ID_ID_ORIGIN_KEY),
-                RCTACPCoreDataBridge.getNullableString(map, VISITOR_ID_ID_TYPE_KEY),
-                RCTACPCoreDataBridge.getNullableString(map, VISITOR_ID_ID_KEY),
-                authenticationStateFromString(RCTACPCoreDataBridge.getNullableString(map, VISITOR_ID_AUTH_STATE_KEY)));
+        return new VisitorID(RCTACPCoreDataBridge.getNullableString(map, ACP_VISITOR_ID_ORIGIN),
+                RCTACPCoreDataBridge.getNullableString(map, ACP_VISITOR_ID_TYPE),
+                RCTACPCoreDataBridge.getNullableString(map, ACP_VISITOR_IDENTIFIER),
+                authenticationStateFromString(RCTACPCoreDataBridge.getNullableString(map, ACP_VISITOR_AUTH_STATE)));
     }
 
     /**
@@ -78,10 +84,10 @@ public final class RCTACPIdentityDataBridge {
      */
     public static WritableMap mapFromVisitorIdentifier(final VisitorID visitorID) {
         WritableMap visitorIDMap = new WritableNativeMap();
-        visitorIDMap.putString(VISITOR_ID_ID_ORIGIN_KEY, visitorID.getIdOrigin());
-        visitorIDMap.putString(VISITOR_ID_ID_TYPE_KEY, visitorID.getIdType());
-        visitorIDMap.putString(VISITOR_ID_ID_KEY, visitorID.getId());
-        visitorIDMap.putString(VISITOR_ID_AUTH_STATE_KEY, stringFromAuthState(visitorID.getAuthenticationState()));
+        visitorIDMap.putString(ACP_VISITOR_ID_ORIGIN, visitorID.getIdOrigin());
+        visitorIDMap.putString(ACP_VISITOR_ID_TYPE, visitorID.getIdType());
+        visitorIDMap.putString(ACP_VISITOR_IDENTIFIER, visitorID.getId());
+        visitorIDMap.putString(ACP_VISITOR_AUTH_STATE, stringFromAuthState(visitorID.getAuthenticationState()));
 
         return visitorIDMap;
     }
