@@ -26,7 +26,6 @@
 RCT_EXPORT_MODULE(ACPCore);
 
 static NSString* const EXTENSION_NAME = @"RCTACPCore";
-static NSString* const EXTENSION_VERSION = @"1.0.0";
 static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dictionary to Event";
 
 // https://facebook.github.io/react-native/docs/native-modules-ios#threading
@@ -42,13 +41,6 @@ static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dic
 
 + (BOOL)requiresMainQueueSetup {
     return YES;
-}
-
-/**
- * @brief Returns the current version of the ACPCore Extension.
- */
-RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    resolve(EXTENSION_VERSION);
 }
 
 /*
