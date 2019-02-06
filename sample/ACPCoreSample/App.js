@@ -126,6 +126,7 @@ export default class App extends Component<Props> {
   getExperienceCloudId() {
     ACPIdentity.getExperienceCloudId().then(cloudId => console.log("AMSDK: CloudID = " + cloudId));
   }
+  
 }
 
 const styles = StyleSheet.create({

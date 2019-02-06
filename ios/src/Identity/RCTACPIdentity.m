@@ -54,7 +54,7 @@ RCT_EXPORT_METHOD(registerExtension) {
  * @param baseUrl URL to which the visitor info needs to be appended. Returned as is if it is nil or empty.
  * @param callback method which will be invoked once the updated url is available.
  */
-RCT_EXPORT_METHOD(appendToUrl:(nonnull NSString*)baseUrl resolver:(RCTPromiseResolveBlock) resolve) {
+RCT_EXPORT_METHOD(appendToUrl:(nonnull NSString*)baseUrl resolver:(RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     [ACPIdentity appendToUrl:[NSURL URLWithString:baseUrl] withCallback:^(NSURL * _Nullable urlWithVisitorData) {
         resolve(urlWithVisitorData.absoluteString);
     }];
