@@ -2,7 +2,7 @@
   "presets": ["flow", "react-native"],
     "plugins": [
       ["module-resolver", {
-        "root": [ "./src/" ]
+        "root": [ "./js/" ]
       }]
     ]
 }
