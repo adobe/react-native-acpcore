@@ -18,18 +18,22 @@
 
 'use strict';
 
+const RCTACPSignal = require('react-native').NativeModules.ACPSignal;
+
 module.exports = {
-
-  get ACPCore() {
-    return require('./ACPCore');
+  /**
+   * Returns the version of the ACPSignal extension
+   * @param  {string} Promise [description]
+   */
+  extensionVersion(): Promise<string> {
+    return Promise.resolve("1.0.0");
   },
 
-  get ACPLifecycle() {
-    return require('./ACPLifecycle');
+  /**
+   * Registers the ACPSignal extension with ACPCore
+   */
+  registerExtension() {
+    RCTACPSignal.registerExtension();
   },
 
-  get ACPSignal() {
-    return require('./ACPSignal');
-  },
-
-};
+}
