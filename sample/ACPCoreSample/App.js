@@ -9,8 +9,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Button, ScrollView, NativeModules} from 'react-native';
-// import * as Core from 'react-native-acpcore';
-import {ACPCore} from 'react-native-acpcore';
+import { ACPCore } from 'react-native-acpcore';
 
 const ACPCoreTwo = NativeModules.ACPCore;
 const ACPLifecycle = NativeModules.ACPLifecycle;
@@ -64,12 +63,7 @@ export default class App extends Component<Props> {
   }
 
   async coreExtensionVersion() {
-    try {
-      var version = await ACPCore.extensionVersion();
-      console.log("ACPCore version: " + version);
-    } catch (e) {
-      console.log("failed to get version");
-    }
+    ACPCore.extensionVersion().then(version => console.log(version));
   }
 
   async identityExtensionVersion() {
