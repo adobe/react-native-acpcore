@@ -32,4 +32,8 @@ module.exports = {
     return require('./ACPSignal');
   },
 
+  get ACPIdentity() {
+    return require('./ACPIdentity');
+  },
+
 };

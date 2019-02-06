@@ -18,7 +18,7 @@
 
 'use strict';
 
-const RCTACPLifecycle = require('react-native').NativeModules.ACPSignal;
+const RCTACPLifecycle = require('react-native').NativeModules.ACPLifecycle;
 
 module.exports = {
   /**

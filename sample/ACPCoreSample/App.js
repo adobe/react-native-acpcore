@@ -9,12 +9,9 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Button, ScrollView, NativeModules} from 'react-native';
-import { ACPCore } from 'react-native-acpcore';
+import { ACPCore, ACPLifecycle, ACPSignal } from 'react-native-acpcore';
 
-const ACPCoreTwo = NativeModules.ACPCore;
-const ACPLifecycle = NativeModules.ACPLifecycle;
 const ACPIdentity = NativeModules.ACPIdentity;
-const ACPSignal = NativeModules.ACPSignal;
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -62,8 +59,8 @@ export default class App extends Component<Props> {
     }
   }
 
-  async coreExtensionVersion() {
-    ACPCore.extensionVersion().then(version => console.log(version));
+  coreExtensionVersion() {
+    ACPCore.extensionVersion().then(version => console.log("ACPCore version: " + version));
   }
 
   async identityExtensionVersion() {
@@ -76,21 +73,11 @@ export default class App extends Component<Props> {
   }
 
   async lifecycleExtensionVersion() {
-    try {
-      var version = await ACPLifecycle.extensionVersion();
-      console.log("ACPLifecycle version: " + version);
-    } catch (e) {
-      console.log("failed to get version");
-    }
+    ACPLifecycle.extensionVersion().then(version => console.log("ACPLifecycle version: " + version));
   }
 
   async signalExtensionVersion() {
-    try {
-      var version = await ACPSignal.extensionVersion();
-      console.log("ACPSignal version: " + version);
-    } catch (e) {
-      console.log("failed to get version");
-    }
+    ACPSignal.extensionVersion().then(version => console.log("ACPSignal version: " + version));
   }
 
   setPrivacyOptIn() {
