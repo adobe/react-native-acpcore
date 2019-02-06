@@ -43,7 +43,7 @@ module.exports = {
   },
 
   syncIdentifiersWithAuthState(identifiers?: {string: string}, authenticationState: ACPMobileVisitorAuthenticationState) {
-    RCTACPIdentity.syncIdentifiers(identifiers, authenticationState);
+    RCTACPIdentity.syncIdentifiersWithAuthState(identifiers, authenticationState);
   },
 
   syncIdentifier(identifierType: String, identifier: String, authenticationState: ACPMobileVisitorAuthenticationState) {
