@@ -9,8 +9,10 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Button, ScrollView, NativeModules} from 'react-native';
+// import * as Core from 'react-native-acpcore';
+import {ACPCore} from 'react-native-acpcore';
 
-const ACPCore = NativeModules.ACPCore;
+const ACPCoreTwo = NativeModules.ACPCore;
 const ACPLifecycle = NativeModules.ACPLifecycle;
 const ACPIdentity = NativeModules.ACPIdentity;
 const ACPSignal = NativeModules.ACPSignal;

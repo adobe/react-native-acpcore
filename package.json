@@ -2,13 +2,12 @@
   "name": "react-native-acpcore",
   "version": "0.0.1",
   "description": "",
-  "main": "src/index.js",
+  "main": "./js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "flow": "flow",
     "lint": "node_modules/.bin/eslint . --max-warnings=0 src/",
-    "lint-fix": "node_modules/.bin/eslint . --fix src/",
-    "build": "rm -fr lib flow && mkdir lib flow && ./node_modules/.bin/babel src/ -d lib/"
+    "lint-fix": "node_modules/.bin/eslint . --fix src/"
   },
   "keywords": [
     "react-native"
