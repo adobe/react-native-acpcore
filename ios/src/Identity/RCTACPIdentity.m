@@ -21,9 +21,7 @@
 
 @implementation RCTACPIdentity
 
-RCT_EXPORT_MODULE();
-
-static NSString* const EXTENSION_VERSION = @"1.0.0";
+RCT_EXPORT_MODULE(ACPIdentity);
 
 - (dispatch_queue_t)methodQueue
 {
@@ -36,13 +34,6 @@ static NSString* const EXTENSION_VERSION = @"1.0.0";
 
 + (BOOL)requiresMainQueueSetup {
     return YES;
-}
-
-/**
- * @brief Returns the current version of the ACPIdentity Extension.
- */
-RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    resolve(EXTENSION_VERSION);
 }
 
 /**

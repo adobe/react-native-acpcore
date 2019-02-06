@@ -1,8 +1,4 @@
-// @flow
-
 /** ***********************************************************************
-* ADOBE CONFIDENTIAL
-* ___________________
 *
 * Copyright 2019 Adobe
 * All Rights Reserved.
@@ -15,59 +11,35 @@
 * Dissemination of this information or reproduction of this material
 * is strictly forbidden unless prior written permission is obtained
 * from Adobe.
-************************************************************************* */
+*
+* @flow
+* @format
+*/
 
-import { NativeModules } from 'react-native';
+'use strict';
 
-// const { RCTACPCore: Native } = NativeModules;
+const RCTACPCore = require('react-native').NativeModules.ACPCore;
 
-const { RCTACPCore } = NativeModules
-
-// Define our enums
 export type ACPMobilePrivacyStatus =
   | "ACP_PRIVACY_STATUS_OPT_IN"
   | "ACP_PRIVACY_STATUS_OPT_OUT"
   | "ACP_PRIVACY_STATUS_UNKNOWN";
-const ACPPrivacyStatusValues: {|
-  optIn: ACPMobilePrivacyStatus,
-  optOut: ACPMobilePrivacyStatus,
-  unknown: ACPMobilePrivacyStatus,
-|} = {
-  optIn: RCTACPCore.ACP_PRIVACY_STATUS_OPT_IN,
-  optOut: RCTACPCore.ACP_PRIVACY_STATUS_OPT_OUT,
-  unknown: RCTACPCore.ACP_PRIVACY_STATUS_UNKNOWN,
-};
 
 export type ACPMobileLogLevel =
   | "ACP_LOG_LEVEL_ERROR"
   | "ACP_LOG_LEVEL_WARNING"
   | "ACP_LOG_LEVEL_DEBUG"
   | "ACP_LOG_LEVEL_VERBOSE";
-const ACPLogLevelValues: {|
-  debug: ACPMobileLogLevel,
-  error: ACPMobileLogLevel,
-  verbose: ACPMobileLogLevel,
-  warning: ACPMobileLogLevel,
-|} = {
-  error: RCTACPCore.ACP_LOG_LEVEL_ERROR,
-  warning: RCTACPCore.ACP_LOG_LEVEL_WARNING,
-  debug: RCTACPCore.ACP_LOG_LEVEL_DEBUG,
-  verbose: RCTACPCore.ACP_LOG_LEVEL_VERBOSE,
-};
 
-const EXTENSION_VERSION = '1.0.0';
-
-export class ACPCore {
-  static ACPMobilePrivacyStatus = ACPPrivacyStatusValues;
-  static ACPMobileLogLevel = ACPLogLevelValues;
+module.exports = {
 
   /**
    * Returns the version of the ACPCore extension
    * @param  {string} Promise a promise that resolves with the extension verison
    */
-  static extensionVersion(): Promise<string> {
-    return Promise.resolve(EXTENSION_VERSION);
-  }
+  extensionVersion(): Promise<string> {
+    return Promise.resolve("1.0.0");
+  },
 
   /**
  * Start the Core processing.
@@ -76,9 +48,9 @@ export class ACPCore {
  * You can use the callback to kickoff additional operations immediately after any operations kicked off during registration.
  * @param  {boolean} Promise a promise that resolves when core has started
  */
-  static start(): Promise<boolean> {
+  start(): Promise<boolean> {
     return RCTACPCore.start();
-  }
+  },
 
   /**
  * Load remote configuration specified by the given application ID
@@ -103,9 +75,9 @@ export class ACPCore {
  * added to the ADBMobile JSON file when downloaded from the Adobe Mobile Services UI and can be
  * found in Manage App Settings. A value of `nil` has no effect.
  */
-  static configureWithAppId(appId?: String) {
+  configureWithAppId(appId?: String) {
     RCTACPCore.configureWithAppId(appId);
-  }
+  },
 
   /**
    * Load configuration from local file
@@ -122,9 +94,9 @@ export class ACPCore {
    *
    * @param  {String?} filepath absolute path to a local configuration file. A value of `nil` has no effect.
    */
-  static configureWithFileInPath(filepath?: String) {
+  configureWithFileInPath(filepath?: String) {
     RCTACPCore.configureWithFileInPath(filepath);
-  }
+  },
 
   /**
  * Update specific configuration parameters
@@ -138,45 +110,45 @@ export class ACPCore {
  *
  * @param  {{ string: any }?} configMap configuration key/value pairs to be updated or added. A value of `nil` has no effect.
  */
-  static updateConfiguration(configMap?: { string: any }) {
+  updateConfiguration(configMap?: { string: any }) {
     RCTACPCore.updateConfiguration(configMap);
-  }
+  },
 
   /**
  * Set the logging level of the SDK
  *
  * @param {ACPMobileLogLevel} mode ACPMobileLogLevel to be used by the SDK
  */
-  static setLogLevel(mode: ACPMobileLogLevel) {
+  setLogLevel(mode: ACPMobileLogLevel) {
     RCTACPCore.setLogLevel(mode);
-  }
+  },
 
   /**
  * Set the Adobe Mobile Privacy status
  *
  * @param {ACPMobilePrivacyStatus} privacyStatus ACPMobilePrivacyStatus to be set to the SDK
  */
-  static setPrivacyStatus(privacyStatus: ACPMobilePrivacyStatus) {
+  setPrivacyStatus(privacyStatus: ACPMobilePrivacyStatus) {
     RCTACPCore.setPrivacyStatus(privacyStatus);
-  }
+  },
 
   /**
    * Get the current Adobe Mobile Privacy Status
    *
    * @return {ACPMobilePrivacyStatus} the current privacy status
    */
-  static getPrivacyStatus(): Promise<ACPMobilePrivacyStatus> {
+  getPrivacyStatus(): Promise<ACPMobilePrivacyStatus> {
     return RCTACPCore.getPrivacyStatus();
-  }
+  },
 
   /**
  * Calls the provided callback with a JSON string containing all of the user's identities known by the SDK
  *
  * @return {string?} known identifier as a JSON string
  */
-  static getSdkIdentities(): Promise<?string> {
+  getSdkIdentities(): Promise<?string> {
     return RCTACPCore.getSdkIdentities();
-  }
+  },
 
   // dispatchEvent TODO
 
@@ -195,9 +167,9 @@ export class ACPCore {
    * @param  {String?} state containing the name of the state to track
    * @param  {{ string: string }?} contextData containing context data to attach on this hit
    */
-  static trackAction(action?: String, contextData?: { string: string }) {
+  trackAction(action?: String, contextData?: { string: string }) {
     RCTACPCore.trackAction(action, contextData);
-  }
+  },
 
   /**
  * This method sends a generic Analytics state tracking hit with context data.
@@ -210,9 +182,9 @@ export class ACPCore {
  * @param  {String?} state containing the name of the state to track
  * @param  {{ string: string }?} contextData containing context data to attach on this hit
  */
-  static trackState(state?: String, contextData?: { string: string }) {
+  trackState(state?: String, contextData?: { string: string }) {
     RCTACPCore.trackState(state, contextData);
-  }
+  },
 
   /**
  * Submits a generic event containing the provided IDFA with event type `generic.identity`.
@@ -226,9 +198,9 @@ export class ACPCore {
  *
  * @param {String?} advertisingIdentifier the advertising idenifier string.
  */
-  static setAdvertisingIdentifier(advertisingIdentifier?: String) {
+  setAdvertisingIdentifier(advertisingIdentifier?: String) {
     RCTACPCore.setAdvertisingIdentifier(advertisingIdentifier);
-  }
+  },
 
   /**
  * Submits a generic event containing the provided push token with event type `generic.identity`.
@@ -238,9 +210,9 @@ export class ACPCore {
  *
  * @param {String?} pushIdentifier the device token for push notifications
  */
-  static setPushIdentifier(pushIdentifier?: String) {
+  setPushIdentifier(pushIdentifier?: String) {
     RCTACPCore.setPushIdentifier(pushIdentifier);
-  }
+  },
 
   /**
  * Submits a generic event to start/resume lifecycle collection with event type `generic.lifecycle`.
@@ -254,9 +226,9 @@ export class ACPCore {
  *
  * @param  {{ string: string }?} additionalContextData optional additional context for this session.
  */
-  static lifecycleStart(additionalContextData?: { string: string }) {
+  lifecycleStart(additionalContextData?: { string: string }) {
     RCTACPCore.lifecycleStart(additionalContextData);
-  }
+  },
 
   /**
   * Submits a generic event to pause lifecycle collection with event type `generic.lifecycle`.
@@ -270,9 +242,9 @@ export class ACPCore {
   *     a new session. The session timeout is defined by the `lifecycle.sessionTimeout` configuration parameter.
   *   - If not defined, the default session timeout is five minutes.
   */
-  static lifecyclePause() {
+  lifecyclePause() {
     RCTACPCore.lifecyclePause();
-  }
+  },
 
   /**
  * Collect PII data. Although using this call enables collection of PII data, the SDK does not
@@ -280,20 +252,20 @@ export class ACPCore {
  *
  * @param  {{ string: string }} data the dictionary containing the PII data to be collected
  */
-  static collectPii(data: { string: string }) {
+  collectPii(data: { string: string }) {
     RCTACPCore.collectPii(data);
-  }
+  },
 
   // TODO, should we make this native only?
-  static collectLaunchInfo() {
+  collectLaunchInfo() {
     RCTACPCore.collectLaunchInfo();
-  }
+  },
 
   // iOS only
   // TODO, should we make this native only
-  static setAppGroup(appGroup?: String) {
+  setAppGroup(appGroup?: String) {
     RCTACPCore.setAppGroup(appGroup);
-  }
+  },
 
   /**
   * iOS only
@@ -302,8 +274,8 @@ export class ACPCore {
   * Forces Rules Engine to send a network request to the rules url in Configuration,
   * to refresh rules content set in the SDK.
    */
-  static downloadRules() {
+  downloadRules() {
     RCTACPCore.downloadRules();
-  }
+  },
 
-}
+};
