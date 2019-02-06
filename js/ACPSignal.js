@@ -1,8 +1,4 @@
-// @flow
-
 /** ***********************************************************************
-* ADOBE CONFIDENTIAL
-* ___________________
 *
 * Copyright 2019 Adobe
 * All Rights Reserved.
@@ -15,27 +11,29 @@
 * Dissemination of this information or reproduction of this material
 * is strictly forbidden unless prior written permission is obtained
 * from Adobe.
-************************************************************************* */
+*
+* @flow
+* @format
+*/
 
-import { NativeModules } from 'react-native';
+'use strict';
 
-const { RCTACPSignal: Native } = NativeModules;
+const RCTACPSignal = require('react-native').NativeModules.ACPSignal;
 
-const EXTENSION_VERSION = '1.0.0';
-
-export class ACPSignal {
+module.exports = {
   /**
    * Returns the version of the ACPSignal extension
-   * @param  {string} Promise a promise that resolves with the extension verison
+   * @param  {string} Promise [description]
    */
-  static extensionVersion(): Promise<string> {
-    return Promise.resolve(EXTENSION_VERSION);
-  }
+  extensionVersion(): Promise<string> {
+    return Promise.resolve("1.0.0");
+  },
 
   /**
    * Registers the ACPSignal extension with ACPCore
    */
-  static registerExtension() {
-    Native.registerExtension();
-  }
-}
+  registerExtension() {
+    RCTACPSignal.registerExtension();
+  },
+
+};

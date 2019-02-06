@@ -20,20 +20,11 @@
 
 @implementation RCTACPSignal
 
-RCT_EXPORT_MODULE();
-
-static NSString* const EXTENSION_VERSION = @"1.0.0";
+RCT_EXPORT_MODULE(ACPSignal);
 
 - (dispatch_queue_t)methodQueue
 {
     return dispatch_get_main_queue();
-}
-
-/**
- * @brief Returns the current version of the ACPSignal Extension.
- */
-RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    resolve(EXTENSION_VERSION);
 }
 
 /**
