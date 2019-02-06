@@ -20,6 +20,18 @@
 
 module.exports = {
 
+  //native models
+  get ACPMobilePrivacyStatus() {
+    return require('./models/ACPMobilePrivacyStatus');
+  },
+  get ACPMobileLogLevel() {
+    return require('./models/ACPMobileLogLevel');
+  },
+  get ACPMobileVisitorAuthenticationState() {
+    return require('./models/ACPMobileVisitorAuthenticationState');
+  },
+
+
   //native modules
   get ACPCore() {
     return require('./ACPCore');

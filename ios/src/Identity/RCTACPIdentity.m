@@ -153,7 +153,7 @@ RCT_EXPORT_METHOD(syncIdentifiers:(nullable NSDictionary*)identifiers) {
  * @param authenticationState a valid \ref ACPMobileVisitorAuthenticationState value.
  * @see ADBMobilePrivacyStatus
  */
-RCT_EXPORT_METHOD(syncIdentifiers:(nullable NSDictionary*)identifiers
+RCT_EXPORT_METHOD(syncIdentifiersWithAuthState:(nullable NSDictionary*)identifiers
                   authentication:(NSString *)authenticationState) {
     [ACPIdentity syncIdentifiers:identifiers authentication:[RCTACPIdentityDataBridge authStateFromString:authenticationState]];
 }
