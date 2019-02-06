@@ -32,7 +32,7 @@ export type ACPMobileLogLevel =
   | "ACP_LOG_LEVEL_VERBOSE";
 
 
-const EXTENSION_VERSION = 1.0.0;
+const EXTENSION_VERSION = "1.0.0";
 
 module.exports {
 
