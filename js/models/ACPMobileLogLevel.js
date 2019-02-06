@@ -16,24 +16,8 @@
 * @format
 */
 
-'use strict';
-
-const RCTACPLifecycle = require('react-native').NativeModules.ACPLifecycle;
-
-module.exports = {
-  /**
-   * Returns the version of the ACPLifecycle extension
-   * @param  {string} Promise [description]
-   */
-  extensionVersion(): Promise<string> {
-    return Promise.resolve("1.0.0");
-  },
-
-  /**
-   * Registers the ACPLifecycle extension with ACPCore
-   */
-  registerExtension() {
-    RCTACPLifecycle.registerExtension();
-  },
-
-};
+export type ACPMobileLogLevel =
+  | "ACP_LOG_LEVEL_ERROR"
+  | "ACP_LOG_LEVEL_WARNING"
+  | "ACP_LOG_LEVEL_DEBUG"
+  | "ACP_LOG_LEVEL_VERBOSE";

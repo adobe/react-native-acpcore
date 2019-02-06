@@ -20,10 +20,7 @@
 
 const RCTACPIdentity = require('react-native').NativeModules.ACPIdentity;
 
-export type ACPMobileVisitorAuthenticationState =
-  | "ACP_VISITOR_AUTH_STATE_AUTHENTICATED"
-  | "ACP_VISITOR_AUTH_STATE_LOGGED_OUT"
-  | "ACP_VISITOR_AUTH_STATE_UNKNOWN";
+import type {ACPMobileVisitorAuthenticationState} from './models/ACPMobileVisitorAuthenticationState';
 
 module.exports = {
   /**
