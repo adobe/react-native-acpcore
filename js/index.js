@@ -25,7 +25,7 @@ module.exports = {
     return require('./ACPCore');
   },
   get ACPLifecycle() {
-    return require('./ACPLifecycle');
+    return require('./ACPCore');
   },
   get ACPIdentity() {
     return require('./ACPIdentity');
@@ -33,5 +33,5 @@ module.exports = {
   get ACPSignal() {
     return require('./ACPSignal');
   },
-  
+
 };
