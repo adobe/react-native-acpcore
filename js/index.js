@@ -21,9 +21,7 @@
 module.exports = {
 
   //native modules
-  get ACPCore() {
-    return require('./ACPCore');
-  },
+
   get ACPLifecycle() {
     return require('./ACPLifecycle');
   },
