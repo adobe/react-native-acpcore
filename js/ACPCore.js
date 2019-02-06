@@ -20,21 +20,21 @@
 
 const Core = require('react-native').NativeModules.ACPCore;
 
-export type ACPMobilePrivacyStatus =
-  | "ACP_PRIVACY_STATUS_OPT_IN"
-  | "ACP_PRIVACY_STATUS_OPT_OUT"
-  | "ACP_PRIVACY_STATUS_UNKNOWN";
-
-export type ACPMobileLogLevel =
-  | "ACP_LOG_LEVEL_ERROR"
-  | "ACP_LOG_LEVEL_WARNING"
-  | "ACP_LOG_LEVEL_DEBUG"
-  | "ACP_LOG_LEVEL_VERBOSE";
+// export type ACPMobilePrivacyStatus =
+//   | "ACP_PRIVACY_STATUS_OPT_IN"
+//   | "ACP_PRIVACY_STATUS_OPT_OUT"
+//   | "ACP_PRIVACY_STATUS_UNKNOWN";
+//
+// export type ACPMobileLogLevel =
+//   | "ACP_LOG_LEVEL_ERROR"
+//   | "ACP_LOG_LEVEL_WARNING"
+//   | "ACP_LOG_LEVEL_DEBUG"
+//   | "ACP_LOG_LEVEL_VERBOSE";
 
 module.exports {
 
   extensionVersion(): Promise<string> {
     return Promise.resolve("1.0.0");
-  }
+  },
 
 };
