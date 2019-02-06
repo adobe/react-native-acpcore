@@ -65,4 +65,4 @@ module.exports = {
     return RCTACPIdentity.getExperienceCloudId();
   },
 
-}
+};
