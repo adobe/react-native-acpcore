@@ -20,7 +20,7 @@
 
 @implementation RCTACPLifecycle
 
-RCT_EXPORT_MODULE();
+RCT_EXPORT_MODULE(ACPLifecycle);
 
 static NSString* const EXTENSION_VERSION = @"1.0.0";
 
