@@ -25,7 +25,7 @@ module.exports = {
     return require('./ACPCore');
   },
   get ACPLifecycle() {
-    return require('./ACPCore');
+    return require('./ACPLifecycle');
   },
   get ACPIdentity() {
     return require('./ACPIdentity');
