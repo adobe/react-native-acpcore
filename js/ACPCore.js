@@ -31,13 +31,10 @@ export type ACPMobileLogLevel =
   | "ACP_LOG_LEVEL_DEBUG"
   | "ACP_LOG_LEVEL_VERBOSE";
 
-
-const EXTENSION_VERSION = "1.0.0";
-
 module.exports {
 
   extensionVersion(): Promise<string> {
-    return Promise.resolve(EXTENSION_VERSION);
+    return Promise.resolve("1.0.0");
   }
 
 };
