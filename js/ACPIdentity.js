@@ -21,6 +21,7 @@
 const RCTACPIdentity = require('react-native').NativeModules.ACPIdentity;
 
 import type {ACPMobileVisitorAuthenticationState} from './models/ACPMobileVisitorAuthenticationState';
+import type {ACPVisitorID} from './models/ACPVisitorID';
 
 module.exports = {
   /**
