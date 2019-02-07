@@ -35,14 +35,6 @@ static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dic
     return dispatch_get_main_queue();
 }
 
-- (NSDictionary *)constantsToExport {
-    return [RCTACPCoreDataBridge getCoreConstants];
-}
-
-+ (BOOL)requiresMainQueueSetup {
-    return YES;
-}
-
 /*
  * @brief Start the Core processing. This should be called after the initial set of extensions have been registered.
  *

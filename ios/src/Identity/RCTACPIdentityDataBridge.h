@@ -20,8 +20,6 @@
 
 @interface RCTACPIdentityDataBridge : NSObject
 
-+ (NSDictionary *) getIdentityConstants;
-
 + (ACPMobileVisitorAuthenticationState) authStateFromString: (NSString *) authStateString;
 
 + (NSString *)stringFromAuthState: (ACPMobileVisitorAuthenticationState) authState;
