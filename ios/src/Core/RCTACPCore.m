@@ -342,9 +342,7 @@ RCT_EXPORT_METHOD(dispatchResponseEvent: (nonnull NSDictionary*) responseEventDi
     if (responseEvent && requestEvent) {
         [ACPCore dispatchResponseEvent:responseEvent requestEvent:requestEvent error:&error];
 
-        if (!error) {
-            resolve(@(YES));
-        } else {
+        if (error) {
             [self handleError:error rejecter:reject];
         }
 
