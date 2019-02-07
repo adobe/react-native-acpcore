@@ -20,8 +20,6 @@
 
 @interface RCTACPCoreDataBridge : NSObject
 
-+ (NSDictionary *) getCoreConstants;
-
 + (ACPMobilePrivacyStatus)privacyStatusFromString: (NSString *) statusString;
 
 + (ACPMobileLogLevel) logLevelFromString: (NSString *) logLevelString;

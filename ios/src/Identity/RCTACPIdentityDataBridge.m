@@ -30,12 +30,6 @@ static NSString* const VISITOR_ID_AUTH_STATE_KEY = @"authenticationState";
 
 @implementation RCTACPIdentityDataBridge
 
-+ (NSDictionary *) getIdentityConstants {
-    return @{ ACP_VISITOR_AUTH_STATE_AUTHENTICATED: ACP_VISITOR_AUTH_STATE_AUTHENTICATED,
-              ACP_VISITOR_AUTH_STATE_LOGGED_OUT: ACP_VISITOR_AUTH_STATE_LOGGED_OUT,
-              ACP_VISITOR_AUTH_STATE_UNKNOWN: ACP_VISITOR_AUTH_STATE_UNKNOWN};
-}
-
 + (NSDictionary *)dictionaryFromVisitorId: (ACPMobileVisitorId *) visitorId {
     NSMutableDictionary *visitorIdDict = [NSMutableDictionary dictionary];
     visitorIdDict[VISITOR_ID_ID_ORIGIN_KEY] = visitorId.idOrigin;

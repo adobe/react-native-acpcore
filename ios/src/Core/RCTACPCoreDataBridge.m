@@ -30,16 +30,6 @@ static NSString* const ACP_PRIVACY_STATUS_OPT_IN = @"ACP_PRIVACY_STATUS_OPT_IN";
 static NSString* const ACP_PRIVACY_STATUS_OPT_OUT = @"ACP_PRIVACY_STATUS_OPT_OUT";
 static NSString* const ACP_PRIVACY_STATUS_UNKNOWN = @"ACP_PRIVACY_STATUS_UNKNOWN";
 
-+ (NSDictionary *)getCoreConstants {
-    return @{ ACP_LOG_LEVEL_ERROR: ACP_LOG_LEVEL_ERROR,
-              ACP_LOG_LEVEL_WARNING: ACP_LOG_LEVEL_WARNING,
-              ACP_LOG_LEVEL_DEBUG: ACP_LOG_LEVEL_DEBUG,
-              ACP_LOG_LEVEL_VERBOSE: ACP_LOG_LEVEL_VERBOSE,
-              ACP_PRIVACY_STATUS_OPT_IN: ACP_PRIVACY_STATUS_OPT_IN,
-              ACP_PRIVACY_STATUS_OPT_OUT: ACP_PRIVACY_STATUS_OPT_OUT,
-              ACP_PRIVACY_STATUS_UNKNOWN: ACP_PRIVACY_STATUS_UNKNOWN };
-}
-
 + (ACPMobilePrivacyStatus)privacyStatusFromString: (NSString *) statusString {
     if ([statusString isEqualToString:ACP_PRIVACY_STATUS_OPT_IN]) {
         return ACPMobilePrivacyStatusOptIn;
