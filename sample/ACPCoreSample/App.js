@@ -9,7 +9,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Button, ScrollView, NativeModules} from 'react-native';
-import {ACPCore, ACPLifecycle, ACPSignal, ACPIdentity, ACPMobileLogLevel, ACPMobilePrivacyStatus, ACPMobileVisitorAuthenticationState, ACPVisitorID} from 'react-native-acpcore';
+import {ACPCore, ACPLifecycle, ACPSignal, ACPIdentity, ACPMobileLogLevel, ACPMobilePrivacyStatus, ACPMobileVisitorAuthenticationState, ACPVisitorID, ACPExtensionEvent} from 'react-native-acpcore';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -31,6 +31,9 @@ export default class App extends Component<Props> {
         <Button title="ACPCore::lifecycleStart()" onPress={this.lifecycleStart}/>
         <Button title="ACPCore::lifecyclePause()" onPress={this.lifecyclePause}/>
         <Button title="ACPCore::collectPii()" onPress={this.collectPii}/>
+        <Button title="ACPCore::dispatchEvent()" onPress={this.dispatchEvent}/>
+        <Button title="ACPCore::dispatchEventWithResponseCallback()" onPress={this.dispatchEventWithResponseCallback}/>
+        <Button title="ACPCore::dispatchResponseEvent()" onPress={this.dispatchResponseEvent}/>
 
         <Button title="ACPIdentity::syncIdentifiers()" onPress={this.syncIdentifiers}/>
         <Button title="ACPIdentity::syncIdentifiersWithAuthState()" onPress={this.syncIdentifiersWithAuthState}/>
@@ -44,20 +47,20 @@ export default class App extends Component<Props> {
   }
 
   initSDK() {
-    console.log("AMSDK IMPORT: ACPCore = " + ACPCore);
-    console.log("AMSDK IMPORT: ACPLifecycle = " + ACPLifecycle);
-    console.log("AMSDK IMPORT: ACPSignal = " + ACPSignal);
-    console.log("AMSDK IMPORT: ACPIdentity = " + ACPIdentity);
-    console.log("AMSDK IMPORT: ACPMobileLogLevel = " + ACPMobileLogLevel);
-    console.log("AMSDK IMPORT: ACPMobilePrivacyStatus = " + ACPMobilePrivacyStatus);
-    console.log("AMSDK IMPORT: ACPMobileVisitorAuthenticationState = " + ACPMobileVisitorAuthenticationState);
-    console.log("AMSDK IMPORT: ACPVisitorID = " + ACPVisitorID);
-    // ACPCore.setLogLevel("ACP_LOG_LEVEL_VERBOSE");
-    // ACPCore.configureWithAppId("launch-EN1a68f9bc5b3c475b8c232adc3f8011fb");
-    // ACPLifecycle.registerExtension();
-    // ACPIdentity.registerExtension();
-    // ACPSignal.registerExtension();
-    // ACPCore.start();
+    // console.log("AMSDK IMPORT: ACPCore = " + ACPCore);
+    // console.log("AMSDK IMPORT: ACPLifecycle = " + ACPLifecycle);
+    // console.log("AMSDK IMPORT: ACPSignal = " + ACPSignal);
+    // console.log("AMSDK IMPORT: ACPIdentity = " + ACPIdentity);
+    // console.log("AMSDK IMPORT: ACPMobileLogLevel = " + ACPMobileLogLevel);
+    // console.log("AMSDK IMPORT: ACPMobilePrivacyStatus = " + ACPMobilePrivacyStatus);
+    // console.log("AMSDK IMPORT: ACPMobileVisitorAuthenticationState = " + ACPMobileVisitorAuthenticationState);
+    // console.log("AMSDK IMPORT: ACPVisitorID = " + ACPVisitorID);
+    ACPCore.setLogLevel("ACP_LOG_LEVEL_VERBOSE");
+    ACPCore.configureWithAppId("launch-EN1a68f9bc5b3c475b8c232adc3f8011fb");
+    ACPLifecycle.registerExtension();
+    ACPIdentity.registerExtension();
+    ACPSignal.registerExtension();
+    ACPCore.start();
   }
 
   coreExtensionVersion() {
@@ -107,6 +110,22 @@ export default class App extends Component<Props> {
 
   collectPii() {
     ACPCore.collectPii({"myPii": "data"});
+  }
+
+  dispatchEvent() {
+    var event = new ACPExtensionEvent("eventName", "eventType", "eventSource", {"testDataKey": "testDataValue"});
+    ACPCore.dispatchEvent(event);
+  }
+
+  dispatchEventWithResponseCallback() {
+    var event = new ACPExtensionEvent("eventName", "eventType", "eventSource", {"testDataKey": "testDataValue"});
+    ACPCore.dispatchEventWithResponseCallback(event).then(responseEvent => console.log("AMSDK: responseEvent = " + responseEvent));
+  }
+
+  dispatchResponseEvent() {
+    var responseEvent = new ACPExtensionEvent("responseEvent", "eventType", "eventSource", {"testDataKey": "testDataValue"});
+    var requestEvent = new ACPExtensionEvent("requestEvent", "eventType", "eventSource", {"testDataKey": "testDataValue"});
+    ACPCore.dispatchResponseEvent(responseEvent, requestEvent);
   }
 
   // identity
