@@ -33,6 +33,9 @@ module.exports = {
   get ACPVisitorID() {
     return require('./models/ACPVisitorID');
   },
+  get ACPExtensionEvent() {
+    return require('./models/ACPExtensionEvent');
+  },
 
 
   //native modules
