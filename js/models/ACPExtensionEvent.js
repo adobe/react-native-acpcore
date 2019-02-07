@@ -18,7 +18,7 @@
 
 'use strict';
 
-class ACPExtensionEvent = {
+class ACPExtensionEvent {
   eventName:   string;
   eventType:   string;
   eventSource: string;
