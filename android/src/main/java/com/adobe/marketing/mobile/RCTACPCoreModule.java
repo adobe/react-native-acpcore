@@ -46,7 +46,7 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
     // Required for RN modules
     @Override
     public String getName() {
-        return "RCTACPCore";
+        return "ACPCore";
     }
 
     @Override
