@@ -40,6 +40,7 @@ module.exports = {
     return require('./ACPCore');
   },
   get ACPLifecycle() {
+    console.log("Importing ACPLifecycle");
     return require('./ACPLifecycle');
   },
   get ACPIdentity() {
