@@ -9,7 +9,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Button, ScrollView, NativeModules} from 'react-native';
-import {ACPCore, ACPLifecycle, ACPSignal, ACPIdentity, ACPMobileLogLevel} from 'react-native-acpcore';
+import {ACPCore, ACPLifecycle, ACPSignal, ACPIdentity, ACPMobileLogLevel, ACPMobilePrivacyStatus, ACPMobileVisitorAuthenticationState, ACPVisitorID} from 'react-native-acpcore';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -44,12 +44,20 @@ export default class App extends Component<Props> {
   }
 
   initSDK() {
-    ACPCore.setLogLevel("ACP_LOG_LEVEL_VERBOSE");
-    ACPCore.configureWithAppId("launch-EN1a68f9bc5b3c475b8c232adc3f8011fb");
-    ACPLifecycle.registerExtension();
-    ACPIdentity.registerExtension();
-    ACPSignal.registerExtension();
-    ACPCore.start();
+    console.log("AMSDK IMPORT: ACPCore = " + ACPCore);
+    console.log("AMSDK IMPORT: ACPLifecycle = " + ACPLifecycle);
+    console.log("AMSDK IMPORT: ACPSignal = " + ACPSignal);
+    console.log("AMSDK IMPORT: ACPIdentity = " + ACPIdentity);
+    console.log("AMSDK IMPORT: ACPMobileLogLevel = " + ACPMobileLogLevel);
+    console.log("AMSDK IMPORT: ACPMobilePrivacyStatus = " + ACPMobilePrivacyStatus);
+    console.log("AMSDK IMPORT: ACPMobileVisitorAuthenticationState = " + ACPMobileVisitorAuthenticationState);
+    console.log("AMSDK IMPORT: ACPVisitorID = " + ACPVisitorID);
+    // ACPCore.setLogLevel("ACP_LOG_LEVEL_VERBOSE");
+    // ACPCore.configureWithAppId("launch-EN1a68f9bc5b3c475b8c232adc3f8011fb");
+    // ACPLifecycle.registerExtension();
+    // ACPIdentity.registerExtension();
+    // ACPSignal.registerExtension();
+    // ACPCore.start();
   }
 
   coreExtensionVersion() {
@@ -126,7 +134,7 @@ export default class App extends Component<Props> {
   getExperienceCloudId() {
     ACPIdentity.getExperienceCloudId().then(cloudId => console.log("AMSDK: CloudID = " + cloudId));
   }
-  
+
 }
 
 const styles = StyleSheet.create({

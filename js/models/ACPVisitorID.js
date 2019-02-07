@@ -20,9 +20,19 @@
 
 import type {ACPMobileVisitorAuthenticationState} from './ACPMobileVisitorAuthenticationState';
 
-export type ACPVisitorID = {
-  idOrigin?: string,
-  idType:   string,
-  id?:       string,
-  authenticationState?: ACPMobileVisitorAuthenticationState,
-};
+class ACPVisitorID = {
+  idOrigin?: string;
+  idType:   string;
+  id?:       string;
+  authenticationState?: ACPMobileVisitorAuthenticationState;
+
+  constructor(idOrigin?: string, idType: string, id?: string, authenticationState?: ACPMobileVisitorAuthenticationState) {
+    this.idOrigin = idOrigin;
+    this.idType = idType;
+    this.id = id;
+    this.authenticationState = authenticationState;
+  }
+
+}
+
+module.exports = ACPVisitorID;
