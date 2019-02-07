@@ -30,6 +30,9 @@ module.exports = {
   get ACPMobileVisitorAuthenticationState() {
     return require('./models/ACPMobileVisitorAuthenticationState');
   },
+  get ACPVisitorID() {
+    return require('./models/ACPVisitorID');
+  },
 
 
   //native modules
