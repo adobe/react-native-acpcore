@@ -22,6 +22,7 @@ const RCTACPCore = require('react-native').NativeModules.ACPCore;
 
 import type {ACPMobileLogLevel} from './models/ACPMobileLogLevel';
 import type {ACPMobilePrivacyStatus} from './models/ACPMobilePrivacyStatus';
+import type {ACPExtensionEvent} from './models/ACPMobileLogLevel';
 
 module.exports = {
 
@@ -142,11 +143,37 @@ module.exports = {
     return RCTACPCore.getSdkIdentities();
   },
 
-  // dispatchEvent TODO
+  /**
+   * Called by the extension public API to dispatch an event for other extensions or the internal SDK to consume.
+   * Any events dispatched by this call will not be processed until after `start` has been called.
+   *
+   * @param event Required parameter with {@link Event} instance to be dispatched. Should not be nil
+   * @return true if the the event dispatching operation succeeded, otherwise the promise will return an error
+   */
+  dispatchEvent(event: ACPExtensionEvent): Promise<boolean> {
+    return RCTACPCore.dispatchEvent(event);
+  },
 
-  // dispatchEventWithResponseCallback TODO
+  /**
+   * [dispatchEvent description]
+   * @param  {[type]} event [description]
+   * @return {[type]}       [description]
+   */
+  dispatchEventWithResponseCallback(event: ACPExtensionEvent): Promise<ACPExtensionEvent> {
+    return RCTACPCore.dispatchEventWithResponseCallback(event);
+  },
 
-  // dispatchResponseEvent TODO
+  /**
+   * Dispatches a response event for a paired event that was sent to dispatchEventWithResponseCallback
+   * or received by an extension listener {@code hear} method.
+   * @param  {[type]} responseEvent [description]
+   * @param  {[type]} requestEvent  [description]
+   * @param  {[type]} trackAction   [description]
+   * @return {[type]}               [description]
+   */
+  dispatchResponseEvent(responseEvent: ACPExtensionEvent, requestEvent: ACPExtensionEvent): Promise<boolean> {
+    return RCTACPCore.dispatchResponseEvent(responseEvent, requestEvent);
+  },
 
   /**
    * This method sends a generic Analytics action tracking hit with context data.
@@ -248,13 +275,13 @@ module.exports = {
     RCTACPCore.collectPii(data);
   },
 
+  // iOS only
   // TODO, should we make this native only?
   collectLaunchInfo() {
     RCTACPCore.collectLaunchInfo();
   },
 
   // iOS only
-  // TODO, should we make this native only
   setAppGroup(appGroup?: String) {
     RCTACPCore.setAppGroup(appGroup);
   },
