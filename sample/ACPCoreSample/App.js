@@ -19,7 +19,7 @@ export default class App extends Component<Props> {
       <View style={styles.container}>
         <ScrollView contentContainerStyle={{ marginTop: 75 }}>
         <Text style={styles.welcome}>ACPCore Test App</Text>
-        <Button title="ACPCore::extensionVersion()" onPress={this.coreExtensionVersion}/>
+        <Button title="ACPCore::extensionVersion()" onPress={() => this.coreExtensionVersion()}/>
         <Button title="ACPLifecycle::extensionVersion()" onPress={this.lifecycleExtensionVersion}/>
         <Button title="ACPIdentity::extensionVersion()" onPress={this.identityExtensionVersion}/>
         <Button title="ACPSignal::extensionVersion()" onPress={this.signalExtensionVersion}/>

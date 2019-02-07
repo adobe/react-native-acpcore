@@ -12,8 +12,8 @@
   "keywords": [
     "react-native"
   ],
-  "author": "Adobe",
-  "license": "TODO",
+  "author": "Nick Porter <nporter@adobe.com>",
+  "license": "Adobe 2019",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
