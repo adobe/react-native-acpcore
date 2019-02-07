@@ -39,7 +39,7 @@ public class RCTACPIdentityModule extends ReactContextBaseJavaModule {
     // Required for RN modules
     @Override
     public String getName() {
-        return "RCTACPIdentity";
+        return "ACPIdentity";
     }
 
     @Override
@@ -104,7 +104,7 @@ public class RCTACPIdentityModule extends ReactContextBaseJavaModule {
      * @param authenticationState {@code String} value indicating authentication state for the user {authenticated, logged_out, unknown}
      */
     @ReactMethod
-    public void syncIdentifiers(final ReadableMap identifiers,
+    public void syncIdentifiersWithAuthState(final ReadableMap identifiers,
                                 final String authenticationState) {
         VisitorID.AuthenticationState authState = RCTACPIdentityDataBridge.authenticationStateFromString(authenticationState);
         if (authState != null) {

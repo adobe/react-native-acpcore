@@ -33,7 +33,7 @@ public class RCTACPLifecycleModule extends ReactContextBaseJavaModule {
     // Required for RN modules
     @Override
     public String getName() {
-        return "RCTACPLifecycle";
+        return "ACPLifecycle";
     }
 
     /**
