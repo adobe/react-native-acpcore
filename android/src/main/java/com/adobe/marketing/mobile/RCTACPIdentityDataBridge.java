@@ -35,15 +35,6 @@ public final class RCTACPIdentityDataBridge {
     private static final String ACP_VISITOR_IDENTIFIER = "identifier";
     private static final String ACP_VISITOR_AUTH_STATE = "authenticationState";
 
-    public static HashMap<String, Object> getIdentityConstants() {
-        HashMap<String, Object> map = new HashMap<>();
-        map.put(ACP_VISITOR_AUTH_STATE_AUTHENTICATED, ACP_VISITOR_AUTH_STATE_AUTHENTICATED);
-        map.put(ACP_VISITOR_AUTH_STATE_LOGGED_OUT, ACP_VISITOR_AUTH_STATE_LOGGED_OUT);
-        map.put(ACP_VISITOR_AUTH_STATE_UNKNOWN, ACP_VISITOR_AUTH_STATE_UNKNOWN);
-
-        return map;
-    }
-
     /**
      * Takes in a {@link String} and returns the associated enum {authenticated, logged_out, unknown}
      *
