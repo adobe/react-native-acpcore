@@ -3,11 +3,12 @@ package com.acpcoresample;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.adobe.marketing.mobile.RCTACPCorePackage;
+import com.adobe.marketing.mobile.reactnative.RCTACPCorePackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.adobe.marketing.mobile.reactnative.RCTACPCoreModule;
 
 import java.util.Arrays;
 import java.util.List;
@@ -43,5 +44,6 @@ public class MainApplication extends Application implements ReactApplication {
   public void onCreate() {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
+    RCTACPCoreModule.setApplication(this);
   }
 }
