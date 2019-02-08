@@ -221,7 +221,7 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
     /**
      * This method will be used when the provided {@code Event} is used as a trigger and a response event
      * is expected in return. The returned event needs to be sent using
-     * {@link #dispatchResponseEvent(ReadableMap, ReadableMap, Callback)}.
+     * {@link #dispatchResponseEvent(ReadableMap, ReadableMap, Promise)}.
      * <p>
      * Passes an {@link ExtensionError} to {@code errorCallback} if {@code event} or
      * {@code responseCallback} are null.
@@ -269,16 +269,20 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
      *                      event sent using {@link RCTACPCoreModule#dispatchEventWithResponseCallback(ReadableMap, Promise)}
      * @param requestEvent  required parameter, the event sent using
      *                      {@link RCTACPCoreModule#dispatchEventWithResponseCallback(ReadableMap, Promise)}
-     * @param errorCallback optional {@link Callback} which will be called if an error occurred during dispatching
+     * @param promise optional {@link Promise} which will be called if an error occurred during dispatching, otherwise resolved with "true".
      * @see MobileCore#dispatchEventWithResponseCallback(Event, AdobeCallback, ExtensionErrorCallback)
      */
     @ReactMethod
     public void dispatchResponseEvent(final ReadableMap responseEvent, final ReadableMap requestEvent,
-                                      final Callback errorCallback) {
+                                      final Promise promise) {
         MobileCore.dispatchResponseEvent(RCTACPCoreDataBridge.eventFromReadableMap(responseEvent), RCTACPCoreDataBridge.eventFromReadableMap(requestEvent), new ExtensionErrorCallback<ExtensionError>() {
             @Override
             public void error(ExtensionError extensionError) {
-                errorCallback.invoke(extensionError.getErrorName());
+                if (extensionError != null) {
+                    promise.resolve(true);
+                } else {
+                    handleError(promise, extensionError);
+                }
             }
         });
     }
@@ -418,13 +422,14 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
      * Invoke this method from {@link Activity#onResume} callback in your activity.
      */
     // MobileCore.collectLaunchInfo is private
-//    @ReactMethod
-//    public void collectLaunchInfo() {
+    @ReactMethod
+    public void collectLaunchInfo() {
 //        Activity act = getCurrentActivity();
 //        if (act != null) {
 //            MobileCore.collectLaunchInfo(act);
 //        }
-//    }
+        Log.d(getName(), "collectLaunchInfo cannot be invoked on Android");
+    }
 
     @ReactMethod
     public void setAppGroup(final String appGroup) {

@@ -344,6 +344,8 @@ RCT_EXPORT_METHOD(dispatchResponseEvent: (nonnull NSDictionary*) responseEventDi
 
         if (error) {
             [self handleError:error rejecter:reject];
+        } else {
+            resolve(@(YES));
         }
 
     } else {
