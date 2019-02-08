@@ -33,7 +33,7 @@ public class RCTACPSignalModule extends ReactContextBaseJavaModule {
     // Required for RN modules
     @Override
     public String getName() {
-        return "RCTACPSignal";
+        return "ACPSignal";
     }
 
     /**
