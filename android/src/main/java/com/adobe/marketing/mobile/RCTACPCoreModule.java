@@ -201,7 +201,7 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
     public void dispatchEvent(final ReadableMap eventMap, final Promise promise) {
         Event event = RCTACPCoreDataBridge.eventFromReadableMap(eventMap);
         if (event == null) {
-            promise.reject(getName(), FAILED_TO_CONVERT_EVENT_MESSAGE, null);
+            promise.reject(getName(), FAILED_TO_CONVERT_EVENT_MESSAGE, new Error(FAILED_TO_CONVERT_EVENT_MESSAGE));
             return;
         }
 
@@ -235,7 +235,7 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
                                                   final Promise promise) {
         Event event = RCTACPCoreDataBridge.eventFromReadableMap(eventMap);
         if (event == null) {
-            promise.reject(getName(), FAILED_TO_CONVERT_EVENT_MESSAGE, null);
+            promise.reject(getName(), FAILED_TO_CONVERT_EVENT_MESSAGE, new Error(FAILED_TO_CONVERT_EVENT_MESSAGE));
             return;
         }
 
