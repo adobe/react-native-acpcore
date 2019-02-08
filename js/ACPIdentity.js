@@ -52,7 +52,7 @@ module.exports = {
   },
 
   appendVisitorInfoForURL(baseURL?: String): Promise<?string> {
-    return RCTACPIdentity.appendToUrl(baseURL);
+    return RCTACPIdentity.appendVisitorInfoForURL(baseURL);
   },
 
   getIdentifiers(): Promise<Array<?ACPVisitorID>> {
