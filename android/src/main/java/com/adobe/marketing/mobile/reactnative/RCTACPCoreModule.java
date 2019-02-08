@@ -383,6 +383,7 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
      *
      * @param data the map containing the PII data to be collected
      */
+    @ReactMethod
     public void collectPii(final ReadableMap data) {
         MobileCore.collectPii(RCTACPMapUtil.toStringMap(data));
     }
