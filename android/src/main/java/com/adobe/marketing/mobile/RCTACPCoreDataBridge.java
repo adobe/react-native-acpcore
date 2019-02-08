@@ -40,21 +40,6 @@ public final class RCTACPCoreDataBridge {
     public final static String EVENT_SOURCE_KEY = "eventSource";
     public final static String EVENT_DATA_KEY = "eventData";
 
-
-    public static HashMap<String, Object> getCoreConstants() {
-        HashMap<String, Object> map = new HashMap<>();
-        map.put(ACP_LOG_LEVEL_ERROR, ACP_LOG_LEVEL_ERROR);
-        map.put(ACP_LOG_LEVEL_WARNING, ACP_LOG_LEVEL_WARNING);
-        map.put(ACP_LOG_LEVEL_DEBUG, ACP_LOG_LEVEL_DEBUG);
-        map.put(ACP_LOG_LEVEL_VERBOSE, ACP_LOG_LEVEL_VERBOSE);
-
-        map.put(ACP_PRIVACY_STATUS_OPT_IN, ACP_PRIVACY_STATUS_OPT_IN);
-        map.put(ACP_PRIVACY_STATUS_OPT_OUT, ACP_PRIVACY_STATUS_OPT_OUT);
-        map.put(ACP_PRIVACY_STATUS_UNKNOWN, ACP_PRIVACY_STATUS_UNKNOWN);
-
-        return map;
-    }
-
     /**
      * Converts a {@link ReadableMap} into an {@link Event}
      *

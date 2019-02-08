@@ -37,10 +37,6 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
     public RCTACPCoreModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
-        Application app = this.getCurrentActivity().getApplication();
-        if (app != null) {
-            MobileCore.setApplication(app);
-        }
     }
 
     // Required for RN modules
@@ -49,9 +45,8 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
         return "ACPCore";
     }
 
-    @Override
-    public Map<String, Object> getConstants() {
-        return RCTACPCoreDataBridge.getCoreConstants();
+    public static void setApplication(final Application application) {
+      MobileCore.setApplication(application);
     }
 
     /**

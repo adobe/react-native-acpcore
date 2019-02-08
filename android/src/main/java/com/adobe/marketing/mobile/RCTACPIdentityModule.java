@@ -42,12 +42,6 @@ public class RCTACPIdentityModule extends ReactContextBaseJavaModule {
         return "ACPIdentity";
     }
 
-    @Override
-    public Map<String, Object> getConstants() {
-        return RCTACPIdentityDataBridge.getIdentityConstants();
-    }
-
-
     /**
      * Registers the Identity extension with the {@code MobileCore}
      * <p>
