@@ -14,12 +14,13 @@
  * is strictly forbidden unless prior written permission is obtained
  * from Adobe Systems Incorporated.
  **************************************************************************/
-package com.adobe.marketing.mobile;
+package com.adobe.marketing.mobile.reactnative;
 
+import com.adobe.marketing.mobile.Event;
+import com.adobe.marketing.mobile.LoggingMode;
+import com.adobe.marketing.mobile.MobilePrivacyStatus;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableNativeMap;
-
-import java.util.HashMap;
 
 public final class RCTACPCoreDataBridge {
 

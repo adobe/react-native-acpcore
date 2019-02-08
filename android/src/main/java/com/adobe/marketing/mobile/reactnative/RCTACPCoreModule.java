@@ -14,8 +14,15 @@
  * is strictly forbidden unless prior written permission is obtained
  * from Adobe Systems Incorporated.
  **************************************************************************/
-package com.adobe.marketing.mobile;
+package com.adobe.marketing.mobile.reactnative;
 
+import com.adobe.marketing.mobile.AdobeCallback;
+import com.adobe.marketing.mobile.Event;
+import com.adobe.marketing.mobile.ExtensionError;
+import com.adobe.marketing.mobile.ExtensionErrorCallback;
+import com.adobe.marketing.mobile.LoggingMode;
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.MobilePrivacyStatus;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -26,8 +33,6 @@ import com.facebook.react.bridge.ReadableMap;
 import android.app.Activity;
 import android.app.Application;
 import android.util.Log;
-
-import java.util.Map;
 
 public class RCTACPCoreModule extends ReactContextBaseJavaModule {
 
@@ -411,13 +416,14 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
      * <p>
      * Invoke this method from {@link Activity#onResume} callback in your activity.
      */
-    @ReactMethod
-    public void collectLaunchInfo() {
-        Activity act = getCurrentActivity();
-        if (act != null) {
-            MobileCore.collectLaunchInfo(act);
-        }
-    }
+    // MobileCore.collectLaunchInfo is private
+//    @ReactMethod
+//    public void collectLaunchInfo() {
+//        Activity act = getCurrentActivity();
+//        if (act != null) {
+//            MobileCore.collectLaunchInfo(act);
+//        }
+//    }
 
     @ReactMethod
     public void setAppGroup(final String appGroup) {
