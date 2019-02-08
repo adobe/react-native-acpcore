@@ -14,8 +14,9 @@
  * is strictly forbidden unless prior written permission is obtained
  * from Adobe Systems Incorporated.
  **************************************************************************/
-package com.adobe.marketing.mobile;
+package com.adobe.marketing.mobile.reactnative;
 
+import com.adobe.marketing.mobile.Signal;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
