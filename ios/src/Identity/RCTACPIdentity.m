@@ -29,7 +29,7 @@ RCT_EXPORT_MODULE(ACPIdentity);
 }
 
 RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    resolve([ACPIdentity.extensionVersion]);
+    resolve([ACPIdentity extensionVersion]);
 }
 
 /**
