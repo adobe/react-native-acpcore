@@ -27,6 +27,10 @@ RCT_EXPORT_MODULE(ACPSignal);
     return dispatch_get_main_queue();
 }
 
+RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
+    resolve([ACPSignal.extensionVersion]);
+}
+
 /**
  * @brief Registers the ACPSignal extension with the Core Event Hub.
  */
