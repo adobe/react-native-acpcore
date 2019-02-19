@@ -28,7 +28,7 @@ RCT_EXPORT_MODULE(ACPLifecycle);
 }
 
 RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    resolve([ACPLifecycle.extensionVersion]);
+    resolve([ACPLifecycle extensionVersion]);
 }
 
 /**

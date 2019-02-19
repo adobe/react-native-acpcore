@@ -36,7 +36,7 @@ static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dic
 }
 
 RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    resolve([ACPCore.extensionVersion]);
+    resolve([ACPCore extensionVersion]);
 }
 
 /*

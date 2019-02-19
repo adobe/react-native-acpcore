@@ -28,7 +28,7 @@ RCT_EXPORT_MODULE(ACPSignal);
 }
 
 RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    resolve([ACPSignal.extensionVersion]);
+    resolve([ACPSignal extensionVersion]);
 }
 
 /**
