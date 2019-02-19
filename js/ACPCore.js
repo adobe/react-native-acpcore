@@ -31,7 +31,7 @@ module.exports = {
    * @param  {string} Promise a promise that resolves with the extension verison
    */
   extensionVersion(): Promise<string> {
-    return Promise.resolve("1.0.0");
+    return Promise.resolve(RCTACPCore.extensionVersion());
   },
 
   /**
