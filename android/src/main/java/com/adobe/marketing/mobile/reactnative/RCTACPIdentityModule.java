@@ -45,6 +45,11 @@ public class RCTACPIdentityModule extends ReactContextBaseJavaModule {
         return "ACPIdentity";
     }
 
+    @ReactMethod
+    public void extensionVersion(final Promise promise) {
+        promise.resolve(Identity.extensionVersion());
+    }
+
     /**
      * Registers the Identity extension with the {@code MobileCore}
      * <p>

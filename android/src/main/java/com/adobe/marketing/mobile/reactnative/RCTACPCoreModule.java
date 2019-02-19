@@ -54,6 +54,11 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
       MobileCore.setApplication(application);
     }
 
+    @ReactMethod
+    public void extensionVersion(final Promise promise) {
+        promise.resolve(MobileCore.extensionVersion());
+    }
+
     /**
      * Start the Core processing. This should be called after the initial set of extensions have been registered.
      * <p>

@@ -28,6 +28,10 @@ RCT_EXPORT_MODULE(ACPIdentity);
     return dispatch_get_main_queue();
 }
 
+RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
+    resolve([ACPIdentity.extensionVersion]);
+}
+
 /**
  * @brief Registers the ACPIdentity extension with the Core Event Hub.
  */

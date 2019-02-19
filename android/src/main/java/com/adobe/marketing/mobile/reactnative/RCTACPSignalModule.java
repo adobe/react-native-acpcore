@@ -17,6 +17,7 @@
 package com.adobe.marketing.mobile.reactnative;
 
 import com.adobe.marketing.mobile.Signal;
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -34,6 +35,11 @@ public class RCTACPSignalModule extends ReactContextBaseJavaModule {
     @Override
     public String getName() {
         return "ACPSignal";
+    }
+
+    @ReactMethod
+    public void extensionVersion(final Promise promise) {
+        promise.resolve(Signal.extensionVersion());
     }
 
     /**

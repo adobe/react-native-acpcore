@@ -27,6 +27,10 @@ RCT_EXPORT_MODULE(ACPLifecycle);
     return dispatch_get_main_queue();
 }
 
+RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
+    resolve([ACPLifecycle.extensionVersion]);
+}
+
 /**
  * @brief Registers the ACPLifecycle extension with the Core Event Hub.
  */

@@ -18,6 +18,7 @@ package com.adobe.marketing.mobile.reactnative;
 
 
 import com.adobe.marketing.mobile.Lifecycle;
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -35,6 +36,11 @@ public class RCTACPLifecycleModule extends ReactContextBaseJavaModule {
     @Override
     public String getName() {
         return "ACPLifecycle";
+    }
+
+    @ReactMethod
+    public void extensionVersion(final Promise promise) {
+        promise.resolve(Lifecycle.extensionVersion());
     }
 
     /**
