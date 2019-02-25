@@ -25,7 +25,7 @@ import java.util.Map;
 
 public class RCTACPArrayUtil {
 
-    public static Object[] toArray(ReadableArray readableArray) {
+    public static Object[] toObjectArray(ReadableArray readableArray) {
         Object[] array = new Object[readableArray.size()];
 
         for (int i = 0; i < readableArray.size(); i++) {
@@ -48,7 +48,7 @@ public class RCTACPArrayUtil {
                     array[i] = RCTACPMapUtil.toMap(readableArray.getMap(i));
                     break;
                 case Array:
-                    array[i] = RCTACPArrayUtil.toArray(readableArray.getArray(i));
+                    array[i] = RCTACPArrayUtil.toObjectArray(readableArray.getArray(i));
                     break;
             }
         }
@@ -57,34 +57,28 @@ public class RCTACPArrayUtil {
     }
 
     public static WritableArray toWritableArray(Object[] array) {
-        WritableArray writableArray = Arguments.createArray();
+        WritableArray writableArr = Arguments.createArray();
 
         for (int i = 0; i < array.length; i++) {
             Object value = array[i];
 
             if (value == null) {
-                writableArray.pushNull();
-            }
-            if (value instanceof Boolean) {
-                writableArray.pushBoolean((Boolean) value);
-            }
-            if (value instanceof Double) {
-                writableArray.pushDouble((Double) value);
-            }
-            if (value instanceof Integer) {
-                writableArray.pushInt((Integer) value);
-            }
-            if (value instanceof String) {
-                writableArray.pushString((String) value);
-            }
-            if (value instanceof Map) {
-                writableArray.pushMap(RCTACPMapUtil.toWritableMap((Map<String, Object>) value));
-            }
-            if (value.getClass().isArray()) {
-                writableArray.pushArray(RCTACPArrayUtil.toWritableArray((Object[]) value));
+                writableArr.pushNull();
+            } else if (value instanceof Boolean) {
+                writableArr.pushBoolean((Boolean) value);
+            } else if (value instanceof Double) {
+                writableArr.pushDouble((Double) value);
+            } else if (value instanceof Integer) {
+                writableArr.pushInt((Integer) value);
+            } else if (value instanceof String) {
+                writableArr.pushString((String) value);
+            } else if (value instanceof Map) {
+                writableArr.pushMap(RCTACPMapUtil.toWritableMap((Map<String, Object>) value));
+            } else if (value.getClass().isArray()) {
+                writableArr.pushArray(RCTACPArrayUtil.toWritableArray((Object[]) value));
             }
         }
 
-        return writableArray;
+        return writableArr;
     }
 }

@@ -53,7 +53,7 @@ public class RCTACPMapUtil {
                     map.put(key, RCTACPMapUtil.toMap(readableMap.getMap(key)));
                     break;
                 case Array:
-                    map.put(key, RCTACPArrayUtil.toArray(readableMap.getArray(key)));
+                    map.put(key, RCTACPArrayUtil.toObjectArray(readableMap.getArray(key)));
                     break;
             }
         }
