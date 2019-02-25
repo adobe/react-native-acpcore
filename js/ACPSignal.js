@@ -26,7 +26,7 @@ module.exports = {
    * @param  {string} Promise [description]
    */
   extensionVersion(): Promise<string> {
-    return Promise.resolve(RCTACPCore.extensionVersion());
+    return Promise.resolve(RCTACPSignal.extensionVersion());
   },
 
   /**
