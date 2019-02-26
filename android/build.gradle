@@ -1,7 +1,3 @@
-
-def DEFAULT_ACPCORE_VERSION  = "1.+"
-def ACPCORE_VERSION = rootProject.hasProperty('ACPCoreVersion') ? rootProject.ACPCoreVersion : DEFAULT_ACPCORE_VERSION
-
 buildscript {
     repositories {
         google()
@@ -38,5 +34,5 @@ repositories {
 
 dependencies {
     implementation "com.facebook.react:react-native:+"
-    implementation "com.adobe.marketing.mobile:sdk-core:${ACPCORE_VERSION}"
+    implementation "com.adobe.marketing.mobile:sdk-core:1.0.2"
 }
