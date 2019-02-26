@@ -1,19 +1,27 @@
 {
   "name": "react-native-acpcore",
   "version": "0.0.1",
-  "description": "",
+  "description": "Adobe Cloud Platform support for React Native apps.",
+  "homepage": "https://aep-sdks.gitbook.io/docs/",
+  "license": "See LICENSE.md",
   "main": "./js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "flow": "flow",
-    "lint": "node_modules/.bin/eslint . --max-warnings=0 src/",
-    "lint-fix": "node_modules/.bin/eslint . --fix src/"
+    "flow": "flow"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "adobe",
+    "adobe cloud platform",
+    "core",
+    "ios",
+    "android"
   ],
-  "author": "Nick Porter <nporter@adobe.com>",
-  "license": "Adobe 2019",
+  "author": {
+    "name": "Adobe Experience Platform SDK Team"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.44.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
@@ -21,19 +29,6 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native": "2.1.0",
     "flow-typed": "^2.3.0",
-    "flow-bin": "^0.92.0",
-    "eslint": "^4.18.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-import-resolver-babel-module": "^4.0.0",
-    "eslint-plugin-flowtype": "^2.46.1",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0",
-    "eslint-plugin-react-native": "^3.2.1"
-  },
-  "dependencies": {
-    "react": "16.6.3",
-    "react-native": "0.58.3"
+    "flow-bin": "^0.92.0"
   }
 }
