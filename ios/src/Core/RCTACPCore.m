@@ -25,7 +25,7 @@
 
 RCT_EXPORT_MODULE(ACPCore);
 
-static NSString* const EXTENSION_NAME = @"RCTACPCore";
+static NSString* const EXTENSION_NAME = @"ACPCore";
 static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dictionary to Event";
 
 // https://facebook.github.io/react-native/docs/native-modules-ios#threading
