@@ -19,7 +19,7 @@ Open `ios/RCTACPCore.xcodeproj`
 Note: This the Xcode project does not include all dependencies to build. If you want to build the project you should run `pod install` then open the workspace.
 
 
-##Installation
+## Installation
 
 You need to install the SDK with [npm](https://www.npmjs.com/) and configure the native Android/iOS project in your react native project.
 
@@ -58,7 +58,7 @@ public void onCreate() {
 }
 ```
 
-### Usage
+## Usage
 
 ### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
 
