@@ -80,7 +80,7 @@ public final class RCTACPCoreDataBridge {
             return LoggingMode.VERBOSE;
         }
 
-        return null;
+        return LoggingMode.DEBUG;
     }
 
 

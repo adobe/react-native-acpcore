@@ -140,9 +140,7 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void setLogLevel(final String mode) {
         LoggingMode logMode = RCTACPCoreDataBridge.loggingModeFromString(mode);
-        if (logMode != null) {
-            MobileCore.setLogLevel(logMode);
-        }
+        MobileCore.setLogLevel(logMode);
     }
 
     /**
@@ -433,17 +431,17 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
 //        if (act != null) {
 //            MobileCore.collectLaunchInfo(act);
 //        }
-        Log.d(getName(), "collectLaunchInfo cannot be invoked on Android");
+        Log.d(getName(), "collectLaunchInfo() cannot be invoked on Android");
     }
 
     @ReactMethod
     public void setAppGroup(final String appGroup) {
-        Log.d(getName(), "setAppGroup() is not available on Android");
+        Log.d(getName(), "setAppGroup() cannot be invoked on Android");
     }
 
     @ReactMethod
     public void downloadRules() {
-        Log.d(getName(), "downloadRules() is not available on Android");
+        Log.d(getName(), "downloadRules() cannot be invoked on Android");
     }
 
     // Helper method/s
@@ -453,7 +451,6 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
         }
 
         promise.reject(String.valueOf(error.getErrorCode()), error.getErrorName(), new RuntimeException(error.getErrorName()));
-
     }
 
 }

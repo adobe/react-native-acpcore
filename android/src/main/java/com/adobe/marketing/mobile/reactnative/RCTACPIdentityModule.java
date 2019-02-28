@@ -109,9 +109,7 @@ public class RCTACPIdentityModule extends ReactContextBaseJavaModule {
     public void syncIdentifiersWithAuthState(final ReadableMap identifiers,
                                 final String authenticationState) {
         VisitorID.AuthenticationState authState = RCTACPIdentityDataBridge.authenticationStateFromString(authenticationState);
-        if (authState != null) {
-            Identity.syncIdentifiers(RCTACPMapUtil.toStringMap(identifiers), RCTACPIdentityDataBridge.authenticationStateFromString(authenticationState));
-        }
+        Identity.syncIdentifiers(RCTACPMapUtil.toStringMap(identifiers), RCTACPIdentityDataBridge.authenticationStateFromString(authenticationState));
     }
 
     /**
@@ -137,9 +135,7 @@ public class RCTACPIdentityModule extends ReactContextBaseJavaModule {
                                final String identifier,
                                final String authenticationState) {
         VisitorID.AuthenticationState authState = RCTACPIdentityDataBridge.authenticationStateFromString(authenticationState);
-        if (authState != null) {
-            Identity.syncIdentifier(identifierType, identifier, authState);
-        }
+        Identity.syncIdentifier(identifierType, identifier, authState);
     }
 
     /**

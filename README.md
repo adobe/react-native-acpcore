@@ -44,7 +44,7 @@ react-native link react-native-acpcore
 
 #### 3.1 Android project
 
-Navigate to `MainApplication.java` under `app/src/main/java/com/<project name>/`  and add a call to `RCTACPCoreModule.setApplication()` inside of `onCreate()`
+Navigate to `MainApplication.java` under `app/src/main/java/com/<project name>/` and add a call to `RCTACPCoreModule.setApplication()` inside of `onCreate()`.
 
 ```java
 import com.adobe.marketing.mobile.reactnative.RCTACPCorePackage; // import the package
@@ -62,7 +62,7 @@ public void onCreate() {
 
 ### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
 
-##### Initalizing the SDK:
+##### Initializing the SDK:
 
 ```javascript
 import {ACPCore, ACPLifecycle, ACPIdentity, ACPSignal, ACPMobileLogLevel} from 'react-native-acpcore';

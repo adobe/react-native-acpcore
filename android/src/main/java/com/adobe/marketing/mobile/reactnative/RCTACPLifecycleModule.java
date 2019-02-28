@@ -57,5 +57,4 @@ public class RCTACPLifecycleModule extends ReactContextBaseJavaModule {
         Lifecycle.registerExtension();
     }
 
-
 }
