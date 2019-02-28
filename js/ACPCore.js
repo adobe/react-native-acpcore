@@ -276,7 +276,6 @@ module.exports = {
   },
 
   // iOS only
-  // TODO, should we make this native only?
   collectLaunchInfo() {
     RCTACPCore.collectLaunchInfo();
   },
