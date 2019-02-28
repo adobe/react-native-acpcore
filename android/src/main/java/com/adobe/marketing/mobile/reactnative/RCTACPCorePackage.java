@@ -44,4 +44,5 @@ public class RCTACPCorePackage implements ReactPackage {
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return Collections.emptyList();
     }
+    
 }

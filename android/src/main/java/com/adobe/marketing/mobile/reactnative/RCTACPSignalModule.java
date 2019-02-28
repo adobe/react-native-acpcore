@@ -55,6 +55,5 @@ public class RCTACPSignalModule extends ReactContextBaseJavaModule {
     public void registerExtension() throws Exception {
         Signal.registerExtension();
     }
-
-
+    
 }

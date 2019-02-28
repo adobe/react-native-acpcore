@@ -70,14 +70,14 @@ static NSString* const ACP_PRIVACY_STATUS_UNKNOWN = @"ACP_PRIVACY_STATUS_UNKNOWN
 
 + (NSDictionary *)sanitizeDictionaryToContainClass: (Class) type WithDictionary:(NSDictionary *)dict {
     NSMutableDictionary *sanitizedDict = [NSMutableDictionary dictionary];
-    
-    for(id key in dict) {
+
+    for (id key in dict) {
         id obj = [dict objectForKey:key];
         if ([key isKindOfClass:type] && [obj isKindOfClass:type]) {
             sanitizedDict[key] = obj;
         }
     }
-    
+
     return sanitizedDict;
 }
 

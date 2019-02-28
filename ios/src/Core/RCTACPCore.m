@@ -28,8 +28,6 @@ RCT_EXPORT_MODULE(ACPCore);
 static NSString* const EXTENSION_NAME = @"ACPCore";
 static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dictionary to Event";
 
-// https://facebook.github.io/react-native/docs/native-modules-ios#threading
-// https://stackoverflow.com/questions/50773748/difference-requiresmainqueuesetup-and-dispatch-get-main-queue
 - (dispatch_queue_t)methodQueue
 {
     return dispatch_get_main_queue();
