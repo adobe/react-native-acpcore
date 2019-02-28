@@ -48,7 +48,6 @@ Navigate to `MainApplication.java` under `app/src/main/java/com/<project name>/`
 
 ```java
 import com.adobe.marketing.mobile.reactnative.RCTACPCorePackage; // import the package
-//...
 
 @Override
 public void onCreate() {
@@ -80,7 +79,7 @@ initSDK() {
 ##### Configuring the SDK with a local file:
 
 ```javascript
-ACPCore.configureWithFileInPath("pathToConfigFile");
+ACPCore.configureWithFileInPath("pathToConfigFile.json");
 ```
 
 ##### Updating the SDK configuration:
@@ -284,3 +283,7 @@ ACPSignal.registerExtension();
 ```javascript
 ACPCore.collectPii({"myPii": "data"});
 ```
+
+## License
+
+See LICENSE.md
