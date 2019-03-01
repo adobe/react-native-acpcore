@@ -4,7 +4,7 @@
 https://wiki.corp.adobe.com/display/adms/React+Native
 
 
-## Setup
+## Devlopment Setup
 
 `npm install`
 
