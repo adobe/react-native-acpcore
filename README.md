@@ -47,7 +47,7 @@ public void onCreate() {
 ##### Initializing the SDK:
 
 ```javascript
-import {ACPCore, ACPLifecycle, ACPIdentity, ACPSignal, ACPMobileLogLevel} from 'react-native-acpcore';
+import {ACPCore, ACPLifecycle, ACPIdentity, ACPSignal} from 'react-native-acpcore';
 
 initSDK() {
     ACPCore.setLogLevel("ACP_LOG_LEVEL_VERBOSE");
