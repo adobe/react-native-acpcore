@@ -31,9 +31,6 @@ RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(R
     resolve([ACPLifecycle extensionVersion]);
 }
 
-/**
- * @brief Registers the ACPLifecycle extension with the Core Event Hub.
- */
 RCT_EXPORT_METHOD(registerExtension) {
     [ACPLifecycle registerExtension];
 }

@@ -42,18 +42,9 @@ public class RCTACPSignalModule extends ReactContextBaseJavaModule {
         promise.resolve(Signal.extensionVersion());
     }
 
-    /**
-     * Registers the Signal extension with the {@code MobileCore}
-     * <p>
-     * <p>
-     * <p>
-     * This will allow the extension to send and receive events to and from the SDK.
-     *
-     * @throws Exception If the registration was not successful.
-     */
     @ReactMethod
     public void registerExtension() throws Exception {
         Signal.registerExtension();
     }
-    
+
 }

@@ -31,9 +31,6 @@ RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(R
     resolve([ACPSignal extensionVersion]);
 }
 
-/**
- * @brief Registers the ACPSignal extension with the Core Event Hub.
- */
 RCT_EXPORT_METHOD(registerExtension) {
     [ACPSignal registerExtension];
 }
