@@ -35,39 +35,39 @@ module.exports = {
   },
 
   /**
- * Start the Core processing.
- * This should be called after the initial set of extensions have been registered.
- * This call will wait for any outstanding registrations to complete and then start event processing.
- * You can use the callback to kickoff additional operations immediately after any operations kicked off during registration.
- * @param  {boolean} Promise a promise that resolves when core has started
- */
+   * Start the Core processing.
+   * This should be called after the initial set of extensions have been registered.
+   * This call will wait for any outstanding registrations to complete and then start event processing.
+   * You can use the callback to kickoff additional operations immediately after any operations kicked off during registration.
+   * @param  {boolean} Promise a promise that resolves when core has started
+   */
   start(): Promise<boolean> {
     return RCTACPCore.start();
   },
 
   /**
- * Load remote configuration specified by the given application ID
- *
- * Configure the SDK by downloading the remote configuration file hosted on Adobe servers
- * specified by the given application ID. The configuration file is cached once downloaded
- * and used in subsequent calls to this API. If the remote file is updated after the first
- * download, the updated file is downloaded and replaces the cached file.
- *
- * The appid is preserved, and on application restarts, the remote configuration file specified by \p appid
- * is downloaded and applied to the SDK.
- *
- * On failure to download the remote configuration file, the SDK is configured using the cached
- * file if it exists, or if no cache file exists then the existing configuration remains unchanged.
- *
- * Calls to this API will replace any existing SDK configuration except those set using
- * ACPCore::updateConfiguration: or ACPCore::setPrivacyStatus:. Configuration updates
- * made using ACPCore::updateConfiguration:
- * and ACPCore::setPrivacyStatus: are always applied on top of configuration changes made using this API.
- *
- * @param  {String?} appId a unique identifier assigned to the app instance by the Adobe Mobile Services. It is automatically
- * added to the ADBMobile JSON file when downloaded from the Adobe Mobile Services UI and can be
- * found in Manage App Settings. A value of `nil` has no effect.
- */
+   * Load remote configuration specified by the given application ID
+   *
+   * Configure the SDK by downloading the remote configuration file hosted on Adobe servers
+   * specified by the given application ID. The configuration file is cached once downloaded
+   * and used in subsequent calls to this API. If the remote file is updated after the first
+   * download, the updated file is downloaded and replaces the cached file.
+   *
+   * The appid is preserved, and on application restarts, the remote configuration file specified by \p appid
+   * is downloaded and applied to the SDK.
+   *
+   * On failure to download the remote configuration file, the SDK is configured using the cached
+   * file if it exists, or if no cache file exists then the existing configuration remains unchanged.
+   *
+   * Calls to this API will replace any existing SDK configuration except those set using
+   * ACPCore::updateConfiguration: or ACPCore::setPrivacyStatus:. Configuration updates
+   * made using ACPCore::updateConfiguration:
+   * and ACPCore::setPrivacyStatus: are always applied on top of configuration changes made using this API.
+   *
+   * @param  {String?} appId a unique identifier assigned to the app instance by the Adobe Mobile Services. It is automatically
+   * added to the ADBMobile JSON file when downloaded from the Adobe Mobile Services UI and can be
+   * found in Manage App Settings. A value of `nil` has no effect.
+   */
   configureWithAppId(appId?: String) {
     RCTACPCore.configureWithAppId(appId);
   },
@@ -92,35 +92,35 @@ module.exports = {
   },
 
   /**
- * Update specific configuration parameters
- *
- * Update the current SDK configuration with specific key/value pairs. Keys not found in the current
- * configuration are added. Configuration updates are preserved and applied over existing or new
- * configurations set by calling ACPCore::configureWithAppId: or ACPCore::configureWithFileInPath:,
- * even across application restarts.
- *
- * Using `nil` values is allowed and effectively removes the configuration parameter from the current configuration.
- *
- * @param  {{ string: any }?} configMap configuration key/value pairs to be updated or added. A value of `nil` has no effect.
- */
+   * Update specific configuration parameters
+   *
+   * Update the current SDK configuration with specific key/value pairs. Keys not found in the current
+   * configuration are added. Configuration updates are preserved and applied over existing or new
+   * configurations set by calling ACPCore::configureWithAppId: or ACPCore::configureWithFileInPath:,
+   * even across application restarts.
+   *
+   * Using `nil` values is allowed and effectively removes the configuration parameter from the current configuration.
+   *
+   * @param  {{ string: any }?} configMap configuration key/value pairs to be updated or added. A value of `nil` has no effect.
+   */
   updateConfiguration(configMap?: { string: any }) {
     RCTACPCore.updateConfiguration(configMap);
   },
 
   /**
- * Set the logging level of the SDK
- *
- * @param {ACPMobileLogLevel} mode ACPMobileLogLevel to be used by the SDK
- */
+   * Set the logging level of the SDK
+   *
+   * @param {ACPMobileLogLevel} mode ACPMobileLogLevel to be used by the SDK
+   */
   setLogLevel(mode: ACPMobileLogLevel) {
     RCTACPCore.setLogLevel(mode);
   },
 
   /**
- * Set the Adobe Mobile Privacy status
- *
- * @param {ACPMobilePrivacyStatus} privacyStatus ACPMobilePrivacyStatus to be set to the SDK
- */
+   * Set the Adobe Mobile Privacy status
+   *
+   * @param {ACPMobilePrivacyStatus} privacyStatus ACPMobilePrivacyStatus to be set to the SDK
+   */
   setPrivacyStatus(privacyStatus: ACPMobilePrivacyStatus) {
     RCTACPCore.setPrivacyStatus(privacyStatus);
   },
@@ -135,10 +135,10 @@ module.exports = {
   },
 
   /**
- * Calls the provided callback with a JSON string containing all of the user's identities known by the SDK
- *
- * @return {string?} known identifier as a JSON string
- */
+   * Calls the provided callback with a JSON string containing all of the user's identities known by the SDK
+   *
+   * @return {string?} known identifier as a JSON string
+   */
   getSdkIdentities(): Promise<?string> {
     return RCTACPCore.getSdkIdentities();
   },
@@ -155,21 +155,31 @@ module.exports = {
   },
 
   /**
-   * [dispatchEvent description]
-   * @param  {[type]} event [description]
-   * @return {[type]}       [description]
+	 * This method will be used when the provided {@code ACPExtensionEvent} is used as a trigger and a response event
+	 * is expected in return. The returned event needs to be sent using
+	 * {@link #dispatchResponseEvent(Event, Event, ExtensionErrorCallback)}.
+	 * <p>
+	 *
+	 * @param event            required parameter, {@link ACPExtensionEvent} instance to be dispatched, used as a trigger
+	 * @param responseCallback required parameters, {@link Promise} to be called with the response event received
+	 *
+	 * @see ACPCore#dispatchResponseEvent(Event, Event, ExtensionErrorCallback)
    */
   dispatchEventWithResponseCallback(event: ACPExtensionEvent): Promise<ACPExtensionEvent> {
     return RCTACPCore.dispatchEventWithResponseCallback(event);
   },
 
   /**
-   * Dispatches a response event for a paired event that was sent to dispatchEventWithResponseCallback
-   * or received by an extension listener {@code hear} method.
-   * @param  {[type]} responseEvent [description]
-   * @param  {[type]} requestEvent  [description]
-   * @param  {[type]} trackAction   [description]
-   * @return {[type]}               [description]
+	 * Dispatches a response event for a paired event that was sent to {@code dispatchEventWithResponseCallback}
+	 * and received by an extension listener {@code hear} method.
+	 *
+	 * @param responseEvent required parameter, {@link ACPExtensionEvent} instance to be dispatched as a response for the
+	 *                      event sent using {@link ACPCore#dispatchEventWithResponseCallback(ACPExtensionEvent)}
+	 * @param requestEvent  required parameter, the event sent using
+	 * 						{@link ACPCore#dispatchEventWithResponseCallback(ACPExtensionEvent)}
+	 * @return {@code boolean} indicating if the the event dispatching operation succeeded
+	 *
+	 * @see ACPCore#dispatchEventWithResponseCallback(ACPExtensionEvent)
    */
   dispatchResponseEvent(responseEvent: ACPExtensionEvent, requestEvent: ACPExtensionEvent): Promise<boolean> {
     return RCTACPCore.dispatchResponseEvent(responseEvent, requestEvent);
@@ -191,60 +201,60 @@ module.exports = {
   },
 
   /**
- * This method sends a generic Analytics state tracking hit with context data.
- *
- *  States represent different screens or views of you application. When the user navigates between application pages,
- *  a new track call should be sent with current state name. Tracking state name is typically called from a
- *  Component in the componentDidMount function.
- *
- *  note: when using the Adobe Analytics extension, calling this API will increment page views
- * @param  {String?} state containing the name of the state to track
- * @param  {{ string: string }?} contextData containing context data to attach on this hit
- */
+   * This method sends a generic Analytics state tracking hit with context data.
+   *
+   *  States represent different screens or views of you application. When the user navigates between application pages,
+   *  a new track call should be sent with current state name. Tracking state name is typically called from a
+   *  Component in the componentDidMount function.
+   *
+   *  note: when using the Adobe Analytics extension, calling this API will increment page views
+   * @param  {String?} state containing the name of the state to track
+   * @param  {{ string: string }?} contextData containing context data to attach on this hit
+   */
   trackState(state?: String, contextData?: { string: string }) {
     RCTACPCore.trackState(state, contextData);
   },
 
   /**
- * Submits a generic event containing the provided IDFA with event type `generic.identity`.
- *
- * When using the Adobe Identity extension, the following applies:
- *   - If the IDFA was set in the SDK, the IDFA will be sent in lifecycle. It can also be accessed in Signals (Postbacks).
- *   - This ID is preserved between app upgrades, is saved and restored during the standard application backup process,
- *     and is removed at uninstall.
- *   - If the Mobile SDK is configured with `identity.adidEnabled` set to `false`, then the advertising identifier
- *     is not set or stored.
- *
- * @param {String?} advertisingIdentifier the advertising idenifier string.
- */
-  setAdvertisingIdentifier(advertisingIdentifier?: String) {
+   * Submits a generic event containing the provided IDFA with event type `generic.identity`.
+   *
+   * When using the Adobe Identity extension, the following applies:
+   *   - If the IDFA was set in the SDK, the IDFA will be sent in lifecycle. It can also be accessed in Signals (Postbacks).
+   *   - This ID is preserved between app upgrades, is saved and restored during the standard application backup process,
+   *     and is removed at uninstall.
+   *   - If the Mobile SDK is configured with `identity.adidEnabled` set to `false`, then the advertising identifier
+   *     is not set or stored.
+   *
+   * @param {String?} advertisingIdentifier the advertising idenifier string.
+   */
+    setAdvertisingIdentifier(advertisingIdentifier?: String) {
     RCTACPCore.setAdvertisingIdentifier(advertisingIdentifier);
   },
 
   /**
- * Submits a generic event containing the provided push token with event type `generic.identity`.
- *
- * When using the Adobe Identity extension, the following applies:
- *   - If the current SDK privacy status is \ref ACPMobilePrivacyStatusOptOut, then the push identifier is not set.
- *
- * @param {String?} pushIdentifier the device token for push notifications
- */
+   * Submits a generic event containing the provided push token with event type `generic.identity`.
+   *
+   * When using the Adobe Identity extension, the following applies:
+   *   - If the current SDK privacy status is \ref ACPMobilePrivacyStatusOptOut, then the push identifier is not set.
+   *
+   * @param {String?} pushIdentifier the device token for push notifications
+   */
   setPushIdentifier(pushIdentifier?: String) {
     RCTACPCore.setPushIdentifier(pushIdentifier);
   },
 
   /**
- * Submits a generic event to start/resume lifecycle collection with event type `generic.lifecycle`.
- *
- * When using the Adobe Lifecycle extension, the following applies:
- *   - Start a new lifecycle session or resume a previously paused lifecycle session. If a previously paused session
- *     timed out, then a new session is created. If a current session is running, then calling this method does nothing.
- *   - Additional context data may be passed when calling this method. Lifecycle data and any additional data are
- *     sent as context data parameters to Analytics, to Target as mbox parameters, and for Audience Manager they are
- *     sent as customer variables. Any additional data is also used by the Rules Engine when processing rules.
- *
- * @param  {{ string: string }?} additionalContextData optional additional context for this session.
- */
+   * Submits a generic event to start/resume lifecycle collection with event type `generic.lifecycle`.
+   *
+   * When using the Adobe Lifecycle extension, the following applies:
+   *   - Start a new lifecycle session or resume a previously paused lifecycle session. If a previously paused session
+   *     timed out, then a new session is created. If a current session is running, then calling this method does nothing.
+   *   - Additional context data may be passed when calling this method. Lifecycle data and any additional data are
+   *     sent as context data parameters to Analytics, to Target as mbox parameters, and for Audience Manager they are
+   *     sent as customer variables. Any additional data is also used by the Rules Engine when processing rules.
+   *
+   * @param  {{ string: string }?} additionalContextData optional additional context for this session.
+   */
   lifecycleStart(additionalContextData?: { string: string }) {
     RCTACPCore.lifecycleStart(additionalContextData);
   },
@@ -266,21 +276,32 @@ module.exports = {
   },
 
   /**
- * Collect PII data. Although using this call enables collection of PII data, the SDK does not
- * automatically send the data to any Adobe endpoint.
- *
- * @param  {{ string: string }} data the dictionary containing the PII data to be collected
- */
+   * Collect PII data. Although using this call enables collection of PII data, the SDK does not
+   * automatically send the data to any Adobe endpoint.
+   * @param  {{ string: string }} data the dictionary containing the PII data to be collected
+   */
   collectPii(data: { string: string }) {
     RCTACPCore.collectPii(data);
   },
 
-  // iOS only
+  /**
+   * iOS Only
+   * @brief set the app group used to sharing user defaults and files among containing app and extension apps
+   * @note This *must* be called in AppDidFinishLaunching and before any other interactions with the Adobe Mobile library have happened.
+   * Only the first call to this function will have any effect.
+   * @platform ios
+   */
   collectLaunchInfo() {
     RCTACPCore.collectLaunchInfo();
   },
 
-  // iOS only
+  /**
+   * iOS Only
+   * @brief set the app group used to sharing user defaults and files among containing app and extension apps
+   * @note This *must* be called in AppDidFinishLaunching and before any other interactions with the Adobe Mobile library have happened.
+   * Only the first call to this function will have any effect.
+   * @platform ios
+   */
   setAppGroup(appGroup?: String) {
     RCTACPCore.setAppGroup(appGroup);
   },
@@ -291,6 +312,7 @@ module.exports = {
   *
   * Forces Rules Engine to send a network request to the rules url in Configuration,
   * to refresh rules content set in the SDK.
+  * @platform ios
    */
   downloadRules() {
     RCTACPCore.downloadRules();

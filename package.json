@@ -1,7 +1,7 @@
 {
   "name": "react-native-acpcore",
   "version": "0.0.1",
-  "description": "Adobe Cloud Platform support for React Native apps.",
+  "description": "Adobe Experience Platform support for React Native apps.",
   "homepage": "https://aep-sdks.gitbook.io/docs/",
   "license": "See LICENSE.md",
   "main": "./js/index.js",
@@ -11,7 +11,7 @@
   "keywords": [
     "react-native",
     "adobe",
-    "adobe cloud platform",
+    "adobe experience platform",
     "core",
     "ios",
     "android"

@@ -23,7 +23,7 @@ const RCTACPLifecycle = require('react-native').NativeModules.ACPLifecycle;
 module.exports = {
   /**
    * Returns the version of the ACPLifecycle extension
-   * @param  {string} Promise [description]
+   * @param  {string} Promise a promise that resolves with the extension verison
    */
   extensionVersion(): Promise<string> {
     return Promise.resolve(RCTACPLifecycle.extensionVersion());

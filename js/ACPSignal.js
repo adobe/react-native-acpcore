@@ -23,7 +23,7 @@ const RCTACPSignal = require('react-native').NativeModules.ACPSignal;
 module.exports = {
   /**
    * Returns the version of the ACPSignal extension
-   * @param  {string} Promise [description]
+   * @param  {string} Promise a promise that resolves with the extension verison
    */
   extensionVersion(): Promise<string> {
     return Promise.resolve(RCTACPSignal.extensionVersion());

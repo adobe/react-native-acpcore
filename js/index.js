@@ -19,8 +19,7 @@
 'use strict';
 
 module.exports = {
-
-  //native models
+  // Native models
   get ACPMobilePrivacyStatus() {
     return require('./models/ACPMobilePrivacyStatus');
   },
@@ -38,7 +37,7 @@ module.exports = {
   },
 
 
-  //native modules
+  // Native modules
   get ACPCore() {
     return require('./ACPCore');
   },
@@ -51,5 +50,4 @@ module.exports = {
   get ACPSignal() {
     return require('./ACPSignal');
   },
-
 };
