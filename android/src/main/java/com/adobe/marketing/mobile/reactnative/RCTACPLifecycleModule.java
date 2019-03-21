@@ -43,15 +43,6 @@ public class RCTACPLifecycleModule extends ReactContextBaseJavaModule {
         promise.resolve(Lifecycle.extensionVersion());
     }
 
-    /**
-     * Registers the Lifecycle extension with the {@code MobileCore}
-     * <p>
-     * <p>
-     * <p>
-     * This will allow the extension to send and receive events to and from the SDK.
-     *
-     * @throws Exception If the registration was not successful.
-     */
     @ReactMethod
     public void registerExtension() throws Exception {
         Lifecycle.registerExtension();
