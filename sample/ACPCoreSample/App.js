@@ -26,6 +26,8 @@ export default class App extends Component<Props> {
         <Button title="ACPCore::setPrivacyStatus(OptIn)" onPress={this.setPrivacyOptIn}/>
         <Button title="ACPCore::setPrivacyStatus(OptOut)" onPress={this.setPrivacyOptOut}/>
         <Button title="ACPCore::getPrivacyStatus()" onPress={this.getPrivacyStatus}/>
+        <Button title="ACPCore::getLogLevel()" onPress={this.getLogLevel}/>
+        <Button title="ACPCore::log(...)" onPress={this.log}/>
         <Button title="ACPCore::getSdkIdentities()" onPress={this.getSdkIdentities}/>
         <Button title="ACPCore::setAdvertisingIdentifier(adID)" onPress={this.setAdvertisingIdentifier}/>
         <Button title="ACPCore::lifecycleStart()" onPress={this.lifecycleStart}/>
@@ -47,14 +49,14 @@ export default class App extends Component<Props> {
   }
 
   initSDK() {
-    // console.log("AMSDK IMPORT: ACPCore = " + ACPCore);
-    // console.log("AMSDK IMPORT: ACPLifecycle = " + ACPLifecycle);
-    // console.log("AMSDK IMPORT: ACPSignal = " + ACPSignal);
-    // console.log("AMSDK IMPORT: ACPIdentity = " + ACPIdentity);
-    // console.log("AMSDK IMPORT: ACPMobileLogLevel = " + ACPMobileLogLevel);
-    // console.log("AMSDK IMPORT: ACPMobilePrivacyStatus = " + ACPMobilePrivacyStatus);
-    // console.log("AMSDK IMPORT: ACPMobileVisitorAuthenticationState = " + ACPMobileVisitorAuthenticationState);
-    // console.log("AMSDK IMPORT: ACPVisitorID = " + ACPVisitorID);
+    // console.log("AdobeExperienceSDK IMPORT: ACPCore = " + ACPCore);
+    // console.log("AdobeExperienceSDK IMPORT: ACPLifecycle = " + ACPLifecycle);
+    // console.log("AdobeExperienceSDK IMPORT: ACPSignal = " + ACPSignal);
+    // console.log("AdobeExperienceSDK IMPORT: ACPIdentity = " + ACPIdentity);
+    // console.log("AdobeExperienceSDK IMPORT: ACPMobileLogLevel = " + ACPMobileLogLevel);
+    // console.log("AdobeExperienceSDK IMPORT: ACPMobilePrivacyStatus = " + ACPMobilePrivacyStatus);
+    // console.log("AdobeExperienceSDK IMPORT: ACPMobileVisitorAuthenticationState = " + ACPMobileVisitorAuthenticationState);
+    // console.log("AdobeExperienceSDK IMPORT: ACPVisitorID = " + ACPVisitorID);
     ACPCore.setLogLevel("ACP_LOG_LEVEL_VERBOSE");
     ACPCore.configureWithAppId("launch-EN1a68f9bc5b3c475b8c232adc3f8011fb");
     ACPLifecycle.registerExtension();
@@ -64,19 +66,19 @@ export default class App extends Component<Props> {
   }
 
   coreExtensionVersion() {
-    ACPCore.extensionVersion().then(version => console.log("AMSDK: ACPCore version: " + version));
+    ACPCore.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPCore version: " + version));
   }
 
   lifecycleExtensionVersion() {
-    ACPLifecycle.extensionVersion().then(version => console.log("AMSDK: ACPLifecycle version: " + version));
+    ACPLifecycle.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPLifecycle version: " + version));
   }
 
   identityExtensionVersion() {
-    ACPIdentity.extensionVersion().then(version => console.log("AMSDK: ACPIdentity version: " + version));
+    ACPIdentity.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPIdentity version: " + version));
   }
 
   signalExtensionVersion() {
-    ACPSignal.extensionVersion().then(version => console.log("AMSDK: ACPSignal version: " + version));
+    ACPSignal.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPSignal version: " + version));
   }
 
 
@@ -89,11 +91,19 @@ export default class App extends Component<Props> {
   }
 
   getPrivacyStatus() {
-    ACPCore.getPrivacyStatus().then(status => console.log("AMSDK: Privacy Status = " + status));
+    ACPCore.getPrivacyStatus().then(status => console.log("AdobeExperienceSDK: Privacy Status = " + status));
+  }
+
+  getLogLevel() {
+    ACPCore.getLogLevel().then(level => console.log("AdobeExperienceSDK: Log Level = " + level));
+  }
+
+  log() {
+    ACPCore.log("ACP_LOG_LEVEL_VERBOSE", "React Native Tag", "React Native Message");
   }
 
   getSdkIdentities() {
-    ACPCore.getSdkIdentities().then(identities => console.log("AMSDK: Identities = " + identities));
+    ACPCore.getSdkIdentities().then(identities => console.log("AdobeExperienceSDK: Identities = " + identities));
   }
 
   setAdvertisingIdentifier() {
@@ -119,7 +129,7 @@ export default class App extends Component<Props> {
 
   dispatchEventWithResponseCallback() {
     var event = new ACPExtensionEvent("eventName", "eventType", "eventSource", {"testDataKey": "testDataValue"});
-    ACPCore.dispatchEventWithResponseCallback(event).then(responseEvent => console.log("AMSDK: responseEvent = " + responseEvent));
+    ACPCore.dispatchEventWithResponseCallback(event).then(responseEvent => console.log("AdobeExperienceSDK: responseEvent = " + responseEvent));
   }
 
   dispatchResponseEvent() {
@@ -143,15 +153,15 @@ export default class App extends Component<Props> {
   }
 
   appendVisitorInfoForURL() {
-    ACPIdentity.appendVisitorInfoForURL("test.com").then(urlWithVisitorData => console.log("AMSDK: VisitorData = " + urlWithVisitorData));
+    ACPIdentity.appendVisitorInfoForURL("test.com").then(urlWithVisitorData => console.log("AdobeExperienceSDK: VisitorData = " + urlWithVisitorData));
   }
 
   getIdentifiers() {
-    ACPIdentity.getIdentifiers().then(identifiers => console.log("AMSDK: Identifiers = " + identifiers));
+    ACPIdentity.getIdentifiers().then(identifiers => console.log("AdobeExperienceSDK: Identifiers = " + identifiers));
   }
 
   getExperienceCloudId() {
-    ACPIdentity.getExperienceCloudId().then(cloudId => console.log("AMSDK: CloudID = " + cloudId));
+    ACPIdentity.getExperienceCloudId().then(cloudId => console.log("AdobeExperienceSDK: CloudID = " + cloudId));
   }
 
 }
