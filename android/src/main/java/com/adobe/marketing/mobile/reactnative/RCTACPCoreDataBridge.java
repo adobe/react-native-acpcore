@@ -83,6 +83,20 @@ public final class RCTACPCoreDataBridge {
         return LoggingMode.DEBUG;
     }
 
+    public static String stringFromLoggingMode(final LoggingMode logMode) {
+        switch (logMode) {
+            case ERROR:
+                return  ACP_LOG_LEVEL_ERROR;
+            case WARNING:
+                return  ACP_LOG_LEVEL_WARNING;
+            case DEBUG:
+                return  ACP_LOG_LEVEL_DEBUG;
+            case VERBOSE:
+                return  ACP_LOG_LEVEL_VERBOSE;
+        }
+
+        return ACP_LOG_LEVEL_DEBUG;
+    }
 
     public static MobilePrivacyStatus privacyStatusFromString(final String privacyStatusString) {
         if (privacyStatusString.equals(ACP_PRIVACY_STATUS_OPT_IN)) {

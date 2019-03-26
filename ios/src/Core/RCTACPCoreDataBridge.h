@@ -26,6 +26,8 @@
 
 + (NSString *)stringFromPrivacyStatus: (ACPMobilePrivacyStatus) status;
 
++ (NSString *)stringFromLogLevel: (ACPMobileLogLevel) logLevel;
+
 + (NSDictionary *)sanitizeDictionaryToContainClass: (Class) type WithDictionary:(NSDictionary *)dict;
 
 @end

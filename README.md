@@ -27,7 +27,7 @@ react-native link react-native-acpcore
 
 #### 3.1 Android project
 
-Navigate to `MainApplication.java` under `app/src/main/java/com/<project name>/` and add a call to `RCTACPCoreModule.setApplication()` inside of `onCreate()`.
+Navigate to `MainApplication.java` under `app/src/main/java/com/<project name>/` and add a call to `RCTACPCoreModule.setApplication(this)` inside of `onCreate()`.
 
 ```java
 import com.adobe.marketing.mobile.reactnative.RCTACPCorePackage; // import the package

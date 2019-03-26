@@ -91,6 +91,17 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void getLogLevel(final Promise promise) {
+        promise.resolve(RCTACPCoreDataBridge.stringFromLoggingMode(MobileCore.getLogLevel()));
+    }
+
+    @ReactMethod
+    public void log(final String mode, final String tag, final String message) {
+        LoggingMode logMode = RCTACPCoreDataBridge.loggingModeFromString(mode);
+        MobileCore.log(logMode, tag, message);
+    }
+
+    @ReactMethod
     public void setPrivacyStatus(final String privacyStatus) {
         MobileCore.setPrivacyStatus(RCTACPCoreDataBridge.privacyStatusFromString(privacyStatus));
     }
@@ -209,6 +220,16 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void collectPii(final ReadableMap data) {
         MobileCore.collectPii(RCTACPMapUtil.toStringMap(data));
+    }
+
+    @ReactMethod
+    public static void setSmallIconResourceID(final int resourceID) {
+      MobileCore.setSmallIconResourceID(resourceID);
+    }
+
+    @ReactMethod
+    public static void setLargeIconResourceID(final int resourceID) {
+      MobileCore.setLargeIconResourceID(resourceID);
     }
 
     // MobileCore.collectLaunchInfo is private

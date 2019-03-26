@@ -117,6 +117,27 @@ module.exports = {
   },
 
   /**
+   * Get the {@link ACPMobileLogLevel} level for the Mobile SDK
+   * @return the set {@code ACPMobileLogLevel}
+   */
+  getLogLevel(): Promise<ACPMobileLogLevel> {
+    return RCTACPCore.getLogLevel();
+  },
+
+  /**
+	 * Sends a log message of the given {@code ACPMobileLogLevel}. If the specified {@code mode} is
+	 * more verbose than the current {@link ACPMobileLogLevel} set from {@link #setLogLevel(ACPMobileLogLevel)}
+	 * then the message is not printed.
+	 *
+	 * @param mode the {@link ACPMobileLogLevel} used to print the message
+	 * @param tag used to identify the source of the log message
+	 * @param message the message to log
+	 */
+  log(logLevel: ACPMobileLogLevel, tag: string, message: string) {
+    RCTACPCore.log(logLevel, tag, message);
+  },
+
+  /**
    * Set the Adobe Mobile Privacy status
    *
    * @param {ACPMobilePrivacyStatus} privacyStatus ACPMobilePrivacyStatus to be set to the SDK
@@ -282,6 +303,22 @@ module.exports = {
    */
   collectPii(data: { string: string }) {
     RCTACPCore.collectPii(data);
+  },
+
+  /**
+	 * Sets the resource Id for small icon.
+	 * @param resourceID the resource Id of the icon
+	 */
+  setSmallIconResourceID(resourceID: number) {
+    RCTACPCore.setSmallIconResourceID(resourceID);
+  },
+
+  /**
+	 * Sets the resource Id for large icon.
+	 * @param resourceID the resource Id of the icon
+	 */
+  setLargeIconResourceID() {
+    RCTACPCore.setLargeIconResourceID(resourceID);
   },
 
   /**
