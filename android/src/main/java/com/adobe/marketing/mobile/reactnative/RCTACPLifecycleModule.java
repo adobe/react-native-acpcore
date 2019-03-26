@@ -17,6 +17,9 @@
 package com.adobe.marketing.mobile.reactnative;
 
 
+import android.util.Log;
+
+import com.adobe.marketing.mobile.InvalidInitException;
 import com.adobe.marketing.mobile.Lifecycle;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -44,8 +47,12 @@ public class RCTACPLifecycleModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void registerExtension() throws Exception {
-        Lifecycle.registerExtension();
+    public void registerExtension() {
+        try {
+            Lifecycle.registerExtension();
+        } catch (InvalidInitException e) {
+            Log.d(getName(), "Registering Lifecycle extension failed with error: " + e.getMessage());
+        }
     }
 
 }

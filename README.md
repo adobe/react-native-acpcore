@@ -77,7 +77,7 @@ ACPCore.updateConfiguration({"yourConfigKey": "yourConfigValue"});
 ACPCore.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPCore version: " + version));
 ```
 
-##### Getting the log level
+##### Getting the log level:
 
 ```javascript
 ACPCore.getLogLevel().then(level => console.log("AdobeExperienceSDK: Log Level = " + level));
@@ -91,7 +91,7 @@ import {ACPMobileLogLevel} from 'react-native-acpcore';
 ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
 ```
 
-##### Using the AEP Logging API
+##### Using the AEP Logging API:
 
 ```javascript
 import {ACPMobileLogLevel} from 'react-native-acpcore';
@@ -108,18 +108,18 @@ const DEBUG = "ACP_LOG_LEVEL_DEBUG";
 const VERBOSE = "ACP_LOG_LEVEL_VERBOSE";
 ```
 
+##### Getting the current privacy status:
+
+```javascript
+ACPCore.getPrivacyStatus().then(status => console.log("AdobeExperienceSDK: Privacy Status = " + status));
+```
+
 ##### Setting the privacy status:
 
 ```javascript
 import {ACPMobilePrivacyStatus} from 'react-native-acpcore';
 
 ACPCore.setPrivacyStatus(ACPMobilePrivacyStatus.OPT_IN);
-```
-
-##### Getting the current privacy status:
-
-```javascript
-ACPCore.getPrivacyStatus().then(status => console.log("AdobeExperienceSDK: Privacy Status = " + status));
 ```
 
 Note: `ACPMobilePrivacyStatus` contains the following getters:

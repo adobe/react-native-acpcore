@@ -25,7 +25,7 @@ static NSString* const ACP_VISITOR_AUTH_STATE_UNKNOWN = @"ACP_VISITOR_AUTH_STATE
 // Visitor ID
 static NSString* const VISITOR_ID_ID_ORIGIN_KEY = @"idOrigin";
 static NSString* const VISITOR_ID_ID_TYPE_KEY = @"idType";
-static NSString* const VISITOR_ID_ID_KEY = @"id";
+static NSString* const VISITOR_ID_ID_KEY = @"identifier";
 static NSString* const VISITOR_ID_AUTH_STATE_KEY = @"authenticationState";
 
 @implementation RCTACPIdentityDataBridge
