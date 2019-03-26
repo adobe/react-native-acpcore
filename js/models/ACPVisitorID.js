@@ -21,15 +21,15 @@
 import type {ACPMobileVisitorAuthenticationState} from './ACPMobileVisitorAuthenticationState';
 
 class ACPVisitorID {
-  idOrigin: string;
-  idType:   string;
-  id:       string;
+  idOrigin:   string;
+  idType:     string;
+  identifier: string;
   authenticationState: ACPMobileVisitorAuthenticationState;
 
   constructor(idOrigin?: string, idType: string, id?: string, authenticationState?: ACPMobileVisitorAuthenticationState) {
     this.idOrigin = idOrigin;
     this.idType = idType;
-    this.id = id;
+    this.identifier = id;
     this.authenticationState = authenticationState;
   }
 

@@ -16,6 +16,9 @@
  **************************************************************************/
 package com.adobe.marketing.mobile.reactnative;
 
+import android.util.Log;
+
+import com.adobe.marketing.mobile.InvalidInitException;
 import com.adobe.marketing.mobile.Signal;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -43,8 +46,12 @@ public class RCTACPSignalModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void registerExtension() throws Exception {
-        Signal.registerExtension();
+    public void registerExtension() {
+        try {
+            Signal.registerExtension();
+        } catch (InvalidInitException e) {
+            Log.d(getName(), "Registering Signal extension failed with error: " + e.getMessage());
+        }
     }
 
 }

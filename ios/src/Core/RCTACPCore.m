@@ -147,9 +147,7 @@ RCT_EXPORT_METHOD(dispatchEventWithResponseCallback: (nonnull NSDictionary*) req
         resolve([ACPExtensionEvent dictionaryFromEvent:responseEvent]);
     } error:&error];
 
-    if (!error) {
-        resolve(@(YES));
-    } else {
+    if (error) {
         [self handleError:error rejecter:reject];
     }
 }

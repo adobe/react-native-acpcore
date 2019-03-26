@@ -16,9 +16,11 @@
  **************************************************************************/
 package com.adobe.marketing.mobile.reactnative;
 
+import android.util.Log;
+
 import com.adobe.marketing.mobile.AdobeCallback;
 import com.adobe.marketing.mobile.Identity;
-import com.adobe.marketing.mobile.MobilePrivacyStatus;
+import com.adobe.marketing.mobile.InvalidInitException;
 import com.adobe.marketing.mobile.VisitorID;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -51,8 +53,12 @@ public class RCTACPIdentityModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void registerExtension() throws Exception {
-        Identity.registerExtension();
+    public void registerExtension() {
+        try {
+            Identity.registerExtension();
+        } catch (InvalidInitException e) {
+            Log.d(getName(), "Registering Identity extension failed with error: " + e.getMessage());
+        }
     }
 
     @ReactMethod
