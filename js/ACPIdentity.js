@@ -20,7 +20,6 @@
 
 const RCTACPIdentity = require('react-native').NativeModules.ACPIdentity;
 
-import type {ACPMobileVisitorAuthenticationState} from './models/ACPMobileVisitorAuthenticationState';
 import type {ACPVisitorID} from './models/ACPVisitorID';
 
 module.exports = {
@@ -75,7 +74,7 @@ module.exports = {
    * @param authenticationState a valid \ref ACPMobileVisitorAuthenticationState value.
    * @see ACPMobilePrivacyStatus
    */
-  syncIdentifiersWithAuthState(identifiers?: {string: string}, authenticationState: ACPMobileVisitorAuthenticationState) {
+  syncIdentifiersWithAuthState(identifiers?: {string: string}, authenticationState: string) {
     RCTACPIdentity.syncIdentifiersWithAuthState(identifiers, authenticationState);
   },
 
@@ -97,7 +96,7 @@ module.exports = {
    * @param authenticationState a valid \ref ACPMobileVisitorAuthenticationState value.
    * @see ACPMobilePrivacyStatus
    */
-  syncIdentifier(identifierType: String, identifier: String, authenticationState: ACPMobileVisitorAuthenticationState) {
+  syncIdentifier(identifierType: String, identifier: String, authenticationState: string) {
     RCTACPIdentity.syncIdentifier(identifierType, identifier, authenticationState);
   },
 
