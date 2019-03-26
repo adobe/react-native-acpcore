@@ -47,10 +47,10 @@ public void onCreate() {
 ##### Initializing the SDK:
 
 ```javascript
-import {ACPCore, ACPLifecycle, ACPIdentity, ACPSignal} from 'react-native-acpcore';
+import {ACPCore, ACPLifecycle, ACPIdentity, ACPSignal, ACPMobileLogLevel} from 'react-native-acpcore';
 
 initSDK() {
-    ACPCore.setLogLevel("ACP_LOG_LEVEL_VERBOSE");
+    ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
     ACPCore.configureWithAppId("yourAppId");
     ACPLifecycle.registerExtension();
     ACPIdentity.registerExtension();
@@ -86,29 +86,34 @@ ACPCore.getLogLevel().then(level => console.log("AdobeExperienceSDK: Log Level =
 ##### Controlling the log level of the SDK:
 
 ```javascript
-ACPCore.setLogLevel("ACP_LOG_LEVEL_VERBOSE");
+import {ACPMobileLogLevel} from 'react-native-acpcore';
+
+ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
 ```
 
 ##### Using the AEP Logging API
 
 ```javascript
-ACPCore.log("ACP_LOG_LEVEL_VERBOSE", "React Native Tag", "React Native Message");
+import {ACPMobileLogLevel} from 'react-native-acpcore';
+
+ACPCore.log(ACPMobileLogLevel.ERROR, "React Native Tag", "React Native Message");
 ```
 
-Note: `ACPMobileLogLevel` is defined as:
+Note: `ACPMobileLogLevel` contains the following getters:
 
 ```javascript
-type ACPMobileLogLevel =
-  | "ACP_LOG_LEVEL_ERROR"
-  | "ACP_LOG_LEVEL_WARNING"
-  | "ACP_LOG_LEVEL_DEBUG"
-  | "ACP_LOG_LEVEL_VERBOSE";
+const ERROR = "ACP_LOG_LEVEL_ERROR";
+const WARNING = "ACP_LOG_LEVEL_WARNING";
+const DEBUG = "ACP_LOG_LEVEL_DEBUG";
+const VERBOSE = "ACP_LOG_LEVEL_VERBOSE";
 ```
 
 ##### Setting the privacy status:
 
 ```javascript
-ACPCore.setPrivacyStatus("ACP_PRIVACY_STATUS_OPT_IN");
+import {ACPMobilePrivacyStatus} from 'react-native-acpcore';
+
+ACPCore.setPrivacyStatus(ACPMobilePrivacyStatus.OPT_IN);
 ```
 
 ##### Getting the current privacy status:
@@ -117,13 +122,12 @@ ACPCore.setPrivacyStatus("ACP_PRIVACY_STATUS_OPT_IN");
 ACPCore.getPrivacyStatus().then(status => console.log("AdobeExperienceSDK: Privacy Status = " + status));
 ```
 
-Note: `ACPMobilePrivacyStatus` is defined as:
+Note: `ACPMobilePrivacyStatus` contains the following getters:
 
 ```javascript
-type ACPMobilePrivacyStatus =
-  | "ACP_PRIVACY_STATUS_OPT_IN"
-  | "ACP_PRIVACY_STATUS_OPT_OUT"
-  | "ACP_PRIVACY_STATUS_UNKNOWN";
+const OPT_IN = "ACP_PRIVACY_STATUS_OPT_IN";
+const OPT_OUT = "ACP_PRIVACY_STATUS_OPT_OUT";
+const UNKNOWN = "ACP_PRIVACY_STATUS_UNKNOWN";
 ```
 
 ##### Getting the SDK identities:
@@ -183,22 +187,23 @@ ACPIdentity.syncIdentifiers({"id1": "identifier1"});
 ##### Sync Identifiers with Authentication State:
 
 ```javascript
-ACPIdentity.syncIdentifiersWithAuthState({"id1": "identifier1"}, "ACP_VISITOR_AUTH_STATE_AUTHENTICATED");
+import {ACPMobileVisitorAuthenticationState} from 'react-native-acpcore';
+
+ACPIdentity.syncIdentifiersWithAuthState({"id1": "identifier1"}, ACPMobileVisitorAuthenticationState.UNKNOWN);
+```
+
+Note: `ACPMobileVisitorAuthenticationState` contains the following getters:
+
+```javascript
+const AUTHENTICATED = "ACP_VISITOR_AUTH_STATE_AUTHENTICATED";
+const LOGGED_OUT = "ACP_VISITOR_AUTH_STATE_LOGGED_OUT";
+const UNKNOWN = "ACP_VISITOR_AUTH_STATE_UNKNOWN";
 ```
 
 ##### Setting the advertising identifier:
 
 ```javascript
 ACPCore.setAdvertisingIdentifier("adID");
-```
-
-Note: `ACPMobileVisitorAuthenticationState` is defined as:
-
-```javascript
-type ACPMobileVisitorAuthenticationState =
-  | "ACP_VISITOR_AUTH_STATE_AUTHENTICATED"
-  | "ACP_VISITOR_AUTH_STATE_LOGGED_OUT"
-  | "ACP_VISITOR_AUTH_STATE_UNKNOWN";
 ```
 
 ##### Append visitor data to a URL:
