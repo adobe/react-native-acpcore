@@ -68,6 +68,19 @@ static NSString* const ACP_PRIVACY_STATUS_UNKNOWN = @"ACP_PRIVACY_STATUS_UNKNOWN
     }
 }
 
++ (NSString *)stringFromLogLevel: (ACPMobileLogLevel) logLevel {
+    switch (logLevel) {
+        case ACPMobileLogLevelError:
+            return ACP_LOG_LEVEL_ERROR;
+        case ACPMobileLogLevelWarning:
+            return ACP_LOG_LEVEL_WARNING;
+        case ACPMobileLogLevelDebug:
+            return ACP_LOG_LEVEL_DEBUG;
+        case ACPMobileLogLevelVerbose:
+            return ACP_LOG_LEVEL_VERBOSE;
+    }
+}
+
 + (NSDictionary *)sanitizeDictionaryToContainClass: (Class) type WithDictionary:(NSDictionary *)dict {
     NSMutableDictionary *sanitizedDict = [NSMutableDictionary dictionary];
 

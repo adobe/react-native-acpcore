@@ -59,6 +59,16 @@ RCT_EXPORT_METHOD(setLogLevel: (NSString *) logLevelString) {
     [ACPCore setLogLevel:[RCTACPCoreDataBridge logLevelFromString:logLevelString]];
 }
 
+RCT_EXPORT_METHOD(getLogLevel: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
+    NSString *logLevelString = [RCTACPCoreDataBridge stringFromLogLevel:[ACPCore logLevel]];
+     resolve(logLevelString);
+}
+
+RCT_EXPORT_METHOD(log: (NSString *) logLevel tag: (nonnull NSString*) tag message: (nonnull NSString*) message) {
+    ACPMobileLogLevel logLevelType = [RCTACPCoreDataBridge logLevelFromString:logLevel];
+    [ACPCore log:logLevelType tag:tag message:message];
+}
+
 RCT_EXPORT_METHOD(getPrivacyStatus: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     [ACPCore getPrivacyStatus:^(ACPMobilePrivacyStatus status) {
         resolve([RCTACPCoreDataBridge stringFromPrivacyStatus:status]);
@@ -167,6 +177,14 @@ RCT_EXPORT_METHOD(dispatchResponseEvent: (nonnull NSDictionary*) responseEventDi
 
 RCT_EXPORT_METHOD(collectLaunchInfo: (nonnull NSDictionary*) userInfo) {
     [ACPCore collectLaunchInfo:userInfo];
+}
+
+RCT_EXPORT_METHOD(setSmallIconResourceID: (NSInteger) resourceID) {
+    NSLog(@"setSmallIconResourceID is not suppported on iOS");
+}
+
+RCT_EXPORT_METHOD(setLargeIconResourceID: (NSInteger) resourceID) {
+    NSLog(@"setLargeIconResourceID is not suppported on iOS");
 }
 
 #pragma mark - Rules Engine
