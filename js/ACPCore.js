@@ -20,8 +20,6 @@
 
 const RCTACPCore = require('react-native').NativeModules.ACPCore;
 
-import type {ACPMobileLogLevel} from './models/ACPMobileLogLevel';
-import type {ACPMobilePrivacyStatus} from './models/ACPMobilePrivacyStatus';
 import type {ACPExtensionEvent} from './models/ACPMobileLogLevel';
 
 module.exports = {
@@ -112,7 +110,7 @@ module.exports = {
    *
    * @param {ACPMobileLogLevel} mode ACPMobileLogLevel to be used by the SDK
    */
-  setLogLevel(mode: ACPMobileLogLevel) {
+  setLogLevel(mode: string) {
     RCTACPCore.setLogLevel(mode);
   },
 
@@ -120,7 +118,7 @@ module.exports = {
    * Get the {@link ACPMobileLogLevel} level for the Mobile SDK
    * @return the set {@code ACPMobileLogLevel}
    */
-  getLogLevel(): Promise<ACPMobileLogLevel> {
+  getLogLevel(): Promise<string> {
     return RCTACPCore.getLogLevel();
   },
 
@@ -133,7 +131,7 @@ module.exports = {
 	 * @param tag used to identify the source of the log message
 	 * @param message the message to log
 	 */
-  log(logLevel: ACPMobileLogLevel, tag: string, message: string) {
+  log(logLevel: string, tag: string, message: string) {
     RCTACPCore.log(logLevel, tag, message);
   },
 
@@ -142,7 +140,7 @@ module.exports = {
    *
    * @param {ACPMobilePrivacyStatus} privacyStatus ACPMobilePrivacyStatus to be set to the SDK
    */
-  setPrivacyStatus(privacyStatus: ACPMobilePrivacyStatus) {
+  setPrivacyStatus(privacyStatus: string) {
     RCTACPCore.setPrivacyStatus(privacyStatus);
   },
 
@@ -151,7 +149,7 @@ module.exports = {
    *
    * @return {ACPMobilePrivacyStatus} the current privacy status
    */
-  getPrivacyStatus(): Promise<ACPMobilePrivacyStatus> {
+  getPrivacyStatus(): Promise<string> {
     return RCTACPCore.getPrivacyStatus();
   },
 

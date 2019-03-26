@@ -16,8 +16,31 @@
 * @format
 */
 
-export type ACPMobileLogLevel =
-  | "ACP_LOG_LEVEL_ERROR"
-  | "ACP_LOG_LEVEL_WARNING"
-  | "ACP_LOG_LEVEL_DEBUG"
-  | "ACP_LOG_LEVEL_VERBOSE";
+'use strict';
+
+const ERROR = "ACP_LOG_LEVEL_ERROR";
+const WARNING = "ACP_LOG_LEVEL_WARNING";
+const DEBUG = "ACP_LOG_LEVEL_DEBUG";
+const VERBOSE = "ACP_LOG_LEVEL_VERBOSE";
+
+class ACPMobileLogLevel {
+
+  static get ERROR() {
+    return ERROR;
+  }
+
+  static get WARNING() {
+    return WARNING;
+  }
+
+  static get DEBUG() {
+    return DEBUG;
+  }
+
+  static get VERBOSE() {
+    return VERBOSE;
+  }
+
+}
+
+module.exports = ACPMobileLogLevel;

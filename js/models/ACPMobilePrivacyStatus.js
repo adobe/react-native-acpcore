@@ -16,7 +16,26 @@
 * @format
 */
 
-export type ACPMobilePrivacyStatus =
-  | "ACP_PRIVACY_STATUS_OPT_IN"
-  | "ACP_PRIVACY_STATUS_OPT_OUT"
-  | "ACP_PRIVACY_STATUS_UNKNOWN";
+'use strict';
+
+const OPT_IN = "ACP_PRIVACY_STATUS_OPT_IN";
+const OPT_OUT = "ACP_PRIVACY_STATUS_OPT_OUT";
+const UNKNOWN = "ACP_PRIVACY_STATUS_UNKNOWN";
+
+class ACPMobilePrivacyStatus {
+
+  static get OPT_IN() {
+    return OPT_IN;
+  }
+
+  static get OPT_OUT() {
+    return OPT_OUT;
+  }
+
+  static get UNKNOWN() {
+    return UNKNOWN;
+  }
+
+}
+
+module.exports = ACPMobilePrivacyStatus;

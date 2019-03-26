@@ -18,7 +18,24 @@
 
 'use strict';
 
-export type ACPMobileVisitorAuthenticationState =
-  | "ACP_VISITOR_AUTH_STATE_AUTHENTICATED"
-  | "ACP_VISITOR_AUTH_STATE_LOGGED_OUT"
-  | "ACP_VISITOR_AUTH_STATE_UNKNOWN";
+const AUTHENTICATED = "ACP_VISITOR_AUTH_STATE_AUTHENTICATED";
+const LOGGED_OUT = "ACP_VISITOR_AUTH_STATE_LOGGED_OUT";
+const UNKNOWN = "ACP_VISITOR_AUTH_STATE_UNKNOWN";
+
+class ACPMobileVisitorAuthenticationState {
+
+  static get AUTHENTICATED() {
+    return AUTHENTICATED;
+  }
+
+  static get LOGGED_OUT() {
+    return LOGGED_OUT;
+  }
+
+  static get UNKNOWN() {
+    return UNKNOWN;
+  }
+
+}
+
+module.exports = ACPMobileVisitorAuthenticationState;

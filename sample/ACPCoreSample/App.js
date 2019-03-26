@@ -57,7 +57,7 @@ export default class App extends Component<Props> {
     // console.log("AdobeExperienceSDK IMPORT: ACPMobilePrivacyStatus = " + ACPMobilePrivacyStatus);
     // console.log("AdobeExperienceSDK IMPORT: ACPMobileVisitorAuthenticationState = " + ACPMobileVisitorAuthenticationState);
     // console.log("AdobeExperienceSDK IMPORT: ACPVisitorID = " + ACPVisitorID);
-    ACPCore.setLogLevel("ACP_LOG_LEVEL_VERBOSE");
+    ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
     ACPCore.configureWithAppId("launch-EN1a68f9bc5b3c475b8c232adc3f8011fb");
     ACPLifecycle.registerExtension();
     ACPIdentity.registerExtension();
@@ -83,11 +83,11 @@ export default class App extends Component<Props> {
 
 
   setPrivacyOptIn() {
-    ACPCore.setPrivacyStatus("ACP_PRIVACY_STATUS_OPT_IN");
+    ACPCore.setPrivacyStatus(ACPMobilePrivacyStatus.OPT_IN);
   }
 
   setPrivacyOptOut() {
-    ACPCore.setPrivacyStatus("ACP_PRIVACY_STATUS_OPT_OUT");
+    ACPCore.setPrivacyStatus(ACPMobilePrivacyStatus.OPT_OUT);
   }
 
   getPrivacyStatus() {
@@ -99,7 +99,7 @@ export default class App extends Component<Props> {
   }
 
   log() {
-    ACPCore.log("ACP_LOG_LEVEL_VERBOSE", "React Native Tag", "React Native Message");
+    ACPCore.log(ACPMobileLogLevel.VERBOSE, "React Native Tag", "React Native Message");
   }
 
   getSdkIdentities() {
@@ -149,7 +149,7 @@ export default class App extends Component<Props> {
   }
 
   syncIdentifier() {
-    ACPIdentity.syncIdentifier("idType", "ID", "ACP_VISITOR_AUTH_STATE_AUTHENTICATED");
+    ACPIdentity.syncIdentifier("idType", "ID", ACPMobileVisitorAuthenticationState.AUTHENTICATED);
   }
 
   appendVisitorInfoForURL() {
