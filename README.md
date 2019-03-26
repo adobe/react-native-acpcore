@@ -62,7 +62,7 @@ initSDK() {
 ##### Configuring the SDK with a local file:
 
 ```javascript
-ACPCore.configureWithFileInPath("pathToConfigFile.json");
+ACPCore.configureWithFileInPath("path/to/config.json");
 ```
 
 ##### Updating the SDK configuration:
@@ -77,7 +77,7 @@ ACPCore.updateConfiguration({"yourConfigKey": "yourConfigValue"});
 ACPCore.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPCore version: " + version));
 ```
 
-##### Getting the current privacy status:
+##### Getting the log level
 
 ```javascript
 ACPCore.getLogLevel().then(level => console.log("AdobeExperienceSDK: Log Level = " + level));
@@ -111,6 +111,12 @@ type ACPMobileLogLevel =
 ACPCore.setPrivacyStatus("ACP_PRIVACY_STATUS_OPT_IN");
 ```
 
+##### Getting the current privacy status:
+
+```javascript
+ACPCore.getPrivacyStatus().then(status => console.log("AdobeExperienceSDK: Privacy Status = " + status));
+```
+
 Note: `ACPMobilePrivacyStatus` is defined as:
 
 ```javascript
@@ -118,12 +124,6 @@ type ACPMobilePrivacyStatus =
   | "ACP_PRIVACY_STATUS_OPT_IN"
   | "ACP_PRIVACY_STATUS_OPT_OUT"
   | "ACP_PRIVACY_STATUS_UNKNOWN";
-```
-
-##### Getting the current privacy status:
-
-```javascript
-ACPCore.getPrivacyStatus().then(status => console.log("AdobeExperienceSDK: Privacy Status = " + status));
 ```
 
 ##### Getting the SDK identities:
