@@ -74,13 +74,25 @@ ACPCore.updateConfiguration({"yourConfigKey": "yourConfigValue"});
 ##### Getting the SDK version:
 
 ```javascript
-ACPCore.extensionVersion().then(version => console.log("AMSDK: ACPCore version: " + version));
+ACPCore.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPCore version: " + version));
+```
+
+##### Getting the current privacy status:
+
+```javascript
+ACPCore.getLogLevel().then(level => console.log("AdobeExperienceSDK: Log Level = " + level));
 ```
 
 ##### Controlling the log level of the SDK:
 
 ```javascript
 ACPCore.setLogLevel("ACP_LOG_LEVEL_VERBOSE");
+```
+
+##### Using the AEP Logging API
+
+```javascript
+ACPCore.log("ACP_LOG_LEVEL_VERBOSE", "React Native Tag", "React Native Message");
 ```
 
 Note: `ACPMobileLogLevel` is defined as:
@@ -111,13 +123,13 @@ type ACPMobilePrivacyStatus =
 ##### Getting the current privacy status:
 
 ```javascript
-ACPCore.getPrivacyStatus().then(status => console.log("AMSDK: Privacy Status = " + status));
+ACPCore.getPrivacyStatus().then(status => console.log("AdobeExperienceSDK: Privacy Status = " + status));
 ```
 
 ##### Getting the SDK identities:
 
 ```javascript
-ACPCore.getSdkIdentities().then(identities => console.log("AMSDK: Identities = " + identities));
+ACPCore.getSdkIdentities().then(identities => console.log("AdobeExperienceSDK: Identities = " + identities));
 ```
 
 ##### Dispatching an Event Hub event:
@@ -135,7 +147,7 @@ ACPCore.dispatchEvent(event);
 import {ACPExtensionEvent} from 'react-native-acpcore';
 
 var event = new ACPExtensionEvent("eventName", "eventType", "eventSource", {"testDataKey": "testDataValue"});
-ACPCore.dispatchEventWithResponseCallback(event).then(responseEvent => console.log("AMSDK: responseEvent = " + responseEvent));
+ACPCore.dispatchEventWithResponseCallback(event).then(responseEvent => console.log("AdobeExperienceSDK: responseEvent = " + responseEvent));
 ```
 
 ##### Dispatching an Event Hub response event:
@@ -153,7 +165,7 @@ ACPCore.dispatchResponseEvent(responseEvent, requestEvent);
 ##### Getting the extension version:
 
 ```javascript
-ACPIdentity.extensionVersion().then(version => console.log("AMSDK: ACPIdentity version: " + version));
+ACPIdentity.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPIdentity version: " + version));
 ```
 
 ##### Registering the extension with Core:
@@ -192,19 +204,19 @@ type ACPMobileVisitorAuthenticationState =
 ##### Append visitor data to a URL:
 
 ```javascript
-ACPIdentity.appendVisitorInfoForURL("test.com").then(urlWithVisitorData => console.log("AMSDK: VisitorData = " + urlWithVisitorData));
+ACPIdentity.appendVisitorInfoForURL("test.com").then(urlWithVisitorData => console.log("AdobeExperienceSDK: VisitorData = " + urlWithVisitorData));
 ```
 
 ##### Get Identifiers:
 
 ```javascript
-ACPIdentity.getIdentifiers().then(identifiers => console.log("AMSDK: Identifiers = " + identifiers));
+ACPIdentity.getIdentifiers().then(identifiers => console.log("AdobeExperienceSDK: Identifiers = " + identifiers));
 ```
 
 ##### Get Experience Cloud IDs:
 
 ```javascript
-ACPIdentity.getExperienceCloudId().then(cloudId => console.log("AMSDK: CloudID = " + cloudId));
+ACPIdentity.getExperienceCloudId().then(cloudId => console.log("AdobeExperienceSDK: CloudID = " + cloudId));
 ```
 
 ##### Setting the push identifier:
@@ -226,7 +238,7 @@ var visitorId = new ACPVisitorID(idOrigin?: string, idType: string, id?: string,
 ##### Getting the extension version:
 
 ```javascript
-ACPLifecycle.extensionVersion().then(version => console.log("AMSDK: ACPLifecycle version: " + version));
+ACPLifecycle.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPLifecycle version: " + version));
 ```
 
 ##### Registering the extension with Core:
@@ -252,7 +264,7 @@ ACPCore.lifecyclePause();
 ##### Getting the extension version:
 
 ```javascript
-ACPSignal.extensionVersion().then(version => console.log("AMSDK: ACPSignal version: " + version));
+ACPSignal.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPSignal version: " + version));
 ```
 
 ##### Registering the extension with Core:
