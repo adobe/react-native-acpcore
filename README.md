@@ -268,7 +268,7 @@ ACPCore.lifecycleStart({"lifecycleStart": "myData"});
 ACPCore.lifecyclePause();
 ```
 
-### [Signal](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/signal)
+### [Signal](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/signals)
 
 ##### Getting the extension version:
 
