@@ -10,11 +10,15 @@ Run instructions for iOS:
 cd /sample/ACPCoreSample/ && react-native run-ios
 ```
 or
+
 Open the Xcode project
+
 Hit the Run button
 
 Run instructions for Android:
+
 Have an Android emulator running (quickest way to get started), or a device connected. https://developer.android.com/studio/run/emulator-commandline
+
 ```
 cd /sample/ACPCoreSample/ && react-native run-android
 ```
