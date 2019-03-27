@@ -31,7 +31,7 @@ react-native link react-native-acpcore
 Navigate to `MainApplication.java` under `app/src/main/java/com/<project name>/` and add a call to `RCTACPCoreModule.setApplication(this)` inside of `onCreate()`.
 
 ```java
-import com.adobe.marketing.mobile.reactnative.RCTACPCorePackage; // import the package
+import com.adobe.marketing.mobile.reactnative.RCTACPCoreModule; // import the module
 
 @Override
 public void onCreate() {
@@ -40,6 +40,9 @@ public void onCreate() {
 	RCTACPCoreModule.setApplication(this); // add this line
 }
 ```
+
+#### 3.2 iOS project
+In the Link Binary With Libraries section, click the + link and add the following frameworks and libraries: `UIKit`, `SystemConfiguration`, `WebKit`, `UserNotifications`, `libsqlite3.0`, `libc++`, `libz`.
 
 ## Usage
 
