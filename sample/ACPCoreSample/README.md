@@ -5,7 +5,8 @@ How to run the sample app:
 Begin by installing the npm dependencies for the sample app (ensure you have ran `npm install` in the parent directory for the actual module)
 `npm install`
 
-Run instructions for iOS:
+#### Run instructions for iOS:
+
 ```
 cd /sample/ACPCoreSample/ && react-native run-ios
 ```
@@ -15,7 +16,7 @@ Open the Xcode project
 
 Hit the Run button
 
-Run instructions for Android:
+#### Run instructions for Android:
 
 Have an Android emulator running (quickest way to get started), or a device connected. https://developer.android.com/studio/run/emulator-commandline
 
