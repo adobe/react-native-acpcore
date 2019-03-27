@@ -1,5 +1,6 @@
+# React Native AEP Analytics Extension
 
-# bourbon-platform-react-native-core
+`react-native-acpcore` is a wrapper around the iOS and Android [AEP Core SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) to allow for integration with React Native applications. Functionality to enable the Core extension is provided entirely through JavaScript documented below.
 
 
 ## Installation
