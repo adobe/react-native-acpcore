@@ -142,9 +142,9 @@
 			remoteGlobalIDString = ED296FEE214C9CF800B7C4FE;
 			remoteInfo = "jsiexecutor-tvOS";
 		};
-		21D872632209FEA800285A6B /* PBXContainerItemProxy */ = {
+		21E195522252C393000DD762 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4E156C7CF3A74D90A4088576 /* RCTACPCore.xcodeproj */;
+			containerPortal = F4ED7E974184469A923CA9FA /* RCTACPCore.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RCTACPCore;
@@ -364,13 +364,13 @@
 		2D02E47B1E0B4A5D006451C7 /* ACPCoreSample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ACPCoreSample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* ACPCoreSample-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ACPCoreSample-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E156C7CF3A74D90A4088576 /* RCTACPCore.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTACPCore.xcodeproj; path = "../node_modules/react-native-acpcore/ios/RCTACPCore.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F4ED7E974184469A923CA9FA /* RCTACPCore.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTACPCore.xcodeproj; path = "../node_modules/@adobe/react-native-acpcore/ios/RCTACPCore.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -561,10 +561,10 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		21D872602209FEA800285A6B /* Products */ = {
+		21E1954F2252C393000DD762 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21D872642209FEA800285A6B /* libRCTACPCore.a */,
+				21E195532252C393000DD762 /* libRCTACPCore.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -619,7 +619,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				4E156C7CF3A74D90A4088576 /* RCTACPCore.xcodeproj */,
+				F4ED7E974184469A923CA9FA /* RCTACPCore.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -780,8 +780,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 21D872602209FEA800285A6B /* Products */;
-					ProjectRef = 4E156C7CF3A74D90A4088576 /* RCTACPCore.xcodeproj */;
+					ProductGroup = 21E1954F2252C393000DD762 /* Products */;
+					ProjectRef = F4ED7E974184469A923CA9FA /* RCTACPCore.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
@@ -927,11 +927,11 @@
 			remoteRef = 21D872442209FD4900285A6B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		21D872642209FEA800285A6B /* libRCTACPCore.a */ = {
+		21E195532252C393000DD762 /* libRCTACPCore.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRCTACPCore.a;
-			remoteRef = 21D872632209FEA800285A6B /* PBXContainerItemProxy */;
+			remoteRef = 21E195522252C393000DD762 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */ = {
@@ -1250,6 +1250,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-acpcore/ios/src/**",
+					"$(SRCROOT)/../node_modules/@adobe/react-native-acpcore/ios/src/**",
 				);
 				INFOPLIST_FILE = ACPCoreSampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1276,6 +1277,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-acpcore/ios/src/**",
+					"$(SRCROOT)/../node_modules/@adobe/react-native-acpcore/ios/src/**",
 				);
 				INFOPLIST_FILE = ACPCoreSampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1303,6 +1305,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-acpcore/ios/src/**",
+					"$(SRCROOT)/../node_modules/@adobe/react-native-acpcore/ios/src/**",
 				);
 				INFOPLIST_FILE = ACPCoreSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1326,6 +1329,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-acpcore/ios/src/**",
+					"$(SRCROOT)/../node_modules/@adobe/react-native-acpcore/ios/src/**",
 				);
 				INFOPLIST_FILE = ACPCoreSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1356,6 +1360,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-acpcore/ios/src/**",
+					"$(SRCROOT)/../node_modules/@adobe/react-native-acpcore/ios/src/**",
 				);
 				INFOPLIST_FILE = "ACPCoreSample-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1390,6 +1395,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-acpcore/ios/src/**",
+					"$(SRCROOT)/../node_modules/@adobe/react-native-acpcore/ios/src/**",
 				);
 				INFOPLIST_FILE = "ACPCoreSample-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1423,6 +1429,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-acpcore/ios/src/**",
+					"$(SRCROOT)/../node_modules/@adobe/react-native-acpcore/ios/src/**",
 				);
 				INFOPLIST_FILE = "ACPCoreSample-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1456,6 +1463,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-acpcore/ios/src/**",
+					"$(SRCROOT)/../node_modules/@adobe/react-native-acpcore/ios/src/**",
 				);
 				INFOPLIST_FILE = "ACPCoreSample-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
