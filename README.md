@@ -1,6 +1,6 @@
 # React Native AEP Analytics Extension
 
-`react-native-acpcore` is a wrapper around the iOS and Android [AEP Core SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) to allow for integration with React Native applications. Functionality to enable the Core extension is provided entirely through JavaScript documented below.
+`@adobe/react-native-acpcore` is a wrapper around the iOS and Android [AEP Core SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) to allow for integration with React Native applications. Functionality to enable the Core extension is provided entirely through JavaScript documented below.
 
 
 ## Installation
@@ -17,11 +17,11 @@ react-native init MyReactApp
 
 ### 2. Install JavaScript packages
 
-Install and link the `react-native-acpcore` package:
+Install and link the `@adobe/react-native-acpcore` package:
 
 ```bash
-npm install react-native-acpcore
-react-native link react-native-acpcore
+npm install @adobe/react-native-acpcore
+react-native link @adobe/react-native-acpcore
 ```
 
 ### 3. Configure native projects
@@ -51,7 +51,7 @@ In the Link Binary With Libraries section, click the + link and add the followin
 ##### Initializing the SDK:
 
 ```javascript
-import {ACPCore, ACPLifecycle, ACPIdentity, ACPSignal, ACPMobileLogLevel} from 'react-native-acpcore';
+import {ACPCore, ACPLifecycle, ACPIdentity, ACPSignal, ACPMobileLogLevel} from '@adobe/react-native-acpcore';
 
 initSDK() {
     ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
@@ -90,7 +90,7 @@ ACPCore.getLogLevel().then(level => console.log("AdobeExperienceSDK: Log Level =
 ##### Controlling the log level of the SDK:
 
 ```javascript
-import {ACPMobileLogLevel} from 'react-native-acpcore';
+import {ACPMobileLogLevel} from '@adobe/react-native-acpcore';
 
 ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
 ```
@@ -98,7 +98,7 @@ ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
 ##### Using the AEP Logging API:
 
 ```javascript
-import {ACPMobileLogLevel} from 'react-native-acpcore';
+import {ACPMobileLogLevel} from '@adobe/react-native-acpcore';
 
 ACPCore.log(ACPMobileLogLevel.ERROR, "React Native Tag", "React Native Message");
 ```
@@ -121,7 +121,7 @@ ACPCore.getPrivacyStatus().then(status => console.log("AdobeExperienceSDK: Priva
 ##### Setting the privacy status:
 
 ```javascript
-import {ACPMobilePrivacyStatus} from 'react-native-acpcore';
+import {ACPMobilePrivacyStatus} from '@adobe/react-native-acpcore';
 
 ACPCore.setPrivacyStatus(ACPMobilePrivacyStatus.OPT_IN);
 ```
@@ -143,7 +143,7 @@ ACPCore.getSdkIdentities().then(identities => console.log("AdobeExperienceSDK: I
 ##### Dispatching an Event Hub event:
 
 ```javascript
-import {ACPExtensionEvent} from 'react-native-acpcore';
+import {ACPExtensionEvent} from '@adobe/react-native-acpcore';
 
 var event = new ACPExtensionEvent("eventName", "eventType", "eventSource", {"testDataKey": "testDataValue"});
 ACPCore.dispatchEvent(event);
@@ -152,7 +152,7 @@ ACPCore.dispatchEvent(event);
 ##### Dispatching an Event Hub event with callback:
 
 ```javascript
-import {ACPExtensionEvent} from 'react-native-acpcore';
+import {ACPExtensionEvent} from '@adobe/react-native-acpcore';
 
 var event = new ACPExtensionEvent("eventName", "eventType", "eventSource", {"testDataKey": "testDataValue"});
 ACPCore.dispatchEventWithResponseCallback(event).then(responseEvent => console.log("AdobeExperienceSDK: responseEvent = " + responseEvent));
@@ -161,7 +161,7 @@ ACPCore.dispatchEventWithResponseCallback(event).then(responseEvent => console.l
 ##### Dispatching an Event Hub response event:
 
 ```javascript
-import {ACPExtensionEvent} from 'react-native-acpcore';
+import {ACPExtensionEvent} from '@adobe/react-native-acpcore';
 
 var responseEvent = new ACPExtensionEvent("responseEvent", "eventType", "eventSource", {"testDataKey": "testDataValue"});
 var requestEvent = new ACPExtensionEvent("requestEvent", "eventType", "eventSource", {"testDataKey": "testDataValue"});
@@ -191,7 +191,7 @@ ACPIdentity.syncIdentifiers({"id1": "identifier1"});
 ##### Sync Identifiers with Authentication State:
 
 ```javascript
-import {ACPMobileVisitorAuthenticationState} from 'react-native-acpcore';
+import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
 
 ACPIdentity.syncIdentifiersWithAuthState({"id1": "identifier1"}, ACPMobileVisitorAuthenticationState.UNKNOWN);
 ```
@@ -237,7 +237,7 @@ ACPCore.setPushIdentifier("pushIdentifier");
 ##### VisitorID Class:
 
 ```javascript
-import {ACPVisitorID} from 'react-native-acpcore';
+import {ACPVisitorID} from '@adobe/react-native-acpcore';
 
 var visitorId = new ACPVisitorID(idOrigin?: string, idType: string, id?: string, authenticationState?: ACPMobileVisitorAuthenticationState)
 ```
