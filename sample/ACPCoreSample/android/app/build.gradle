@@ -135,7 +135,6 @@ android {
 
 dependencies {
     implementation project(':@adobe_react-native-acpcore')
-    implementation project(':react-native-acpcore')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
