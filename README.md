@@ -1,4 +1,4 @@
-# React Native AEP Analytics Extension
+# React Native AEP Core Extension
 
 `react-native-acpcore` is a wrapper around the iOS and Android [AEP Core SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) to allow for integration with React Native applications. Functionality to enable the Core extension is provided entirely through JavaScript documented below.
 
