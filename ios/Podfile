@@ -4,15 +4,17 @@ target 'RCTACPCore' do
   # inherit! :search_paths
   # Pods for testing
 
-  pod 'React', :path => '../node_modules/react-native', :subspecs => [
-  'Core',
-  'RCTAnimation',
-  'RCTBlob',
-  'RCTNetwork',
-  'RCTText',
-  'RCTWebSocket',
-  'CxxBridge',
-  'DevSupport',
+  react_native_path = "../node_modules/react-native"
+  pod 'React', :path => "#{react_native_path}", :subspecs => [
+    'Core',
+    'CxxBridge',
+    'DevSupport',
+    'RCTText',
+    'RCTNetwork',
+    'RCTImage',
+    'RCTWebSocket',
   ]
-  pod 'yoga', path: '../node_modules/react-native/ReactCommon/yoga'
+
+  pod "yoga", :path => "#{react_native_path}/ReactCommon/yoga"
+  pod 'Folly', :podspec => "#{react_native_path}/third-party-podspecs/Folly.podspec"
 end
