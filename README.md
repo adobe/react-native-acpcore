@@ -45,11 +45,8 @@ public void onCreate() {
 In the Link Binary With Libraries section, click the + link and add the following frameworks and libraries: `UIKit`, `SystemConfiguration`, `WebKit`, `UserNotifications`, `libsqlite3.0`, `libc++`, `libz`.
 
 ## Usage
-
 ### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
-
 ##### Initializing the SDK:
-
 ```javascript
 import {ACPCore, ACPLifecycle, ACPIdentity, ACPSignal, ACPMobileLogLevel} from '@adobe/react-native-acpcore';
 
@@ -64,31 +61,26 @@ initSDK() {
 ```
 
 ##### Configuring the SDK with a local file:
-
 ```javascript
 ACPCore.configureWithFileInPath("path/to/config.json");
 ```
 
 ##### Updating the SDK configuration:
-
 ```javascript
 ACPCore.updateConfiguration({"yourConfigKey": "yourConfigValue"});
 ```
 
 ##### Getting the SDK version:
-
 ```javascript
 ACPCore.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPCore version: " + version));
 ```
 
 ##### Getting the log level:
-
 ```javascript
 ACPCore.getLogLevel().then(level => console.log("AdobeExperienceSDK: Log Level = " + level));
 ```
 
 ##### Controlling the log level of the SDK:
-
 ```javascript
 import {ACPMobileLogLevel} from '@adobe/react-native-acpcore';
 
@@ -96,7 +88,6 @@ ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
 ```
 
 ##### Using the AEP Logging API:
-
 ```javascript
 import {ACPMobileLogLevel} from '@adobe/react-native-acpcore';
 
@@ -113,13 +104,11 @@ const VERBOSE = "ACP_LOG_LEVEL_VERBOSE";
 ```
 
 ##### Getting the current privacy status:
-
 ```javascript
 ACPCore.getPrivacyStatus().then(status => console.log("AdobeExperienceSDK: Privacy Status = " + status));
 ```
 
 ##### Setting the privacy status:
-
 ```javascript
 import {ACPMobilePrivacyStatus} from '@adobe/react-native-acpcore';
 
@@ -135,13 +124,11 @@ const UNKNOWN = "ACP_PRIVACY_STATUS_UNKNOWN";
 ```
 
 ##### Getting the SDK identities:
-
 ```javascript
 ACPCore.getSdkIdentities().then(identities => console.log("AdobeExperienceSDK: Identities = " + identities));
 ```
 
 ##### Dispatching an Event Hub event:
-
 ```javascript
 import {ACPExtensionEvent} from '@adobe/react-native-acpcore';
 
@@ -150,7 +137,6 @@ ACPCore.dispatchEvent(event);
 ```
 
 ##### Dispatching an Event Hub event with callback:
-
 ```javascript
 import {ACPExtensionEvent} from '@adobe/react-native-acpcore';
 
@@ -159,7 +145,6 @@ ACPCore.dispatchEventWithResponseCallback(event).then(responseEvent => console.l
 ```
 
 ##### Dispatching an Event Hub response event:
-
 ```javascript
 import {ACPExtensionEvent} from '@adobe/react-native-acpcore';
 
@@ -171,25 +156,21 @@ ACPCore.dispatchResponseEvent(responseEvent, requestEvent);
 ### [Identity](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/identity)
 
 ##### Getting the extension version:
-
 ```javascript
 ACPIdentity.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPIdentity version: " + version));
 ```
 
 ##### Registering the extension with Core:
-
 ```javascript
 ACPIdentity.registerExtension();
 ```
 
 ##### Sync Identifiers:
-
 ```javascript
 ACPIdentity.syncIdentifiers({"id1": "identifier1"});
 ```
 
 ##### Sync Identifiers with Authentication State:
-
 ```javascript
 import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
 
@@ -223,19 +204,16 @@ ACPIdentity.getIdentifiers().then(identifiers => console.log("AdobeExperienceSDK
 ```
 
 ##### Get Experience Cloud IDs:
-
 ```javascript
 ACPIdentity.getExperienceCloudId().then(cloudId => console.log("AdobeExperienceSDK: CloudID = " + cloudId));
 ```
 
 ##### Setting the push identifier:
-
 ```javascript
 ACPCore.setPushIdentifier("pushIdentifier");
 ```
 
 ##### VisitorID Class:
-
 ```javascript
 import {ACPVisitorID} from '@adobe/react-native-acpcore';
 
@@ -245,49 +223,40 @@ var visitorId = new ACPVisitorID(idOrigin?: string, idType: string, id?: string,
 ### [Lifecycle](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/lifecycle)
 
 ##### Getting the extension version:
-
 ```javascript
 ACPLifecycle.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPLifecycle version: " + version));
 ```
 
 ##### Registering the extension with Core:
-
 ```javascript
 ACPLifecycle.registerExtension();
 ```
 
 ##### Starting a lifecycle event:
-
 ```javascript
 ACPCore.lifecycleStart({"lifecycleStart": "myData"});
 ```
 
 ##### Pausing a lifecycle event:
-
 ```javascript
 ACPCore.lifecyclePause();
 ```
 
 ### [Signal](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/signals)
-
 ##### Getting the extension version:
-
 ```javascript
 ACPSignal.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPSignal version: " + version));
 ```
 
 ##### Registering the extension with Core:
-
 ```javascript
 ACPSignal.registerExtension();
 ```
 
 ##### Collecting PII:
-
 ```javascript
 ACPCore.collectPii({"myPii": "data"});
 ```
 
 ## License
-
 See LICENSE.md
