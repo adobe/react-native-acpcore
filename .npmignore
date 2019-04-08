@@ -42,6 +42,8 @@ ios/Pods
 ios/build
 *project.xcworkspace*
 *xcuserdata*
+ios/*.xcworkspace
+ios/*.podspec
 
 # OS-specific files
 .DS_Store
