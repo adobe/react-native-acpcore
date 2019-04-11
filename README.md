@@ -2,6 +2,15 @@
 
 `@adobe/react-native-acpcore` is a wrapper around the iOS and Android [AEP Core SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) to allow for integration with React Native applications. Functionality to enable the Core extension is provided entirely through JavaScript documented below.
 
+## Contents
+- [Installation](#installation)
+  - [Android](#android-project)
+	- [iOS](#ios-project)
+- [Usage](#usage)
+	- [Core](#core)
+	- [Identity](#identity)
+	- [Lifecycle](#lifecycle)
+	- [Signal](#signal)
 
 ## Installation
 
@@ -42,7 +51,14 @@ public void onCreate() {
 ```
 
 #### 3.2 iOS project
-In the Link Binary With Libraries section, click the + link and add the following frameworks and libraries: `UIKit`, `SystemConfiguration`, `WebKit`, `UserNotifications`, `libsqlite3.0`, `libc++`, `libz`.
+In the Link Binary With Libraries section, click the + link and add the following frameworks and libraries:
+* `UIKit.framework`
+* `SystemConfiguration.framework`
+* `WebKit.framework`
+* `UserNotifications.framework`
+* `libsqlite3.0.tbd`
+* `libc++.tbd`
+* `libz.tbd`
 
 ## Usage
 ### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
@@ -259,4 +275,4 @@ ACPCore.collectPii({"myPii": "data"});
 ```
 
 ## License
-See LICENSE.md
+See [LICENSE](LICENSE)
