@@ -5,7 +5,7 @@
 ## Contents
 - [Installation](#installation)
   - [Android](#android-project)
-	- [iOS](#ios-project)
+  - [iOS](#ios-project)
 - [Usage](#usage)
 	- [Core](#core)
 	- [Identity](#identity)
