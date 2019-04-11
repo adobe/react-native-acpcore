@@ -235,21 +235,17 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
     // MobileCore.collectLaunchInfo is private
     @ReactMethod
     public void collectLaunchInfo() {
-//        Activity act = getCurrentActivity();
-//        if (act != null) {
-//            MobileCore.collectLaunchInfo(act);
-//        }
-        Log.d(getName(), "collectLaunchInfo() cannot be invoked on Android");
+        MobileCore.log(LoggingMode.DEBUG, getName(), "collectLaunchInfo() cannot be invoked on Android");
     }
 
     @ReactMethod
     public void setAppGroup(final String appGroup) {
-        Log.d(getName(), "setAppGroup() cannot be invoked on Android");
+        MobileCore.log(LoggingMode.DEBUG, getName(), "setAppGroup() cannot be invoked on Android");
     }
 
     @ReactMethod
     public void downloadRules() {
-        Log.d(getName(), "downloadRules() cannot be invoked on Android");
+        MobileCore.log(LoggingMode.DEBUG, getName(), "downloadRules() cannot be invoked on Android");
     }
 
     // Helper method/s
