@@ -4,8 +4,8 @@
 
 ## Contents
 - [Installation](#installation)
-  - [Android](#android-project)
-  - [iOS](#ios-project)
+  - [Android](#31-android-project)
+  - [iOS](#32-ios-project)
 - [Usage](#usage)
 	- [Core](#core)
 	- [Identity](#identity)
