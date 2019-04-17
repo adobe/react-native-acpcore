@@ -214,15 +214,7 @@
 				210E3BC92200EB6200AC9192 /* Libs */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				210E3BAD2200E9CF00AC9192 /* Frameworks */,
-				87A6AF640BD39E7BD529CBE4 /* Pods */,
 			);
-			sourceTree = "<group>";
-		};
-		87A6AF640BD39E7BD529CBE4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
