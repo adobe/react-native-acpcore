@@ -178,11 +178,11 @@ RCT_EXPORT_METHOD(collectLaunchInfo: (nonnull NSDictionary*) userInfo) {
 }
 
 RCT_EXPORT_METHOD(setSmallIconResourceID: (NSInteger) resourceID) {
-    NSLog(@"setSmallIconResourceID is not suppported on iOS");
+    [ACPCore log:ACPMobileLogLevelDebug tag:EXTENSION_NAME message:@"setSmallIconResourceID is not suppported on iOS"];
 }
 
 RCT_EXPORT_METHOD(setLargeIconResourceID: (NSInteger) resourceID) {
-    NSLog(@"setLargeIconResourceID is not suppported on iOS");
+    [ACPCore log:ACPMobileLogLevelDebug tag:EXTENSION_NAME message:@"setLargeIconResourceID is not suppported on iOS"];    
 }
 
 #pragma mark - Rules Engine
