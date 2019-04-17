@@ -1,6 +1,9 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.adobe.marketing.mobile.reactnative">
-
+    <application>
+       <activity android:name="com.adobe.marketing.mobile.FullscreenMessageActivity" />
+       <receiver android:name="com.adobe.marketing.mobile.LocalNotificationHandler" />
+   </application>
 </manifest>
   
