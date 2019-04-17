@@ -2,9 +2,9 @@
 //  ACPCore.h
 //  Adobe Experience Platform -- iOS Framework
 //
-//  Copyright 1996-2019. Adobe. All Rights Reserved
+//  Copyright 1996-2018. Adobe. All Rights Reserved
 //
-//  Core Version: 2.1.0
+//  Core Version: 2.1.1
 
 #import <Foundation/Foundation.h>
 
@@ -57,6 +57,16 @@ typedef NS_ENUM(NSUInteger, ACPMobileVisitorAuthenticationState) {
     ACPMobileVisitorAuthenticationStateLoggedOut = 2  /*!< Enum value ACPMobileVisitorAuthenticationStateLoggedOut. */
 };
 
+/**
+ *  @brief An enum type representing possible wrapper states.
+ *
+ *  @see ACPCore::setWrapperType:
+ */
+typedef NS_ENUM(NSUInteger, ACPMobileWrapperType) {
+    ACPMobileWrapperTypeNone = 0, /*!< Enum value ACPMobileWrapperTypeNone. */
+    ACPMobileWrapperTypeReactNative = 1 /*!< Enum value ACPMobileWrapperTypeReactNative. */
+};
+
 #pragma mark - Configuration
 
 /**
@@ -107,6 +117,12 @@ typedef NS_ENUM(NSUInteger, ACPMobileVisitorAuthenticationState) {
  */
 + (void) getSdkIdentities: (nullable void (^) (NSString* __nullable content)) callback;
 
+/**
+ * @brief Set the provided callback with a url string and call this callback function before SDK extension open url action
+ *
+ * @param callback a method that has an string param containing a url, which return YES if it will handle the provided url, NO continue to open url.
+ */
++ (void) registerURLHandler: (nonnull BOOL (^) (NSString* __nullable url)) callback;
 /**
  * @brief Get the current Adobe Mobile Privacy Status
  *
@@ -367,6 +383,15 @@ typedef NS_ENUM(NSUInteger, ACPMobileVisitorAuthenticationState) {
  * @see ACPCore::setLogLevel:
  */
 + (void) log: (ACPMobileLogLevel) logLevel tag: (nonnull NSString*) tag message: (nonnull NSString*) message;
+
+/**
+ * @brief Sets the SDK's current wrapper type. This API should only be used if
+ * being developed on platforms such as React Native.
+ *
+ * @param wrapperType the type of wrapper being used
+ * @see ACPMobileWrapperType
+ */
++ (void) setWrapperType: (ACPMobileWrapperType) wrapperType;
 
 @end
 

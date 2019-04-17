@@ -30,6 +30,7 @@ static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dic
 
 - (dispatch_queue_t)methodQueue
 {
+    [ACPCore setWrapperType:ACPMobileWrapperTypeReactNative];
     return dispatch_get_main_queue();
 }
 
