@@ -60,6 +60,8 @@ In the Link Binary With Libraries section, click the + link and add the followin
 * `libc++.tbd`
 * `libz.tbd`
 
+Note: If you plan to use the AEP SDK in your native iOS code you will need to import the appropriate headers with the following format: `#import <RCTACPCore/ACPCore.h>`
+
 ## Usage
 ### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
 ##### Initializing the SDK:
