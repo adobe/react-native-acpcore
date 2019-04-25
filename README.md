@@ -37,16 +37,16 @@ react-native link @adobe/react-native-acpcore
 
 #### 3.1 Android project
 
-Navigate to `MainApplication.java` under `app/src/main/java/com/<project name>/` and add a call to `RCTACPCoreModule.setApplication(this)` inside of `onCreate()`.
+Navigate to `MainApplication.java` under `app/src/main/java/com/<project-name>/` and add a call to `MobileCore.setApplication(this)` inside of `onCreate()`.
 
 ```java
-import com.adobe.marketing.mobile.reactnative.RCTACPCoreModule; // import the module
+import com.adobe.marketing.mobile.MobileCore; // import MobileCore
 
 @Override
 public void onCreate() {
 	super.onCreate();
 	//...
-	RCTACPCoreModule.setApplication(this); // add this line
+	MobileCore.setApplication(this); // add this line
 }
 ```
 
@@ -59,6 +59,9 @@ In the Link Binary With Libraries section, click the + link and add the followin
 * `libsqlite3.0.tbd`
 * `libc++.tbd`
 * `libz.tbd`
+
+Note: If you plan to use the AEP SDK in your native iOS code you will need to import the appropriate headers with the following format: `#import <RCTACPCore/ACPCore.h>`
+
 
 ## Usage
 ### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)

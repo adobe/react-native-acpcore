@@ -16,6 +16,26 @@
 		210E3BBB2200E9F500AC9192 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BBA2200E9F500AC9192 /* libz.tbd */; };
 		21230B932203B41D00F2B198 /* RCTACPSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E026202203A24E006C3583 /* RCTACPSignal.m */; };
 		2132E26922057F1D000DDF24 /* RCTACPIdentityDataBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2132E26822057F1D000DDF24 /* RCTACPIdentityDataBridge.m */; };
+		215A61DA226E138500FA8FC6 /* ACPLifecycle.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BCE2200EB7100AC9192 /* ACPLifecycle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		215A61DB226E138500FA8FC6 /* ACPExtensionEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BCF2200EB7100AC9192 /* ACPExtensionEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		215A61DC226E138500FA8FC6 /* ACPExtensionListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD02200EB7100AC9192 /* ACPExtensionListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		215A61DD226E138500FA8FC6 /* ACPCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD12200EB7100AC9192 /* ACPCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		215A61DE226E138500FA8FC6 /* ACPExtensionError.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD22200EB7100AC9192 /* ACPExtensionError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		215A61DF226E138500FA8FC6 /* ACPIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD32200EB7100AC9192 /* ACPIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		215A61E0226E138500FA8FC6 /* ACPSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD42200EB7100AC9192 /* ACPSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		215A61E1226E138500FA8FC6 /* ACPMobileVisitorId.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD52200EB7100AC9192 /* ACPMobileVisitorId.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		215A61E2226E138500FA8FC6 /* ACPExtensionApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD62200EB7200AC9192 /* ACPExtensionApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		215A61E3226E138500FA8FC6 /* ACPExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD72200EB7200AC9192 /* ACPExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		215A61E5226E139F00FA8FC6 /* ACPLifecycle.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BCE2200EB7100AC9192 /* ACPLifecycle.h */; };
+		215A61E6226E139F00FA8FC6 /* ACPExtensionEvent.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BCF2200EB7100AC9192 /* ACPExtensionEvent.h */; };
+		215A61E7226E139F00FA8FC6 /* ACPExtensionListener.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD02200EB7100AC9192 /* ACPExtensionListener.h */; };
+		215A61E8226E139F00FA8FC6 /* ACPCore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD12200EB7100AC9192 /* ACPCore.h */; };
+		215A61E9226E139F00FA8FC6 /* ACPExtensionError.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD22200EB7100AC9192 /* ACPExtensionError.h */; };
+		215A61EA226E139F00FA8FC6 /* ACPIdentity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD32200EB7100AC9192 /* ACPIdentity.h */; };
+		215A61EB226E139F00FA8FC6 /* ACPSignal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD42200EB7100AC9192 /* ACPSignal.h */; };
+		215A61EC226E139F00FA8FC6 /* ACPMobileVisitorId.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD52200EB7100AC9192 /* ACPMobileVisitorId.h */; };
+		215A61ED226E139F00FA8FC6 /* ACPExtensionApi.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD62200EB7200AC9192 /* ACPExtensionApi.h */; };
+		215A61EE226E139F00FA8FC6 /* ACPExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD72200EB7200AC9192 /* ACPExtension.h */; };
 		21E025FC2202252B006C3583 /* ACPExtensionEvent+ReactNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E025FB2202252B006C3583 /* ACPExtensionEvent+ReactNative.m */; };
 		21E0261822039C07006C3583 /* RCTACPCoreDataBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261722039C07006C3583 /* RCTACPCoreDataBridge.m */; };
 		21E0261B2203A235006C3583 /* RCTACPIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261A2203A235006C3583 /* RCTACPIdentity.m */; };
@@ -35,6 +55,16 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				215A61E5226E139F00FA8FC6 /* ACPLifecycle.h in CopyFiles */,
+				215A61E6226E139F00FA8FC6 /* ACPExtensionEvent.h in CopyFiles */,
+				215A61E7226E139F00FA8FC6 /* ACPExtensionListener.h in CopyFiles */,
+				215A61E8226E139F00FA8FC6 /* ACPCore.h in CopyFiles */,
+				215A61E9226E139F00FA8FC6 /* ACPExtensionError.h in CopyFiles */,
+				215A61EA226E139F00FA8FC6 /* ACPIdentity.h in CopyFiles */,
+				215A61EB226E139F00FA8FC6 /* ACPSignal.h in CopyFiles */,
+				215A61EC226E139F00FA8FC6 /* ACPMobileVisitorId.h in CopyFiles */,
+				215A61ED226E139F00FA8FC6 /* ACPExtensionApi.h in CopyFiles */,
+				215A61EE226E139F00FA8FC6 /* ACPExtension.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,27 +250,37 @@
 				210E3BC92200EB6200AC9192 /* Libs */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				210E3BAD2200E9CF00AC9192 /* Frameworks */,
-				87A6AF640BD39E7BD529CBE4 /* Pods */,
 			);
-			sourceTree = "<group>";
-		};
-		87A6AF640BD39E7BD529CBE4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2C86202D735F4FCF81BFCBE3 /* Pods-RCTACPCore.debug.xcconfig */,
-				27418D03A0E3E52D8F34A996 /* Pods-RCTACPCore.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		215A61D9226E137B00FA8FC6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				215A61DA226E138500FA8FC6 /* ACPLifecycle.h in Headers */,
+				215A61DB226E138500FA8FC6 /* ACPExtensionEvent.h in Headers */,
+				215A61DC226E138500FA8FC6 /* ACPExtensionListener.h in Headers */,
+				215A61DD226E138500FA8FC6 /* ACPCore.h in Headers */,
+				215A61DE226E138500FA8FC6 /* ACPExtensionError.h in Headers */,
+				215A61DF226E138500FA8FC6 /* ACPIdentity.h in Headers */,
+				215A61E0226E138500FA8FC6 /* ACPSignal.h in Headers */,
+				215A61E1226E138500FA8FC6 /* ACPMobileVisitorId.h in Headers */,
+				215A61E2226E138500FA8FC6 /* ACPExtensionApi.h in Headers */,
+				215A61E3226E138500FA8FC6 /* ACPExtension.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		58B511DA1A9E6C8500147676 /* RCTACPCore */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RCTACPCore" */;
 			buildPhases = (
-				16E57F39FC0FFA9B4A293392 /* [CP] Check Pods Manifest.lock */,
+				215A61D9226E137B00FA8FC6 /* Headers */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
