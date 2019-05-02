@@ -75,11 +75,6 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void configureWithFileInPath(final String filepath) {
-        MobileCore.configureWithFileInPath(filepath);
-    }
-
-    @ReactMethod
     public void updateConfiguration(final ReadableMap configMap) {
         MobileCore.updateConfiguration(RCTACPMapUtil.toMap(configMap));
     }

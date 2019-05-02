@@ -52,10 +52,6 @@ RCT_EXPORT_METHOD(configureWithAppId:(NSString* __nullable) appId) {
     [ACPCore configureWithAppId:appId];
 }
 
-RCT_EXPORT_METHOD(configureWithFileInPath: (NSString* __nullable) filepath) {
-    [ACPCore configureWithFileInPath:filepath];
-}
-
 RCT_EXPORT_METHOD(updateConfiguration: (NSDictionary* __nullable) config) {
     [ACPCore updateConfiguration:config];
 }
