@@ -23,6 +23,7 @@ import com.adobe.marketing.mobile.ExtensionErrorCallback;
 import com.adobe.marketing.mobile.LoggingMode;
 import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.MobilePrivacyStatus;
+import com.adobe.marketing.mobile.WrapperType;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -42,6 +43,7 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
     public RCTACPCoreModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
+        MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
     }
 
     // Required for RN modules
