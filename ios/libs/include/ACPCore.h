@@ -2,9 +2,9 @@
 //  ACPCore.h
 //  Adobe Experience Platform -- iOS Framework
 //
-//  Copyright 1996-2018. Adobe. All Rights Reserved
+//  Copyright 1996-2019. Adobe. All Rights Reserved
 //
-//  Core Version: 2.1.1
+//  Core Version: 2.2.1
 
 #import <Foundation/Foundation.h>
 
@@ -170,6 +170,7 @@ typedef NS_ENUM(NSUInteger, ACPMobileWrapperType) {
  *
  * This call will wait for any outstanding registrations to complete and then start event processing.
  * You can use the callback to kickoff additional operations immediately after any operations kicked off during registration.
+ * You shouldn't call this method more than once in your app, if so, sdk will ignore it and print error log.
  *
  * @param callback An optional method invoked after registrations are complete
  */

@@ -2,7 +2,7 @@
 //  ACPExtensionApi.h
 //  Adobe Experience Platform -- iOS Framework
 //
-//  Copyright 1996-2018. Adobe. All Rights Reserved
+//  Copyright 1996-2019. Adobe. All Rights Reserved
 
 #ifndef ADOBEMOBILE_ADBEXTENSIONSERVICES_H
 #define ADOBEMOBILE_ADBEXTENSIONSERVICES_H
@@ -45,6 +45,9 @@
  *
  * This method executes asynchronously, returning immediately and registering the provided listener on the event hub
  * thread. The provided listener's init method will be called when the registration is completed.
+ *
+ * A wildcard listener is intended for debugging purposes only and it is strongly recommended to not use it
+ * in a production environment.
  *
  * @param listener A callback interface to receive events
  * @param error An optional parameter where an NSError* will be returned if valid and NO was returned
