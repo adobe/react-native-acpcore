@@ -30,8 +30,12 @@ static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dic
 
 - (dispatch_queue_t)methodQueue
 {
-    [ACPCore setWrapperType:ACPMobileWrapperTypeReactNative];
     return dispatch_get_main_queue();
+}
+
++ (void) initialize {
+    [super initialize];
+    [ACPCore setWrapperType:ACPMobileWrapperTypeReactNative];
 }
 
 RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
@@ -46,10 +50,6 @@ RCT_EXPORT_METHOD(start: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRe
 
 RCT_EXPORT_METHOD(configureWithAppId:(NSString* __nullable) appId) {
     [ACPCore configureWithAppId:appId];
-}
-
-RCT_EXPORT_METHOD(configureWithFileInPath: (NSString* __nullable) filepath) {
-    [ACPCore configureWithFileInPath:filepath];
 }
 
 RCT_EXPORT_METHOD(updateConfiguration: (NSDictionary* __nullable) config) {

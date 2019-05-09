@@ -79,11 +79,6 @@ initSDK() {
 }
 ```
 
-##### Configuring the SDK with a local file:
-```javascript
-ACPCore.configureWithFileInPath("path/to/config.json");
-```
-
 ##### Updating the SDK configuration:
 ```javascript
 ACPCore.updateConfiguration({"yourConfigKey": "yourConfigValue"});
