@@ -66,6 +66,53 @@ Note: If you plan to use the AEP SDK in your native iOS code you will need to im
 ## Usage
 ### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
 ##### Initializing the SDK:
+
+It is recommended to initialize the SDK in your native code inside your AppDelegate and MainApplication in iOS and Android respectively, however you can still initialize the SDK in Javascript.
+
+**iOS:**
+
+```objective-c
+// Import the SDK
+#import <RCTACPCore/ACPCore.h>
+#import <RCTACPCore/ACPLifecycle.h>
+#import <RCTACPCore/ACPIdentity.h>
+#import <RCTACPCore/ACPSignal.h>
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  //...
+  [ACPCore configureWithAppId:@"yourAppId"];
+  [ACPCore setWrapperType:ACPMobileWrapperTypeReactNative];
+  [ACPIdentity registerExtension];
+  [ACPLifecycle registerExtension];
+  [ACPSignal registerExtension];
+  
+  [ACPCore start:nil];
+}
+```
+
+**Android:**
+
+```java
+@Override
+public void onCreate() {
+  //...
+  MobileCore.setApplication(this);
+  MobileCore.configureWithAppID("yourAppId");
+  MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
+  try {
+    Identity.registerExtension();
+    Lifecycle.registerExtension();
+    Signal.registerExtension();
+  } catch (Exception e) {
+    // handle exception
+  }
+
+  MobileCore.start(null);
+}
+```
+
+**Javascript:**
+
 ```javascript
 import {ACPCore, ACPLifecycle, ACPIdentity, ACPSignal, ACPMobileLogLevel} from '@adobe/react-native-acpcore';
 
@@ -80,6 +127,7 @@ initSDK() {
 ```
 
 ##### Updating the SDK configuration:
+
 ```javascript
 ACPCore.updateConfiguration({"yourConfigKey": "yourConfigValue"});
 ```
