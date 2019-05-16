@@ -10,8 +10,8 @@
     "prepublish": "cd ios && pod deintegrate"
   },
   "repository": {
-  "type" : "git",
-  "url" : "https://github.com/adobe/react-native-acpcore"
+    "type": "git",
+    "url": "https://github.com/adobe/react-native-acpcore"
   },
   "keywords": [
     "react-native",
