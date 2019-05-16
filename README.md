@@ -85,7 +85,7 @@ It is recommended to initialize the SDK in your native code inside your AppDeleg
   [ACPIdentity registerExtension];
   [ACPLifecycle registerExtension];
   [ACPSignal registerExtension];
-  
+
   [ACPCore start:nil];
 }
 ```
@@ -319,6 +319,9 @@ ACPSignal.registerExtension();
 ```javascript
 ACPCore.collectPii({"myPii": "data"});
 ```
+
+## Contributing
+See [CONTRIBUTING](CONTRIBUTING)
 
 ## License
 See [LICENSE](LICENSE)
