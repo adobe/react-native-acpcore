@@ -321,7 +321,7 @@ ACPCore.collectPii({"myPii": "data"});
 ```
 
 ## Contributing
-See [CONTRIBUTING](CONTRIBUTING)
+See [CONTRIBUTING](CONTRIBUTING.md)
 
 ## License
-See [LICENSE](LICENSE)
+See [LICENSE](LICENSE.md)
