@@ -16,6 +16,12 @@ Pod::Spec.new do |s|
   s.frameworks = "UIKit", "SystemConfiguration", "WebKit",
                  "UserNotifications"
 
+  s.vendored_libraries = "ios/libs/libACPCore_iOS.a",
+                         "ios/libs/libACPIdentity_iOS.a",
+                         "ios/libs/libACPLifecycle_iOS.a",
+                         "ios/libs/libACPSignal_iOS.a"
+
+
   s.library = "c++", "z", "sqlite3.0"
 
   s.requires_arc = true
