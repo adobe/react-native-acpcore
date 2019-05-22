@@ -1,0 +1,62 @@
+version: 2
+jobs:
+  build-android:
+    docker:
+      - image: circleci/android:api-28
+    steps:
+      - checkout:
+
+      - run:
+          name: Building Android Project
+          command: make build-android
+
+  build-ios:
+    macos:
+      xcode: "10.0"
+
+    steps:
+      - checkout
+
+      - run: npm install
+
+      # restore pods related caches
+      - restore_cache:
+          keys:
+            - cocoapods-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "ios/Podfile.lock" }}
+            - cocoapods-cache-v1-{{ arch }}-{{ .Branch }}
+            - cocoapods-cache-v1
+            - 1-gems-{{ checksum "ios/Gemfile.lock" }}
+
+      # make sure we're on the right version of cocoapods
+      - run:
+          name: Verify Cocoapods Version
+          command: cd ios && bundle check || bundle install --path vendor/bundle
+
+      # save cocoapods version gem data
+      - save_cache:
+          key: 1-gems-{{ checksum "ios/Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+      # update CocoaPods
+      - run:
+          name: Update Cocoapods
+          command: (cd ios && bundle exec pod repo update && bundle exec pod update)
+
+      # save pods related files
+      - save_cache:
+          key: cocoapods-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "ios/Podfile.lock" }}
+          paths:
+            - ./ios/Pods
+            - ~/.cocoapods
+
+      - run:
+          name: Building iOS Project
+          command: make build-ios
+
+workflows:
+  version: 2
+  ci-workflow:
+    jobs:
+      - build-android
+      - build-ios
