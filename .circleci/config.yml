@@ -22,9 +22,6 @@ jobs:
       # restore pods related caches
       - restore_cache:
           keys:
-            - cocoapods-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "ios/Podfile.lock" }}
-            - cocoapods-cache-v1-{{ arch }}-{{ .Branch }}
-            - cocoapods-cache-v1
             - 1-gems-{{ checksum "ios/Gemfile.lock" }}
 
       # make sure we're on the right version of cocoapods
@@ -38,17 +35,7 @@ jobs:
           paths:
             - vendor/bundle
 
-      # update CocoaPods
-      - run:
-          name: Update Cocoapods
-          command: (cd ios && bundle exec pod repo update && bundle exec pod update)
-
-      # save pods related files
-      - save_cache:
-          key: cocoapods-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "ios/Podfile.lock" }}
-          paths:
-            - ./ios/Pods
-            - ~/.cocoapods
+      - run: mkdir ~/.cocoapods/repos && cd ~/.cocoapods/repos  && git clone --depth 1 https://github.com/CocoaPods/Specs.git master
 
       - run:
           name: Building iOS Project

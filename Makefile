@@ -2,7 +2,7 @@ PROJECT_NAME = ACPCore
 
 setup:
 	(npm install)
-	(cd ios && pod repo update || true && pod install)
+	(cd ios && pod deintegrate || true && pod install)
 
 clean:
 	(rm -rf android/build && rm -rf ios/build)
