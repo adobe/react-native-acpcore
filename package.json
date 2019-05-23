@@ -7,7 +7,7 @@
   "main": "./js/index.js",
   "scripts": {
     "flow": "flow",
-    "prepublish": "cd ios && pod deintegrate"
+    "prepublishOnly": "cd ios && pod deintegrate"
   },
   "repository": {
     "type": "git",
