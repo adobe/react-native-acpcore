@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/android:api-28
     steps:
-      - checkout:
+      - checkout
 
       - run:
           name: Building Android Project
@@ -54,9 +54,24 @@ jobs:
           name: Building iOS Project
           command: make build-ios
 
+  unit-test:
+    macos:
+      xcode: "10.0"
+
+    steps:
+      - checkout
+
+      - run: npm install
+      - run: npm install jest@24.8.0 -g
+
+      - run:
+          name: Unit Tests
+          command: make run-tests
+
 workflows:
   version: 2
   ci-workflow:
     jobs:
       - build-android
       - build-ios
+      - unit-test
