@@ -2,7 +2,6 @@
 
 How to run the sample app:
 
-Begin by installing the npm dependencies for the sample app (ensure you have ran `npm install` in the parent directory for the actual module)
 `npm install`
 
 #### Run instructions for iOS:
