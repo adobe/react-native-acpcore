@@ -14,6 +14,7 @@ governing permissions and limitations under the License.
 
 import { NativeModules } from 'react-native';
 import ACPIdentity from '../js/ACPIdentity';
+import ACPMobileVisitorAuthenticationState from '../js/models/ACPMobileVisitorAuthenticationState';
 
 describe('ACPIdentity', () => {
 
@@ -28,4 +29,48 @@ describe('ACPIdentity', () => {
     await ACPIdentity.registerExtension();
     expect(spy).toHaveBeenCalled();
   });
+
+  test('syncIdentifiers is called with correct parameters', async () => {
+    const spy = jest.spyOn(NativeModules.ACPIdentity, 'syncIdentifiers');
+    let identifiers = {"testKey": "testValue"};
+    await ACPIdentity.syncIdentifiers(identifiers);
+    expect(spy).toHaveBeenCalledWith(identifiers);
+  });
+
+  test('syncIdentifiersWithAuthState is called with correct parameters', async () => {
+    const spy = jest.spyOn(NativeModules.ACPIdentity, 'syncIdentifiersWithAuthState');
+    let identifiers = {"testKey": "testValue"};
+    let authState = ACPMobileVisitorAuthenticationState.LOGGED_OUT;
+    await ACPIdentity.syncIdentifiersWithAuthState(identifiers, authState);
+    expect(spy).toHaveBeenCalledWith(identifiers, authState);
+  });
+
+  test('syncIdentifier is called with correct parameters', async () => {
+    const spy = jest.spyOn(NativeModules.ACPIdentity, 'syncIdentifier');
+    let identifier = "testId"
+    let identifierType = "testIdType"
+    let authState = ACPMobileVisitorAuthenticationState.LOGGED_IN;
+    await ACPIdentity.syncIdentifier(identifier, identifierType, authState);
+    expect(spy).toHaveBeenCalledWith(identifier, identifierType, authState);
+  });
+
+  test('appendVisitorInfoForURL is called with correct parameters', async () => {
+    const spy = jest.spyOn(NativeModules.ACPIdentity, 'appendVisitorInfoForURL');
+    let url = "testurl.com";
+    await ACPIdentity.appendVisitorInfoForURL(url);
+    expect(spy).toHaveBeenCalledWith(url);
+  });
+
+  test('getIdentifiers is called', async () => {
+    const spy = jest.spyOn(NativeModules.ACPIdentity, 'getIdentifiers');
+    await ACPIdentity.getIdentifiers();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  test('getExperienceCloudId is called', async () => {
+    const spy = jest.spyOn(NativeModules.ACPIdentity, 'getExperienceCloudId');
+    await ACPIdentity.getExperienceCloudId();
+    expect(spy).toHaveBeenCalled();
+  });
+
 });

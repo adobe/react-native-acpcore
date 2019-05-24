@@ -14,11 +14,41 @@ governing permissions and limitations under the License.
 
 jest.mock('NativeModules', () => ({
   ACPCore: {
-    extensionVersion: jest.fn(() => new Promise(resolve => resolve()))
+    extensionVersion: jest.fn(() => new Promise(resolve => resolve())),
+    start: jest.fn(() => new Promise(resolve => resolve())),
+    configureWithAppId: jest.fn(),
+    updateConfiguration: jest.fn(),
+    setLogLevel: jest.fn(),
+    getLogLevel: jest.fn(() => new Promise(resolve => resolve())),
+    log: jest.fn(),
+    setPrivacyStatus: jest.fn(),
+    getPrivacyStatus: jest.fn(() => new Promise(resolve => resolve())),
+    getSdkIdentities: jest.fn(() => new Promise(resolve => resolve())),
+    dispatchEvent: jest.fn(),
+    dispatchEventWithResponseCallback: jest.fn(() => new Promise(resolve => resolve())),
+    dispatchResponseEvent: jest.fn(() => new Promise(resolve => resolve())),
+    trackAction: jest.fn(),
+    trackState: jest.fn(),
+    setAdvertisingIdentifier: jest.fn(),
+    setPushIdentifier: jest.fn(),
+    lifecycleStart: jest.fn(),
+    lifecyclePause: jest.fn(),
+    collectPii: jest.fn(),
+    setSmallIconResourceID: jest.fn(),
+    setLargeIconResourceID: jest.fn(),
+    collectLaunchInfo: jest.fn(),
+    setAppGroup: jest.fn(),
+    downloadRules: jest.fn(),
   },
   ACPIdentity: {
     extensionVersion: jest.fn(() => new Promise(resolve => resolve())),
-    registerExtension: jest.fn()
+    registerExtension: jest.fn(),
+    syncIdentifiers: jest.fn(),
+    syncIdentifiersWithAuthState: jest.fn(),
+    syncIdentifier: jest.fn(),
+    appendVisitorInfoForURL: jest.fn(() => new Promise(resolve => resolve())),
+    getIdentifiers: jest.fn(() => new Promise(resolve => resolve())),
+    getExperienceCloudId: jest.fn(() => new Promise(resolve => resolve()))
   },
   ACPLifecycle: {
     extensionVersion: jest.fn(() => new Promise(resolve => resolve())),
