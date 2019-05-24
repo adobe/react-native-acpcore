@@ -1,0 +1,105 @@
+version: 2
+jobs:
+  build-android:
+    docker:
+      - image: circleci/android:api-28
+    steps:
+      - checkout
+
+      - run:
+          name: Building Android Project
+          command: make build-android
+
+  build-ios:
+    macos:
+      xcode: "10.0"
+
+    steps:
+      - checkout
+
+      - run: npm install
+
+      # restore pods related caches
+      - restore_cache:
+          keys:
+            - 1-gems-{{ checksum "ios/Gemfile.lock" }}
+
+      # make sure we're on the right version of cocoapods
+      - run:
+          name: Verify Cocoapods Version
+          command: cd ios && bundle check || bundle install --path vendor/bundle
+
+      # save cocoapods version gem data
+      - save_cache:
+          key: 1-gems-{{ checksum "ios/Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+      - run: mkdir ~/.cocoapods/repos && cd ~/.cocoapods/repos  && git clone --depth 1 https://github.com/CocoaPods/Specs.git master
+
+      - run:
+          name: Building iOS Project
+          command: make build-ios
+
+  unit-test:
+    macos:
+      xcode: "10.0"
+
+    steps:
+      - checkout
+
+      - run: npm install
+      - run: npm install jest@24.8.0 -g
+
+      - run:
+          name: Unit Tests
+          command: make run-tests
+
+
+  build-sample-app-android:
+    docker:
+      - image: circleci/android:api-28-node
+    steps:
+      - checkout
+
+      - run:
+          name: Install react-native-cli
+          command: sudo npm install -g react-native-cli
+
+      - run:
+          name: Copy changes into sample app
+          command: make copy-to-sample
+
+      - run:
+          name: Building Android Sample App
+          command: make build-sample-android
+
+
+  build-sample-app-ios:
+    macos:
+      xcode: "10.0"
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install react-native-cli
+          command: npm install -g react-native-cli
+
+      - run:
+          name: Copy changes into sample app
+          command: make copy-to-sample
+
+      - run:
+          name: Building iOS Sample App
+          command: make build-sample-ios
+
+workflows:
+  version: 2
+  ci-workflow:
+    jobs:
+      - build-android
+      - build-ios
+      - unit-test
+      - build-sample-app-android
+      - build-sample-app-ios
