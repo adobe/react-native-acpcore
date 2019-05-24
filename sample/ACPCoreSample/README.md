@@ -2,12 +2,10 @@
 
 How to run the sample app:
 
-`npm install`
-
 #### Run instructions for iOS:
 
 ```
-cd /sample/ACPCoreSample/ && react-native run-ios
+cd /sample/ACPCoreSample/ && npm install && react-native run-ios
 ```
 or
 
@@ -20,7 +18,7 @@ Hit the Run button
 Have an Android emulator running (quickest way to get started), or a device connected. https://developer.android.com/studio/run/emulator-commandline
 
 ```
-cd /sample/ACPCoreSample/ && react-native run-android
+cd /sample/ACPCoreSample/ && npm install && react-native run-android
 ```
 
 ### Troubleshooting
