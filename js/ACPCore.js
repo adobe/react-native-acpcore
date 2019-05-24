@@ -68,25 +68,6 @@ module.exports = {
   },
 
   /**
-   * Load configuration from local file
-   *
-   * Configure the SDK by reading a local file containing the JSON configuration.  On application relaunch,
-   * the configuration from the file at \p filepath is not preserved and this method must be called again if desired.
-   *
-   * On failure to read the file or parse the JSON contents, the existing configuration remains unchanged.
-   *
-   * Calls to this API will replace any existing SDK configuration except those set using
-   * ACPCore::updateConfiguration: or ACPCore::setPrivacyStatus:. Configuration updates
-   * made using ACPCore::updateConfiguration:
-   * and ACPCore::setPrivacyStatus: are always applied on top of configuration changes made using this API.
-   *
-   * @param  {String?} filepath absolute path to a local configuration file. A value of `nil` has no effect.
-   */
-  configureWithFileInPath(filepath?: String) {
-    RCTACPCore.configureWithFileInPath(filepath);
-  },
-
-  /**
    * Update specific configuration parameters
    *
    * Update the current SDK configuration with specific key/value pairs. Keys not found in the current
@@ -312,7 +293,7 @@ module.exports = {
 	 * Sets the resource Id for large icon.
 	 * @param resourceID the resource Id of the icon
 	 */
-  setLargeIconResourceID() {
+  setLargeIconResourceID(resourceID: number) {
     RCTACPCore.setLargeIconResourceID(resourceID);
   },
 

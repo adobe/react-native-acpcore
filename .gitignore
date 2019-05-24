@@ -31,7 +31,6 @@ DerivedData
 project.xcworkspace
 ios/Pods
 ios/*.xcworkspace
-ios/Podfile.lock
 
 # Android/IntelliJ
 #
@@ -45,3 +44,5 @@ local.properties
 buck-out/
 \.buckd/
 *.keystore
+acp-sdks/
+.*tgz

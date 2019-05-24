@@ -57,3 +57,13 @@ android/gradlew
 android/build
 android/gradlew.bat
 android/gradle/
+__tests__
+.circleci/
+.opensource/
+jest/
+acp-sdks/
+update-android-sdk.sh
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+Makefile
+*.tgz

@@ -11,9 +11,6 @@
 		210E3BB12200E9D400AC9192 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB02200E9D400AC9192 /* SystemConfiguration.framework */; };
 		210E3BB32200E9DB00AC9192 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB22200E9DB00AC9192 /* WebKit.framework */; };
 		210E3BB52200E9E300AC9192 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB42200E9E300AC9192 /* UserNotifications.framework */; };
-		210E3BB72200E9EB00AC9192 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB62200E9EA00AC9192 /* libsqlite3.0.tbd */; };
-		210E3BB92200E9F000AC9192 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB82200E9F000AC9192 /* libc++.tbd */; };
-		210E3BBB2200E9F500AC9192 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BBA2200E9F500AC9192 /* libz.tbd */; };
 		21230B932203B41D00F2B198 /* RCTACPSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E026202203A24E006C3583 /* RCTACPSignal.m */; };
 		2132E26922057F1D000DDF24 /* RCTACPIdentityDataBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2132E26822057F1D000DDF24 /* RCTACPIdentityDataBridge.m */; };
 		215A61DA226E138500FA8FC6 /* ACPLifecycle.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BCE2200EB7100AC9192 /* ACPLifecycle.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -114,10 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210E3BBB2200E9F500AC9192 /* libz.tbd in Frameworks */,
 				21E026292203A6B5006C3583 /* libACPLifecycle_iOS.a in Frameworks */,
-				210E3BB92200E9F000AC9192 /* libc++.tbd in Frameworks */,
-				210E3BB72200E9EB00AC9192 /* libsqlite3.0.tbd in Frameworks */,
 				210E3BB52200E9E300AC9192 /* UserNotifications.framework in Frameworks */,
 				210E3BB32200E9DB00AC9192 /* WebKit.framework in Frameworks */,
 				21E0262A2203A6B5006C3583 /* libACPSignal_iOS.a in Frameworks */,
