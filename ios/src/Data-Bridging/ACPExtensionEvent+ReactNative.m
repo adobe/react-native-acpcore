@@ -24,7 +24,7 @@ static NSString* const EVENT_DATA_KEY = @"eventData";
     NSString *type = [dict objectForKey:EVENT_TYPE_KEY];
     NSString *source = [dict objectForKey:EVENT_SOURCE_KEY];
 
-    if (name && type && source && [[dict objectForKey:EVENT_DATA_KEY] isKindOfClass:[NSDictionary class]]) {
+    if (name && type && source && ([[dict objectForKey:EVENT_DATA_KEY] isKindOfClass:[NSDictionary class]] || ![dict objectForKey:EVENT_DATA_KEY])) {
         return [ACPExtensionEvent extensionEventWithName:name type:type source:source data:[dict objectForKey:EVENT_DATA_KEY] error:nil];
     }
 

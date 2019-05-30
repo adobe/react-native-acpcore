@@ -21,6 +21,10 @@ import java.util.Map;
 public class RCTACPArrayUtil {
 
     public static Object[] toObjectArray(ReadableArray readableArray) {
+        if (readableArray == null) {
+            return null;
+        }
+
         Object[] array = new Object[readableArray.size()];
 
         for (int i = 0; i < readableArray.size(); i++) {
@@ -52,6 +56,9 @@ public class RCTACPArrayUtil {
     }
 
     public static WritableArray toWritableArray(Object[] array) {
+        if (array == null) {
+            return null;
+        }
         WritableArray writableArr = Arguments.createArray();
 
         for (int i = 0; i < array.length; i++) {

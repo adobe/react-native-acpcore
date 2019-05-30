@@ -43,6 +43,10 @@ public final class RCTACPCoreDataBridge {
      * @return An {@link Event}
      */
     public static Event eventFromReadableMap(final ReadableMap map) {
+        if (map == null) {
+            return null;
+        }
+
         Event event = new Event.Builder(getNullableString(map, EVENT_NAME_KEY), getNullableString(map, EVENT_TYPE_KEY), getNullableString(map, EVENT_SOURCE_KEY))
                 .setEventData(RCTACPMapUtil.toMap(map.getMap(EVENT_DATA_KEY)))
                 .build();
@@ -50,6 +54,10 @@ public final class RCTACPCoreDataBridge {
     }
 
     public static ReadableMap readableMapFromEvent(final Event event) {
+        if (event == null) {
+            return null;
+        }
+
         WritableNativeMap map = new WritableNativeMap();
         map.putString(EVENT_NAME_KEY, event.getName());
         map.putString(EVENT_TYPE_KEY, event.getType());
@@ -65,6 +73,10 @@ public final class RCTACPCoreDataBridge {
      * @return The @{link LoggingMode} associated with logModeString
      */
     public static LoggingMode loggingModeFromString(final String logModeString) {
+        if (logModeString == null) {
+            return LoggingMode.DEBUG;
+        }
+
         if (logModeString.equals(ACP_LOG_LEVEL_ERROR)) {
             return LoggingMode.ERROR;
         } else if (logModeString.equals(ACP_LOG_LEVEL_WARNING)) {
@@ -79,6 +91,10 @@ public final class RCTACPCoreDataBridge {
     }
 
     public static String stringFromLoggingMode(final LoggingMode logMode) {
+        if (logMode == null) {
+            return ACP_LOG_LEVEL_DEBUG;
+        }
+
         switch (logMode) {
             case ERROR:
                 return  ACP_LOG_LEVEL_ERROR;
@@ -94,6 +110,10 @@ public final class RCTACPCoreDataBridge {
     }
 
     public static MobilePrivacyStatus privacyStatusFromString(final String privacyStatusString) {
+        if (privacyStatusString == null) {
+            return MobilePrivacyStatus.UNKNOWN;
+        }
+
         if (privacyStatusString.equals(ACP_PRIVACY_STATUS_OPT_IN)) {
             return MobilePrivacyStatus.OPT_IN;
         } else if (privacyStatusString.equals(ACP_PRIVACY_STATUS_OPT_OUT)) {
@@ -104,6 +124,10 @@ public final class RCTACPCoreDataBridge {
     }
 
     public static String stringFromPrivacyStatus(final MobilePrivacyStatus privacyStatus) {
+        if (privacyStatus == null) {
+            return ACP_PRIVACY_STATUS_UNKNOWN;
+        }
+
         if (privacyStatus == MobilePrivacyStatus.OPT_IN) {
             return ACP_PRIVACY_STATUS_OPT_IN;
         } else if (privacyStatus == MobilePrivacyStatus.OPT_OUT) {
