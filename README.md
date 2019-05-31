@@ -69,10 +69,9 @@ In the Link Binary With Libraries section, click the + link and add the followin
 Note: If you plan to use the AEP SDK in your native iOS code you will need to import the appropriate headers with the following format: `#import <RCTACPCore/ACPCore.h>`
 
 ## Tests
-This project contains jest unit tests, to run the unit tests locally execute the following commands:
+This project contains jest unit tests, to run the unit tests locally with:
 ```
-npm install
-./node_modules/.bin/jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/
+make run-tests-locally
 ```
 
 ## Usage
