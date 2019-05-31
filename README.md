@@ -25,7 +25,6 @@ You need to install the SDK with [npm](https://www.npmjs.com/) and configure the
 First create a React Native project:
 
 ```bash
-cd MyReactApp
 react-native init MyReactApp
 ```
 
@@ -34,6 +33,7 @@ react-native init MyReactApp
 Install and link the `@adobe/react-native-acpcore` package:
 
 ```bash
+cd MyReactApp
 npm install @adobe/react-native-acpcore
 react-native link @adobe/react-native-acpcore
 ```
