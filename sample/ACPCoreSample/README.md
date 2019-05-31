@@ -27,5 +27,6 @@ If you're having issues running the sample app, ensure you can at least run a de
 
 ```
 react-native init MyReactApp
+cd MyReactApp
 react-native run-ios or react-native run-android
 ```
