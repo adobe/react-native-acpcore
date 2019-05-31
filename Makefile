@@ -24,6 +24,9 @@ build-sample-ios:
 run-tests:
 	jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/ --runInBand
 
+run-tests-locally: setup
+	./node_modules/.bin/jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/
+
 copy-to-sample:
 	cd sample/ACP*Sample/ && sh copy-changes-to-sample.sh
 
