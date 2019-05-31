@@ -2,6 +2,8 @@
 
 > Note: Commands are assuming you're in the root directory of the repository.
 
+> Note: If you are new to React Native we suggest you follow the [React Native Getting Started](<https://facebook.github.io/react-native/docs/getting-started.html>) page before continuing.
+
 How to run the sample app:
 
 #### Run instructions for iOS:
