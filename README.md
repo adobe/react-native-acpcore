@@ -25,6 +25,7 @@ You need to install the SDK with [npm](https://www.npmjs.com/) and configure the
 First create a React Native project:
 
 ```bash
+cd MyReactApp
 react-native init MyReactApp
 ```
 
