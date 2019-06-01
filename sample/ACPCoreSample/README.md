@@ -11,11 +11,12 @@ How to run the sample app:
 ```
 cd sample/ACPCoreSample/ && npm install && react-native run-ios
 ```
+
+> Note: If you see an error "Can't find simulator for "iPhoneX"", this is a known [issue](https://github.com/facebook/react-native/issues/23256) with React Native and you should try running the sample app inside of Xcode.
+
 or
 
-Open the Xcode project
-
-Hit the Run button
+Open the Xcode project under the `ios` directory and hit run
 
 #### Run instructions for Android:
 
