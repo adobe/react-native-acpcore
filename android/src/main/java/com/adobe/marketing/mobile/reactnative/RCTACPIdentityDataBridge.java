@@ -36,6 +36,10 @@ public final class RCTACPIdentityDataBridge {
      * @return The @{link VisitorID.AuthenticationState} authentication state
      */
     public static VisitorID.AuthenticationState authenticationStateFromString(final String authStateString) {
+        if (authStateString == null) {
+            return VisitorID.AuthenticationState.UNKNOWN;
+        }
+
         if (authStateString.equals(ACP_VISITOR_AUTH_STATE_AUTHENTICATED)) {
             return VisitorID.AuthenticationState.AUTHENTICATED;
         } else if (authStateString.equals(ACP_VISITOR_AUTH_STATE_LOGGED_OUT)) {
@@ -46,6 +50,10 @@ public final class RCTACPIdentityDataBridge {
     }
 
     public static String stringFromAuthState(final VisitorID.AuthenticationState authenticationState) {
+        if (authenticationState == null) {
+            return ACP_VISITOR_AUTH_STATE_UNKNOWN;
+        }
+
         if (authenticationState == VisitorID.AuthenticationState.AUTHENTICATED) {
             return ACP_VISITOR_AUTH_STATE_AUTHENTICATED;
         } else if (authenticationState == VisitorID.AuthenticationState.LOGGED_OUT) {
@@ -56,6 +64,10 @@ public final class RCTACPIdentityDataBridge {
     }
 
     public static VisitorID visitorIdentifierFromReadableMap(final ReadableMap map) {
+        if (map == null) {
+            return null;
+        }
+
         return new VisitorID(RCTACPCoreDataBridge.getNullableString(map, ACP_VISITOR_ID_ORIGIN),
                 RCTACPCoreDataBridge.getNullableString(map, ACP_VISITOR_ID_TYPE),
                 RCTACPCoreDataBridge.getNullableString(map, ACP_VISITOR_IDENTIFIER),
@@ -68,6 +80,10 @@ public final class RCTACPIdentityDataBridge {
      * @return A {@link WritableMap} that represents the visitorID
      */
     public static WritableMap mapFromVisitorIdentifier(final VisitorID visitorID) {
+        if (visitorID == null) {
+            return null;
+        }
+
         WritableMap visitorIDMap = new WritableNativeMap();
         visitorIDMap.putString(ACP_VISITOR_ID_ORIGIN, visitorID.getIdOrigin());
         visitorIDMap.putString(ACP_VISITOR_ID_TYPE, visitorID.getIdType());
