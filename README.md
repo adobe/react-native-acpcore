@@ -43,7 +43,7 @@ react-native link @adobe/react-native-acpcore
 
 #### 3.1 Android project
 
-Navigate to `MainApplication.java` under `android/app/src/main/java/com/<project-name>/` and add a call to `MobileCore.setApplication(this)` inside of `onCreate()`.
+Navigate to `MainApplication.java` under `android/app/src/main/java/com/<project-name>/MainApplication.java` and add a call to `MobileCore.setApplication(this)` inside of `onCreate()`.
 
 ```java
 import com.adobe.marketing.mobile.MobileCore; // import MobileCore
