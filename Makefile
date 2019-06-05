@@ -1,5 +1,4 @@
 PROJECT_NAME = ACPCore
-ANDROID_LIB_NAME = core
 
 setup:
 	(npm install)
