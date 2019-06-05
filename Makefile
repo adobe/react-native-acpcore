@@ -33,7 +33,8 @@ copy-to-sample:
 
 # fetches the latest iOS & Android SDK and put them in the project
 update-libs:
+	rm -rf acp-sdks # clean if needed
 	git clone https://github.com/Adobe-Marketing-Cloud/acp-sdks
 	cp -a acp-sdks/iOS/${PROJECT_NAME}/ ios/libs/ # copy iOS lib
-	sh update-android-sdk
+	sh update-android-sdk.sh
 	rm -rf acp-sdks
