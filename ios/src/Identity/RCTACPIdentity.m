@@ -37,9 +37,9 @@ RCT_EXPORT_METHOD(appendVisitorInfoForURL:(nonnull NSString*)baseUrl resolver:(R
     }];
 }
 
-RCT_EXPORT_METHOD(getUrlVariables:((RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    [ACPIdentity getUrlVariables:^(NSURL * _Nullable urlVariables) {
-        resolve(urlVariables.absoluteString);
+RCT_EXPORT_METHOD(getUrlVariables:(RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
+    [ACPIdentity getUrlVariables:^(NSString * _Nullable urlVariables) {
+        resolve(urlVariables);
     }];
 }
 
