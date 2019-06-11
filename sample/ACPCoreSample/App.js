@@ -47,6 +47,7 @@ export default class App extends Component<Props> {
         <Button title="ACPIdentity::syncIdentifiersWithAuthState()" onPress={this.syncIdentifiersWithAuthState}/>
         <Button title="ACPIdentity::syncIdentifier()" onPress={this.syncIdentifier}/>
         <Button title="ACPIdentity::appendVisitorInfoForURL()" onPress={this.appendVisitorInfoForURL}/>
+        <Button title="ACPIdentity::getUrlVariables()" onPress={this.getUrlVariables}/>
         <Button title="ACPIdentity::getIdentifiers()" onPress={this.getIdentifiers}/>
         <Button title="ACPIdentity::getExperienceCloudId()" onPress={this.getExperienceCloudId}/>
         </ScrollView>
@@ -160,6 +161,10 @@ export default class App extends Component<Props> {
 
   appendVisitorInfoForURL() {
     ACPIdentity.appendVisitorInfoForURL("test.com").then(urlWithVisitorData => console.log("AdobeExperienceSDK: VisitorData = " + urlWithVisitorData));
+  }
+
+  getUrlVariables() {
+    ACPIdentity.getUrlVariables().then(urlVariables => console.log("AdobeExperienceSDK: UrlVariables = " + urlVariables));
   }
 
   getIdentifiers() {
