@@ -61,6 +61,12 @@ describe('ACPIdentity', () => {
     expect(spy).toHaveBeenCalledWith(url);
   });
 
+  test('getUrlVariables is called', async () => {
+    const spy = jest.spyOn(NativeModules.ACPIdentity, 'getUrlVariables');
+    await ACPIdentity.getUrlVariables();
+    expect(spy).toHaveBeenCalled();
+  });
+
   test('getIdentifiers is called', async () => {
     const spy = jest.spyOn(NativeModules.ACPIdentity, 'getIdentifiers');
     await ACPIdentity.getIdentifiers();
