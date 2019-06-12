@@ -87,6 +87,16 @@ public class RCTACPIdentityModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void getUrlVariables(final Promise promise) {
+        Identity.getUrlVariables(new AdobeCallback<String>() {
+            @Override
+            public void call(String s) {
+                promise.resolve(s);
+            }
+        });
+    }
+
+    @ReactMethod
     public void getIdentifiers(final Promise promise) {
         Identity.getIdentifiers(new AdobeCallback<List<VisitorID>>() {
             @Override
