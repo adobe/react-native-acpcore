@@ -37,6 +37,12 @@ RCT_EXPORT_METHOD(appendVisitorInfoForURL:(nonnull NSString*)baseUrl resolver:(R
     }];
 }
 
+RCT_EXPORT_METHOD(getUrlVariables:(RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
+    [ACPIdentity getUrlVariables:^(NSString * _Nullable urlVariables) {
+        resolve(urlVariables);
+    }];
+}
+
 RCT_EXPORT_METHOD(getIdentifiers:(RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     [ACPIdentity getIdentifiers:^(NSArray<ACPMobileVisitorId *> * _Nullable visitorIDs) {
         NSMutableArray *visitorIDArr = [NSMutableArray array];

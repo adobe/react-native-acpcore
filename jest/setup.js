@@ -47,6 +47,7 @@ jest.mock('NativeModules', () => ({
     syncIdentifiersWithAuthState: jest.fn(),
     syncIdentifier: jest.fn(),
     appendVisitorInfoForURL: jest.fn(() => new Promise(resolve => resolve())),
+    getUrlVariables: jest.fn(() => new Promise(resolve => resolve())),
     getIdentifiers: jest.fn(() => new Promise(resolve => resolve())),
     getExperienceCloudId: jest.fn(() => new Promise(resolve => resolve()))
   },
