@@ -113,6 +113,24 @@ module.exports = {
   },
 
   /**
+   * @brief Returns visitor information in URL query string form for consumption in hybrid mobile apps.
+   *
+   * Retrieves the visitor identifiers as a URL query parameter string.
+   * There will be no leading '&' or '?' punctuation, as the caller is responsible for placing the string in the correct
+   * location of their resulting URL. If there is not a valid URL string to return, or if an error occurs, callback will
+   * contain nil. Otherwise, the following information is added to the query section of the given URL.
+   * The attribute `adobe_mc` is an URL encoded list containing the Experience Cloud ID, Experience Cloud Org ID,
+   * Analytics Tracking ID if available from Analytics, and a timestamp when this request
+   * was made. The attribute `adobe_aa_vid` is the URL encoded Analytics Customer Visitor ID, if previously set in
+   * Analytics extension.
+   *
+   * @param promise method which will be invoked once the url query parameter string is available.
+   */
+  getUrlVariables(): Promise<?string> {
+    return RCTACPIdentity.getUrlVariables();
+  },
+
+  /**
    * @brief Returns all customer identifiers which were previously synced with the Adobe Experience Cloud.
    *
    * @param callback method which will be invoked once the customer identifiers are available.

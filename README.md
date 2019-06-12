@@ -270,6 +270,12 @@ ACPCore.setAdvertisingIdentifier("adID");
 ACPIdentity.appendVisitorInfoForURL("test.com").then(urlWithVisitorData => console.log("AdobeExperienceSDK: VisitorData = " + urlWithVisitorData));
 ```
 
+##### Get visitor data as URL query parameter string:
+
+```javascript
+ACPIdentity.getUrlVariables().then(urlVariables => console.log("AdobeExperienceSDK: UrlVariables = " + urlVariables));
+```
+
 ##### Get Identifiers:
 
 ```javascript
