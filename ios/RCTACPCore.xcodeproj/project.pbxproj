@@ -13,16 +13,6 @@
 		210E3BB52200E9E300AC9192 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB42200E9E300AC9192 /* UserNotifications.framework */; };
 		21230B932203B41D00F2B198 /* RCTACPSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E026202203A24E006C3583 /* RCTACPSignal.m */; };
 		2132E26922057F1D000DDF24 /* RCTACPIdentityDataBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2132E26822057F1D000DDF24 /* RCTACPIdentityDataBridge.m */; };
-		215A61DA226E138500FA8FC6 /* ACPLifecycle.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BCE2200EB7100AC9192 /* ACPLifecycle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		215A61DB226E138500FA8FC6 /* ACPExtensionEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BCF2200EB7100AC9192 /* ACPExtensionEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		215A61DC226E138500FA8FC6 /* ACPExtensionListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD02200EB7100AC9192 /* ACPExtensionListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		215A61DD226E138500FA8FC6 /* ACPCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD12200EB7100AC9192 /* ACPCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		215A61DE226E138500FA8FC6 /* ACPExtensionError.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD22200EB7100AC9192 /* ACPExtensionError.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		215A61DF226E138500FA8FC6 /* ACPIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD32200EB7100AC9192 /* ACPIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		215A61E0226E138500FA8FC6 /* ACPSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD42200EB7100AC9192 /* ACPSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		215A61E1226E138500FA8FC6 /* ACPMobileVisitorId.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD52200EB7100AC9192 /* ACPMobileVisitorId.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		215A61E2226E138500FA8FC6 /* ACPExtensionApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD62200EB7200AC9192 /* ACPExtensionApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		215A61E3226E138500FA8FC6 /* ACPExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E3BD72200EB7200AC9192 /* ACPExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		215A61E5226E139F00FA8FC6 /* ACPLifecycle.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BCE2200EB7100AC9192 /* ACPLifecycle.h */; };
 		215A61E6226E139F00FA8FC6 /* ACPExtensionEvent.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BCF2200EB7100AC9192 /* ACPExtensionEvent.h */; };
 		215A61E7226E139F00FA8FC6 /* ACPExtensionListener.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD02200EB7100AC9192 /* ACPExtensionListener.h */; };
@@ -243,32 +233,11 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		215A61D9226E137B00FA8FC6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				215A61DA226E138500FA8FC6 /* ACPLifecycle.h in Headers */,
-				215A61DB226E138500FA8FC6 /* ACPExtensionEvent.h in Headers */,
-				215A61DC226E138500FA8FC6 /* ACPExtensionListener.h in Headers */,
-				215A61DD226E138500FA8FC6 /* ACPCore.h in Headers */,
-				215A61DE226E138500FA8FC6 /* ACPExtensionError.h in Headers */,
-				215A61DF226E138500FA8FC6 /* ACPIdentity.h in Headers */,
-				215A61E0226E138500FA8FC6 /* ACPSignal.h in Headers */,
-				215A61E1226E138500FA8FC6 /* ACPMobileVisitorId.h in Headers */,
-				215A61E2226E138500FA8FC6 /* ACPExtensionApi.h in Headers */,
-				215A61E3226E138500FA8FC6 /* ACPExtension.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		58B511DA1A9E6C8500147676 /* RCTACPCore */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RCTACPCore" */;
 			buildPhases = (
-				215A61D9226E137B00FA8FC6 /* Headers */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -301,6 +270,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
