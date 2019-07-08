@@ -56,16 +56,8 @@ export default class App extends Component<Props> {
   }
 
   initSDK() {
-    // console.log("AdobeExperienceSDK IMPORT: ACPCore = " + ACPCore);
-    // console.log("AdobeExperienceSDK IMPORT: ACPLifecycle = " + ACPLifecycle);
-    // console.log("AdobeExperienceSDK IMPORT: ACPSignal = " + ACPSignal);
-    // console.log("AdobeExperienceSDK IMPORT: ACPIdentity = " + ACPIdentity);
-    // console.log("AdobeExperienceSDK IMPORT: ACPMobileLogLevel = " + ACPMobileLogLevel);
-    // console.log("AdobeExperienceSDK IMPORT: ACPMobilePrivacyStatus = " + ACPMobilePrivacyStatus);
-    // console.log("AdobeExperienceSDK IMPORT: ACPMobileVisitorAuthenticationState = " + ACPMobileVisitorAuthenticationState);
-    // console.log("AdobeExperienceSDK IMPORT: ACPVisitorID = " + ACPVisitorID);
     ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
-    ACPCore.configureWithAppId("launch-EN1a68f9bc5b3c475b8c232adc3f8011fb");
+    ACPCore.configureWithAppId("yourAppId");
     ACPLifecycle.registerExtension();
     ACPIdentity.registerExtension();
     ACPSignal.registerExtension();
