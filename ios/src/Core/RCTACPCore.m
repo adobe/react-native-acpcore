@@ -33,6 +33,22 @@ static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dic
     [ACPCore setWrapperType:ACPMobileWrapperTypeReactNative];
 }
 
+- (NSData *)dataFromHexString:(NSString *)string {
+    NSMutableData *result = [[NSMutableData alloc] init];
+
+    for (int i = 0; i + 2 <= string.length; i += 2) {
+        NSRange range = NSMakeRange(i, 2);
+        NSString* hexStr = [string substringWithRange:range];
+        NSScanner* scanner = [NSScanner scannerWithString:hexStr];
+        unsigned int intValue;
+        [scanner scanHexInt:&intValue];
+        unsigned char uc = (unsigned char) intValue;
+        [result appendBytes:&uc length:1];
+    }
+    
+    return [NSData dataWithData:result];
+}
+
 RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     resolve([ACPCore extensionVersion]);
 }
@@ -104,7 +120,7 @@ RCT_EXPORT_METHOD(setAdvertisingIdentifier: (nullable NSString*) adId) {
 }
 
 RCT_EXPORT_METHOD(setPushIdentifier: (nullable NSString*) deviceToken) {
-    [ACPCore setPushIdentifier:[RCTConvert NSData:deviceToken]];
+    [ACPCore setPushIdentifier:[self dataFromHexString:deviceToken]];
 }
 
 RCT_EXPORT_METHOD(trackAction: (nullable NSString*) action data: (nullable NSDictionary*) data) {
