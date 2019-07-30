@@ -57,6 +57,13 @@ public void onCreate() {
 ```
 
 #### 3.2 iOS project
+
+#### With Cocoapods
+* Add `pod 'RCTACPCore', :path => '../node_modules/@adobe/react-native-acpcore'` to your `ios/Podfile`
+* Run `pod install` on `/ios`
+
+#### Manual installation
+* 
 In the Link Binary With Libraries section, click the + link and add the following frameworks and libraries:
 * `UIKit.framework`
 * `SystemConfiguration.framework`
