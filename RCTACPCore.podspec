@@ -17,14 +17,7 @@ Pod::Spec.new do |s|
   s.source_files  = "ios/**/*.{h,m}"
   s.requires_arc = true
 
-  s.dependency "React"  
-  s.dependency "ACPGriffonBeta", "~> 0.0"
-  s.dependency "ACPTargetVEC", "~> 2.0'"
-  s.dependency "ACPTarget", "~> 2.1'"
-  s.dependency "ACPAudience", "~> 2.0'"
-  s.dependency "ACPAnalytics", "~> 2.0'"
-  s.dependency "ACPUserProfile", "~> 2.0'"
-  s.dependency "ACPCore", "~> 2.0"
+  s.dependency "React"
   s.frameworks = 'UIKit', 'SystemConfiguration', 'WebKit', 'UserNotifications'
   s.library = 'sqlite3.0', 'c++', 'z'
 end
