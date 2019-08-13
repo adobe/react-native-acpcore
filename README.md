@@ -301,7 +301,7 @@ var visitorId = new ACPVisitorID(idOrigin?: string, idType: string, id?: string,
 
 ### [Lifecycle](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/lifecycle)
 
-> Note: We recommend to implement Lifecycle metrics in native Android and iOS code.
+> Note: We recommend implementing Lifecycle metrics in native Android and iOS code.
 
 ##### Getting the extension version:
 ```javascript
