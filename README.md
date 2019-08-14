@@ -78,7 +78,7 @@ make run-tests-locally
 ### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
 ##### Initializing the SDK:
 
-It is recommended to initialize the SDK in your native code inside your AppDelegate and MainApplication in iOS and Android respectively, however you can still initialize the SDK in Javascript.
+It is recommended to initialize the SDK via native code inside your AppDelegate and MainApplication in iOS and Android respectively. However, you can still initialize the SDK in Javascript.
 
 **iOS:**
 
