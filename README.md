@@ -104,6 +104,13 @@ It is recommended to initialize the SDK via native code inside your AppDelegate 
 **Android:**
 
 ```java
+// Import the SDK
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Identity;
+import com.adobe.marketing.mobile.Lifecycle;
+import com.adobe.marketing.mobile.Signal;
+import com.adobe.marketing.mobile.WrapperType;
+
 @Override
 public void onCreate() {
   //...
