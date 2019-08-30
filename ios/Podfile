@@ -2,8 +2,6 @@ platform :ios, "10.0"
 
 target "RCTACPCore" do
   # inherit! :search_paths
-  # Pods for testing
-
   react_native_path = "../node_modules/react-native"
 
   pod "React-Core", :path => "#{react_native_path}/React"
