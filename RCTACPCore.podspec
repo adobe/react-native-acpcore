@@ -20,4 +20,5 @@ Pod::Spec.new do |s|
   s.dependency "React"
   s.frameworks = 'UIKit', 'SystemConfiguration', 'WebKit', 'UserNotifications'
   s.library = 'sqlite3.0', 'c++', 'z'
+  s.vendored_libraries = 'ios/libs/libACPCore_iOS.a', 'ios/libs/libACPIdentity_iOS.a', 'ios/libs/libACPLifecycle_iOS.a', 'ios/libs/libACPSignal_iOS.a'
 end
