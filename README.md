@@ -36,7 +36,8 @@ Install and link the `@adobe/react-native-acpcore` package:
 ```bash
 cd MyReactApp
 npm install @adobe/react-native-acpcore
-react-native link @adobe/react-native-acpcore
+react-native link @adobe/react-native-acpcore # Only for React Native versions before 0.60
+cd ios && pod install && cd .. # Only for React Native versions after 0.60
 ```
 
 ### 3. Configure native projects
