@@ -5,13 +5,13 @@ target "RCTACPCore" do
   react_native_path = "../node_modules/react-native"
 
   pod "React-Core", :path => "#{react_native_path}/React"
-  pod "React-cxxreact", :path => "../node_modules/react-native/ReactCommon/cxxreact"
-  pod "React-jsi", :path => "../node_modules/react-native/ReactCommon/jsi"
-  pod "React-jsiexecutor", :path => "../node_modules/react-native/ReactCommon/jsiexecutor"
-  pod "React-jsinspector", :path => "../node_modules/react-native/ReactCommon/jsinspector"
+  pod "React-cxxreact", :path => "#{react_native_path}/ReactCommon/cxxreact"
+  pod "React-jsi", :path => "#{react_native_path}/ReactCommon/jsi"
+  pod "React-jsiexecutor", :path => "#{react_native_path}/ReactCommon/jsiexecutor"
+  pod "React-jsinspector", :path => "#{react_native_path}/ReactCommon/jsinspector"
 
 
-  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  pod 'DoubleConversion', :podspec => "#{react_native_path}third-party-podspecs/DoubleConversion.podspec"
   pod "yoga", :path => "#{react_native_path}/ReactCommon/yoga"
   pod "Folly", :podspec => "#{react_native_path}/third-party-podspecs/Folly.podspec"
 end
