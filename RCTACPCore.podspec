@@ -4,7 +4,7 @@ package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 Pod::Spec.new do |s|
   s.name         = "RCTACPCore"
   s.version      = package["version"]
-  s.summary      = "Core framework for Adobe Experience Cloud SDK. Written and Supported by Adobe."
+  s.summary      = "Core library for Adobe Experience Cloud SDK. Written and Supported by Adobe."
   s.author       = "Adobe Mobile SDK Team"
 
   s.homepage     = "https://github.com/adobe/react-native-acpcore"

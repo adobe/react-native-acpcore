@@ -75,7 +75,7 @@ public void onCreate() {
 }
 ```
 
-#### 3.2 iOS project
+#### 3.2 iOS project (Only required for **React Native <= 0.59**)
 In the Link Binary With Libraries section, click the + link and add the following frameworks and libraries:
 * `UIKit.framework`
 * `SystemConfiguration.framework`
