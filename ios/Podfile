@@ -11,7 +11,7 @@ target "RCTACPCore" do
   pod "React-jsinspector", :path => "#{react_native_path}/ReactCommon/jsinspector"
 
 
-  pod 'DoubleConversion', :podspec => "#{react_native_path}third-party-podspecs/DoubleConversion.podspec"
+  pod 'DoubleConversion', :podspec => "#{react_native_path}/third-party-podspecs/DoubleConversion.podspec"
   pod "yoga", :path => "#{react_native_path}/ReactCommon/yoga"
   pod "Folly", :podspec => "#{react_native_path}/third-party-podspecs/Folly.podspec"
 end
