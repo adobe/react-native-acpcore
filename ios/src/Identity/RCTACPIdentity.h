@@ -10,11 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-#if __has_include("RCTBridgeModule.h")
-#import "RCTBridgeModule.h"
-#else
-#import <React/RCTBridgeModule.h> // Required when used as a Pod in a Swift project
-#endif
+#import <React/RCTBridgeModule.h>
+#import <Foundation/Foundation.h>
 
 @interface RCTACPIdentity : NSObject <RCTBridgeModule>
 
