@@ -36,7 +36,26 @@ Install and link the `@adobe/react-native-acpcore` package:
 ```bash
 cd MyReactApp
 npm install @adobe/react-native-acpcore
-react-native link @adobe/react-native-acpcore
+```
+
+#### 2.1 Link
+- **React Native 0.60+**
+
+
+[CLI autolink feature](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) links the module while building the app.
+
+
+- **React Native <= 0.59**
+
+
+```bash
+$ react-native link react-native-acpcore
+```
+
+*Note* For `iOS` using `cocoapods`, run:
+
+```bash
+$ cd ios/ && pod install
 ```
 
 ### 3. Configure native projects
@@ -56,7 +75,7 @@ public void onCreate() {
 }
 ```
 
-#### 3.2 iOS project
+#### 3.2 iOS project (Only required for **React Native <= 0.59**)
 In the Link Binary With Libraries section, click the + link and add the following frameworks and libraries:
 * `UIKit.framework`
 * `SystemConfiguration.framework`
