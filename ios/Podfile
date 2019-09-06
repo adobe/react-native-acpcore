@@ -1,20 +1,17 @@
-platform :ios, '10.0'
+platform :ios, "10.0"
 
-target 'RCTACPCore' do
+target "RCTACPCore" do
   # inherit! :search_paths
-  # Pods for testing
-
   react_native_path = "../node_modules/react-native"
-  pod 'React', :path => "#{react_native_path}", :subspecs => [
-    'Core',
-    'CxxBridge',
-    'DevSupport',
-    'RCTText',
-    'RCTNetwork',
-    'RCTImage',
-    'RCTWebSocket',
-  ]
 
+  pod "React-Core", :path => "#{react_native_path}/React"
+  pod "React-cxxreact", :path => "#{react_native_path}/ReactCommon/cxxreact"
+  pod "React-jsi", :path => "#{react_native_path}/ReactCommon/jsi"
+  pod "React-jsiexecutor", :path => "#{react_native_path}/ReactCommon/jsiexecutor"
+  pod "React-jsinspector", :path => "#{react_native_path}/ReactCommon/jsinspector"
+
+
+  pod 'DoubleConversion', :podspec => "#{react_native_path}/third-party-podspecs/DoubleConversion.podspec"
   pod "yoga", :path => "#{react_native_path}/ReactCommon/yoga"
-  pod 'Folly', :podspec => "#{react_native_path}/third-party-podspecs/Folly.podspec"
+  pod "Folly", :podspec => "#{react_native_path}/third-party-podspecs/Folly.podspec"
 end
