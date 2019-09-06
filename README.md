@@ -97,7 +97,7 @@ make run-tests-locally
 ### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
 ##### Initializing the SDK:
 
-It is recommended to initialize the SDK via native code inside your AppDelegate and MainApplication in iOS and Android respectively. However, you can still initialize the SDK in Javascript.
+> Note: It is recommended to initialize the SDK via native code inside your AppDelegate and MainApplication in iOS and Android respectively. However, you can still initialize the SDK in Javascript.
 
 **iOS:**
 
@@ -327,7 +327,7 @@ var visitorId = new ACPVisitorID(idOrigin?: string, idType: string, id?: string,
 
 ### [Lifecycle](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/lifecycle)
 
-> Note: Implementing Lifecycle via Javascript may lead to inaccurate Lifecycle metrics, therefore we recommend implementing Lifecycle in native Android and iOS code.
+> Note: Implementing Lifecycle via Javascript may lead to inaccurate Lifecycle metrics, therefore we recommend implementing Lifecycle in native [Android and iOS code](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/lifecycle). However, if implementing Lifecycle in Javascript is required you can use the [`AppState`](https://facebook.github.io/react-native/docs/appstate) to receive notifications about when your app enters foreground/background. Based on the `AppState` you can make the corresponding calls to `lifecycleStart` and `lifecyclePause`.
 
 ##### Getting the extension version:
 ```javascript
