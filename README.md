@@ -6,8 +6,9 @@
 
 ## Contents
 - [Installation](#installation)
-  - [Android](#31-android-project)
-  - [iOS](#32-ios-project)
+  - [Android](#3.1-android-project)
+  - [iOS](#3.2-ios-project)
+  - [Next steps](#4.-next-steps)
 - [Tests](#tests)
 - [Usage](#usage)
 	- [Core](#core)
@@ -75,7 +76,19 @@ public void onCreate() {
 }
 ```
 
-#### 3.2 iOS project (Only required for **React Native <= 0.59**)
+The SDK requires standard [network connection](https://developer.android.com/training/basics/network-ops/connecting) permissions in your manifest to send data, collect cellular provider, and record offline tracking calls.
+
+To add these permissions, add the following lines to your `AndroidManifest.xml` file, which is located in the application project directory:
+
+```markup
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+
+#### 3.2 iOS project
+
+> (Only required for **React Native <= 0.59**)
+
 In the Link Binary With Libraries section, click the + link and add the following frameworks and libraries:
 * `UIKit.framework`
 * `SystemConfiguration.framework`
@@ -85,7 +98,19 @@ In the Link Binary With Libraries section, click the + link and add the followin
 * `libc++.tbd`
 * `libz.tbd`
 
-Note: If you plan to use the AEP SDK in your native iOS code you will need to import the appropriate headers with the following format: `#import <RCTACPCore/ACPCore.h>`
+> Note: If you plan to use the AEP SDK in your native iOS code you will need to import the appropriate headers with the following format: `#import <RCTACPCore/ACPCore.h>`
+
+#### 4. Next steps
+
+After your have installed Core for React Native, you can install additional AEP React Native extensions.
+
+| Extension    | npm package                                                  |
+| ------------ | ------------------------------------------------------------ |
+| Analytics    | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-acpanalytics.svg?color=green&label=%40adobe%2Freact-native-acpanalytics&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-acpanalytics) |
+| Audience     | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-acpaudience.svg?color=green&label=%40adobe%2Freact-native-acpaudience&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-acpaudience) |
+| Campaign     | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-acpcampaign.svg?color=green&label=%40adobe%2Freact-native-acpcampaign&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-acpcampaign) |
+| Target       | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-acptarget.svg?color=green&label=%40adobe%2Freact-native-acptarget&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-acptarget) |
+| User Profile | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-acpuserprofile.svg?color=green&label=%40adobe%2Freact-native-acpuserprofile&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-acpuserprofile) |
 
 ## Tests
 This project contains jest unit tests which are contained in the `__tests__` directory, to run the tests locally:
