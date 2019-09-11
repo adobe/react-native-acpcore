@@ -98,8 +98,6 @@ In the Link Binary With Libraries section, click the + link and add the followin
 * `libc++.tbd`
 * `libz.tbd`
 
-> Note: If you plan to use the AEP SDK in your native iOS code you will need to import the appropriate headers with the following format: `#import <RCTACPCore/ACPCore.h>`
-
 #### 4. Next steps
 
 After your have installed Core for React Native, you can install additional AEP React Native extensions.
