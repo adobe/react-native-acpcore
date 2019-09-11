@@ -6,9 +6,9 @@
 
 ## Contents
 - [Installation](#installation)
-  - [Android](#3.1-android-project)
-  - [iOS](#3.2-ios-project)
-  - [Next steps](#4.-next-steps)
+  - [Android](#31-android-project)
+  - [iOS](#32-ios-project)
+  - [Next steps](#4-next-steps)
 - [Tests](#tests)
 - [Usage](#usage)
 	- [Core](#core)
