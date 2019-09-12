@@ -100,7 +100,7 @@ In the Link Binary With Libraries section, click the + link and add the followin
 
 #### 4. Next steps
 
-After your have installed Core for React Native, you can install additional AEP React Native extensions.
+After you have installed Core, you can install additional AEP React Native extensions.
 
 | Extension    | npm package                                                  |
 | ------------ | ------------------------------------------------------------ |
