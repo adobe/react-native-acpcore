@@ -23,17 +23,17 @@ import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReadableMap;
 
-import android.app.Activity;
 import android.app.Application;
-import android.util.Log;
+
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class RCTACPCoreModule extends ReactContextBaseJavaModule {
 
     private final ReactApplicationContext reactContext;
     private static String FAILED_TO_CONVERT_EVENT_MESSAGE = "Failed to convert map to Event";
+    private static AtomicBoolean hasStarted = new AtomicBoolean(false);
 
     public RCTACPCoreModule(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -58,10 +58,16 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void start(final Promise promise) {
+        if (hasStarted.get()) {
+            promise.resolve(true);
+            return;
+        }
+
         MobileCore.start(new AdobeCallback() {
             @Override
             public void call(Object obj) {
-                promise.resolve(true);
+            hasStarted.set(true);
+            promise.resolve(true);
             }
         });
     }
