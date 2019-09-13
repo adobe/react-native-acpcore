@@ -54,9 +54,20 @@ RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(R
 }
 
 RCT_EXPORT_METHOD(start: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    [ACPCore start:^{
-        resolve(@(YES));
-    }];
+    static BOOL hasStarted = NO;
+    static dispatch_once_t onceToken;
+    
+    if (hasStarted) {
+        resolve(@(hasStarted));
+        return;
+    }
+    
+    dispatch_once(&onceToken, ^{
+        [ACPCore start:^{
+            hasStarted = YES;
+            resolve(@(hasStarted));
+        }];
+    });
 }
 
 RCT_EXPORT_METHOD(configureWithAppId:(NSString* __nullable) appId) {
