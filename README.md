@@ -138,6 +138,7 @@ make run-tests-locally
   [ACPIdentity registerExtension];
   [ACPLifecycle registerExtension];
   [ACPSignal registerExtension];
+  // Register any additional extensions
 
   [ACPCore start:nil];
 }
@@ -163,6 +164,7 @@ public void onCreate() {
     Identity.registerExtension();
     Lifecycle.registerExtension();
     Signal.registerExtension();
+    // Register any additional extensions
   } catch (Exception e) {
     // handle exception
   }
@@ -182,6 +184,8 @@ initSDK() {
     ACPLifecycle.registerExtension();
     ACPIdentity.registerExtension();
     ACPSignal.registerExtension();
+    // Register any additional extensions
+    
     ACPCore.start();
 }
 ```
