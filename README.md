@@ -46,7 +46,7 @@ npm install @adobe/react-native-acpcore
 [CLI autolink feature](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) links the module while building the app.
 
 
-- **React Native <= 0.59**
+- **React Native <= 0.59 and not using `cocoapods`**
 
 
 ```bash
