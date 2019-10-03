@@ -50,13 +50,13 @@ npm install @adobe/react-native-acpcore
 
 
 ```bash
-$ react-native link @adobe/react-native-acpcore
+react-native link @adobe/react-native-acpcore
 ```
 
 *Note* For `iOS` using `cocoapods`, run:
 
 ```bash
-$ cd ios/ && pod install
+cd ios/ && pod install
 ```
 
 ### 3. Configure native projects
