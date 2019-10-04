@@ -397,7 +397,7 @@ ACPCore.collectPii({"myPii": "data"});
 
 #### `TypeError: null is not an object (evaluating RCTACPCore...)`
 or
-#### `RCTACPCore.h` not found when importing `<RCTACPCore/RCTACPCore.h>`
+#### `ACPCore.h` not found when importing `<RCTACPCore/ACPCore.h>`
 One possible cause is not running `react-native link @adobe/react-native-acpcore`.
 ```bash
 react-native link @adobe/react-native-acpcore
