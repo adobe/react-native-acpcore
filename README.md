@@ -394,11 +394,14 @@ ACPCore.collectPii({"myPii": "data"});
 ```
 
 ## Trouble Shooting
+A few different errors can result from not running `react-native link @adobe/react-native-acpcore`.
 
-#### `TypeError: null is not an object (evaluating RCTACPCore...)`
-or
-#### `ACPCore.h` not found when importing `<RCTACPCore/ACPCore.h>`
-One possible cause is not running `react-native link @adobe/react-native-acpcore`.
+- `TypeError: null is not an object (evaluating RCTACPCore...)`
+
+- `ACPCore.h` not found when importing `<RCTACPCore/ACPCore.h>`
+
+- No SDK logs or errors after implementing in Javascript.
+
 ```bash
 react-native link @adobe/react-native-acpcore
 cd ios/ && pod install # only if using pods
