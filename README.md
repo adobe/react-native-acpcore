@@ -406,7 +406,7 @@ cd ios/ && pod install # only if using pods
 Another possible issue is that your application is built using [`Expo`](https://expo.io/). Unfortunately `Expo does not support` native modules out of the box. Please see [Ejecting to ExpoKit](https://docs.expo.io/versions/latest/expokit/eject/).
 
 
-#### How to update React Native AEP SDK to the latest version
+### How to update React Native AEP SDK to the latest version
 If you have already installed the AEP SDK into your React Native app and wish to upgrade to newer version, complete the following steps:
 1. `npm uninstall --save @adobe/react-native-acpcore` to uninstall previous versions. Be sure to do this for all extensions you're planning to upgrade e.g. `npm uninstall --save @adobe/react-native-acpanalytics` if you're upgrading the Analytics extension.
 2. `npm install --save-exact @adobe/react-native-acpcore` to install the latest AEP SDK. Do this with any extensions you're upgrading at the time.
