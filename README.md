@@ -400,13 +400,13 @@ A few different errors can result from not running `react-native link @adobe/rea
 
 - `ACPCore.h` not found when importing `<RCTACPCore/ACPCore.h>`
 
-- No SDK logs or errors after implementing in Javascript.
+- No SDK logs or errors after implementing in Javascript
 
 ```bash
 react-native link @adobe/react-native-acpcore
 cd ios/ && pod install # only if using pods
 ```
-Another possible issue is that your application is built using [`Expo`](https://expo.io/). Unfortunately `Expo does not support` native modules out of the box. Please see [Ejecting to ExpoKit](https://docs.expo.io/versions/latest/expokit/eject/).
+Another possible issue is that your application is built using [`Expo`](https://expo.io/). Unfortunately `Expo` does not support native modules out of the box. Please see [Ejecting to ExpoKit](https://docs.expo.io/versions/latest/expokit/eject/).
 
 
 ### How to update React Native AEP SDK to the latest version
