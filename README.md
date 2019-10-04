@@ -394,7 +394,7 @@ ACPCore.collectPii({"myPii": "data"});
 ```
 
 ## Trouble Shooting
-A few different errors can result from not running `react-native link @adobe/react-native-acpcore`.
+A few different errors can result from not running `react-native link @adobe/react-native-acpcore` or when the autolinker in React Native 0.60.x does not properly link the SDK when building.
 
 - `TypeError: null is not an object (evaluating RCTACPCore...)`
 
