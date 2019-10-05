@@ -1,6 +1,7 @@
 sample/
 .github/
 .git/
+.editorconfig
 
 # Built application files
 android/*/build/
