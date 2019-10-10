@@ -25,6 +25,7 @@ import com.adobe.marketing.mobile.Identity;
 import com.adobe.marketing.mobile.Lifecycle;
 import com.adobe.marketing.mobile.Signal;
 import com.adobe.marketing.mobile.WrapperType;
+import com.adobe.marketing.mobile.LoggingMode;
 
 import java.util.Arrays;
 import java.util.List;
@@ -61,6 +62,7 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     MobileCore.setApplication(this); // add this line
+    MobileCore.setLogLevel(LoggingMode.VERBOSE);
     MobileCore.configureWithAppID("yourAppId");
     MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
 
