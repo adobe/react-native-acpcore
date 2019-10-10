@@ -24,7 +24,6 @@ import com.adobe.marketing.mobile.MobileCore; // import MobileCore
 import com.adobe.marketing.mobile.Identity;
 import com.adobe.marketing.mobile.Lifecycle;
 import com.adobe.marketing.mobile.Signal;
-import com.adobe.marketing.mobile.Campaign;
 import com.adobe.marketing.mobile.WrapperType;
 
 import java.util.Arrays;
