@@ -20,7 +20,6 @@ import {ACPCore, ACPLifecycle, ACPSignal, ACPIdentity, ACPMobileLogLevel, ACPMob
 type Props = {};
 export default class App extends Component<Props> {
   render() {
-    this.initSDK();
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={{ marginTop: 75 }}>
@@ -53,15 +52,6 @@ export default class App extends Component<Props> {
         </ScrollView>
       </View>
     );
-  }
-
-  initSDK() {
-    ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
-    ACPCore.configureWithAppId("yourAppId");
-    ACPLifecycle.registerExtension();
-    ACPIdentity.registerExtension();
-    ACPSignal.registerExtension();
-    ACPCore.start();
   }
 
   coreExtensionVersion() {

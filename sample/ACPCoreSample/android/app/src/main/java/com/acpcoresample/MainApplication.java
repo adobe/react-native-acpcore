@@ -21,6 +21,11 @@ import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.adobe.marketing.mobile.reactnative.RCTACPCoreModule;
 import com.adobe.marketing.mobile.MobileCore; // import MobileCore
+import com.adobe.marketing.mobile.Identity;
+import com.adobe.marketing.mobile.Lifecycle;
+import com.adobe.marketing.mobile.Signal;
+import com.adobe.marketing.mobile.Campaign;
+import com.adobe.marketing.mobile.WrapperType;
 
 import java.util.Arrays;
 import java.util.List;
@@ -57,5 +62,17 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     MobileCore.setApplication(this); // add this line
+    MobileCore.configureWithAppID("yourAppId");
+    MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
+
+    try {
+      Identity.registerExtension();
+      Lifecycle.registerExtension();
+      Signal.registerExtension();
+    } catch (Exception e) {
+      // handle exception
+    }
+
+    MobileCore.start(null);
   }
 }
