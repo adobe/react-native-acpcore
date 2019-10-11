@@ -7,7 +7,9 @@
 How to run the sample app:
 
 ### Add your App Id:
-In `App.js`, find the call to `configureWithAppId` and add your app id.
+In `ios/**/AppDelegate.m`, find the call to `configureWithAppId` and add your app id.
+
+In `android/**/MainApplication.java`, find the call to `configureWithAppId` and add your app id.
 
 #### Run instructions for iOS:
 
