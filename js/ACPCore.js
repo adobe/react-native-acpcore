@@ -304,17 +304,6 @@ module.exports = {
    * Only the first call to this function will have any effect.
    * @platform ios
    */
-  collectLaunchInfo() {
-    RCTACPCore.collectLaunchInfo();
-  },
-
-  /**
-   * iOS Only
-   * @brief set the app group used to sharing user defaults and files among containing app and extension apps
-   * @note This *must* be called in AppDidFinishLaunching and before any other interactions with the Adobe Mobile library have happened.
-   * Only the first call to this function will have any effect.
-   * @platform ios
-   */
   setAppGroup(appGroup?: String) {
     RCTACPCore.setAppGroup(appGroup);
   },
