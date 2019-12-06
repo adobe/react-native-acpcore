@@ -45,7 +45,7 @@ static NSString* const FAILED_TO_CONVERT_EVENT_MESSAGE = @"Failed to convert dic
         unsigned char uc = (unsigned char) intValue;
         [result appendBytes:&uc length:1];
     }
-    
+
     return [NSData dataWithData:result];
 }
 
@@ -56,12 +56,12 @@ RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(R
 RCT_EXPORT_METHOD(start: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     static BOOL hasStarted = NO;
     static dispatch_once_t onceToken;
-    
+
     if (hasStarted) {
         resolve(@(hasStarted));
         return;
     }
-    
+
     dispatch_once(&onceToken, ^{
         [ACPCore start:^{
             hasStarted = YES;
@@ -194,10 +194,6 @@ RCT_EXPORT_METHOD(dispatchResponseEvent: (nonnull NSDictionary*) responseEventDi
     } else {
         reject(EXTENSION_NAME, FAILED_TO_CONVERT_EVENT_MESSAGE, nil);
     }
-}
-
-RCT_EXPORT_METHOD(collectLaunchInfo: (nonnull NSDictionary*) userInfo) {
-    [ACPCore collectLaunchInfo:userInfo];
 }
 
 RCT_EXPORT_METHOD(setSmallIconResourceID: (NSInteger) resourceID) {

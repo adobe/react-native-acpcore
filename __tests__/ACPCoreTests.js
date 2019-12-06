@@ -173,12 +173,6 @@ describe('ACPCore', () => {
     expect(spy).toHaveBeenCalledWith(resourceID);
   });
 
-  test('collectLaunchInfo is called', async () => {
-    const spy = jest.spyOn(NativeModules.ACPCore, 'collectLaunchInfo');
-    await ACPCore.collectLaunchInfo();
-    expect(spy).toHaveBeenCalled();
-  });
-
   test('setAppGroup is called with correct parameters', async () => {
     const spy = jest.spyOn(NativeModules.ACPCore, 'setAppGroup');
     let appGroup = "testAppGroup"

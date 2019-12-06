@@ -230,12 +230,6 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
       MobileCore.setLargeIconResourceID(resourceID);
     }
 
-    // MobileCore.collectLaunchInfo is private
-    @ReactMethod
-    public void collectLaunchInfo() {
-        MobileCore.log(LoggingMode.DEBUG, getName(), "collectLaunchInfo() cannot be invoked on Android");
-    }
-
     @ReactMethod
     public void setAppGroup(final String appGroup) {
         MobileCore.log(LoggingMode.DEBUG, getName(), "setAppGroup() cannot be invoked on Android");
