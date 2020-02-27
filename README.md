@@ -122,75 +122,20 @@ make run-tests-locally
 ### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
 ##### Initializing the SDK:
 
-> Note: It is recommended to initialize the SDK via native code inside your AppDelegate and MainApplication in iOS and Android respectively. However, you can still initialize the SDK in Javascript. If you initialize the SDK via native code, it is not required to initialize the SDK in Javascript.
+Initializing the SDK should be done in native code, documentation on how to initalize the SDK can be found [here](https://aep-sdks.gitbook.io/docs/getting-started/get-the-sdk#2-add-initialization-code).
 
-**iOS:**
+After you have added the initialization code to your app, be sure to set the SDK wrapper type to React Native before you start the SDK.
 
+###### iOS:
 ```objective-c
-// Import the SDK
-#import <RCTACPCore/ACPCore.h>
-#import <RCTACPCore/ACPLifecycle.h>
-#import <RCTACPCore/ACPIdentity.h>
-#import <RCTACPCore/ACPSignal.h>
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  //...
-  [ACPCore configureWithAppId:@"yourAppId"];
-  [ACPCore setWrapperType:ACPMobileWrapperTypeReactNative];
-  [ACPIdentity registerExtension];
-  [ACPLifecycle registerExtension];
-  [ACPSignal registerExtension];
-  // Register any additional extensions
-
-  [ACPCore start:nil];
-}
+[ACPCore setWrapperType:ACPMobileWrapperTypeReactNative];
 ```
 
-**Android:**
-
+###### Android
 ```java
-// Import the SDK
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Identity;
-import com.adobe.marketing.mobile.Lifecycle;
-import com.adobe.marketing.mobile.Signal;
-import com.adobe.marketing.mobile.WrapperType;
-
-@Override
-public void onCreate() {
-  //...
-  MobileCore.setApplication(this);
-  MobileCore.configureWithAppID("yourAppId");
-  MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
-  try {
-    Identity.registerExtension();
-    Lifecycle.registerExtension();
-    Signal.registerExtension();
-    // Register any additional extensions
-  } catch (Exception e) {
-    // handle exception
-  }
-
-  MobileCore.start(null);
-}
+MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
 ```
 
-**Javascript:**
-
-```javascript
-import {ACPCore, ACPLifecycle, ACPIdentity, ACPSignal, ACPMobileLogLevel} from '@adobe/react-native-acpcore';
-
-initSDK() {
-    ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
-    ACPCore.configureWithAppId("yourAppId");
-    ACPLifecycle.registerExtension();
-    ACPIdentity.registerExtension();
-    ACPSignal.registerExtension();
-    // Register any additional extensions
-    
-    await ACPCore.start();
-}
-```
 
 ##### Updating the SDK configuration:
 
