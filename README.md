@@ -6,8 +6,7 @@
 
 ## Contents
 - [Installation](#installation)
-  - [Android](#31-android-project)
-  - [iOS](#32-ios-project)
+  - [iOS](#31-ios-project)
   - [Next steps](#4-next-steps)
 - [Tests](#tests)
 - [Usage](#usage)
@@ -62,31 +61,7 @@ cd ios/ && pod install
 
 ### 3. Configure native projects
 
-#### 3.1 Android project
-
-Navigate to `MainApplication.java` under `android/app/src/main/java/com/<project-name>/MainApplication.java` and add a call to `MobileCore.setApplication(this)` inside of `onCreate()`.
-
-```java
-import com.adobe.marketing.mobile.MobileCore; // import MobileCore
-
-@Override
-public void onCreate() {
-	super.onCreate();
-	//...
-	MobileCore.setApplication(this); // add this line
-}
-```
-
-The SDK requires standard [network connection](https://developer.android.com/training/basics/network-ops/connecting) permissions in your manifest to send data, collect cellular provider, and record offline tracking calls.
-
-To add these permissions, add the following lines to your `AndroidManifest.xml` file, which is located in the application project directory:
-
-```markup
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-```
-
-#### 3.2 iOS project
+#### 3.1 iOS project
 
 > (Only required for **React Native <= 0.59**)
 
@@ -122,7 +97,7 @@ make run-tests-locally
 ### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
 ##### Initializing the SDK:
 
-Initializing the SDK should be done in native code, documentation on how to initalize the SDK can be found [here](https://aep-sdks.gitbook.io/docs/getting-started/get-the-sdk#2-add-initialization-code).
+Initializing the SDK should be done in native code, documentation on how to initalize the SDK can be found [here](https://aep-sdks.gitbook.io/docs/getting-started/get-the-sdk#2-add-initialization-code). The linked documentation initalizes the User Profile extension which is not required, however if you are interested in the User Profile extension for React Native you can find it [here](https://www.npmjs.com/package/@adobe/react-native-acpuserprofile).
 
 After you have added the initialization code to your app, be sure to set the SDK wrapper type to React Native before you start the SDK.
 
