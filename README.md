@@ -333,7 +333,7 @@ Another possible issue is that your application is built using [`Expo`](https://
 
 2. `Specs satisfying the RCTACPCore (from ../node_modules/@adobe/react-native-acpcore) dependency were found, but they required a higher minimum deployment target.`
 
-The AEP SDK's require at least iOS 10.0 to function properly. If you see this error, ensure your `Podfile` specfies at least iOS 10.0.
+- The AEP SDK's require at least iOS 10.0 to function properly. If you see this error, ensure your `Podfile` specfies at least iOS 10.0.
 
 ## Contributing
 See [CONTRIBUTING](CONTRIBUTING.md)
