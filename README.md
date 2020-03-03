@@ -317,7 +317,7 @@ ACPCore.collectPii({"myPii": "data"});
 ```
 
 ## Trouble Shooting
-A few different errors can result from not running `react-native link @adobe/react-native-acpcore` or when the autolinker in React Native 0.60.x does not properly link the SDK when building.
+1. A few different errors can result from not running `react-native link @adobe/react-native-acpcore` or when the autolinker in React Native 0.60.x does not properly link the SDK when building.
 
 - `TypeError: null is not an object (evaluating RCTACPCore...)`
 
@@ -331,6 +331,9 @@ cd ios/ && pod install # only if using pods
 ```
 Another possible issue is that your application is built using [`Expo`](https://expo.io/). Unfortunately `Expo` does not support native modules out of the box. Please see [Ejecting to ExpoKit](https://docs.expo.io/versions/latest/expokit/eject/).
 
+2. `Specs satisfying the RCTACPCore (from ../node_modules/@adobe/react-native-acpcore) dependency were found, but they required a higher minimum deployment target.`
+
+The AEP SDK's require at least iOS 10.0 to function properly. If you see this error, ensure your `Podfile` specfies at least iOS 10.0.
 
 ## Contributing
 See [CONTRIBUTING](CONTRIBUTING.md)
