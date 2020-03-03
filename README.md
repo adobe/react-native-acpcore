@@ -11,10 +11,10 @@
 - [Tests](#tests)
 - [Usage](#usage)
   - [Initializing](#initializing)
-	- [Core](#core)
-	- [Identity](#identity)
-	- [Lifecycle](#lifecycle)
-	- [Signal](#signal)
+  - [Core](#core)
+  - [Identity](#identity)
+  - [Lifecycle](#lifecycle)
+  - [Signal](#signal)
 - [Trouble Shooting](#trouble-shooting)	
 
 ## Installation
