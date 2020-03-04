@@ -15,7 +15,7 @@
   - [Identity](#identity)
   - [Lifecycle](#lifecycle)
   - [Signal](#signal)
-- [Trouble Shooting](#trouble-shooting)	
+- [Troubleshooting](#troubleshooting)	
 
 ## Installation
 
@@ -316,7 +316,7 @@ ACPSignal.registerExtension();
 ACPCore.collectPii({"myPii": "data"});
 ```
 
-## Trouble Shooting
+## Troubleshooting
 1. A few different errors can result from not running `react-native link @adobe/react-native-acpcore` or when the autolinker in React Native 0.60.x does not properly link the SDK when building.
 
 - `TypeError: null is not an object (evaluating RCTACPCore...)`
