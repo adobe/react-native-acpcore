@@ -215,6 +215,12 @@ ACPIdentity.extensionVersion().then(version => console.log("AdobeExperienceSDK: 
 ACPIdentity.registerExtension();
 ```
 
+##### Sync Identifier:
+```javascript
+ACPIdentity.syncIdentifier("identifierType", "identifier", ACPMobileVisitorAuthenticationState.AUTHENTICATED);
+```
+
+
 ##### Sync Identifiers:
 ```javascript
 ACPIdentity.syncIdentifiers({"id1": "identifier1"});
