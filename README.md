@@ -10,11 +10,12 @@
   - [Next steps](#4-next-steps)
 - [Tests](#tests)
 - [Usage](#usage)
-	- [Core](#core)
-	- [Identity](#identity)
-	- [Lifecycle](#lifecycle)
-	- [Signal](#signal)
-- [Trouble Shooting](#trouble-shooting)	
+  - [Initializing](#initializing)
+  - [Core](#core)
+  - [Identity](#identity)
+  - [Lifecycle](#lifecycle)
+  - [Signal](#signal)
+- [Troubleshooting](#troubleshooting)	
 
 ## Installation
 
@@ -94,23 +95,24 @@ make run-tests-locally
 ```
 
 ## Usage
-### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
-##### Initializing the SDK:
 
-Initializing the SDK should be done in native code, documentation on how to initalize the SDK can be found [here](https://aep-sdks.gitbook.io/docs/getting-started/get-the-sdk#2-add-initialization-code). The linked documentation initalizes the User Profile extension which is not required, however if you are interested in the User Profile extension for React Native you can find it [here](https://www.npmjs.com/package/@adobe/react-native-acpuserprofile).
+### Initializing:
 
-After you have added the initialization code to your app, be sure to set the SDK wrapper type to React Native before you start the SDK.
+Initializing the SDK should be done in native code, documentation on how to initalize the SDK can be found [here](https://aep-sdks.gitbook.io/docs/getting-started/get-the-sdk#2-add-initialization-code). The linked documentation initalizes the User Profile extension which is not required, however, if you are interested in the User Profile extension for React Native you can find it [here](https://www.npmjs.com/package/@adobe/react-native-acpuserprofile).
+
+Once you have added the initialization code to your app, be sure to set the SDK wrapper type to React Native before you start the SDK.
 
 ###### iOS:
 ```objective-c
 [ACPCore setWrapperType:ACPMobileWrapperTypeReactNative];
 ```
 
-###### Android
+###### Android:
 ```java
 MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
 ```
 
+### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
 
 ##### Updating the SDK configuration:
 
@@ -213,6 +215,12 @@ ACPIdentity.extensionVersion().then(version => console.log("AdobeExperienceSDK: 
 ACPIdentity.registerExtension();
 ```
 
+##### Sync Identifier:
+```javascript
+ACPIdentity.syncIdentifier("identifierType", "identifier", ACPMobileVisitorAuthenticationState.AUTHENTICATED);
+```
+
+
 ##### Sync Identifiers:
 ```javascript
 ACPIdentity.syncIdentifiers({"id1": "identifier1"});
@@ -314,8 +322,8 @@ ACPSignal.registerExtension();
 ACPCore.collectPii({"myPii": "data"});
 ```
 
-## Trouble Shooting
-A few different errors can result from not running `react-native link @adobe/react-native-acpcore` or when the autolinker in React Native 0.60.x does not properly link the SDK when building.
+## Troubleshooting
+1. A few different errors can result from not running `react-native link @adobe/react-native-acpcore` or when the autolinker in React Native 0.60.x does not properly link the SDK when building.
 
 - `TypeError: null is not an object (evaluating RCTACPCore...)`
 
@@ -329,6 +337,9 @@ cd ios/ && pod install # only if using pods
 ```
 Another possible issue is that your application is built using [`Expo`](https://expo.io/). Unfortunately `Expo` does not support native modules out of the box. Please see [Ejecting to ExpoKit](https://docs.expo.io/versions/latest/expokit/eject/).
 
+2. `Specs satisfying the RCTACPCore (from ../node_modules/@adobe/react-native-acpcore) dependency were found, but they required a higher minimum deployment target.`
+
+- The AEP SDK's require at least iOS 10.0 to function properly. If you see this error, ensure your `Podfile` specfies at least iOS 10.0.
 
 ## Contributing
 See [CONTRIBUTING](CONTRIBUTING.md)
