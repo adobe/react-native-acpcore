@@ -1,6 +1,6 @@
 {
   "name": "@adobe/react-native-acpcore",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Adobe Experience Platform support for React Native apps.",
   "homepage": "https://aep-sdks.gitbook.io/docs/",
   "license": "Apache-2.0",
