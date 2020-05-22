@@ -5,12 +5,21 @@ target "RCTACPCore" do
   react_native_path = "../node_modules/react-native"
 
   pod "React-Core", :path => "../node_modules/react-native"
+  pod 'React-RCTSettings', :path => '../node_modules/react-native/Libraries/Settings'
+  
+  pod 'React-CoreModules', :path => '../node_modules/react-native/React/CoreModules'
   pod "React-cxxreact", :path => "#{react_native_path}/ReactCommon/cxxreact"
   pod "React-jsi", :path => "#{react_native_path}/ReactCommon/jsi"
   pod "React-jsiexecutor", :path => "#{react_native_path}/ReactCommon/jsiexecutor"
   pod "React-jsinspector", :path => "#{react_native_path}/ReactCommon/jsinspector"
-
-
+  pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
+  pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
+  pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
+  pod 'RCTTypeSafety', :path => "../node_modules/react-native/Libraries/TypeSafety"
+  pod 'React-RCTImage', :path => "../node_modules/react-native/Libraries/Image"
+  pod 'React-RCTNetwork', :path => "../node_modules/react-native/Libraries/Network"
+  pod 'React-Core/RCTWebSocket', :path => '../node_modules/react-native'
+  pod 'ReactCommon/turbomodule/core', :path => "../node_modules/react-native/ReactCommon"
   pod 'DoubleConversion', :podspec => "#{react_native_path}/third-party-podspecs/DoubleConversion.podspec"
   pod "Yoga", :path => "#{react_native_path}/ReactCommon/yoga"
   pod "Folly", :podspec => "#{react_native_path}/third-party-podspecs/Folly.podspec"
