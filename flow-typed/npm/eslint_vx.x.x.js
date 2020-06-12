@@ -370,10 +370,6 @@ declare module 'eslint/lib/rules/handle-callback-err' {
   declare module.exports: any;
 }
 
-declare module 'eslint/lib/rules/id-blacklist' {
-  declare module.exports: any;
-}
-
 declare module 'eslint/lib/rules/id-length' {
   declare module.exports: any;
 }
@@ -1643,9 +1639,6 @@ declare module 'eslint/lib/rules/guard-for-in.js' {
 }
 declare module 'eslint/lib/rules/handle-callback-err.js' {
   declare module.exports: $Exports<'eslint/lib/rules/handle-callback-err'>;
-}
-declare module 'eslint/lib/rules/id-blacklist.js' {
-  declare module.exports: $Exports<'eslint/lib/rules/id-blacklist'>;
 }
 declare module 'eslint/lib/rules/id-length.js' {
   declare module.exports: $Exports<'eslint/lib/rules/id-length'>;
