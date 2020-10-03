@@ -1,0 +1,4 @@
+module ACPCore {
+    header "ACPCore.h"
+    export *
+}

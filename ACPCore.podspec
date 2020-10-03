@@ -14,10 +14,11 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/adobe/react-native-acpcore.git", :tag => "#{s.version}" }
 
-  s.source_files  = "ios/**/*.{h,m}"
+  s.source_files  = "ios/**/*.{h,m,modulemap}"
   s.requires_arc = true
 
   s.dependency "React"
+  s.pod_target_xcconfig = {'DEFINES_MODULE' => 'YES', 'SWIFT_INCLUDE_PATHS' => '${PODS_ROOT}/../../node_modules/@adobe/react-native-acpcore/ios/libs/**'}
   s.frameworks = 'UIKit', 'SystemConfiguration', 'WebKit', 'UserNotifications'
   s.library = 'sqlite3.0', 'c++', 'z'
   s.vendored_libraries = 'ios/libs/libACPCore_iOS.a', 'ios/libs/libACPIdentity_iOS.a', 'ios/libs/libACPLifecycle_iOS.a', 'ios/libs/libACPSignal_iOS.a'
