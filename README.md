@@ -1,6 +1,9 @@
 # React Native AEP Core Extension
 
-[![npm version](https://badge.fury.io/js/%40adobe%2Freact-native-acpcore.svg)](https://badge.fury.io/js/%40adobe%2Freact-native-acpcore) ![npm](https://img.shields.io/npm/dm/@adobe/react-native-acpcore) [![CircleCI](https://img.shields.io/circleci/project/github/adobe/react-native-acpcore/master.svg?logo=circleci)](https://circleci.com/gh/adobe/workflows/react-native-acpcore) ![NPM](https://img.shields.io/npm/l/@adobe/react-native-acpcore.svg)
+[![npm version](https://badge.fury.io/js/%40adobe%2Freact-native-acpcore.svg)](https://www.npmjs.com/package/@adobe/react-native-acpcore) 
+[![npm downloads](https://img.shields.io/npm/dm/@adobe/react-native-acpcore)](https://www.npmjs.com/package/@adobe/react-native-acpcore)
+[![CircleCI](https://img.shields.io/circleci/project/github/adobe/react-native-acpcore/main.svg?logo=circleci)](https://circleci.com/gh/adobe/workflows/react-native-acpcore) 
+[![license](https://img.shields.io/npm/l/@adobe/react-native-acpcore.svg)](https://github.com/adobe/react-native-acpcore/blob/main/LICENSE)
 
 `@adobe/react-native-acpcore` is a wrapper around the iOS and Android [AEP Core SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) to allow for integration with React Native applications. Functionality to enable the Core extension is provided entirely through JavaScript documented below.
 
