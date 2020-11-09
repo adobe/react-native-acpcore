@@ -4,6 +4,8 @@ on:
     branches:
       - main 
 jobs:
+  build:
+    runs-on: macOS-latest
   npm-publish:
     name: npm-publish
     runs-on: ubuntu-latest
