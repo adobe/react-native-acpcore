@@ -1,17 +1,18 @@
+project 'RCTACPCore.xcodeproj'
+
+target 'RCTACPCore' do
 platform :ios, "10.0"
+# inherit! :search_paths
+react_native_path = "../node_modules/react-native"
 
-target "RCTACPCore" do
-  # inherit! :search_paths
-  react_native_path = "../node_modules/react-native"
-
-  pod "React-Core", :path => "#{react_native_path}/React"
-  pod "React-cxxreact", :path => "#{react_native_path}/ReactCommon/cxxreact"
-  pod "React-jsi", :path => "#{react_native_path}/ReactCommon/jsi"
-  pod "React-jsiexecutor", :path => "#{react_native_path}/ReactCommon/jsiexecutor"
-  pod "React-jsinspector", :path => "#{react_native_path}/ReactCommon/jsinspector"
+pod "React-Core", :path => "#{react_native_path}/React"
+pod "React-cxxreact", :path => "#{react_native_path}/ReactCommon/cxxreact"
+pod "React-jsi", :path => "#{react_native_path}/ReactCommon/jsi"
+pod "React-jsiexecutor", :path => "#{react_native_path}/ReactCommon/jsiexecutor"
+pod "React-jsinspector", :path => "#{react_native_path}/ReactCommon/jsinspector"
 
 
-  pod 'DoubleConversion', :podspec => "#{react_native_path}/third-party-podspecs/DoubleConversion.podspec"
-  pod "yoga", :path => "#{react_native_path}/ReactCommon/yoga"
-  pod "Folly", :podspec => "#{react_native_path}/third-party-podspecs/Folly.podspec"
+pod 'DoubleConversion', :podspec => "#{react_native_path}/third-party-podspecs/DoubleConversion.podspec"
+pod "yoga", :path => "#{react_native_path}/ReactCommon/yoga"
+pod "Folly", :podspec => "#{react_native_path}/third-party-podspecs/Folly.podspec"
 end

@@ -19,7 +19,7 @@ import {ACPCore, ACPLifecycle, ACPSignal, ACPIdentity, ACPMobileLogLevel, ACPMob
 
 type Props = {};
 export default class App extends Component<Props> {
-  render() {
+  render() {    
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={{ marginTop: 75 }}>
