@@ -93,10 +93,6 @@
 		21E0261F2203A24E006C3583 /* RCTACPSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTACPSignal.h; path = src/Signal/RCTACPSignal.h; sourceTree = "<group>"; };
 		21E026202203A24E006C3583 /* RCTACPSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCTACPSignal.m; path = src/Signal/RCTACPSignal.m; sourceTree = "<group>"; };
 		3D2FC286255BCFAE00DACA1A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		3D2FC2D4255BD81500DACA1A /* libACPIdentity_tvOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libACPIdentity_tvOS.a; path = libs/tvos/libACPIdentity_tvOS.a; sourceTree = "<group>"; };
-		3D2FC2D5255BD81500DACA1A /* libACPCore_tvOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libACPCore_tvOS.a; path = libs/tvos/libACPCore_tvOS.a; sourceTree = "<group>"; };
-		3D2FC2D6255BD81500DACA1A /* libACPLifecycle_tvOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libACPLifecycle_tvOS.a; path = libs/tvos/libACPLifecycle_tvOS.a; sourceTree = "<group>"; };
-		3D2FC2D7255BD81500DACA1A /* libACPSignal_tvOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libACPSignal_tvOS.a; path = libs/tvos/libACPSignal_tvOS.a; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RCTACPCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTACPCore.h; path = src/Core/RCTACPCore.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RCTACPCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTACPCore.m; path = src/Core/RCTACPCore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,10 +148,6 @@
 				210E3BD82200EB7200AC9192 /* libACPIdentity_iOS.a */,
 				210E3BCA2200EB7100AC9192 /* libACPLifecycle_iOS.a */,
 				210E3BCC2200EB7100AC9192 /* libACPSignal_iOS.a */,
-				3D2FC2D5255BD81500DACA1A /* libACPCore_tvOS.a */,
-				3D2FC2D4255BD81500DACA1A /* libACPIdentity_tvOS.a */,
-				3D2FC2D6255BD81500DACA1A /* libACPLifecycle_tvOS.a */,
-				3D2FC2D7255BD81500DACA1A /* libACPSignal_tvOS.a */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
