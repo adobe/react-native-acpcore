@@ -10,7 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@adobe/react-native-acpcore": "file:../../adobe-react-native-acpcore-1.4.0.tgz",
+    "@adobe/react-native-acpcore": "*",
     "react": "16.13.1",
     "react-native": "npm:react-native-tvos@0.63.1-3"
   },
