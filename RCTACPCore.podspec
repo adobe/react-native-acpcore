@@ -10,15 +10,23 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/adobe/react-native-acpcore"
 
   s.license      = "Apache 2.0 License"
-  s.platform      = :ios, '10.0'
+  s.platforms    = { :ios => "10.0", :tvos => "10.0" }
 
   s.source       = { :git => "https://github.com/adobe/react-native-acpcore.git", :tag => "#{s.version}" }
 
-  s.source_files  = "ios/**/*.{h,m}"
+  
   s.requires_arc = true
 
   s.dependency "React"
-  s.frameworks = 'UIKit', 'SystemConfiguration', 'WebKit', 'UserNotifications'
-  s.library = 'sqlite3.0', 'c++', 'z'
-  s.vendored_libraries = 'ios/libs/libACPCore_iOS.a', 'ios/libs/libACPIdentity_iOS.a', 'ios/libs/libACPLifecycle_iOS.a', 'ios/libs/libACPSignal_iOS.a'
+
+  s.source_files  = "ios/**/*.{h,m}"
+  s.ios.vendored_libraries = 'ios/libs/libACPCore_iOS.a', 'ios/libs/libACPIdentity_iOS.a', 'ios/libs/libACPLifecycle_iOS.a', 'ios/libs/libACPSignal_iOS.a'
+  s.ios.frameworks = 'UIKit', 'SystemConfiguration', 'WebKit', 'UserNotifications'
+  s.ios.library = 'sqlite3.0', 'c++', 'z'
+  
+  s.tvos.vendored_libraries = 'ios/libs/tvos/libACPCore_tvOS.a', 'ios/libs/tvos/libACPIdentity_tvOS.a', 'ios/libs/tvos/libACPLifecycle_tvOS.a', 'ios/libs/tvos/libACPSignal_tvOS.a'
+  s.tvos.frameworks = 'SystemConfiguration'
+  s.tvos.library = 'sqlite3.0', 'c++', 'z'
+  
+  
 end
