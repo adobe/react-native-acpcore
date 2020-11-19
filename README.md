@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/%40adobe%2Freact-native-acpcore.svg)](https://badge.fury.io/js/%40adobe%2Freact-native-acpcore) ![npm](https://img.shields.io/npm/dm/@adobe/react-native-acpcore) [![CircleCI](https://img.shields.io/circleci/project/github/adobe/react-native-acpcore/master.svg?logo=circleci)](https://circleci.com/gh/adobe/workflows/react-native-acpcore) ![NPM](https://img.shields.io/npm/l/@adobe/react-native-acpcore.svg)
 
-`@adobe/react-native-acpcore` is a wrapper around the iOS and Android [AEP Core SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) to allow for integration with React Native applications. Functionality to enable the Core extension is provided entirely through JavaScript documented below.
+`@adobe/react-native-acpcore` is a wrapper around the iOS, tvOS and Android [AEP Core SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) to allow for integration with React Native applications. Functionality to enable the Core extension is provided entirely through JavaScript documented below.
 
 ## Contents
 - [Installation](#installation)
@@ -30,6 +30,7 @@ First create a React Native project:
 ```bash
 react-native init MyReactApp
 ```
+> Note: Follow [React Native tvos support](https://reactnative.dev/blog/2020/03/26/version-0.62#moving-apple-tv-to-react-native-tvos) to create app with tvos target.
 
 ### 2. Install JavaScript packages
 
