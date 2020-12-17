@@ -20,11 +20,11 @@ Pod::Spec.new do |s|
   s.dependency "React"
 
   s.source_files  = "ios/**/*.{h,m}"
-  s.ios.vendored_libraries = 'ios/libs/libACPCore_iOS.a', 'ios/libs/libACPIdentity_iOS.a', 'ios/libs/libACPLifecycle_iOS.a', 'ios/libs/libACPSignal_iOS.a'
+  s.ios.vendored_frameworks = 'ios/ACPCore.xcframework', 'ios/ACPIdentity.xcframework', 'ios/ACPLifecycle.xcframework', 'ios/ACPSignal.xcframework'
   s.ios.frameworks = 'UIKit', 'SystemConfiguration', 'WebKit', 'UserNotifications'
   s.ios.library = 'sqlite3.0', 'c++', 'z'
   
-  s.tvos.vendored_libraries = 'ios/libs/tvos/libACPCore_tvOS.a', 'ios/libs/tvos/libACPIdentity_tvOS.a', 'ios/libs/tvos/libACPLifecycle_tvOS.a', 'ios/libs/tvos/libACPSignal_tvOS.a'
+  s.ios.vendored_frameworks = 'ios/ACPCoreTV.xcframework', 'ios/ACPIdentityTV.xcframework', 'ios/ACPLifecycleTV.xcframework', 'ios/ACPSignalTV.xcframework'
   s.tvos.frameworks = 'SystemConfiguration'
   s.tvos.library = 'sqlite3.0', 'c++', 'z'
   
