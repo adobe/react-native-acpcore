@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 #import "RCTACPLifecycle.h"
-#import "ACPLifecycle.h"
+#import <RCTACPCore/ACPLifecycle.h>
 
 @implementation RCTACPLifecycle
 

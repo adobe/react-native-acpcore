@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 #import <Foundation/Foundation.h>
-#import "ACPCore.h"
+#import <RCTACPCore/ACPCore.h>
 
 @interface RCTACPIdentityDataBridge : NSObject
 
