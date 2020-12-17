@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,24 +13,26 @@
 		210E3BB52200E9E300AC9192 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB42200E9E300AC9192 /* UserNotifications.framework */; };
 		21230B932203B41D00F2B198 /* RCTACPSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E026202203A24E006C3583 /* RCTACPSignal.m */; };
 		2132E26922057F1D000DDF24 /* RCTACPIdentityDataBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2132E26822057F1D000DDF24 /* RCTACPIdentityDataBridge.m */; };
-		215A61E5226E139F00FA8FC6 /* ACPLifecycle.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BCE2200EB7100AC9192 /* ACPLifecycle.h */; };
-		215A61E6226E139F00FA8FC6 /* ACPExtensionEvent.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BCF2200EB7100AC9192 /* ACPExtensionEvent.h */; };
-		215A61E7226E139F00FA8FC6 /* ACPExtensionListener.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD02200EB7100AC9192 /* ACPExtensionListener.h */; };
-		215A61E8226E139F00FA8FC6 /* ACPCore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD12200EB7100AC9192 /* ACPCore.h */; };
-		215A61E9226E139F00FA8FC6 /* ACPExtensionError.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD22200EB7100AC9192 /* ACPExtensionError.h */; };
-		215A61EA226E139F00FA8FC6 /* ACPIdentity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD32200EB7100AC9192 /* ACPIdentity.h */; };
-		215A61EB226E139F00FA8FC6 /* ACPSignal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD42200EB7100AC9192 /* ACPSignal.h */; };
-		215A61EC226E139F00FA8FC6 /* ACPMobileVisitorId.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD52200EB7100AC9192 /* ACPMobileVisitorId.h */; };
-		215A61ED226E139F00FA8FC6 /* ACPExtensionApi.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD62200EB7200AC9192 /* ACPExtensionApi.h */; };
-		215A61EE226E139F00FA8FC6 /* ACPExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 210E3BD72200EB7200AC9192 /* ACPExtension.h */; };
+		21A6F9CC258BF12F004A93D8 /* ACPLifecycle.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A6F9C4258BF12E004A93D8 /* ACPLifecycle.xcframework */; };
+		21A6F9CE258BF12F004A93D8 /* ACPCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A6F9C6258BF12E004A93D8 /* ACPCore.xcframework */; };
+		21A6F9D2258BF12F004A93D8 /* ACPIdentity.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A6F9CA258BF12F004A93D8 /* ACPIdentity.xcframework */; };
+		21A6F9D3258BF12F004A93D8 /* ACPSignal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A6F9CB258BF12F004A93D8 /* ACPSignal.xcframework */; };
+		21A6FA4A258BFB95004A93D8 /* ACPCore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA44258BFB8D004A93D8 /* ACPCore.h */; };
+		21A6FA4B258BFB95004A93D8 /* ACPError.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA45258BFB8D004A93D8 /* ACPError.h */; };
+		21A6FA4C258BFB95004A93D8 /* ACPExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA47258BFB8D004A93D8 /* ACPExtension.h */; };
+		21A6FA4D258BFB95004A93D8 /* ACPExtensionApi.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA46258BFB8D004A93D8 /* ACPExtensionApi.h */; };
+		21A6FA4E258BFB95004A93D8 /* ACPExtensionError.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA42258BFB8D004A93D8 /* ACPExtensionError.h */; };
+		21A6FA4F258BFB95004A93D8 /* ACPExtensionEvent.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA43258BFB8D004A93D8 /* ACPExtensionEvent.h */; };
+		21A6FA50258BFB95004A93D8 /* ACPExtensionListener.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA48258BFB8E004A93D8 /* ACPExtensionListener.h */; };
+		21A6FA51258BFB95004A93D8 /* ACPMobileVisitorId.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA49258BFB8E004A93D8 /* ACPMobileVisitorId.h */; };
+		21A6FA52258BFB95004A93D8 /* ACPNetworkServiceOverrider.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA41258BFB8D004A93D8 /* ACPNetworkServiceOverrider.h */; };
+		21A6FA57258BFBE0004A93D8 /* ACPIdentity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA54258BFBB8004A93D8 /* ACPIdentity.h */; };
+		21A6FA58258BFBE0004A93D8 /* ACPLifecycle.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA55258BFBCD004A93D8 /* ACPLifecycle.h */; };
+		21A6FA59258BFBE0004A93D8 /* ACPSignal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA56258BFBD8004A93D8 /* ACPSignal.h */; };
 		21E025FC2202252B006C3583 /* ACPExtensionEvent+ReactNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E025FB2202252B006C3583 /* ACPExtensionEvent+ReactNative.m */; };
 		21E0261822039C07006C3583 /* RCTACPCoreDataBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261722039C07006C3583 /* RCTACPCoreDataBridge.m */; };
 		21E0261B2203A235006C3583 /* RCTACPIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261A2203A235006C3583 /* RCTACPIdentity.m */; };
 		21E0261E2203A241006C3583 /* RCTACPLifecycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261D2203A241006C3583 /* RCTACPLifecycle.m */; };
-		21E026272203A6B5006C3583 /* libACPCore_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BCB2200EB7100AC9192 /* libACPCore_iOS.a */; };
-		21E026282203A6B5006C3583 /* libACPIdentity_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BD82200EB7200AC9192 /* libACPIdentity_iOS.a */; };
-		21E026292203A6B5006C3583 /* libACPLifecycle_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BCA2200EB7100AC9192 /* libACPLifecycle_iOS.a */; };
-		21E0262A2203A6B5006C3583 /* libACPSignal_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BCC2200EB7100AC9192 /* libACPSignal_iOS.a */; };
 		B3E7B58A1CC2AC0600A0062D /* RCTACPCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RCTACPCore.m */; };
 /* End PBXBuildFile section */
 
@@ -41,16 +43,18 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				215A61E5226E139F00FA8FC6 /* ACPLifecycle.h in CopyFiles */,
-				215A61E6226E139F00FA8FC6 /* ACPExtensionEvent.h in CopyFiles */,
-				215A61E7226E139F00FA8FC6 /* ACPExtensionListener.h in CopyFiles */,
-				215A61E8226E139F00FA8FC6 /* ACPCore.h in CopyFiles */,
-				215A61E9226E139F00FA8FC6 /* ACPExtensionError.h in CopyFiles */,
-				215A61EA226E139F00FA8FC6 /* ACPIdentity.h in CopyFiles */,
-				215A61EB226E139F00FA8FC6 /* ACPSignal.h in CopyFiles */,
-				215A61EC226E139F00FA8FC6 /* ACPMobileVisitorId.h in CopyFiles */,
-				215A61ED226E139F00FA8FC6 /* ACPExtensionApi.h in CopyFiles */,
-				215A61EE226E139F00FA8FC6 /* ACPExtension.h in CopyFiles */,
+				21A6FA57258BFBE0004A93D8 /* ACPIdentity.h in CopyFiles */,
+				21A6FA58258BFBE0004A93D8 /* ACPLifecycle.h in CopyFiles */,
+				21A6FA59258BFBE0004A93D8 /* ACPSignal.h in CopyFiles */,
+				21A6FA4A258BFB95004A93D8 /* ACPCore.h in CopyFiles */,
+				21A6FA4B258BFB95004A93D8 /* ACPError.h in CopyFiles */,
+				21A6FA4C258BFB95004A93D8 /* ACPExtension.h in CopyFiles */,
+				21A6FA4D258BFB95004A93D8 /* ACPExtensionApi.h in CopyFiles */,
+				21A6FA4E258BFB95004A93D8 /* ACPExtensionError.h in CopyFiles */,
+				21A6FA4F258BFB95004A93D8 /* ACPExtensionEvent.h in CopyFiles */,
+				21A6FA50258BFB95004A93D8 /* ACPExtensionListener.h in CopyFiles */,
+				21A6FA51258BFB95004A93D8 /* ACPMobileVisitorId.h in CopyFiles */,
+				21A6FA52258BFB95004A93D8 /* ACPNetworkServiceOverrider.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,23 +69,29 @@
 		210E3BB62200E9EA00AC9192 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		210E3BB82200E9F000AC9192 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		210E3BBA2200E9F500AC9192 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		210E3BCA2200EB7100AC9192 /* libACPLifecycle_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libACPLifecycle_iOS.a; path = libs/libACPLifecycle_iOS.a; sourceTree = "<group>"; };
-		210E3BCB2200EB7100AC9192 /* libACPCore_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libACPCore_iOS.a; path = libs/libACPCore_iOS.a; sourceTree = "<group>"; };
-		210E3BCC2200EB7100AC9192 /* libACPSignal_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libACPSignal_iOS.a; path = libs/libACPSignal_iOS.a; sourceTree = "<group>"; };
-		210E3BCE2200EB7100AC9192 /* ACPLifecycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPLifecycle.h; sourceTree = "<group>"; };
-		210E3BCF2200EB7100AC9192 /* ACPExtensionEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtensionEvent.h; sourceTree = "<group>"; };
-		210E3BD02200EB7100AC9192 /* ACPExtensionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtensionListener.h; sourceTree = "<group>"; };
-		210E3BD12200EB7100AC9192 /* ACPCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPCore.h; sourceTree = "<group>"; };
-		210E3BD22200EB7100AC9192 /* ACPExtensionError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtensionError.h; sourceTree = "<group>"; };
-		210E3BD32200EB7100AC9192 /* ACPIdentity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPIdentity.h; sourceTree = "<group>"; };
-		210E3BD42200EB7100AC9192 /* ACPSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPSignal.h; sourceTree = "<group>"; };
-		210E3BD52200EB7100AC9192 /* ACPMobileVisitorId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPMobileVisitorId.h; sourceTree = "<group>"; };
-		210E3BD62200EB7200AC9192 /* ACPExtensionApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtensionApi.h; sourceTree = "<group>"; };
-		210E3BD72200EB7200AC9192 /* ACPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPExtension.h; sourceTree = "<group>"; };
-		210E3BD82200EB7200AC9192 /* libACPIdentity_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libACPIdentity_iOS.a; path = libs/libACPIdentity_iOS.a; sourceTree = "<group>"; };
 		21230B842203B1F400F2B198 /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2132E26722057F1D000DDF24 /* RCTACPIdentityDataBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTACPIdentityDataBridge.h; path = src/Identity/RCTACPIdentityDataBridge.h; sourceTree = "<group>"; };
 		2132E26822057F1D000DDF24 /* RCTACPIdentityDataBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCTACPIdentityDataBridge.m; path = src/Identity/RCTACPIdentityDataBridge.m; sourceTree = "<group>"; };
+		21A6F9C4258BF12E004A93D8 /* ACPLifecycle.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPLifecycle.xcframework; path = libs/ACPLifecycle.xcframework; sourceTree = "<group>"; };
+		21A6F9C5258BF12E004A93D8 /* ACPLifecycleTV.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPLifecycleTV.xcframework; path = libs/ACPLifecycleTV.xcframework; sourceTree = "<group>"; };
+		21A6F9C6258BF12E004A93D8 /* ACPCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPCore.xcframework; path = libs/ACPCore.xcframework; sourceTree = "<group>"; };
+		21A6F9C7258BF12F004A93D8 /* ACPCoreTV.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPCoreTV.xcframework; path = libs/ACPCoreTV.xcframework; sourceTree = "<group>"; };
+		21A6F9C8258BF12F004A93D8 /* ACPSignalTV.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPSignalTV.xcframework; path = libs/ACPSignalTV.xcframework; sourceTree = "<group>"; };
+		21A6F9C9258BF12F004A93D8 /* ACPIdentityTV.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPIdentityTV.xcframework; path = libs/ACPIdentityTV.xcframework; sourceTree = "<group>"; };
+		21A6F9CA258BF12F004A93D8 /* ACPIdentity.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPIdentity.xcframework; path = libs/ACPIdentity.xcframework; sourceTree = "<group>"; };
+		21A6F9CB258BF12F004A93D8 /* ACPSignal.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPSignal.xcframework; path = libs/ACPSignal.xcframework; sourceTree = "<group>"; };
+		21A6FA41258BFB8D004A93D8 /* ACPNetworkServiceOverrider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPNetworkServiceOverrider.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPNetworkServiceOverrider.h"; sourceTree = "<group>"; };
+		21A6FA42258BFB8D004A93D8 /* ACPExtensionError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPExtensionError.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPExtensionError.h"; sourceTree = "<group>"; };
+		21A6FA43258BFB8D004A93D8 /* ACPExtensionEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPExtensionEvent.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPExtensionEvent.h"; sourceTree = "<group>"; };
+		21A6FA44258BFB8D004A93D8 /* ACPCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPCore.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPCore.h"; sourceTree = "<group>"; };
+		21A6FA45258BFB8D004A93D8 /* ACPError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPError.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPError.h"; sourceTree = "<group>"; };
+		21A6FA46258BFB8D004A93D8 /* ACPExtensionApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPExtensionApi.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPExtensionApi.h"; sourceTree = "<group>"; };
+		21A6FA47258BFB8D004A93D8 /* ACPExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPExtension.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPExtension.h"; sourceTree = "<group>"; };
+		21A6FA48258BFB8E004A93D8 /* ACPExtensionListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPExtensionListener.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPExtensionListener.h"; sourceTree = "<group>"; };
+		21A6FA49258BFB8E004A93D8 /* ACPMobileVisitorId.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPMobileVisitorId.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPMobileVisitorId.h"; sourceTree = "<group>"; };
+		21A6FA54258BFBB8004A93D8 /* ACPIdentity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPIdentity.h; path = "libs/ACPIdentity.xcframework/ios-arm64_armv7_armv7s/Headers/ACPIdentity.h"; sourceTree = "<group>"; };
+		21A6FA55258BFBCD004A93D8 /* ACPLifecycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPLifecycle.h; path = "libs/ACPLifecycle.xcframework/ios-arm64_armv7_armv7s/Headers/ACPLifecycle.h"; sourceTree = "<group>"; };
+		21A6FA56258BFBD8004A93D8 /* ACPSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPSignal.h; path = "libs/ACPSignal.xcframework/ios-arm64_armv7_armv7s/Headers/ACPSignal.h"; sourceTree = "<group>"; };
 		21E025FA2202252B006C3583 /* ACPExtensionEvent+ReactNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ACPExtensionEvent+ReactNative.h"; path = "src/Data-Bridging/ACPExtensionEvent+ReactNative.h"; sourceTree = "<group>"; };
 		21E025FB2202252B006C3583 /* ACPExtensionEvent+ReactNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ACPExtensionEvent+ReactNative.m"; path = "src/Data-Bridging/ACPExtensionEvent+ReactNative.m"; sourceTree = "<group>"; };
 		21E0261622039C07006C3583 /* RCTACPCoreDataBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTACPCoreDataBridge.h; path = src/Core/RCTACPCoreDataBridge.h; sourceTree = "<group>"; };
@@ -102,14 +112,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21E026292203A6B5006C3583 /* libACPLifecycle_iOS.a in Frameworks */,
 				210E3BB52200E9E300AC9192 /* UserNotifications.framework in Frameworks */,
+				21A6F9CC258BF12F004A93D8 /* ACPLifecycle.xcframework in Frameworks */,
+				21A6F9CE258BF12F004A93D8 /* ACPCore.xcframework in Frameworks */,
+				21A6F9D3258BF12F004A93D8 /* ACPSignal.xcframework in Frameworks */,
 				210E3BB32200E9DB00AC9192 /* WebKit.framework in Frameworks */,
-				21E0262A2203A6B5006C3583 /* libACPSignal_iOS.a in Frameworks */,
-				21E026272203A6B5006C3583 /* libACPCore_iOS.a in Frameworks */,
-				21E026282203A6B5006C3583 /* libACPIdentity_iOS.a in Frameworks */,
 				210E3BB12200E9D400AC9192 /* SystemConfiguration.framework in Frameworks */,
 				210E3BAF2200E9CF00AC9192 /* UIKit.framework in Frameworks */,
+				21A6F9D2258BF12F004A93D8 /* ACPIdentity.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,31 +153,36 @@
 		210E3BC92200EB6200AC9192 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				210E3BCD2200EB7100AC9192 /* include */,
-				210E3BCB2200EB7100AC9192 /* libACPCore_iOS.a */,
-				210E3BD82200EB7200AC9192 /* libACPIdentity_iOS.a */,
-				210E3BCA2200EB7100AC9192 /* libACPLifecycle_iOS.a */,
-				210E3BCC2200EB7100AC9192 /* libACPSignal_iOS.a */,
+				21A6FA40258BFB5E004A93D8 /* include */,
+				21A6F9C6258BF12E004A93D8 /* ACPCore.xcframework */,
+				21A6F9C7258BF12F004A93D8 /* ACPCoreTV.xcframework */,
+				21A6F9CA258BF12F004A93D8 /* ACPIdentity.xcframework */,
+				21A6F9C9258BF12F004A93D8 /* ACPIdentityTV.xcframework */,
+				21A6F9C4258BF12E004A93D8 /* ACPLifecycle.xcframework */,
+				21A6F9C5258BF12E004A93D8 /* ACPLifecycleTV.xcframework */,
+				21A6F9CB258BF12F004A93D8 /* ACPSignal.xcframework */,
+				21A6F9C8258BF12F004A93D8 /* ACPSignalTV.xcframework */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
 		};
-		210E3BCD2200EB7100AC9192 /* include */ = {
+		21A6FA40258BFB5E004A93D8 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				210E3BCE2200EB7100AC9192 /* ACPLifecycle.h */,
-				210E3BCF2200EB7100AC9192 /* ACPExtensionEvent.h */,
-				210E3BD02200EB7100AC9192 /* ACPExtensionListener.h */,
-				210E3BD12200EB7100AC9192 /* ACPCore.h */,
-				210E3BD22200EB7100AC9192 /* ACPExtensionError.h */,
-				210E3BD32200EB7100AC9192 /* ACPIdentity.h */,
-				210E3BD42200EB7100AC9192 /* ACPSignal.h */,
-				210E3BD52200EB7100AC9192 /* ACPMobileVisitorId.h */,
-				210E3BD62200EB7200AC9192 /* ACPExtensionApi.h */,
-				210E3BD72200EB7200AC9192 /* ACPExtension.h */,
+				21A6FA44258BFB8D004A93D8 /* ACPCore.h */,
+				21A6FA45258BFB8D004A93D8 /* ACPError.h */,
+				21A6FA47258BFB8D004A93D8 /* ACPExtension.h */,
+				21A6FA46258BFB8D004A93D8 /* ACPExtensionApi.h */,
+				21A6FA42258BFB8D004A93D8 /* ACPExtensionError.h */,
+				21A6FA43258BFB8D004A93D8 /* ACPExtensionEvent.h */,
+				21A6FA48258BFB8E004A93D8 /* ACPExtensionListener.h */,
+				21A6FA49258BFB8E004A93D8 /* ACPMobileVisitorId.h */,
+				21A6FA41258BFB8D004A93D8 /* ACPNetworkServiceOverrider.h */,
+				21A6FA54258BFBB8004A93D8 /* ACPIdentity.h */,
+				21A6FA55258BFBCD004A93D8 /* ACPLifecycle.h */,
+				21A6FA56258BFBD8004A93D8 /* ACPSignal.h */,
 			);
 			name = include;
-			path = libs/include;
 			sourceTree = "<group>";
 		};
 		21E026222203A438006C3583 /* Identity */ = {
@@ -240,9 +255,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RCTACPCore" */;
 			buildPhases = (
+				58B511D91A9E6C8500147676 /* CopyFiles */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
-				58B511D91A9E6C8500147676 /* CopyFiles */,
 			);
 			buildRules = (
 			);

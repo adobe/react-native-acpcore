@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 #import "RCTACPSignal.h"
-#import "ACPSignal.h"
+#import <RCTACPCore/ACPSignal.h>
 
 @implementation RCTACPSignal
 
