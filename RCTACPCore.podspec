@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.ios.frameworks = 'UIKit', 'SystemConfiguration', 'WebKit', 'UserNotifications'
   s.ios.library = 'sqlite3.0', 'c++', 'z'
 
-  s.ios.vendored_frameworks = 'ios/libs/ACPCoreTV.xcframework', 'ios/libs/ACPIdentityTV.xcframework', 'ios/libs/ACPLifecycleTV.xcframework', 'ios/libs/ACPSignalTV.xcframework'
+  s.tvos.vendored_frameworks = 'ios/libs/ACPCoreTV.xcframework', 'ios/libs/ACPIdentityTV.xcframework', 'ios/libs/ACPLifecycleTV.xcframework', 'ios/libs/ACPSignalTV.xcframework'
   s.tvos.frameworks = 'SystemConfiguration'
   s.tvos.library = 'sqlite3.0', 'c++', 'z'
 
