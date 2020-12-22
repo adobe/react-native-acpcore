@@ -14,19 +14,19 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/adobe/react-native-acpcore.git", :tag => "#{s.version}" }
 
-  
+
   s.requires_arc = true
 
   s.dependency "React"
 
   s.source_files  = "ios/**/*.{h,m}"
-  s.ios.vendored_libraries = 'ios/libs/libACPCore_iOS.a', 'ios/libs/libACPIdentity_iOS.a', 'ios/libs/libACPLifecycle_iOS.a', 'ios/libs/libACPSignal_iOS.a'
+  s.ios.vendored_frameworks = 'ios/libs/ACPCore.xcframework', 'ios/libs/ACPIdentity.xcframework', 'ios/libs/ACPLifecycle.xcframework', 'ios/libs/ACPSignal.xcframework'
   s.ios.frameworks = 'UIKit', 'SystemConfiguration', 'WebKit', 'UserNotifications'
   s.ios.library = 'sqlite3.0', 'c++', 'z'
-  
-  s.tvos.vendored_libraries = 'ios/libs/tvos/libACPCore_tvOS.a', 'ios/libs/tvos/libACPIdentity_tvOS.a', 'ios/libs/tvos/libACPLifecycle_tvOS.a', 'ios/libs/tvos/libACPSignal_tvOS.a'
+
+  s.tvos.vendored_frameworks = 'ios/libs/ACPCoreTV.xcframework', 'ios/libs/ACPIdentityTV.xcframework', 'ios/libs/ACPLifecycleTV.xcframework', 'ios/libs/ACPSignalTV.xcframework'
   s.tvos.frameworks = 'SystemConfiguration'
   s.tvos.library = 'sqlite3.0', 'c++', 'z'
-  
-  
+
+
 end
