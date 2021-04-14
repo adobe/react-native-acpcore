@@ -224,7 +224,6 @@ ACPIdentity.registerExtension();
 ACPIdentity.syncIdentifier("identifierType", "identifier", ACPMobileVisitorAuthenticationState.AUTHENTICATED);
 ```
 
-
 ##### Sync Identifiers:
 ```javascript
 ACPIdentity.syncIdentifiers({"id1": "identifier1"});
