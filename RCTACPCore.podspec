@@ -11,17 +11,11 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "10.0", :tvos => "10.0" }
   s.source       = { :git => "https://github.com/adobe/react-native-acpcore.git", :tag => "#{s.version}" }
   s.requires_arc = true
+  
   s.dependency "React"
+  s.dependency "ACPCore"
+
   s.source_files  = "ios/**/*.{h,m}"
   
-  # s.ios.vendored_frameworks = 'ios/libs/ACPCore.xcframework', 'ios/libs/ACPIdentity.xcframework', 'ios/libs/ACPLifecycle.xcframework', 'ios/libs/ACPSignal.xcframework'
-  s.dependency = pod "ACPCore"
-  s.ios.frameworks = 'UIKit', 'SystemConfiguration', 'WebKit', 'UserNotifications'
-  s.ios.library = 'sqlite3.0', 'c++', 'z'
-
-  # s.tvos.vendored_frameworks = 'ios/libs/ACPCoreTV.xcframework', 'ios/libs/ACPIdentityTV.xcframework', 'ios/libs/ACPLifecycleTV.xcframework', 'ios/libs/ACPSignalTV.xcframework'
-  s.tvos.frameworks = 'SystemConfiguration'
-  s.tvos.library = 'sqlite3.0', 'c++', 'z'
-
 
 end
