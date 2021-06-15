@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 #import <React/RCTConvert.h>
 #import "RCTACPCore.h"
-#import <RCTACPCore/ACPCore.h>
+#import <ACPCore.h>
 #import "ACPExtensionEvent+ReactNative.h"
 #import "RCTACPCoreDataBridge.h"
 

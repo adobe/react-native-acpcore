@@ -1,4 +1,7 @@
 PODS:
+  - ACPCore (2.9.3):
+    - ACPCore/main (= 2.9.3)
+  - ACPCore/main (2.9.3)
   - boost-for-react-native (1.63.0)
   - DoubleConversion (1.1.6)
   - Folly (2018.10.22.00):
@@ -43,6 +46,7 @@ PODS:
   - yoga (0.60.5.React)
 
 DEPENDENCIES:
+  - ACPCore
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - React-Core (from `../node_modules/react-native/React`)
@@ -53,7 +57,8 @@ DEPENDENCIES:
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
+    - ACPCore
     - boost-for-react-native
     - glog
 
@@ -76,6 +81,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  ACPCore: 5f00fcf7aba597b29b359e4c14f7f4f1f95503f3
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
@@ -87,6 +93,6 @@ SPEC CHECKSUMS:
   React-jsinspector: e08662d1bf5b129a3d556eb9ea343a3f40353ae4
   yoga: 312528f5bbbba37b4dcea5ef00e8b4033fdd9411
 
-PODFILE CHECKSUM: 71c022224f811410582caa784ad3bf3f3bee8ac6
+PODFILE CHECKSUM: 73ca2dd527f466799215bb4c8804815ada5ec576
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

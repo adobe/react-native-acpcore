@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 #import "RCTACPIdentity.h"
-#import <RCTACPCore/ACPIdentity.h>
+#import <ACPIdentity.h>
 #import "RCTACPIdentityDataBridge.h"
 
 @implementation RCTACPIdentity

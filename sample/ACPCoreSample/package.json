@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@adobe/react-native-acpcore": "*",
     "@babel/runtime": "^7.0.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
@@ -16,8 +17,7 @@
     "flow-typed": "^2.3.0",
     "flow-bin": "^0.92.0",
     "react": "16.6.3",
-    "react-native": "0.58.3",
-    "@adobe/react-native-acpcore": "*",
+    "react-native": "0.63.4",
     "graceful-fs": "4.2.2"
   },
   "devDependencies": {
