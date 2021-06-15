@@ -16,10 +16,10 @@ build-ios: setup
 	(cd ios && xcodebuild build -workspace RCT${PROJECT_NAME}.xcworkspace -scheme RCT${PROJECT_NAME})
 
 build-sample-android:
-	(cd sample/ACP*Sample/android && ./gradlew assembleRelease)
+	(cd sample/ACP*SampleApp/android && ./gradlew assembleRelease)
 
 build-sample-ios:
-	(cd sample/ACP*Sample/ios && xcodebuild build -project ACPCoreSample.xcodeproj -scheme ACPCoreSample CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED="NO" CODE_SIGNING_ALLOWED="NO")
+	(cd sample/ACP*SampleApp/ios && pod update && npx react-native run-ios)
 
 run-tests:
 	jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/ --runInBand
@@ -28,7 +28,7 @@ run-tests-locally: setup
 	./node_modules/.bin/jest --testPathIgnorePatterns sample/ node_modules/ --modulePathIgnorePatterns sample/
 
 copy-to-sample:
-	cd sample/ACP*Sample/ && sh copy-changes-to-sample.sh
+	(cd sample/ACP*SampleApp && make sync)
 
 # fetches the latest iOS & Android SDK and put them in the project
 update-libs:

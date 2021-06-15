@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		005DA56D635FE461A642BB54 /* libPods-RCTACPCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE36348A04D3182EA07BE135 /* libPods-RCTACPCore.a */; };
 		210E3BAF2200E9CF00AC9192 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BAE2200E9CF00AC9192 /* UIKit.framework */; };
 		210E3BB12200E9D400AC9192 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB02200E9D400AC9192 /* SystemConfiguration.framework */; };
 		210E3BB32200E9DB00AC9192 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB22200E9DB00AC9192 /* WebKit.framework */; };
@@ -18,6 +17,7 @@
 		21E0261822039C07006C3583 /* RCTACPCoreDataBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261722039C07006C3583 /* RCTACPCoreDataBridge.m */; };
 		21E0261B2203A235006C3583 /* RCTACPIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261A2203A235006C3583 /* RCTACPIdentity.m */; };
 		21E0261E2203A241006C3583 /* RCTACPLifecycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261D2203A241006C3583 /* RCTACPLifecycle.m */; };
+		9E85E16F3FE624E0AD388CB3 /* libPods-RCTACPCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3BB05C460CC448856AB122 /* libPods-RCTACPCore.a */; };
 		B3E7B58A1CC2AC0600A0062D /* RCTACPCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RCTACPCore.m */; };
 /* End PBXBuildFile section */
 
@@ -56,11 +56,11 @@
 		21E0261F2203A24E006C3583 /* RCTACPSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTACPSignal.h; path = src/Signal/RCTACPSignal.h; sourceTree = "<group>"; };
 		21E026202203A24E006C3583 /* RCTACPSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCTACPSignal.m; path = src/Signal/RCTACPSignal.m; sourceTree = "<group>"; };
 		3D2FC286255BCFAE00DACA1A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		B138DB3B5F8B4B0AF439C522 /* Pods-RCTACPCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTACPCore.debug.xcconfig"; path = "Target Support Files/Pods-RCTACPCore/Pods-RCTACPCore.debug.xcconfig"; sourceTree = "<group>"; };
+		6F3BB05C460CC448856AB122 /* libPods-RCTACPCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTACPCore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* RCTACPCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTACPCore.h; path = src/Core/RCTACPCore.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RCTACPCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTACPCore.m; path = src/Core/RCTACPCore.m; sourceTree = "<group>"; };
-		EED7338EDA51CB0906A315B2 /* Pods-RCTACPCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTACPCore.release.xcconfig"; path = "Target Support Files/Pods-RCTACPCore/Pods-RCTACPCore.release.xcconfig"; sourceTree = "<group>"; };
-		FE36348A04D3182EA07BE135 /* libPods-RCTACPCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTACPCore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2C1580DA06D9F227265D7A8 /* Pods-RCTACPCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTACPCore.release.xcconfig"; path = "Target Support Files/Pods-RCTACPCore/Pods-RCTACPCore.release.xcconfig"; sourceTree = "<group>"; };
+		FC1FB704683B5BA7B22B6D02 /* Pods-RCTACPCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTACPCore.debug.xcconfig"; path = "Target Support Files/Pods-RCTACPCore/Pods-RCTACPCore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 				210E3BB32200E9DB00AC9192 /* WebKit.framework in Frameworks */,
 				210E3BB12200E9D400AC9192 /* SystemConfiguration.framework in Frameworks */,
 				210E3BAF2200E9CF00AC9192 /* UIKit.framework in Frameworks */,
-				005DA56D635FE461A642BB54 /* libPods-RCTACPCore.a in Frameworks */,
+				9E85E16F3FE624E0AD388CB3 /* libPods-RCTACPCore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +99,7 @@
 				210E3BB22200E9DB00AC9192 /* WebKit.framework */,
 				210E3BB02200E9D400AC9192 /* SystemConfiguration.framework */,
 				210E3BAE2200E9CF00AC9192 /* UIKit.framework */,
-				FE36348A04D3182EA07BE135 /* libPods-RCTACPCore.a */,
+				6F3BB05C460CC448856AB122 /* libPods-RCTACPCore.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,8 +170,8 @@
 		927F6DCF44567097D9E8ACEE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B138DB3B5F8B4B0AF439C522 /* Pods-RCTACPCore.debug.xcconfig */,
-				EED7338EDA51CB0906A315B2 /* Pods-RCTACPCore.release.xcconfig */,
+				FC1FB704683B5BA7B22B6D02 /* Pods-RCTACPCore.debug.xcconfig */,
+				D2C1580DA06D9F227265D7A8 /* Pods-RCTACPCore.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RCTACPCore" */;
 			buildPhases = (
-				5FAEB717B7C88D2F6F289030 /* [CP] Check Pods Manifest.lock */,
+				81470BB30DAFA6A214B5AFD1 /* [CP] Check Pods Manifest.lock */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
@@ -230,7 +230,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5FAEB717B7C88D2F6F289030 /* [CP] Check Pods Manifest.lock */ = {
+		81470BB30DAFA6A214B5AFD1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -371,7 +371,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B138DB3B5F8B4B0AF439C522 /* Pods-RCTACPCore.debug.xcconfig */;
+			baseConfigurationReference = FC1FB704683B5BA7B22B6D02 /* Pods-RCTACPCore.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,7 +393,7 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EED7338EDA51CB0906A315B2 /* Pods-RCTACPCore.release.xcconfig */;
+			baseConfigurationReference = D2C1580DA06D9F227265D7A8 /* Pods-RCTACPCore.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
