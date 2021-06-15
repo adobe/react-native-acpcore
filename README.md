@@ -8,6 +8,7 @@
 `@adobe/react-native-acpcore` is a wrapper around the iOS, tvOS and Android [AEP Core SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) to allow for integration with React Native applications. Functionality to enable the Core extension is provided entirely through JavaScript documented below.
 
 ## Contents
+- [Requirements](#Requirements)
 - [Installation](#installation)
   - [iOS](#31-ios-project)
   - [Next steps](#4-next-steps)
@@ -19,6 +20,13 @@
   - [Lifecycle](#lifecycle)
   - [Signal](#signal)
 - [Troubleshooting](#troubleshooting)	
+
+
+## Requirements
+- @adobe/react-native-acpcore 1.x
+  - React Native 0.44.+
+- @adobe/react-native-acpcore 2.x
+  - React Native 0.60.+
 
 ## Installation
 
