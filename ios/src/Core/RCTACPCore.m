@@ -53,23 +53,6 @@ RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(R
     resolve([ACPCore extensionVersion]);
 }
 
-RCT_EXPORT_METHOD(start: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
-    static BOOL hasStarted = NO;
-    static dispatch_once_t onceToken;
-
-    if (hasStarted) {
-        resolve(@(hasStarted));
-        return;
-    }
-
-    dispatch_once(&onceToken, ^{
-        [ACPCore start:^{
-            hasStarted = YES;
-            resolve(@(hasStarted));
-        }];
-    });
-}
-
 RCT_EXPORT_METHOD(configureWithAppId:(NSString* __nullable) appId) {
     [ACPCore configureWithAppId:appId];
 }
@@ -116,14 +99,6 @@ RCT_EXPORT_METHOD(setAppGroup: (nullable NSString*) appGroup) {
 
 RCT_EXPORT_METHOD(collectPii: (nonnull NSDictionary*) data) {
     [ACPCore collectPii:[RCTACPCoreDataBridge sanitizeDictionaryToContainClass:[NSString class] WithDictionary:data]];
-}
-
-RCT_EXPORT_METHOD(lifecyclePause) {
-    [ACPCore lifecyclePause];
-}
-
-RCT_EXPORT_METHOD(lifecycleStart: (nullable NSDictionary*) additionalContextData) {
-    [ACPCore lifecycleStart:[RCTACPCoreDataBridge sanitizeDictionaryToContainClass:[NSString class] WithDictionary:additionalContextData]];
 }
 
 RCT_EXPORT_METHOD(setAdvertisingIdentifier: (nullable NSString*) adId) {

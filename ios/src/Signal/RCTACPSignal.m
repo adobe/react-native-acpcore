@@ -26,8 +26,4 @@ RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(R
     resolve([ACPSignal extensionVersion]);
 }
 
-RCT_EXPORT_METHOD(registerExtension) {
-    [ACPSignal registerExtension];
-}
-
 @end

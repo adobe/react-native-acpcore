@@ -33,8 +33,6 @@ export default class App extends Component<Props> {
         <Button title="ACPCore::log(...)" onPress={this.log}/>
         <Button title="ACPCore::getSdkIdentities()" onPress={this.getSdkIdentities}/>
         <Button title="ACPCore::setAdvertisingIdentifier(adID)" onPress={this.setAdvertisingIdentifier}/>
-        <Button title="ACPCore::lifecycleStart()" onPress={this.lifecycleStart}/>
-        <Button title="ACPCore::lifecyclePause()" onPress={this.lifecyclePause}/>
         <Button title="ACPCore::collectPii()" onPress={this.collectPii}/>
         <Button title="ACPCore::dispatchEvent()" onPress={this.dispatchEvent}/>
         <Button title="ACPCore::dispatchEventWithResponseCallback()" onPress={this.dispatchEventWithResponseCallback}/>
@@ -95,14 +93,6 @@ export default class App extends Component<Props> {
 
   setAdvertisingIdentifier() {
     ACPCore.setAdvertisingIdentifier("adID");
-  }
-
-  lifecycleStart() {
-    ACPCore.lifecycleStart({"lifecycleStart": "myData"});
-  }
-
-  lifecyclePause() {
-    ACPCore.lifecyclePause();
   }
 
   collectPii() {

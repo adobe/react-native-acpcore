@@ -26,8 +26,4 @@ RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(R
     resolve([ACPLifecycle extensionVersion]);
 }
 
-RCT_EXPORT_METHOD(registerExtension) {
-    [ACPLifecycle registerExtension];
-}
-
 @end

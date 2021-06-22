@@ -27,10 +27,6 @@ RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(R
     resolve([ACPIdentity extensionVersion]);
 }
 
-RCT_EXPORT_METHOD(registerExtension) {
-    [ACPIdentity registerExtension];
-}
-
 RCT_EXPORT_METHOD(appendVisitorInfoForURL:(nonnull NSString*)baseUrl resolver:(RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     [ACPIdentity appendToUrl:[NSURL URLWithString:baseUrl] withCallback:^(NSURL * _Nullable urlWithVisitorData) {
         resolve(urlWithVisitorData.absoluteString);

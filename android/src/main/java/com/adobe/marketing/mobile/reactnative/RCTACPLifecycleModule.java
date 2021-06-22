@@ -41,13 +41,4 @@ public class RCTACPLifecycleModule extends ReactContextBaseJavaModule {
         promise.resolve(Lifecycle.extensionVersion());
     }
 
-    @ReactMethod
-    public void registerExtension() {
-        try {
-            Lifecycle.registerExtension();
-        } catch (InvalidInitException e) {
-            Log.d(getName(), "Registering Lifecycle extension failed with error: " + e.getMessage());
-        }
-    }
-
 }

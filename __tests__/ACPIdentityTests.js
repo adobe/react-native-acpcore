@@ -24,12 +24,6 @@ describe('ACPIdentity', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  test('registerExtension is called', async () => {
-    const spy = jest.spyOn(NativeModules.ACPIdentity, 'registerExtension');
-    await ACPIdentity.registerExtension();
-    expect(spy).toHaveBeenCalled();
-  });
-
   test('syncIdentifiers is called with correct parameters', async () => {
     const spy = jest.spyOn(NativeModules.ACPIdentity, 'syncIdentifiers');
     let identifiers = {"testKey": "testValue"};

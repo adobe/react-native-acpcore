@@ -24,9 +24,4 @@ describe('ACPSignal', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  test('registerExtension is called', async () => {
-    const spy = jest.spyOn(NativeModules.ACPSignal, 'registerExtension');
-    await ACPSignal.registerExtension();
-    expect(spy).toHaveBeenCalled();
-  });
 });
