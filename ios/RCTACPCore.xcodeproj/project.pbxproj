@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,27 +13,12 @@
 		210E3BB52200E9E300AC9192 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210E3BB42200E9E300AC9192 /* UserNotifications.framework */; };
 		21230B932203B41D00F2B198 /* RCTACPSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E026202203A24E006C3583 /* RCTACPSignal.m */; };
 		2132E26922057F1D000DDF24 /* RCTACPIdentityDataBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2132E26822057F1D000DDF24 /* RCTACPIdentityDataBridge.m */; };
-		21A6F9CC258BF12F004A93D8 /* ACPLifecycle.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A6F9C4258BF12E004A93D8 /* ACPLifecycle.xcframework */; };
-		21A6F9CE258BF12F004A93D8 /* ACPCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A6F9C6258BF12E004A93D8 /* ACPCore.xcframework */; };
-		21A6F9D2258BF12F004A93D8 /* ACPIdentity.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A6F9CA258BF12F004A93D8 /* ACPIdentity.xcframework */; };
-		21A6F9D3258BF12F004A93D8 /* ACPSignal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A6F9CB258BF12F004A93D8 /* ACPSignal.xcframework */; };
-		21A6FA4A258BFB95004A93D8 /* ACPCore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA44258BFB8D004A93D8 /* ACPCore.h */; };
-		21A6FA4B258BFB95004A93D8 /* ACPError.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA45258BFB8D004A93D8 /* ACPError.h */; };
-		21A6FA4C258BFB95004A93D8 /* ACPExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA47258BFB8D004A93D8 /* ACPExtension.h */; };
-		21A6FA4D258BFB95004A93D8 /* ACPExtensionApi.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA46258BFB8D004A93D8 /* ACPExtensionApi.h */; };
-		21A6FA4E258BFB95004A93D8 /* ACPExtensionError.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA42258BFB8D004A93D8 /* ACPExtensionError.h */; };
-		21A6FA4F258BFB95004A93D8 /* ACPExtensionEvent.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA43258BFB8D004A93D8 /* ACPExtensionEvent.h */; };
-		21A6FA50258BFB95004A93D8 /* ACPExtensionListener.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA48258BFB8E004A93D8 /* ACPExtensionListener.h */; };
-		21A6FA51258BFB95004A93D8 /* ACPMobileVisitorId.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA49258BFB8E004A93D8 /* ACPMobileVisitorId.h */; };
-		21A6FA52258BFB95004A93D8 /* ACPNetworkServiceOverrider.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA41258BFB8D004A93D8 /* ACPNetworkServiceOverrider.h */; };
-		21A6FA57258BFBE0004A93D8 /* ACPIdentity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA54258BFBB8004A93D8 /* ACPIdentity.h */; };
-		21A6FA58258BFBE0004A93D8 /* ACPLifecycle.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA55258BFBCD004A93D8 /* ACPLifecycle.h */; };
-		21A6FA59258BFBE0004A93D8 /* ACPSignal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21A6FA56258BFBD8004A93D8 /* ACPSignal.h */; };
 		21E025FC2202252B006C3583 /* ACPExtensionEvent+ReactNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E025FB2202252B006C3583 /* ACPExtensionEvent+ReactNative.m */; };
 		21E0261822039C07006C3583 /* RCTACPCoreDataBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261722039C07006C3583 /* RCTACPCoreDataBridge.m */; };
 		21E0261B2203A235006C3583 /* RCTACPIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261A2203A235006C3583 /* RCTACPIdentity.m */; };
 		21E0261E2203A241006C3583 /* RCTACPLifecycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E0261D2203A241006C3583 /* RCTACPLifecycle.m */; };
 		B3E7B58A1CC2AC0600A0062D /* RCTACPCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RCTACPCore.m */; };
+		C46D75050C485BB0B81E31C0 /* libPods-RCTACPCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6118E7888A4CDC99CF60FDDF /* libPods-RCTACPCore.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,18 +28,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				21A6FA57258BFBE0004A93D8 /* ACPIdentity.h in CopyFiles */,
-				21A6FA58258BFBE0004A93D8 /* ACPLifecycle.h in CopyFiles */,
-				21A6FA59258BFBE0004A93D8 /* ACPSignal.h in CopyFiles */,
-				21A6FA4A258BFB95004A93D8 /* ACPCore.h in CopyFiles */,
-				21A6FA4B258BFB95004A93D8 /* ACPError.h in CopyFiles */,
-				21A6FA4C258BFB95004A93D8 /* ACPExtension.h in CopyFiles */,
-				21A6FA4D258BFB95004A93D8 /* ACPExtensionApi.h in CopyFiles */,
-				21A6FA4E258BFB95004A93D8 /* ACPExtensionError.h in CopyFiles */,
-				21A6FA4F258BFB95004A93D8 /* ACPExtensionEvent.h in CopyFiles */,
-				21A6FA50258BFB95004A93D8 /* ACPExtensionListener.h in CopyFiles */,
-				21A6FA51258BFB95004A93D8 /* ACPMobileVisitorId.h in CopyFiles */,
-				21A6FA52258BFB95004A93D8 /* ACPNetworkServiceOverrider.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,26 +45,6 @@
 		21230B842203B1F400F2B198 /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2132E26722057F1D000DDF24 /* RCTACPIdentityDataBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTACPIdentityDataBridge.h; path = src/Identity/RCTACPIdentityDataBridge.h; sourceTree = "<group>"; };
 		2132E26822057F1D000DDF24 /* RCTACPIdentityDataBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCTACPIdentityDataBridge.m; path = src/Identity/RCTACPIdentityDataBridge.m; sourceTree = "<group>"; };
-		21A6F9C4258BF12E004A93D8 /* ACPLifecycle.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPLifecycle.xcframework; path = libs/ACPLifecycle.xcframework; sourceTree = "<group>"; };
-		21A6F9C5258BF12E004A93D8 /* ACPLifecycleTV.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPLifecycleTV.xcframework; path = libs/ACPLifecycleTV.xcframework; sourceTree = "<group>"; };
-		21A6F9C6258BF12E004A93D8 /* ACPCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPCore.xcframework; path = libs/ACPCore.xcframework; sourceTree = "<group>"; };
-		21A6F9C7258BF12F004A93D8 /* ACPCoreTV.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPCoreTV.xcframework; path = libs/ACPCoreTV.xcframework; sourceTree = "<group>"; };
-		21A6F9C8258BF12F004A93D8 /* ACPSignalTV.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPSignalTV.xcframework; path = libs/ACPSignalTV.xcframework; sourceTree = "<group>"; };
-		21A6F9C9258BF12F004A93D8 /* ACPIdentityTV.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPIdentityTV.xcframework; path = libs/ACPIdentityTV.xcframework; sourceTree = "<group>"; };
-		21A6F9CA258BF12F004A93D8 /* ACPIdentity.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPIdentity.xcframework; path = libs/ACPIdentity.xcframework; sourceTree = "<group>"; };
-		21A6F9CB258BF12F004A93D8 /* ACPSignal.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ACPSignal.xcframework; path = libs/ACPSignal.xcframework; sourceTree = "<group>"; };
-		21A6FA41258BFB8D004A93D8 /* ACPNetworkServiceOverrider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPNetworkServiceOverrider.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPNetworkServiceOverrider.h"; sourceTree = "<group>"; };
-		21A6FA42258BFB8D004A93D8 /* ACPExtensionError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPExtensionError.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPExtensionError.h"; sourceTree = "<group>"; };
-		21A6FA43258BFB8D004A93D8 /* ACPExtensionEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPExtensionEvent.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPExtensionEvent.h"; sourceTree = "<group>"; };
-		21A6FA44258BFB8D004A93D8 /* ACPCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPCore.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPCore.h"; sourceTree = "<group>"; };
-		21A6FA45258BFB8D004A93D8 /* ACPError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPError.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPError.h"; sourceTree = "<group>"; };
-		21A6FA46258BFB8D004A93D8 /* ACPExtensionApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPExtensionApi.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPExtensionApi.h"; sourceTree = "<group>"; };
-		21A6FA47258BFB8D004A93D8 /* ACPExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPExtension.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPExtension.h"; sourceTree = "<group>"; };
-		21A6FA48258BFB8E004A93D8 /* ACPExtensionListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPExtensionListener.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPExtensionListener.h"; sourceTree = "<group>"; };
-		21A6FA49258BFB8E004A93D8 /* ACPMobileVisitorId.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPMobileVisitorId.h; path = "libs/ACPCore.xcframework/ios-arm64_armv7_armv7s/Headers/ACPMobileVisitorId.h"; sourceTree = "<group>"; };
-		21A6FA54258BFBB8004A93D8 /* ACPIdentity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPIdentity.h; path = "libs/ACPIdentity.xcframework/ios-arm64_armv7_armv7s/Headers/ACPIdentity.h"; sourceTree = "<group>"; };
-		21A6FA55258BFBCD004A93D8 /* ACPLifecycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPLifecycle.h; path = "libs/ACPLifecycle.xcframework/ios-arm64_armv7_armv7s/Headers/ACPLifecycle.h"; sourceTree = "<group>"; };
-		21A6FA56258BFBD8004A93D8 /* ACPSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ACPSignal.h; path = "libs/ACPSignal.xcframework/ios-arm64_armv7_armv7s/Headers/ACPSignal.h"; sourceTree = "<group>"; };
 		21E025FA2202252B006C3583 /* ACPExtensionEvent+ReactNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ACPExtensionEvent+ReactNative.h"; path = "src/Data-Bridging/ACPExtensionEvent+ReactNative.h"; sourceTree = "<group>"; };
 		21E025FB2202252B006C3583 /* ACPExtensionEvent+ReactNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ACPExtensionEvent+ReactNative.m"; path = "src/Data-Bridging/ACPExtensionEvent+ReactNative.m"; sourceTree = "<group>"; };
 		21E0261622039C07006C3583 /* RCTACPCoreDataBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTACPCoreDataBridge.h; path = src/Core/RCTACPCoreDataBridge.h; sourceTree = "<group>"; };
@@ -103,8 +56,11 @@
 		21E0261F2203A24E006C3583 /* RCTACPSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTACPSignal.h; path = src/Signal/RCTACPSignal.h; sourceTree = "<group>"; };
 		21E026202203A24E006C3583 /* RCTACPSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RCTACPSignal.m; path = src/Signal/RCTACPSignal.m; sourceTree = "<group>"; };
 		3D2FC286255BCFAE00DACA1A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		6118E7888A4CDC99CF60FDDF /* libPods-RCTACPCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RCTACPCore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61C6372F64BEC1F9EB593929 /* Pods-RCTACPCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTACPCore.release.xcconfig"; path = "Target Support Files/Pods-RCTACPCore/Pods-RCTACPCore.release.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RCTACPCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTACPCore.h; path = src/Core/RCTACPCore.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RCTACPCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTACPCore.m; path = src/Core/RCTACPCore.m; sourceTree = "<group>"; };
+		C6335E95E8B41B3DA7AC988A /* Pods-RCTACPCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCTACPCore.debug.xcconfig"; path = "Target Support Files/Pods-RCTACPCore/Pods-RCTACPCore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,13 +69,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				210E3BB52200E9E300AC9192 /* UserNotifications.framework in Frameworks */,
-				21A6F9CC258BF12F004A93D8 /* ACPLifecycle.xcframework in Frameworks */,
-				21A6F9CE258BF12F004A93D8 /* ACPCore.xcframework in Frameworks */,
-				21A6F9D3258BF12F004A93D8 /* ACPSignal.xcframework in Frameworks */,
 				210E3BB32200E9DB00AC9192 /* WebKit.framework in Frameworks */,
 				210E3BB12200E9D400AC9192 /* SystemConfiguration.framework in Frameworks */,
 				210E3BAF2200E9CF00AC9192 /* UIKit.framework in Frameworks */,
-				21A6F9D2258BF12F004A93D8 /* ACPIdentity.xcframework in Frameworks */,
+				C46D75050C485BB0B81E31C0 /* libPods-RCTACPCore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,43 +99,9 @@
 				210E3BB22200E9DB00AC9192 /* WebKit.framework */,
 				210E3BB02200E9D400AC9192 /* SystemConfiguration.framework */,
 				210E3BAE2200E9CF00AC9192 /* UIKit.framework */,
+				6118E7888A4CDC99CF60FDDF /* libPods-RCTACPCore.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		210E3BC92200EB6200AC9192 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				21A6FA40258BFB5E004A93D8 /* include */,
-				21A6F9C6258BF12E004A93D8 /* ACPCore.xcframework */,
-				21A6F9C7258BF12F004A93D8 /* ACPCoreTV.xcframework */,
-				21A6F9CA258BF12F004A93D8 /* ACPIdentity.xcframework */,
-				21A6F9C9258BF12F004A93D8 /* ACPIdentityTV.xcframework */,
-				21A6F9C4258BF12E004A93D8 /* ACPLifecycle.xcframework */,
-				21A6F9C5258BF12E004A93D8 /* ACPLifecycleTV.xcframework */,
-				21A6F9CB258BF12F004A93D8 /* ACPSignal.xcframework */,
-				21A6F9C8258BF12F004A93D8 /* ACPSignalTV.xcframework */,
-			);
-			name = Libs;
-			sourceTree = "<group>";
-		};
-		21A6FA40258BFB5E004A93D8 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				21A6FA44258BFB8D004A93D8 /* ACPCore.h */,
-				21A6FA45258BFB8D004A93D8 /* ACPError.h */,
-				21A6FA47258BFB8D004A93D8 /* ACPExtension.h */,
-				21A6FA46258BFB8D004A93D8 /* ACPExtensionApi.h */,
-				21A6FA42258BFB8D004A93D8 /* ACPExtensionError.h */,
-				21A6FA43258BFB8D004A93D8 /* ACPExtensionEvent.h */,
-				21A6FA48258BFB8E004A93D8 /* ACPExtensionListener.h */,
-				21A6FA49258BFB8E004A93D8 /* ACPMobileVisitorId.h */,
-				21A6FA41258BFB8D004A93D8 /* ACPNetworkServiceOverrider.h */,
-				21A6FA54258BFBB8004A93D8 /* ACPIdentity.h */,
-				21A6FA55258BFBCD004A93D8 /* ACPLifecycle.h */,
-				21A6FA56258BFBD8004A93D8 /* ACPSignal.h */,
-			);
-			name = include;
 			sourceTree = "<group>";
 		};
 		21E026222203A438006C3583 /* Identity */ = {
@@ -242,10 +161,19 @@
 				21E026232203A440006C3583 /* Lifecycle */,
 				21E026242203A448006C3583 /* Signal */,
 				21E026262203A540006C3583 /* Data Helpers */,
-				210E3BC92200EB6200AC9192 /* Libs */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				210E3BAD2200E9CF00AC9192 /* Frameworks */,
+				927F6DCF44567097D9E8ACEE /* Pods */,
 			);
+			sourceTree = "<group>";
+		};
+		927F6DCF44567097D9E8ACEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6335E95E8B41B3DA7AC988A /* Pods-RCTACPCore.debug.xcconfig */,
+				61C6372F64BEC1F9EB593929 /* Pods-RCTACPCore.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +183,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RCTACPCore" */;
 			buildPhases = (
+				E6621EF96814DB5FAAB243BD /* [CP] Check Pods Manifest.lock */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
@@ -299,6 +228,31 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E6621EF96814DB5FAAB243BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RCTACPCore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
@@ -417,6 +371,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6335E95E8B41B3DA7AC988A /* Pods-RCTACPCore.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -428,7 +383,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libraries",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/libs",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RCTACPCore;
@@ -439,6 +393,7 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61C6372F64BEC1F9EB593929 /* Pods-RCTACPCore.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,7 +405,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libraries",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/libs",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RCTACPCore;

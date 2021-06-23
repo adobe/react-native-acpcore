@@ -27,14 +27,7 @@ module.exports = {
   extensionVersion(): Promise<string> {
     return Promise.resolve(RCTACPIdentity.extensionVersion());
   },
-
-  /**
-   * Registers the ACPIdentity extension with ACPCore
-   */
-  registerExtension() {
-    RCTACPIdentity.registerExtension();
-  },
-
+  
   /**
    * @brief Updates the given customer IDs with the Adobe Experience Cloud ID Service.
    *

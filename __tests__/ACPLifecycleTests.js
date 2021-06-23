@@ -23,9 +23,4 @@ describe('ACPLifecycle', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  test('registerExtension is called', async () => {
-    const spy = jest.spyOn(NativeModules.ACPLifecycle, 'registerExtension');
-    await ACPLifecycle.registerExtension();
-    expect(spy).toHaveBeenCalled();
-  });
 });

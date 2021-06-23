@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 #import "RCTACPSignal.h"
-#import <RCTACPCore/ACPSignal.h>
+#import <ACPSignal.h>
 
 @implementation RCTACPSignal
 
@@ -24,10 +24,6 @@ RCT_EXPORT_MODULE(ACPSignal);
 
 RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     resolve([ACPSignal extensionVersion]);
-}
-
-RCT_EXPORT_METHOD(registerExtension) {
-    [ACPSignal registerExtension];
 }
 
 @end

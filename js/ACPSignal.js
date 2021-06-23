@@ -26,11 +26,4 @@ module.exports = {
     return Promise.resolve(RCTACPSignal.extensionVersion());
   },
 
-  /**
-   * Registers the ACPSignal extension with ACPCore
-   */
-  registerExtension() {
-    RCTACPSignal.registerExtension();
-  },
-
 };

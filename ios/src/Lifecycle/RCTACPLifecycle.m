@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 #import "RCTACPLifecycle.h"
-#import <RCTACPCore/ACPLifecycle.h>
+#import <ACPLifecycle.h>
 
 @implementation RCTACPLifecycle
 
@@ -24,10 +24,6 @@ RCT_EXPORT_MODULE(ACPLifecycle);
 
 RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     resolve([ACPLifecycle extensionVersion]);
-}
-
-RCT_EXPORT_METHOD(registerExtension) {
-    [ACPLifecycle registerExtension];
 }
 
 @end

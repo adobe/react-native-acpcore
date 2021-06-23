@@ -30,17 +30,6 @@ module.exports = {
   },
 
   /**
-   * Start the Core processing.
-   * This should be called after the initial set of extensions have been registered.
-   * This call will wait for any outstanding registrations to complete and then start event processing.
-   * You can use the callback to kickoff additional operations immediately after any operations kicked off during registration.
-   * @param  {boolean} Promise a promise that resolves when core has started
-   */
-  start(): Promise<boolean> {
-    return RCTACPCore.start();
-  },
-
-  /**
    * Load remote configuration specified by the given application ID
    *
    * Configure the SDK by downloading the remote configuration file hosted on Adobe servers
@@ -238,38 +227,6 @@ module.exports = {
    */
   setPushIdentifier(pushIdentifier?: String) {
     RCTACPCore.setPushIdentifier(pushIdentifier);
-  },
-
-  /**
-   * Submits a generic event to start/resume lifecycle collection with event type `generic.lifecycle`.
-   *
-   * When using the Adobe Lifecycle extension, the following applies:
-   *   - Start a new lifecycle session or resume a previously paused lifecycle session. If a previously paused session
-   *     timed out, then a new session is created. If a current session is running, then calling this method does nothing.
-   *   - Additional context data may be passed when calling this method. Lifecycle data and any additional data are
-   *     sent as context data parameters to Analytics, to Target as mbox parameters, and for Audience Manager they are
-   *     sent as customer variables. Any additional data is also used by the Rules Engine when processing rules.
-   *
-   * @param  {{ string: string }?} additionalContextData optional additional context for this session.
-   */
-  lifecycleStart(additionalContextData?: { string: string }) {
-    RCTACPCore.lifecycleStart(additionalContextData);
-  },
-
-  /**
-  * Submits a generic event to pause lifecycle collection with event type `generic.lifecycle`.
-  *
-  * When using the Adobe Lifecycle extension, the following applies:
-  *   - Pauses the current lifecycle session. Calling pause on an already paused session updates the paused timestamp,
-  *     having the effect of resetting the session timeout timer. If no lifecycle session is running, then calling
-  *     this method does nothing.
-  *   - A paused session is resumed if ACPCore::lifecycleStart: is called before the session timeout. After
-  *     the session timeout, a paused session is closed and calling ACPCore::lifecycleStart: will create
-  *     a new session. The session timeout is defined by the `lifecycle.sessionTimeout` configuration parameter.
-  *   - If not defined, the default session timeout is five minutes.
-  */
-  lifecyclePause() {
-    RCTACPCore.lifecyclePause();
   },
 
   /**
