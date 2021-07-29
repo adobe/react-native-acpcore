@@ -1,4 +1,4 @@
-# ACPCoreSampleApp
+# ACPCoreTVapp
 
 > Note: Commands are assuming you're in the root directory of the repository.
 
@@ -11,26 +11,24 @@ In `ios/**/AppDelegate.m`, find the call to `configureWithAppId` and add your ap
 
 In `android/**/MainApplication.java`, find the call to `configureWithAppId` and add your app id.
 
-#### Run instructions for iOS:
+#### Run instructions for TVOS:
 
 ```
-cd sample/ACPCoreSampleApp/ && npm install && cd ios/ && pod update && cd .. && react-native run-ios
+cd sample/ACPCoreTVapp/ && npm install && cd ios/ && pod update && cd .. && npx react-native run-ios  --simulator "Apple TV" --scheme "ACPCoreTVapp-tvOS"
 ```
-
-> Note: If you see an error "Can't find simulator for "iPhoneX"", this is a known [issue](https://github.com/facebook/react-native/issues/23256) with React Native and you should try running the sample app inside of Xcode.
 
 or
 ```
-cd sample/ACPCoreSampleApp/ && npm install && cd ios/ && pod update
+cd sample/ACPCoreTVapp/ && npm install && cd ios/ && pod update
 ```
-Then, open the Xcode project under the `ios` directory and hit run.
+Then, open the ACPCoreTVapp.xcworkspace project under the `ios` directory and hit run.
 
 #### Run instructions for Android:
 
 Have an Android emulator running (quickest way to get started), or a device connected. https://developer.android.com/studio/run/emulator-commandline
 
 ```
-cd sample/ACPCoreSampleApp/ && npm install && react-native run-android
+cd sample/ACPCoreTVapp/ && npm install && react-native run-android
 ```
 
 ### Troubleshooting
