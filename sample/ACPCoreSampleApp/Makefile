@@ -1,5 +1,5 @@
 sync:
-	(cd ../../ && rm adobe-react-native-acpcore-2.0.0.tgz || true)
+	(cd ../../ && rm adobe-react-native-acpcore-2.0.0-alpha.1.tgz || true)
 	(cd ../../ && npm pack)
 	(rm -r node_modules/@adobe/react-native-acpcore || true)
 	(rm package-lock.json || true)
