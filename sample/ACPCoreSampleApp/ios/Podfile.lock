@@ -1,7 +1,7 @@
 PODS:
-  - ACPCore (2.9.3):
-    - ACPCore/main (= 2.9.3)
-  - ACPCore/main (2.9.3)
+  - ACPCore (2.9.4):
+    - ACPCore/main (= 2.9.4)
+  - ACPCore/main (2.9.4)
   - boost-for-react-native (1.63.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
@@ -71,7 +71,7 @@ PODS:
     - boost-for-react-native
     - DoubleConversion
     - glog
-  - RCTACPCore (2.0.0):
+  - RCTACPCore (2.0.0-alpha.1):
     - ACPCore
     - React
   - RCTRequired (0.64.2)
@@ -455,7 +455,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  ACPCore: 5f00fcf7aba597b29b359e4c14f7f4f1f95503f3
+  ACPCore: 7d09a5b7233d72fa7cb4369c99a8250fd7240305
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
@@ -472,7 +472,7 @@ SPEC CHECKSUMS:
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: 1aa4f6a6ee7256b83db99ec1ccdaa80d10f9af9b
   RCT-Folly: ec7a233ccc97cc556cf7237f0db1ff65b986f27c
-  RCTACPCore: b2954e0c71617c7d6306f62e347bd543f8a46723
+  RCTACPCore: 5b2dcb6735eedbd02e6ea314c8a81facf7dae7c7
   RCTRequired: 6d3e854f0e7260a648badd0d44fc364bc9da9728
   RCTTypeSafety: c1f31d19349c6b53085766359caac425926fafaa
   React: bda6b6d7ae912de97d7a61aa5c160db24aa2ad69
@@ -500,4 +500,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 66e089c34f36f8b7949037b614e32db3253a8149
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
