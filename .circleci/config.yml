@@ -26,6 +26,10 @@ jobs:
 
       # make sure we're on the right version of cocoapods
       - run:
+          name: Install latest Cocoapods
+          command: sudo gem install cocoapods
+
+      - run:
           name: Verify Cocoapods Version
           command: cd ios && bundle check || bundle install --path vendor/bundle
 
@@ -72,7 +76,10 @@ jobs:
 
       - run:
           name: Building Android Sample App
-          command: make build-sample-android
+          command: |
+            export NODE_OPTIONS=--max-old-space-size=8192
+            make build-sample-android
+
 
 
   build-sample-app-ios:
@@ -85,6 +92,10 @@ jobs:
       - run:
           name: Install react-native-cli
           command: npm install -g react-native-cli
+      
+      - run:
+          name: Install latest Cocoapods
+          command: sudo gem install cocoapods
 
       - run:
           name: Copy changes into sample app

@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 #import "RCTACPIdentity.h"
-#import <RCTACPCore/ACPIdentity.h>
+#import <ACPIdentity.h>
 #import "RCTACPIdentityDataBridge.h"
 
 @implementation RCTACPIdentity
@@ -25,10 +25,6 @@ RCT_EXPORT_MODULE(ACPIdentity);
 
 RCT_EXPORT_METHOD(extensionVersion: (RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {
     resolve([ACPIdentity extensionVersion]);
-}
-
-RCT_EXPORT_METHOD(registerExtension) {
-    [ACPIdentity registerExtension];
 }
 
 RCT_EXPORT_METHOD(appendVisitorInfoForURL:(nonnull NSString*)baseUrl resolver:(RCTPromiseResolveBlock) resolve rejecter:(RCTPromiseRejectBlock)reject) {

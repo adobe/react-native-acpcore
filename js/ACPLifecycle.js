@@ -26,11 +26,4 @@ module.exports = {
     return Promise.resolve(RCTACPLifecycle.extensionVersion());
   },
 
-  /**
-   * Registers the ACPLifecycle extension with ACPCore
-   */
-  registerExtension() {
-    RCTACPLifecycle.registerExtension();
-  },
-
 };

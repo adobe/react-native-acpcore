@@ -26,12 +26,6 @@ describe('ACPCore', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  test('start is called', async () => {
-    const spy = jest.spyOn(NativeModules.ACPCore, 'start');
-    await ACPCore.start();
-    expect(spy).toHaveBeenCalled();
-  });
-
   test('configureWithAppId is called with correct parameters', async () => {
     const spy = jest.spyOn(NativeModules.ACPCore, 'configureWithAppId');
     let appId = "testAppId";
@@ -137,19 +131,6 @@ describe('ACPCore', () => {
     let pushIdentifier = "testPushId";
     await ACPCore.setPushIdentifier(pushIdentifier);
     expect(spy).toHaveBeenCalledWith(pushIdentifier);
-  });
-
-  test('lifecycleStart is called with correct parameters', async () => {
-    const spy = jest.spyOn(NativeModules.ACPCore, 'lifecycleStart');
-    let contextData = {"testKey": "testValue"};
-    await ACPCore.lifecycleStart(contextData);
-    expect(spy).toHaveBeenCalledWith(contextData);
-  });
-
-  test('lifecyclePause is called', async () => {
-    const spy = jest.spyOn(NativeModules.ACPCore, 'lifecyclePause');
-    await ACPCore.lifecyclePause();
-    expect(spy).toHaveBeenCalled();
   });
 
   test('collectPii is called with correct parameters', async () => {

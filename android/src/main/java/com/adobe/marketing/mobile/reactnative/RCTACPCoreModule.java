@@ -57,22 +57,6 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void start(final Promise promise) {
-        if (hasStarted.get()) {
-            promise.resolve(true);
-            return;
-        }
-
-        MobileCore.start(new AdobeCallback() {
-            @Override
-            public void call(Object obj) {
-            hasStarted.set(true);
-            promise.resolve(true);
-            }
-        });
-    }
-
-    @ReactMethod
     public void configureWithAppId(final String appId) {
         MobileCore.configureWithAppID(appId);
     }
@@ -203,16 +187,6 @@ public class RCTACPCoreModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void setPushIdentifier(final String pushIdentifier) {
         MobileCore.setPushIdentifier(pushIdentifier);
-    }
-
-    @ReactMethod
-    public void lifecycleStart(final ReadableMap additionalContextData) {
-        MobileCore.lifecycleStart(RCTACPMapUtil.toStringMap(additionalContextData));
-    }
-
-    @ReactMethod
-    public void lifecyclePause() {
-        MobileCore.lifecyclePause();
     }
 
     @ReactMethod

@@ -40,13 +40,4 @@ public class RCTACPSignalModule extends ReactContextBaseJavaModule {
         promise.resolve(Signal.extensionVersion());
     }
 
-    @ReactMethod
-    public void registerExtension() {
-        try {
-            Signal.registerExtension();
-        } catch (InvalidInitException e) {
-            Log.d(getName(), "Registering Signal extension failed with error: " + e.getMessage());
-        }
-    }
-
 }

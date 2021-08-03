@@ -48,15 +48,6 @@ public class RCTACPIdentityModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void registerExtension() {
-        try {
-            Identity.registerExtension();
-        } catch (InvalidInitException e) {
-            Log.d(getName(), "Registering Identity extension failed with error: " + e.getMessage());
-        }
-    }
-
-    @ReactMethod
     public void syncIdentifiers(final ReadableMap identifiers) {
         Identity.syncIdentifiers(RCTACPMapUtil.toStringMap(identifiers));
     }
