@@ -7,22 +7,31 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "react": "16.13.1",
-    "react-native": "npm:react-native-tvos@0.63.4-0",
-    "@adobe/react-native-acpcore": "file:../../adobe-react-native-acpcore-2.0.0.tgz"
+    "react": "17.0.2",
+    "react-native": "npm:react-native-tvos@0.66.3-1",
+    "@adobe/react-native-acpcore": "file:../../adobe-react-native-acpcore-2.1.0.tgz"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/runtime": "^7.8.4",
-    "@react-native-community/eslint-config": "^1.1.0",
-    "babel-jest": "^25.1.0",
-    "eslint": "^6.5.1",
-    "jest": "^25.1.0",
-    "metro-react-native-babel-preset": "^0.59.0",
-    "react-test-renderer": "16.13.1"
+    "@babel/core": "^7.17.5",
+    "@babel/runtime": "^7.17.2",
+    "@react-native-community/eslint-config": "^3.0.1",
+    "@types/jest": "^27.4.1",
+    "@types/react-native": "^0.66.16",
+    "@types/react-test-renderer": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "babel-jest": "^27.5.1",
+    "eslint": "^8.9.0",
+    "jest": "^27.5.1",
+    "metro-react-native-babel-preset": "^0.68.0",
+    "react-test-renderer": "17.0.2",
+    "typescript": "^4.5.5"
+  },
+  "resolutions": {
+    "@types/react": "^17"
   },
   "jest": {
     "preset": "react-native"

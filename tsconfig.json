@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "jsx": "react-native",
+    "target": "ES2015",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "rootDir": ".",
+    "module": "commonjs",
+    "strict": true,
+  },
+}

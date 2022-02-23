@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./ts",
+    "outDir": "./js",
+    "skipLibCheck": true
+  },
+  "exclude": ["__tests__", "sample/**", "js/"]
+}

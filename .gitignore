@@ -43,4 +43,7 @@ buck-out/
 \.buckd/
 *.keystore
 acp-sdks/
-.*tgz
+*.tgz
+
+# Output
+js/
