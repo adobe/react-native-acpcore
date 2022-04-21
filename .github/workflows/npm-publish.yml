@@ -10,7 +10,7 @@ jobs:
     steps:
     # https://github.com/actions/checkout/issues/760
     - name: Trust My Directory
-      run: export GIT_CEILING_DIRECTORIES=/github/workspace # only work before git v2.35.2
+      run: export GIT_CEILING_DIRECTORIES=/github/workspace
     - name: Checkout repository
       uses: actions/checkout@main
     - name: Set up Node.js
@@ -27,4 +27,5 @@ jobs:
       env: 
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         NPM_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }} 
+        GIT_CEILING_DIRECTORIES: /github/workspace
         NPM_AUTH: ${{ secrets.ADOBE_BOT_NPM_TOKEN }} 
