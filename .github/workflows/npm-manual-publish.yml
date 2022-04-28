@@ -1,0 +1,27 @@
+# This is a basic workflow that is manually triggered
+
+name: npm-manual-publish
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+jobs:
+    publish-latest:
+        name: publish-latest
+        runs-on: ubuntu-18.04
+        steps:
+            - name: checkout
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+                  ref: ${{ github.ref }}
+            - name: node
+              uses: actions/setup-node@v2
+              with:
+                  node-version: 14
+                  registry-url: https://registry.npmjs.org/
+            - name: publish
+              run: npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.ADOBE_BOT_NPM_TOKEN }}
