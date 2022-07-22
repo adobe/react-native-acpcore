@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "17.0.1",
     "react-native": "0.64.2",
-    "@adobe/react-native-acpcore": "file:../../adobe-react-native-acpcore-2.0.1.tgz"
+    "@adobe/react-native-acpcore": "file:../../adobe-react-native-acpcore-2.0.2.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
