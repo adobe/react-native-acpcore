@@ -5,7 +5,7 @@
 [![CircleCI](https://img.shields.io/circleci/project/github/adobe/react-native-acpcore/main.svg?logo=circleci)](https://circleci.com/gh/adobe/workflows/react-native-acpcore) 
 [![license](https://img.shields.io/npm/l/@adobe/react-native-acpcore.svg)](https://github.com/adobe/react-native-acpcore/blob/main/LICENSE)
 
-`@adobe/react-native-acpcore` is a wrapper around the iOS, tvOS and Android [AEP Core SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) to allow for integration with React Native applications. Functionality to enable the Core extension is provided entirely through JavaScript documented below.
+`@adobe/react-native-acpcore` is a wrapper around the iOS, tvOS and Android [AEP Core SDK](https://developer.adobe.com/client-sdks/previous-versions/documentation/mobile-core) to allow for integration with React Native applications. Functionality to enable the Core extension is provided entirely through JavaScript documented below.
 
 ## Contents
 - [Requirements](#Requirements)
@@ -109,7 +109,7 @@ make run-tests-locally
 
 ### Initializing:
 
-Initializing the SDK should be done in native code, documentation on how to initialize the SDK can be found [here](https://aep-sdks.gitbook.io/docs/getting-started/get-the-sdk#2-add-initialization-code). The linked documentation initializes the User Profile extension which is not required, however, if you are interested in the User Profile extension for React Native you can find it [here](https://www.npmjs.com/package/@adobe/react-native-acpuserprofile).
+Initializing the SDK should be done in native code, documentation on how to initialize the SDK can be found [here](https://developer.adobe.com/client-sdks/previous-versions/documentation/mobile-core/api-reference/#registerextensions). The linked documentation initializes the User Profile extension which is not required, however, if you are interested in the User Profile extension for React Native you can find it [here](https://www.npmjs.com/package/@adobe/react-native-acpuserprofile).
 
 Once you have added the initialization code to your app, be sure to set the SDK wrapper type to React Native before you start the SDK.
 
@@ -123,7 +123,7 @@ Once you have added the initialization code to your app, be sure to set the SDK 
 MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
 ```
 
-### [Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core)
+### [Core](https://developer.adobe.com/client-sdks/previous-versions/documentation/mobile-core)
 
 ##### Updating the SDK configuration:
 
@@ -214,7 +214,7 @@ var requestEvent = new ACPExtensionEvent("requestEvent", "eventType", "eventSour
 ACPCore.dispatchResponseEvent(responseEvent, requestEvent);
 ```
 
-### [Identity](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/identity)
+### [Identity](https://developer.adobe.com/client-sdks/previous-versions/documentation/mobile-core/identity)
 
 ##### Getting the extension version:
 ```javascript
@@ -287,16 +287,16 @@ import {ACPVisitorID} from '@adobe/react-native-acpcore';
 var visitorId = new ACPVisitorID(idOrigin?: string, idType: string, id?: string, authenticationState?: ACPMobileVisitorAuthenticationState)
 ```
 
-### [Lifecycle](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/lifecycle)
+### [Lifecycle](https://developer.adobe.com/client-sdks/previous-versions/documentation/mobile-core/lifecycle)
 
-> Note: Implementing Lifecycle via Javascript may lead to inaccurate Lifecycle metrics, therefore we recommend implementing Lifecycle in native [Android and iOS code](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/lifecycle). 
+> Note: Implementing Lifecycle via Javascript may lead to inaccurate Lifecycle metrics, therefore we recommend implementing Lifecycle in native [Android and iOS code](https://developer.adobe.com/client-sdks/previous-versions/documentation/mobile-core/lifecycle). 
 
 ##### Getting the extension version:
 ```javascript
 ACPLifecycle.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPLifecycle version: " + version));
 ```
 
-### [Signal](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/signals)
+### [Signal](https://developer.adobe.com/client-sdks/previous-versions/documentation/mobile-core/signal)
 ##### Getting the extension version:
 ```javascript
 ACPSignal.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPSignal version: " + version));

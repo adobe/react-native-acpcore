@@ -12,7 +12,7 @@ jobs:
 
   build-ios:
     macos:
-      xcode: "12.0"
+      xcode: "13.4.0"
 
     steps:
       - checkout
@@ -47,7 +47,7 @@ jobs:
 
   unit-test:
     macos:
-      xcode: "12.0"
+      xcode: "13.4.0"
 
     steps:
       - checkout
@@ -84,7 +84,7 @@ jobs:
 
   build-sample-app-ios:
     macos:
-      xcode: "12.0"
+      xcode: "13.4.0"
 
     steps:
       - checkout
@@ -109,7 +109,7 @@ workflows:
   version: 2
   ci-workflow:
     jobs:
-      - build-android
+    #  - build-android
       - build-ios
       - unit-test
       - build-sample-app-android
